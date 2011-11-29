@@ -1,0 +1,213 @@
+2011-11-29
+pm nke el epd biib gild wmt eog lvs mrk hd rai tgt lly low cat exc yhoo csco 
+2008-12-23
+gild mhs genz qcom abt amgn adp cl bmy v mcd orcl pg wmt abx lly fpl so rtn pfe
+2008-12-02
+gild mhs sgp xom adp mcd amgn cvx pg bmy mmm so wmt d t cost dvn wye xto afl
+2007-12-04
+pot vmw aapl goog nyx pcp glw de fslr ma blk gild cme amzn genz mos wft emr syk esrx
+2008-12-09
+gild mhs amgn adp bmy kr xom mcd pg cl cost so wmt rtn pfe t cmcsa fpl abx usb
+2007-12-11
+pot aapl goog nyx blk de mos fslr vmw ma gild pcp cme amzn genz emr syk glw wft hpq
+2008-12-16
+gild qcom mhs amgn adp bmy v xom mcd abx so pg wmt rtn lly oxy pfe wye t fpl 
+2007-12-18
+pot aapl vmw goog nyx de lmt mos fslr ma gild pcp cme genz syk wfr hpq xto emr stt
+2007-11-20
+rimm fslr ma blk gild cme lmt mos esrx pcp wft genz trow oxy xto schw emr hpq cvs mon
+2007-11-27
+rimm aapl goog de mos fslr ma gild pcp cme esrx wft xto genz lmt syk oxy cvs slb mon
+2007-10-30
+rimm vmw pot aapl nov goog fcx mos pcp hal blk amzn wft nyx gild cme xto hpq abx yhoo
+2008-11-04
+celg abt amgn pg kr xom bmy esrx wmt wmi cvx so cb pfe usb wfc rtn duk bbt wye
+2007-11-13
+rimm pot aapl goog nyx mos ma blk gild cme slb oxy esrx wft hal lmt emr syk xto genz
+2009-07-25
+pot rimm nov aapl ebay slb amzn pcp wft hal jnpr fcx celg goog nvda orcl hpq mos gild de
+2007-10-02
+vmw pot nov rimm ebay amzn pcp wft hal fcx goog aapl slb nvda orcl hpq jnpr mos celg csco
+2007-10-09
+rimm vmw pot goog nov aapl ebay amzn pcp hal fcx slb nvda wft orcl hpq jnpr celg gild emc
+2007-10-16
+rimm vmw pot goog nov aapl ebay slb amzn hal fcx emc wft mos jnpr celg gild nvda orcl biib
+2007-10-23
+rimm vmw goog aapl amzn emc fcx nov nvda mos jnpr slb hal syk hpq ma celg blk biib abx
+2007-31-07
+aapl,pot,rimm,nov,slb,amzn,pcp,jnpr,fcx,nvda,wft,hpq,orcl,amat,ma,celg,cme,cnq,biib,rci
+2007-07-24
+aapl,rimm,pot,pcu,nov,slb,rig,hal,pcp,jnpr,gsf,wft,csco,tck,amzn,fcx,ebay,nvda,hpq,do
+2007-08-07
+pot,aapl,rimm,nov,pcp,jnpr,mos,fcx,csco,hpq,amat,wft,orcl,stj,nvda,agn,mhs,celg,cme,biib
+2008-08-12
+rimm celg gild nsc fslr unp orcl px genz qcom stj ibm bax mdt adbe blk mcd symc tjx wu
+2007-08-21
+rimm,nov ebay slb, syk jnpr nvda wft hpq mos mhs ma de biib bdx cvs itw coh ko dhr
+2008-08-26
+celg rimm genz fslr nsc mdt orcl gild px stj bax wu qcom adbe blk ibm syk hes esrx schw
+2007-08-28
+aapl rimm nov ebay slb jnpr nvda wft hpq syk biib mos vmw mhs de itw ma emc ko mgm
+2009-01-13
+gild sgp genz qcom mcd mhs amgn adp bmy v lly orcl ibm fpl bdx pfe rtn k wye wmi
+2007-09-11
+rimm nov ebay slb amzn wft hpq jnpr celg nvda biib mos orcl de stj mhs vmw tmo bdx agn
+2007-09-18
+rimm nov ebay slb amzn wft jnpr fcx celg nvda biib hpq stj mos de syk bhi vmw tmo orcl 
+2008-05-20
+rimm,rig,hes,nbl,oxy,apa,csx,nxy,nue,ma,swn,nov,eca,wft,su,cnq,dvn,hal,px,ibm
+2008-06-03
+ma,rimm,hes,nbl,csx,apa,oxy,su,swn,nov,mur,eca,wft,cvx,px,ibm,bni,cnq,dvn,fslr
+2007-06-05
+pot,aapl,pcu,rimm,nov,rig,pcp,slb,bhi,amzn,gild,wft,pcar,ma,aa,tck,bni,coh,mcd,vlo
+2008-06-10
+rimm,hes,mon,nbl,mos,oxy,csx,eca,su,ma,swn,nov,mur,cnq,px,bni,nue,wft,hal,sii
+2007-06-12
+pot,aapl,rimm,nov,slb,rig,pcp,bhi,amzn,wft,ma,gild,tck,pcar,mcd,gsf,goog,tmo,cat,cnq
+2008-06-17
+pot,rimm,hes,mon,nbl,mos,su,ma,swn,agu,eca,cnq,flr,px,qcom,fslr,cmi,chk,pcz,ibm
+2007-06-19
+pot,aapl,rimm,nov,slb,rig,pcp,ma,bhi,wft,amzn,gsf,tmo,tck,pcar,aa,gild,mon,mcd,fcx
+2008-07-01
+pot,hes,mos,wmb,agu,cnq,px,fslr,flr,upl,celg,eog,abx,qcom,chk,genz,x,nem,gild,bhi
+2007-07-03
+pot,rimm,nov,rig,pcp,slb,bhi,gsf,wft,nvda,amzn,ma,tck,aa,pcar,nke,fcx,goog,orcl,pcz
+2008-07-08
+hes,mos,celg,agu,cnq,flr,qcom,fslr,sii,genz,chk,wmb,abx,biib,symc,dna,mdt,unp,nem,cost
+2007-07-10
+aapl,pot,rimm,nov,rig,pcp,slb,wft,bhi,gsf,amzn,nvda,aa,tck,ma,nke,fcx,goog,pcar,cnq
+2007-07-17
+aapl,pot,rimm,pcu,nov,rig,pcp,slb,amzn,nvda,csco,tck,goog,gsf,ma,fcx,ebay,pcar,cat,aa
+2007-05-01
+celg,pot,gild,pcu,nov,pcar,amzn,al,slb,orcl,vol,sgp,zmh,tmo,mhs,exc,aapl,ebay,bhi,csco
+2008-05-06
+ma,rimm,rig,hes,nbl,csx,apa,nxy,nue,aapl,cnq,hal,px,cat,ibm,fslr,bni,eog,cvx,chk
+2007-05-08
+celg,pot,gild,nov,al,wft,pcar,rimm,amzn,sgp,rig,exc,etr,ma,gs,slb,zmh,orcl,vlo,stj
+2009-05-12
+rimm,amzn,v,fslr,aapl,yum,bby,goog,ebay,tri,ma,ccl,fpl,ry,wag,xto,ibm,qcom,wfc,cvs
+2008-05-13
+rimm,ma,nbl,hes,oxy,apa,csx,nxy,su,nue,swn,nov,eca,wft,cnq,hal,px,ibm,cat,fslr
+2007-05-15
+pot,aapl,nov,wft,pcp,amzn,celg,gild,rimm,rig,pcar,slb,tcx,vlo,fsh,tmo,cat,ma,gs,zmh
+2009-05-19
+rimm,fslr,amzn,v,yum,goog,ebay,aapl,tri,wfc,ry,ccl,cme,mon,afl,pot,bns,ibm,wlp,bmo
+2007-03-06
+pcu,coh,rimm,gild,pcar,zmh,syk,nke,nue,de,bam,jci,aapl,fd,fpl,trv,pru,yhoo,etr,bax
+
+2009-3-10
+sgp,amzn,abx,ma,mos,qxom,tri,wmtsu,oxy,mo,imo,yhoo (only 13)
+
+2008-03-11
+RIG,MA,NXY,STT,eca,hes,apa,xto,gg,cnq,csx,su,eog,genz,hal,dvn,chk,celg,orcl,gild
+
+2007-03-13
+pcu,coh,nue,rimm,cme,pcar,pot,de,gild,al,zmh,syk,kss,nke,aapl,ben,etr,bam,xto,mro
+2009-03-17
+amzn,ma,bmy,ibm,qcom,aapl,emc,wmt,mo,tri,su,hes,dhr,mrk,ocy,imo,glw,
+2007-03-20
+nue,rimm,pcar,de,syk,nke,al,zmh,aapl,ceg,fpl,mro,xto,bam,etr,fd,bax,tmo,rg,jci
+2009-03-24
+amzn,ma,orcl,ibm,emc,cme,bmy,aapl,fpl,abx,qcom,adp,wmt,nem,hes,tri,oxy,wag,su,mo
+2007-03-27
+nue,rimm,gild,pcar,pot,lvs,orcl,mro,slb,zmh,nke,xto,fpl,aapl,kss,de,ceg,gs,etr,vlo
+2009-03-31
+amzn,goog,genz,bby,ma,v,mhs,aapl,orcl,bmy,emc,cme,qcom,fpl,abx,adp,wag,nem,wmt,cov
+2008-04-08
+pot,rig,ma,csx,stt,eca,rimm,blk,hes,hal,fslr,eog,cnq,gild,ibm,celg,genz,nke,wft,glw
+2007-04-10
+pcu,rimm,pot,celg,gild,nue,slb,zmh,orcl,etr,xto,kss,ceg,mro,ebay,al,wft,aapl,tmo,fpl
+2009-04-14
+v,amzn,rimm,biib,ma,bby,cvx,cme,mhs,aapl,orcl,goog,emc,wag,adp,tri,qcom,ibm,bk,imo
+2007-04-17
+pcu,slb,pot,gild,nue,celg,mgm,zmh,ebay,wft,orcl,xto,al,chk,etr,kss,bni,ceg,sgp,kr
+2008-04-22
+pot,rig,mos,csx,de,cnq,eca,nbl,hes,apa,px,nue,rimm,ma,wft,nxy,hal,cat,fslr,su
+2008-04-29
+pot,rig,ma,oxy,csx,de,nbl,hes,hal,apa,fslr,nue,rimm,nov,eca,wft,cnq,nxy,px,cat
+
+
+2009-03-09
+gild,mhs,genz,abx,abt,mcd,bax,d,fpl,goog,orcl,bmy,peg,ibm,k,kft,nem,unh,xto,amzn
+
+2007-02-06
+coh,lvs,rimm,mgm,syk,nyx,pcu,cme,pcar,pot,gs,ben,ms,csco,frx,de,gild,nue,mco,zmh
+
+2008-02-05
+ma,stt,hes,orcl,genz,gild,hon,zmh,cme,csx,bby,biib,abt,bax,abx,qcom,nem,nke,bk,ntrs
+
+2008-02-26
+pot,stt,hes,abx,rimm,ma,csx,eca,stj,apa,fslr,eog,gg,dvn,wfr,biib,zmh,chk,nue,qcom
+
+2008-02-12
+ma,stt,hes,genz,gild,zmh,eog,biib,dyn,celg,wfr,hon,qcom,avp,abx,glw,nsc,nue,bni,abt
+
+2011-06-21
+celg,el,agn,biib,lo,mc,coh,pm,unh,aet,yum,wlp,apd,cbs,tmo,cl,wag,abt,hnz,crm
+
+2011-06-28
+el,sbux,biib,a,agn,cern,lo,unh,mcd,pcp,bax,crm,ibm,aet,cbs,apd,amzw,wlp,tmo,vrx
+
+2011-07-06
+No BC on July 6?? I couldn't find it possibly didn't publish due to holiday
+
+2011-07-12
+nflx,ma,el,celg,v,sbux,biib,hal,dtv,coh,agn,lo,ebay,wynn,vmw,qcomm,a,mcd,crm,unh
+
+2011-07-19
+ma,el,v,sbux,biib,gg,coh,hal,ebay,wynn,vmw,agn,mcd,lo,bhi,crm,unh,goog,pcp,bax
+
+2011-07-26
+aapl,ma,v,el,mcd,bhi,vmw,isrg,celg,hal,sbux,biib,pm,ebay,coh,gg,agn,lo,wynn,goog
+
+2011-08-02
+gmcr,aapl,ma,isrg,el,mcd,pcln,vmw,v,hal,sbux,ebay,bhi,amzn,pm,nbl,coh,lvs,biib,lo
+
+2011-08-09
+ma,pm,mcd,bmy,gis,nke,kft,mon,exc,d (only 10)
+
+2011-08-16
+gmcr,ma,v,abx,mcd,nem,epd,el,nbl,mon,ed,d (just 12)
+
+2011-08-23
+gg,abx,mcd,nem,lo,yum,wmt,ed,jnj,ppl,tgt,nee,d,aep (14)
+
+2011-08-30
+abx,nem,lo,yum,biib,bce,wmt,ed,jnj,mon,tgt,nee,d,mck,aep,fe (16)
+
+Sep5 
+<missing>
+
+2011-09-13
+gmcr,gg,abx,nem,amzn,ed,kmb,tgt,d,fe (only 10)
+
+2011-09-20
+gmcr,ma,v,isrg,abx,amxz,nem,pm,ebay,lo,pcp,kgc,bmy,biib,tjx,spg,coh,cost,yum,el
+
+2011-09-27
+ma,ebay,amzn,bmy,intc,tjx,biib,so,unh,ed,kmb,d,tgt,pcg,fe,nee,wlp,yhoo,hd (only 19)
+
+2011-10-04
+amzn,lo,bmy,biib,intc,so,kmb,ed,duk,d,ppl,nee,pcg,fe,wlp,vz,hd (only 17)
+
+2011-10-11
+celg,amzn,lo,bmy,biib,wmt,dell,msi,intu,lly,unp,rai,duk,pcg,kmb,tgt,nee,d,ppl,mon
+
+2011-10-18
+isrg,celg,nke,goog,amzn,lo,bmy,intu,biib,ctsh,wmt,msi,dell,gis,duk,rai,kmb,tgt,d,nee
+
+2011-10-25
+isrg,celg,pm,nke,vfc,atvi,gild,wpe,biib,tjx,wmt,intc,bbby,bmy,intu,cvx,pg,abt,lo,msi
+
+2011-11-01
+isrg,v,pm,nke,vfc,hcp,biib,coh,wpz,gild,atvi,intu,tjx,wmt,goog,intc,bbby,cvx,epd,ctsh
+
+2011-11-08
+isrg ma abx qpz nke atvi biib qcom el epd unp intu gild se wmt nem intc bbby nsc wmb
+2011-11-15
+isrg ma wpz nke goog qxom biib wmt coh el intu epd unp intc tjx nsc se nem bmy wmb
+
+2011-11-22
+ma pm epd biib qcom nke coh el tjx unp intc wmb abt wmt eog mrk hd tgt pfe rai
+
+I'm not sure if their algorithm is all over the place or the stocks are just all over the place because there seems to be very little consistency as to who is on this list.
