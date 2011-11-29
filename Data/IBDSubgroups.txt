@@ -1,0 +1,1192 @@
+102308
+2 9 31 126 Retail–DrugStores .. –4.3–1.4
+3 3 3 90 Mdcal–Outpnt/HmCr 95 –15.3–4.7
+4 4 11 185 Insurance–Brokers 88 –14.7–2.6
+5 8 4 22 Elec–MilitarySystems 93 –2.0–2.4
+6 2 14 178 ComptrSftwr–Mdcl 96 –25.3–2.5
+7 1 2 152 Retail–Discnt&Vari .. +11.5–3.7
+8 10 7 143 CommlSvcs–Schools 97 –13.1–3.9
+9 5 1 83 Medical–Genetics .. –17.4–4.1
+10 16 39 51 Soap&ClngPreparat .. –7.2–3.9
+11 11 75 79 Banks–Southeast 88 –20.5–3.2
+12 21 33 31 Food–MscPrparation 92 –16.2–2.6
+13 14 13 66 Medical–Products 92 –24.8–4.5
+14 15 6 61 Medical–Biomed/Bth 92 –24.8–3.3
+15 7 34 111 Banks–Wst/Sthwst 88 –27.8–3.4
+16 30 60 63 Mdcal–Drg/Dvrsified .. –6.2–3.7
+17 28 24 73 Medical–EthicalDrgs 85 –28.3–4.6
+18 25 69 52 Utility–GasDstribtn 85 –20.5–3.9
+19 44 130 94 Retail–Spr/MiniMkts 89 –27.2–4.3
+20 20 91 48 Banks–Midwest 85 –21.9–3.9
+21 13 92 30 Banks–Northeast 86 –16.1 –3.1
+22 17 23 101 ComlSvcs–Scrty 80 –31.7 –3.4
+23 37 118 76 Financ–Svings&Lo 89 –29.9 –1.7
+24 18 70 60 Cosmetics/PersnlCre 88 –23.1 –4.5
+25 77 154 39 Fnanc–IdxTrckngFd .. –28.4 –2.3
+26 32 64 12 DvrsifiedOprtions 81 –22.5 –3.0
+27 53 124 16 Tobacco 87 –17.8 –1.6
+28 24 58 33 Medical–GenercDrgs 87 –12.2 –3.2
+29 6 21 131 Retail/Whlsle–Food 86 –22.4 –3.8
+30 36 36 45 CommlSvcs–Misc 90 –34.9 –3.7
+31 23 12 40 Mdical/Dntal–Srvcs 91 –33.5 –5.5
+32 38 88 59 Fnce–InvsmntMgt 67 –39.6 –5.0
+33 40 131 114 Utility–WaterSupply 83 –23.1 –4.9
+34 33 20 28 Medical–Systems/Eqp 90 –37.6 –5.3
+35 41 30 14 PollutionCntrl–Svcs 92 –13.2 –4.4
+36 27 68 54 Insrnce–Prp/Cas/Titl 80 –31.0 –4.6
+37 31 5 20 Leisr–Tys/Gms/Hbby .. –16.6 –4.8
+38 49 61 36 CmmlSvcs–Cnsltng 89 –29.7 –3.4
+39 47 104 65 Mdcal–WhlsleDrg 86 –26.4 –3.0
+40 12 71 160 Banks–SuprRgional 82 –32.0 –6.3
+41 84 156 57 CommlSvcs–Hlthcre .. –36.0 –3.7
+42 60 106 74 Utility–ElctricPwr 80 –33.7 –5.4
+43 73 117 97 HsholdofficFurnitr .. –44.4 –4.4
+44 22 29 142 Mdcal–NrsngHmes 91 –42.5 –7.2
+45 19 9 55 Rtail–Clthing/Shoe 85 –36.9 –5.2
+46 76 67 62 Househld–Applncs .. –35.1 –6.9
+47 29 45 82 Food–Confectionery .. –3.4 –4.1
+48 63 116 117 Medical/Dntal–Sppls 89 –30.0 –3.7
+49 26 65 103 InvstmntBrokers 84 –51.6 –6.1
+50 66 43 77 Rtail/Whlsle–At/Prts 83 –33.7 –3.4
+51 119 153 70 FnancepblInvFdbnd .. –24.7 +0.3
+52 48 22 188 Comptr–PrphrlEqp .. –29.6 –1.8
+53 35 89 191 Mdical–HlthMntOrg 82 –49.1 –10
+54 103 127 164 Leisre–Mvies&Rel 64 –34.4 –3.7
+55 72 94 157 Telecom–WirlssEqp 78 –40.2 –4.8
+56 50 10 84 RetlWhsleBldgPrds 87 –16.6 –5.7
+57 57 35 53 ComptrSftwr–Entr 86 –45.7 –4.4
+58 45 16 10 Bldg–A/C&HeatingP 76 –17.5 –4.8
+59 90 15 11 Trnsportation–Trck 77 –18.3 –5.1
+60 43 49 67 Retail–MjrDscChns .. –26.7 –5.1
+61 34 59 58 Cmpter–TechSrvcs 85 –29.0 –5.3
+62 67 83 69 FuneralSvcs&Rel .. –29.0 –2.8
+63 92 168 6 Oil&Gas–USRoyalty 81 –13.5 –5.4
+64 65 27 18 Chemicals–Specialty 78 –36.6 –7.3
+65 99 56 3 Bldg–Rsidnt/Comml 61 –9.5 –3.8
+66 46 54 47 FnancialSrvcs–Misc 83 –47.6 –6.6
+67 98 57 80 Internet–Software .. –38.6 –2.8
+68 71 19 50 Rtail–HmeFrnshngs .. –26.5 –4.0
+69 80 38 193 Compter–Netwrking 85 –45.6 –2.7
+70 55 100 182 Telecom–Services 73 –48.8 –6.5
+71 75 111 49 Beverages–Alcoholic 75 –27.3 –7.6
+72 52 63 72 Finance–Reit .. –34.9 –6.4
+73 91 28 7 Transportation–Rail 89 –4.9 –3.3
+74 51 81 86 Apparel–Shoes&Rel 82 –37.1 –6.8
+75 86 76 25 Containers 79 –32.7 –6.0
+76 68 48 187 Fincecnsmer/CmlLns 87 –42.9 –6.9
+77 54 112 105 Retail–Restaurants 84 –46.8 –4.1
+78 135 143 133 Retail–MailOrder&Di .. –47.1 –2.2
+79 142 174 75 Oil&Gas–Trnsprt/Pip 82 –34.6 –2.7
+80 69 50 106 CmmlSvcs–MrktRch 87 –32.4 –5.2
+81 64 175 163 Media–Radio/Tv 60 –57.4 –8.7
+82 144 132 155 Rtail/Whlslecmp/Cll .. –42.7 –3.4
+83 83 87 98 Elec–Scntific/Msrng 82 –37.4 –4.6
+84 56 46 112 Bldg–Mntnance&S .. –27.5 –8.7
+85 39 73 127 Insurance–Life 67 –38.4 –6.7
+86 61 32 171 Bldg–Paint&Allied 65 –27.0 –6.6
+87 123 123 170 ComptrSftwr–Scrity 85 –43.5 –2.9
+88 128 86 41 Transportation–Svcs 82 –22.1 –1.2
+89 87 37 107 Bldg–CnstrPrds/Msc 69 –38.8 –5.0
+90 111 167 175 Bldg–Mbile/Mfg&Rv .. –49.0 –6.0
+91 100 110 179 Retail–LeisurePrds .. –50.8 –4.1
+92 116 103 102 Aerospce/DfnseEqp 83 –45.2 –4.0
+93 108 121 177 OfficeSuppliesMfg .. –44.6 –4.8
+94 110 150 34 Bvrages–SftDrinks 77 –40.1 –4.4
+95 112 144 120 RealEstateOprtions 59 –30.3 –4.0
+96 160 173 24 AgriculturalOprtions 68 –36.6 –7.9
+97 133 126 96 ComptrSftwr–Fincl 84 –43.5 –4.4
+98 114 95 149 CompterSftwr–Dsgn 83 –38.8 –5.5
+99 79 17 176 Retail–Misc 84 –53.9 –5.4
+100 85 109 180 Auto/Trck–RplcPrts .. –52.3 –6.2
+101 81 77 156 RtailWhlsleOffcSup .. –38.6 –2.8
+102 70 47 124 CommlSvcs–Stffng .. –42.6 –4.5
+103 96 102 134 Bldg–HandTools 63 –32.7 –4.8
+104 140 139 95 Elec–SemicndctrEqp .. –52.3 –5.1
+105 145 62 108 Trnsprttion–EqpMfg .. –36.5 –5.4
+106 161 134 42 CmptrSftwr–Edu .. –42.4 –4.9
+107 42 44 169 Telecom–Equipment 69 –46.2 –6.4
+108 59 18 93 Apprel–ClthingMfg 74 –37.4 –6.0
+109 124 155 166 Internet–Content 88 –48.9 –2.0
+110 139 172 35 Telecom–SrvcsFrgn 74 –47.0 –9.9
+111 105 135 88 Cmptr–IntgrtdSyst .. –40.5 –3.8
+112 153 122 122 Elec–ContractMfg .. –41.8 –1.4
+113 118 90 99 Elctricl–Equipmnt 76 –47.5 –7.9
+114 97 151 141 Banks–MoneyCntr 72 –42.6 –6.9
+115 89 25 29 Mchnry–GenIndstrl 73 –38.2 –9.0
+116 150 163 148 CommlSvcs–Prntng .. –53.7 –4.2
+117 62 79 104 Bldg–WoodPrds .. –34.9 –6.7
+118 125 136 158 Internet–Isp .. –46.8 –5.4
+119 115 119 46 Trnsprt–AirFreight .. –37.7 –7.8
+120 138 142 162 ConsumerProd–Misc .. –51.8 –2.7
+121 132 138 89 Elec–MiscProducts .. –51.4 –4.8
+122 143 158 17 Food–MeatProducts .. –37.8 –5.2
+123 129 128 165 Bldg–Cment/Cncrt .. –43.2 –6.6
+124 74 66 44 PollutnCntrl–Eqp 77 –34.6 –7.7
+125 120 98 172 Media–Books .. –47.4 –6.9
+126 146 115 118 CommlSvcs–Leasing 75 –39.2 –7.5
+127 58 74 115 Paper&PaperProduc 60 –48.9 –6.9
+128 95 55 144 Elec–SmicondctrMfg 67 –50.1 –4.5
+129 159 96 71 Telecom–WirlssSvcs 82 –53.1 –8.8
+130 104 85 135 Leisure–Products 50 –49.3 –7.7
+131 101 53 186 Intrnet–NtwrkSltns .. –48.2 –5.4
+132 168 179 145 Oil&Gas–Rfing/Mkt 65 –52.3 –6.0
+133 127 114 136 ComptrSftwr–Dsktp .. –46.8 –6.7
+134 134 108 161 Elec–PrtsDistribtrs .. –48.7 –5.6
+135 93 40 21 MetalProc&Fabrica 60 –51.9 –9.2
+136 136 148 78 Aerospace/Defense .. –42.0 –3.4
+137 163 170 110 Financ–PblInvFdeqt .. –46.1 –6.0
+138 148 149 129 MetalPrds–Fstners .. –36.8 –5.1
+139 109 51 27 Mchnry–MtlHdlg .. –37.9 –4.6
+140 130 147 64 Insrnce–Acc&Heal .. –49.0 –9.9
+141 82 41 153 Retail/Whlsle–Jwlry .. –48.5 –6.1
+142 106 84 116 Internet–ECommerce 79 –49.5 –3.7
+143 94 93 159 Media–Cble/StlliteTv 62 –47.6 –7.8
+144 171 183 138 AutoManufacturers .. –44.2 –7.1
+145 113 52 43 Medcal–Hospitals .. –35.3 –4.0
+146 78 8 109 Food–DairyProducts .. –37.5 –11
+147 187 187 190 Textile–Mill/Hsehold .. –67.4 –1.5
+148 121 133 192 Houshld–CnsmerElc .. –52.4 –5.5
+149 122 140 168 Chemicals–Plastics .. –44.2 –4.9
+150 149 181 140 RealEstateDevlpmt .. –51.8 –7.0
+151 152 120 167 Comptr–DataStrge .. –50.9 –4.0
+152 155 160 154 Office–Eqp&Autom .. –44.6 –5.0
+153 177 186 91 Finc–PblInvFd–Fn .. –51.7 –6.9
+154 158 165 130 Media–Diversified 57 –57.4 –4.3
+155 126 99 151 Leisure–Services 53 –57.8 –4.4
+156 137 82 100 Elec–Cmpnent/Cntr .. –44.6 –5.1
+157 102 72 85 Oil&Gas–IntlExplPr .. –55.4 –9.4
+158 166 42 13 Energy–Other 67 –50.0 –9.7
+159 156 182 56 Oil&Gas–IntlIntegra 67 –50.0 –9.4
+160 151 157 26 Media–Periodicals .. –47.9 –4.7
+161 167 125 23 Chemicals–Basic .. –37.5 –7.0
+162 141 113 125 Retail–CnsmrElec .. –52.1 –7.8
+163 117 78 146 Comptr–Manufctrs .. –47.7 +0.6
+164 88 141 174 Telcom–FibrOptcs .. –52.1 –4.8
+165 157 161 119 ComlSvcs–Advrtsng .. –56.9 –9.0
+166 164 171 137 Insrnce–Divrsified .. –57.3 –8.5
+167 165 146 128 Transportation–Ship .. –48.8 –7.7
+168 131 80 1 Oil&Gas–USExplPro 67 –40.0 –11
+169 172 101 150 Bldg–HeavyConstr .. –52.8 –11
+170 179 159 123 Househld–Housewrs .. –49.5 +2.7
+171 176 195 183 Media–Newspapers .. –62.4 –3.9
+172 147 105 173 Retail–DprtmntStrs .. –55.1 –5.8
+173 169 97 132 Machnry–Tools&Re .. –47.5 –12
+174 180 185 196 Leisre–PhtoEqp/Rel .. –56.7 –5.5
+175 154 129 38 Oil&Gas–FieldServic 53 –51.2 –10
+176 185 137 184 Trucks&Parts–HvyD .. –59.5 –6.0
+177 184 197 8 MetalOres–Gld/Silvr 45 –59.2 –16
+178 181 152 92 Auto/Trck–OrgnlEqp .. –61.8 –6.4
+179 178 166 37 MetalPrds–Distribtr .. –49.0 –5.9
+180 174 164 189 Leisre–Gamng/Equip 54 –68.6 –5.7
+181 191 188 197 Fnanc–Mrtg&RelSvc .. –80.1 –4.3
+182 173 177 32 Oil&GascdnExplPro .. –40.9 –10
+183 175 178 121 Banks–Foreign .. –57.0 –10
+184 170 145 147 Leisure–Hotels&Mot .. –56.7 –7.2
+185 162 107 113 Oil&Gas–Mchnry/Eq 57 –55.7 –13
+186 186 184 19 Mchinry–Cnstr/Mng .. –54.8 –9.9
+187 188 191 81 Food–Flour&Grain .. –45.6 –8.9
+188 182 180 9 Oil&Gas–Drilling 59 –50.7 –12
+189 190 192 87 Oil&Gas–USIntgrt .. –56.7 –13
+190 193 169 4 Machinery–Farm .. –54.5 –12
+191 183 190 68 Oil&Gas–CdnIntgrt .. –51.9 –11
+192 189 162 5 Chemicals–Fertilizers 66 –54.3 –9.0
+193 192 176 139 Auto/Trck–Tirs&M .. –59.7 –12
+194 194 189 2 Steel–Producers .. –61.8 –12
+195 195 194 181 Steel–SpcltyAlloys .. –72.2 –9.6
+196 196 193 15 MetalOres 55 –57.7 –12
+197 197 196 194 Mining–Gems .. –75.9 –8.2
+
+102407
+1 3 4 Bldg-HeavyConstruction 23 +64.1 +1.7
+2 4 6 Computer-Manufacturers 12 +44.7 +4.7
+3 5 69 Internet-Content 39 +26.9 +4.6
+4 2 7 Internet-ECommerce 46 +40.4 +4.3
+5 1 1 Chemicals-Fertilizers 13 +138 +2.1
+6 8 3 MetalOres 59 +52.6 +3.4
+7 10 31 Oil&Gas-IntlExplPr 29 +86.8 +2.8
+8 9 12 Medical-Systems/Equip 103 +33.3 +2.0
+9 7 15 Food-DairyProducts 8 +49.0 +2.8
+10 12 38 ComputerSftwr-Enterprse 121 +32.3 +1.7
+11 6 13 ComputerSftwr-Security 24 +50.7 +2.6
+12 11 88 MetalOres-Gold/Silver 82 +18.6 +2.8
+13 19 50 Oil&Gas-IntlIntegra 19 +30.7 +1.7
+14 21 26 Telecom-WirelessSvcs 61 +30.9 +2.3
+15 13 9 Machinery-GenIndustrial 41 +37.4 +1.4
+16 22 10 Energy-Other 72 +30.2 +2.5
+17 16 5 Transportation-Ship 47 +32.0 +2.5
+18 23 18 Steel-Producers 20 +48.8 +3.3
+19 15 23 Machinery-Farm 8 +57.3 +4.1
+20 20 41 Elec-MilitarySystems 19 +40.7 +0.5
+21 17 2 Oil&Gas-Machinery/Eq 29 +57.6 +3.6
+22 25 37 Telecom-WirelessEquip 77 +9.9 +2.8
+23 18 8 Oil&Gas-FieldServic 51 +25.5 +2.5
+24 26 51 Telecom-ServicesFrgn 46 +30.1 +2.5
+25 14 17 CommlSvcs-Schools 18 +56.3 +2.9
+26 24 150 Medical-Genetics 30 +19.0 +0.8
+27 28 30 MetalProc&Fabrica 42 +33.1 +1.9
+28 27 19 Computer-Networking 39 +20.4 +1.2
+29 29 14 Aerospace/DefenseEqp 50 +37.6 +2.3
+30 31 42 Elec-SemiconductorMfg 141 +11.5 +0.9
+31 34 114 Beverages-SoftDrinks 18 +21.5 +2.0
+32 40 33 CommlSvcs-Consulting 23 +30.5 +1.2
+33 47 145 Transportation-Airline 33 –2.6 +3.3
+34 42 66 Banks-Foreign 26 +19.1 +2.7
+35 33 45 Medical/Dental-Services 57 +26.3 +1.5
+36 30 29 Oil&Gas-CdnIntegrat 4 +32.1 +1.1
+37 76 64 Auto/Truck-ReplaceParts 7 +16.2 +1.7
+38 37 49 Chemicals-Basic 19 +18.0 +1.1
+39 46 71 Beverages-Alcoholic 25 +20.8 +1.2
+40 39 48 Chemicals-Specialty 53 +17.7 +1.6
+41 36 24 Electrical-Equipment 37 +25.3 +0.7
+42 35 85 AgriculturalOperations 22 +22.0 +1.9
+43 43 139 Leisure-Gaming/Equip 38 +16.1 +1.4
+44 32 54 Oil&Gas-USExplPro 110 +19.5 +0.2
+45 38 65 Medical-Products 129 +17.8 +0.7
+46 44 110 Internet-Software 42 +11.2 +0.8
+47 41 102 Medical-Biomed/Biotech 276 +6.4 +1.2
+48 54 87 Finance-PublInvFd-Frgn 114 +8.4 +1.9
+49 57 89 Computer-PeripheralEqp 12 +0.6 –0.6
+50 50 83 CommlSvcs-MarketRsrch 18 +12.2 +0.9
+51 53 58 CommlSvcs-Miscellaneous 56 +8.4 +1.1
+52 55 75 Elec-Scientific/Msrng 42 +26.0 +2.1
+53 67 68 Retail-ConsumerElec 9 +13.3 +2.0
+54 74 124 FinancialServices-Misc 60 +14.0 +1.7
+55 51 25 Machinery-Tools&Re 8 +35.2 +1.7
+56 49 105 ComputerSftwr-Financial 20 +14.7 –0.8
+57 62 128 AutoManufacturers 9 +17.6 +2.1
+58 73 141 CommlSvcs-Healthcare 22 +5.5 +1.2
+59 70 16 Apparel-Shoes&Rel 16 +15.7 –0.8
+60 60 67 Elec-MiscProducts 43 +13.1 +0.5
+61 52 28 PollutionControl-Svcs 27 +24.7 +3.1
+62 82 161 Telecom-FiberOptics 21 –2.4 +1.4
+63 45 20 Machinery-Constr/Mining 10 +24.1 +2.7
+64 75 78 Retail/Whlsle-Cmptr/Cell 21 +12.4 +0.8
+65 59 186 Textile-Mill/Hsehold 6 –7.1 +1.2
+66 97 93 Medical-HlthMaintOrg 18 +17.8 +1.8
+67 91 113 Medical-EthicalDrugs 88 0.0 +1.4
+68 83 63 Food-MiscPreparation 48 +9.4 +0.8
+69 56 163 Mining-Gems 6 +13.9 +1.2
+70 68 94 Retail-Restaurants 71 +4.0 +0.5
+71 58 57 Oil&Gas-CdnExplPro 70 +18.6 +1.2
+72 64 92 Elec-ContractMfg 26 +1.0 +0.8
+73 72 133 Insurance-Acc&Heal 8 +10.1 +1.0
+74 79 79 Computer-TechServices 63 +2.8 +0.6
+75 77 81 DiversifiedOperations 54 +17.0 +1.2
+76 116 86 Internet-NetworkSltns 21 +3.2 +2.7
+77 63 35 Machinery-MtlHdlg/Autmn 16 +18.7 +1.5
+78 61 146 Oil&Gas-USRoyalty 17 +3.8 +0.3
+79 90 165 Computer-DataStorage 23 –12.1 +1.5
+80 92 70 Insurance-Brokers 15 +19.2 –0.7
+81 89 100 Aerospace/Defense 10 +19.9 +0.6
+82 80 91 Retail/Whlsle-Jewelry 12 +15.3 +4.9
+83 66 82 Utility-WaterSupply 16 +10.1 +0.8
+84 78 74 FuneralSvcs&Rel 8 +18.7 –0.5
+85 99 46 Elec-SemiconductorEquip 59 +7.1 +1.4
+86 71 22 Oil&Gas-Drilling 26 +22.3 +2.9
+87 108 137 Finance-InvestmentMgmt 124 +5.9 +1.5
+88 69 73 PollutionControl-Equip 12 +9.2 +0.8
+89 84 39 Telecom-Equipment 58 +14.8 +1.4
+90 87 116 Finance-IdxTrackingFd 589 +9.7 +0.9
+91 81 122 ComputerSftwr-Design 14 +16.2 +0.8
+92 65 36 Retail/Whlsle-Food 12 +27.5 +0.2
+93 86 144 Medical-GenericDrugs 17 +4.9 +0.8
+94 93 101 ComputerSftwr-Educ/Entr 25 –0.9 –0.1
+95 88 76 Auto/Truck-OriginalEqp 33 +23.0 +2.0
+96 101 158 Medical-WhlsleDrg/Suppl 10 +15.2 +1.2
+97 48 11 Trucks&Parts-HvyD 13 +48.9 +0.6
+98 121 119 Medical-Outpnt/HmCare 28 +5.7 +1.8
+99 94 21 Food-MeatProducts 12 +13.8 +0.9
+100 104 173 ComputerSftwr-Desktop 12 +5.1 +2.1
+101 95 80 ConsumerProducts-Misc 21 +13.8 +0.9
+102 128 61 Internet-Isp 14 +36.5 +2.2
+103 96 53 MetalPrds-Fasteners 4 +21.0 +0.4
+104 134 99 Leisure-Hotels&Mot 15 +6.4 +0.7
+105 109 34 CommlSvcs-Security/Sfty 50 +14.0 +0.4
+106 85 84 Medical/Dental-Supplies 17 +11.0 –0.1
+107 102 40 Bldg-Maintenance&S 9 +13.2 0.0
+108 103 115 Computer-IntegratedSyst 24 +11.2 +0.7
+109 111 60 Elec-Component/Connectr 32 +13.3 –0.1
+110 110 44 Media-Cable/SatelliteTv 28 +9.1 –0.1
+111 115 171 Insurance-Life 28 –0.5 +0.4
+112 113 153 Finance-InvestmentBkrs 53 –4.4 +1.0
+113 118 123 Bldg-Mobile/Mfg&Rv 19 –1.3 +0.9
+114 105 126 Containers 22 +8.7 –0.4
+115 124 127 ComputerSftwr-Medical 30 +0.1 +0.9
+116 120 112 Telecom-Services 49 +2.2 +0.3
+117 112 97 Utility-ElectricPower 84 +6.5 +0.3
+118 129 136 Cosmetics/PersonalCare 48 –1.1 +0.2
+119 117 148 Food-Confectionery 6 +3.2 –0.2
+120 127 138 Media-Diversified 24 +5.9 +0.8
+121 125 160 Banks-MoneyCenter 20 +3.0 +1.1
+122 130 56 Transportation-Rail 11 +25.6 +2.3
+123 136 132 Retail-MajorDisc Chains 10 +0.5 –0.3
+124 122 157 Insurance-Prop/Cas/Titl 118 –6.9 0.0
+125 107 131 Retail-Miscellaneous 17 +5.3 +0.7
+126 139 106 Leisure-Products 19 –4.7 +0.8
+127 119 43 Oil&Gas-Transprt/Pip 49 +7.8 +0.7
+128 132 52 Oil&Gas-USIntegrat 4 +25.6 +1.0
+129 138 120 Insurance-Diversified 11 +8.7 +0.5
+130 140 96 Retail-Super/MiniMkts 26 +6.6 +0.5
+131 144 47 Bldg-A/C&HeatingP 12 –1.7 +0.6
+132 150 111 Paper&PaperProduc 40 +0.9 +2.1
+133 135 135 Tobacco 11 +4.9 +0.7
+134 133 166 Retail-MailOrder&Di 13 +2.6 +0.5
+135 123 62 Auto/Truck-Tires&M 5 +13.2 +3.1
+136 146 109 Media-Radio/Tv 37 –8.5 +1.4
+137 143 170 Steel-SpecialtyAlloys 9 +14.1 +1.2
+138 98 176 Leisure-Movies&Rel 21 –2.0 0.0
+139 114 27 Oil&Gas-Refining/Mkt 33 +20.7 +3.1
+140 100 108 Leisure-Services 36 –1.3 –1.5
+141 126 130 Household-Housewares 4 +23.6 +0.2
+142 145 181 Banks-Northeast 127 –13.7 0.0
+143 149 118 Transport-AirFreight 10 +5.1 +0.7
+144 151 117 CommlSvcs-Advertising 28 +3.8 +1.5
+145 141 143 Utility-GasDistribution 34 +3.7 +0.3
+146 142 121 Bldg-ConstrPrds/Misc 41 –8.5 +0.7
+147 137 107 Bldg-HandTools 9 +7.7 +0.1
+148 106 151 Chemicals-Plastics 16 –5.5 +0.4
+149 153 55 MetalPrds-Distributor 7 +6.4 +2.9
+150 152 168 Medical-NursingHomes 17 +9.0 +0.5
+151 131 77 Food-Flour&Grain 9 0.0 +1.1
+152 158 156 OfficeSuppliesMfg 8 +0.5 +2.4
+153 156 180 Banks-Midwest 76 –17.7 –0.3
+154 165 90 RealEstateOperations 35 –5.6 +1.0
+155 172 178 Hsehold/OfficeFurniture 29 –8.2 +1.6
+156 155 192 Medical-Drug/Diversified 2 +1.4 +0.3
+157 159 194 Finance-Reit 183 –13.8 +0.8
+158 161 103 CommlSvcs-Leasing 23 –7.0 +0.6
+159 160 183 Finance-Savings&Lo 154 –16.9 –0.4
+160 166 167 Media-Books 10 –3.6 +0.8
+161 154 169 Finance-PublInvFd-Eqt 146 –6.9 +0.6
+162 162 175 Soap&ClngPreparat 4 +1.1 +0.1
+163 164 149 Bldg-Paint&Allied 4 –0.3 –0.1
+164 148 98 Transportation-Svcs 10 +10.3 –2.0
+165 167 172 Office-Equip&Autom 5 –2.3 –0.3
+166 175 189 Media-Newspapers 17 –17.6 +1.1
+167 177 193 Banks-Southeast 149 –18.4 –0.1
+168 170 125 Retail/Whlsle-BldgPrds 17 –1.2 –0.1
+169 157 32 Transportation-EquipMfg 12 +2.1 +3.5
+170 169 174 Retail-Clothing/Shoe 58 –20.1 –0.8
+171 174 177 Media-Periodicals 7 –44.3 +0.9
+172 173 185 Banks-West/Southwest 82 –18.6 –0.2
+173 168 184 Finance-PublInvFd-Bond 398 –8.6 +0.1
+174 176 164 Retail-DrugStores 7 +7.1 +1.0
+175 163 95 Apparel-ClothingMfg 44 –8.9 –1.0
+176 147 59 Elec-PartsDistributors 11 +10.2 –2.9
+177 185 182 Bldg-WoodPrds 17 –10.8 –0.3
+178 182 152 Retail/Whlsle-Autos/Prts 20 –6.3 –0.2
+179 181 162 CommlSvcs-Printing 17 –5.4 +0.6
+180 187 179 Leisure-Toys/Games/Hobby 11 –7.9 +2.7
+181 184 129 Transportation-Truck 25 –6.7 +0.5
+182 180 187 Banks-SuperRegional 15 –13.6 +0.7
+183 188 154 CommlSvcs-Staffing 29 –15.2 –0.4
+184 179 159 Retail-LeisureProducts 24 –14.0 –0.1
+185 183 190 Finance-Mrtg&RelSvc 18 –29.5 –0.4
+186 178 104 Household-ConsumerElec 17 –2.8 +0.4
+187 192 191 RealEstateDevelopment 20 –19.9 –0.3
+188 186 72 Bldg-Cement/Concrt/Ag 11 +10.5 +0.6
+189 171 147 Household-Appliances 7 +1.1 –1.9
+190 189 155 Medical-Hospitals 8 –7.1 +1.2
+191 191 134 Retail-Discount&Vari 4 +1.0 –1.4
+192 193 140 Retail/Whlsle-OfficeSup 7 –17.5 +0.6
+193 190 188 Finance-Consumer/CmlLns 29 –23.6 –1.0
+194 195 195 Retail-HomeFurnishings 20 –28.1 –0.6
+195 194 142 Leisure-PhotoEquip/Rel 4 –16.4 –1.1
+196 196 196 Retail-DepartmentStores 13 –28.2 –1.1
+197 197 197 Bldg-Resident/Comml 24 –42.9 –0.7
+
+102708
+1 107 26 195 Trnsprttin–Airlne 84 –37.5–5.1
+2 1 2 152 Retail–Discnt&Vari .. +11.6+0.5
+3 3 3 90 Mdcal–Outpnt/HmCr 95 –21.2–4.1
+4 9 31 126 Retail–DrugStores .. –5.5–1.3
+5 10 7 143 CommlSvcs–Schools 97 –15.1+0.3
+6 15 6 61 Medical–Biomed/Bth 92 –28.1–2.7
+7 21 33 31 Food–MscPrparation 93 –18.8–3.9
+8 17 23 101 ComlSvcs–Scrty 80 –36.4–3.4
+9 11 75 79 Banks–Southeast 87 –23.2–1.4
+10 44130 94 Retail–Spr/MiniMkts 86 –27.8–1.9
+11 25 69 52 Utility–GasDstribtn 85 –20.0–2.4
+12 30 60 63 Mdcal–Drg/Dvrsified .. –6.3–2.0
+13 16 39 51 Soap&ClngPreparat .. –10.3–4.0
+14 7 34 111 Banks–Wst/Sthwst 87 –31.2–1.6
+15 5 1 83 Medical–Genetics .. –23.0–3.9
+16 4 11 185 Insurance–Brokers 82 –18.4+0.2
+17 8 4 22 Elec–MilitarySystems 92 –4.9–4.6
+18 14 13 66 Medical–Products 92 –28.5–3.1
+19 77154 39 Fnanc–IdxTrckngFd .. –29.2–0.8
+20 13 92 30 Banks–Northeast 87 –17.9–1.4
+21 2 14 178 ComptrSftwr–Mdcl 92 –32.1 –4.4
+22 37 118 76 Financ–Svings&Lo 90 –31.7 –1.6
+23 53 124 16 Tobacco 89 –18.3 –3.6
+24 20 91 48 Banks–Midwest 83 –25.0 –1.9
+25 28 24 73 Medical–EthicalDrgs 86 –31.2 –3.7
+26 18 70 60 Cosmetics/PersnlCre 87 –27.0 –3.9
+27 38 88 59 Fnce–InvsmntMgt 63 –42.8 –1.4
+28 27 68 54 Insrnce–Prp/Cas/Titl 81 –32.3 +0.1
+29 32 64 12 DvrsifiedOprtions 83 –26.9 –3.1
+30 6 21 131 Retail/Whlsle–Food 86 –24.8 –2.1
+31 24 58 33 Medical–GenercDrgs 86 –17.0 –4.2
+32 40 131 114 Utility–WaterSupply 84 –23.6 –2.5
+33 41 30 14 PollutionCntrl–Svcs 92 –16.1 –3.5
+34 12 71 160 Banks–SuprRgional 84 –34.2 –0.5
+35 36 36 45 CommlSvcs–Misc 90 –38.7 –3.5
+36 33 20 28 Medical–Systems/Eqp 87 –41.6 –4.1
+37 60 106 74 Utility–ElctricPwr 83 –33.7 –3.1
+38 29 45 82 Food–Confectionery .. –6.3 –4.1
+39 23 12 40 Mdical/Dntal–Srvcs 88 –39.5 –2.7
+40 84 156 57 CommlSvcs–Hlthcre .. –38.4 –3.7
+41 119 153 70 FnancepblInvFdbnd .. –23.9 –0.9
+42 49 61 36 CmmlSvcs–Cnsltng 89 –32.3 –3.0
+43 31 5 20 Leisr–Tys/Gms/Hbby .. –20.6 –4.3
+44 51 81 86 Apparel–Shoes&Rel 83 –41.3 –4.1
+45 26 65 103 InvstmntBrokers 84 –54.3 –4.5
+46 35 89 191 Mdical–HlthMntOrg 82 –51.0 –3.2
+47 50 10 84 RetlWhsleBldgPrds 88 –19.7 –3.4
+48 47 104 65 Mdcal–WhlsleDrg 84 –30.2 –4.0
+49 73 117 97 HsholdofficFurnitr .. –47.4 –3.6
+50 92 168 6 Oil&Gas–USRoyalty 84 –14.8 –1.0
+51 22 29 142 Mdcal–NrsngHmes 88 –46.8 –4.4
+52 72 94 157 Telecom–WirlssEqp 78 –42.9 –3.0
+53 63 116 117 Medical/Dntal–Sppls 88 –34.4 –3.4
+54 66 43 77 Rtail/Whlsle–At/Prts 83 –36.8 –2.9
+55 43 49 67 Retail–MjrDscChns .. –30.0 –2.9
+56 76 67 62 Househld–Applncs .. –38.4 –4.7
+57 34 59 58 Cmpter–TechSrvcs 87 –31.7 –2.5
+58 75 111 49 Beverages–Alcoholic 77 –28.6 –3.3
+59 91 28 7 Transportation–Rail 93 –5.6 –2.5
+60 71 19 50 Rtail–HmeFrnshngs .. –30.1 –3.1
+61 90 15 11 Trnsportation–Trck 78 –23.6 –3.3
+62 19 9 55 Rtail–Clthing/Shoe 82 –41.8 –3.5
+63 48 22 188 Comptr–PrphrlEqp .. –32.4 –1.4
+64 45 16 10 Bldg–A/C&HeatingP 76 –21.2 –3.5
+65 57 35 53 ComptrSftwr–Entr 84 –48.4 –3.0
+66 86 76 25 Containers 80 –34.9 –2.6
+67 55 100 182 Telecom–Services 76 –51.5 –4.7
+68 103 127 164 Leisre–Mvies&Rel 52 –40.5 –5.6
+69 142 174 75 Oil&Gas–Trnsprt/Pip 85 –35.8 –1.1
+70 46 54 47 FnancialSrvcs–Misc 80 –52.6 –5.2
+71 67 83 69 FuneralSvcs&Rel .. –33.5 –3.5
+72 52 63 72 Finance–Reit .. –39.8 –5.3
+73 187 187 190 Textile–Mill/Hsehold .. –68.7 –1.2
+74 99 56 3 Bldg–Rsidnt/Comml 52 –17.9 –4.1
+75 65 27 18 Chemicals–Specialty 75 –39.8 –2.9
+76 80 38 193 Compter–Netwrking 79 –50.0 –4.0
+77 123 123 170 ComptrSftwr–Scrity .. –45.9 –2.7
+78 39 73 127 Insurance–Life 69 –38.5 –0.9
+79 54 112 105 Retail–Restaurants 83 –48.9 –2.7
+80 135 143 133 Retail–MailOrder&Di .. –48.7 –1.9
+81 83 87 98 Elec–Scntific/Msrng 79 –41.8 –2.7
+82 61 32 171 Bldg–Paint&Allied 65 –30.1 –3.5
+83 100 110 179 Retail–LeisurePrds .. –54.1 –3.8
+84 144 132 155 Rtail/Whlslecmp/Cll .. –46.0 –2.6
+85 56 46 112 Bldg–Mntnance&S .. –31.4 –3.4
+86 64 175 163 Media–Radio/Tv 53 –60.0 –6.5
+87 133 126 96 ComptrSftwr–Fincl 85 –46.8 –3.4
+88 98 57 80 Internet–Software .. –43.5 –5.8
+89 116 103 102 Aerospce/DfnseEqp 85 –46.8 –2.6
+90 128 86 41 Transportation–Svcs 81 –26.7 –3.8
+91 122 140 168 Chemicals–Plastics .. –47.0 –2.9
+92 87 37 107 Bldg–CnstrPrds/Msc 67 –41.7 –2.7
+93 105 135 88 Cmptr–IntgrtdSyst 77 –42.4 –2.0
+94 95 55 144 Elec–SmicondctrMfg 73 –51.7 –0.1
+95 112 144 120 RealEstateOprtions 54 –33.2 –1.8
+96 121 133 192 Houshld–CnsmerElc .. –53.3 –1.6
+97 69 50 106 CmmlSvcs–MrktRch 82 –37.5 –4.7
+98 159 96 71 Telecom–WirlssSvcs 84 –56.9 –5.7
+99 81 77 156 RtailWhlsleOffcSup .. –42.2 –4.3
+100 111 167 175 Bldg–Mbile/Mfg&Rv .. –52.2 –3.9
+101 110 150 34 Bvrages–SftDrinks 78 –44.1 –4.1
+102 108 121 177 OfficeSuppliesMfg .. –47.7 –3.3
+103 42 44 169 Telecom–Equipment 67 –50.0 –3.1
+104 70 47 124 CommlSvcs–Stffng .. –46.0 –3.6
+105 139 172 35 Telecom–SrvcsFrgn 76 –49.4 –6.3
+106 140 139 95 Elec–SemicndctrEqp .. –55.2 –2.8
+107 114 95 149 CompterSftwr–Dsgn 80 –44.2 –3.2
+108 153 122 122 Elec–ContractMfg .. –42.8 –1.2
+109 96 102 134 Bldg–HandTools 62 –37.0 –4.6
+110 68 48 187 Fincecnsmer/CmlLns 77 –49.4 –5.8
+111 168 179 145 Oil&Gas–Rfing/Mkt 69 –54.1 –3.4
+112 101 53 186 Intrnet–NtwrkSltns .. –49.7 –2.5
+113 115 119 46 Trnsprt–AirFreight .. –39.8 –4.1
+114 160 173 24 AgriculturalOprtions 62 –39.2 –3.4
+115 74 66 44 PollutnCntrl–Eqp 77 –38.0 –3.2
+116 59 18 93 Apprel–ClthingMfg 72 –42.3 –5.4
+117 104 85 135 Leisure–Products 51 –52.6 –4.5
+118 88 141 174 Telcom–FibrOptcs .. –55.1 –4.0
+119 146 115 118 CommlSvcs–Leasing 72 –42.6 –3.3
+120 85 109 180 Auto/Trck–RplcPrts .. –56.0 –4.7
+121 120 98 172 Media–Books .. –49.4 –3.1
+122 150 163 148 CommlSvcs–Prntng .. –56.8 –3.9
+123 89 25 29 Mchnry–GenIndstrl 68 –43.8 –5.0
+124 58 74 115 Paper&PaperProduc 56 –52.1 –5.1
+125 118 90 99 Elctricl–Equipmnt 72 –52.0 –4.6
+126 132 138 89 Elec–MiscProducts .. –54.9 –6.2
+127 163 170 110 Financ–PblInvFdeqt .. –48.4 –2.6
+128 143 158 17 Food–MeatProducts .. –40.2 –4.6
+129 97 151 141 Banks–MoneyCntr 70 –47.5 –7.7
+130 129 128 165 Bldg–Cment/Cncrt .. –47.4 –7.1
+131 125 136 158 Internet–Isp .. –49.4 –3.2
+132 109 51 27 Mchnry–MtlHdlg .. –42.0 –3.7
+133 145 62 108 Trnsprttion–EqpMfg .. –43.6 –7.5
+134 78 8 109 Food–DairyProducts .. –34.2 –2.4
+135 62 79 104 Bldg–WoodPrds .. –41.6 –8.8
+136 136 148 78 Aerospace/Defense .. –43.3 –3.8
+137 138 142 162 ConsumerProd–Misc .. –55.4 –3.6
+138 127 114 136 ComptrSftwr–Dsktp .. –48.5 –3.0
+139 161 134 42 CmptrSftwr–Edu .. –46.7 –5.7
+140 124 155 166 Internet–Content 83 –52.5 –6.2
+141 171 183 138 AutoManufacturers .. –46.6 –4.8
+142 130 147 64 Insrnce–Acc&Heal .. –50.1 +2.2
+143 79 17 176 Retail–Misc 76 –58.2 –5.0
+144 94 93 159 Media–Cble/StlliteTv 63 –52.7 –7.2
+145 152 120 167 Comptr–DataStrge .. –52.3 +0.1
+146 134 108 161 Elec–PrtsDistribtrs .. –53.0 –3.5
+147 106 84 116 Internet–ECommerce 72 –52.5 –4.3
+148 148 149 129 MetalPrds–Fstners .. –39.1 –1.9
+149 137 82 100 Elec–Cmpnent/Cntr .. –48.9 –5.2
+150 82 41 153 Retail/Whlsle–Jwlry .. –51.4 –3.7
+151 102 72 85 Oil&Gas–IntlExplPr .. –58.7 –5.5
+152 177 186 91 Finc–PblInvFd–Fn .. –54.8 –4.0
+153 151 157 26 Media–Periodicals .. –48.5 –3.0
+154 149 181 140 RealEstateDevlpmt .. –55.3 –4.3
+155 113 52 43 Medcal–Hospitals .. –39.2 –1.6
+156 156 182 56 Oil&Gas–IntlIntegra 71 –52.0 –6.8
+157 117 78 146 Comptr–Manufctrs .. –49.4 –2.6
+158 167 125 23 Chemicals–Basic .. –39.8 –3.8
+159 155 160 154 Office–Eqp&Autom .. –48.2 –6.1
+160 93 40 21 MetalProc&Fabrica 53 –57.3 –6.4
+161 126 99 151 Leisure–Services 56 –59.8 –3.4
+162 166 42 13 Energy–Other 62 –55.1 –5.0
+163 157 161 119 ComlSvcs–Advrtsng .. –59.3 –3.1
+164 141 113 125 Retail–CnsmrElec .. –54.6 –3.3
+165 158 165 130 Media–Diversified 58 –57.4 –2.2
+166 164 171 137 Insrnce–Divrsified .. –58.3 –2.2
+167 131 80 1 Oil&Gas–USExplPro 68 –41.7 –2.9
+168 165 146 128 Transportation–Ship .. –53.2 –5.5
+169 172 101 150 Bldg–HeavyConstr .. –56.1 –5.1
+170 179 159 123 Househld–Housewrs .. –51.1 –2.4
+171 176 195 183 Media–Newspapers .. –64.1 –4.2
+172 184 197 8 MetalOres–Gld/Silvr 45 –59.4 +3.8
+173 185 137 184 Trucks&Parts–HvyD .. –62.5 –4.3
+174 154 129 38 Oil&Gas–FieldServic 55 –53.9 –5.4
+175 173 177 32 Oil&GascdnExplPro .. –42.1 –2.1
+176 170 145 147 Leisure–Hotels&Mot .. –57.7 –2.3
+177 174 164 189 Leisre–Gamng/Equip 54 –72.5 –5.9
+178 169 97 132 Machnry–Tools&Re .. –52.6 –4.0
+179 147 105 173 Retail–DprtmntStrs .. –59.9 –4.8
+180 178 166 37 MetalPrds–Distribtr .. –53.8 –6.6
+181 191 188 197 Fnanc–Mrtg&RelSvc .. –82.4 –4.2
+182 180 185 196 Leisre–PhtoEqp/Rel .. –60.9 –6.3
+183 175 178 121 Banks–Foreign .. –60.1 –8.6
+184 188 191 81 Food–Flour&Grain .. –44.6 +1.6
+185 182 180 9 Oil&Gas–Drilling 62 –51.3 –5.4
+186 190 192 87 Oil&Gas–USIntgrt .. –55.9 –4.5
+187 162 107 113 Oil&Gas–Mchnry/Eq 57 –58.5 –5.8
+188 181 152 92 Auto/Trck–OrgnlEqp .. –65.3 –6.0
+189 183 190 68 Oil&Gas–CdnIntgrt .. –51.5 –1.3
+190 186 184 19 Mchinry–Cnstr/Mng .. –58.0 –5.4
+191 193 169 4 Machinery–Farm .. –58.7 –4.4
+192 189 162 5 Chemicals–Fertilizers 64 –57.5 –1.4
+193 196 193 15 MetalOres 54 –59.1 –1.9
+194 192 176 139 Auto/Trck–Tirs&M .. –64.2 –6.0
+195 195 194 181 Steel–SpcltyAlloys .. –74.1 –2.5
+196 194 189 2 Steel–Producers .. –63.4 –5.9
+197 197 196 194 Mining–Gems .. –77.0 –1.7
+
+102808
+1 2 2 154 Retail–Discnt&Vari .. +9.8–1.6
+2 14 59 22 Food–MscPrparation 93 –20.1–1.6
+3 43138 23 Tobacco 89 –18.3 0.0
+4 4 5 69 Mdcal–Outpnt/HmCr 95 –25.2–5.2
+5 9 4 100 CommlSvcs–Schools 97 –15.1–0.9
+6 34161 47 Fnanc–IdxTrckngFd .. –29.8–0.7
+7 33113 62 Mdcal–Drg/Dvrsified .. –7.8–1.5
+8 19 6 60 Medical–Biomed/Bth 90 –32.2–5.9
+9 15 41 42 Soap&ClngPreparat .. –13.6–3.5
+10 16 47 115 Retail–Spr/MiniMkts 87 –30.9–5.1
+11 5 22 95 Retail–DrugStores .. –9.6–4.2
+12 1 9 131 Banks–Wst/Sthwst 87 –32.4–1.7
+13 18 13 101 ComlSvcs–Scrty 81 –38.6–3.2
+14 41 53 65 Utility–GasDstribtn 86 –23.4–4.3
+15 6 44 111 Banks–Southeast 87 –24.7–1.9
+16 7 3 184 Insurance–Brokers 83 –21.0–3.2
+17 31 76 67 Cosmetics/PersnlCre 88 –27.7–1.6
+18 10 48 39 Banks–Northeast 88 –19.5–1.8
+19 30 26 87 Medical–EthicalDrgs 87 –33.5–3.5
+20 21 21 58 Medical–Products 91 –31.5–4.4
+21 91 49 196 Trnsprttin–Airlne 83 –40.3 –6.1
+22 22 96 108 Financ–Svings&Lo 90 –32.8 –1.8
+23 25 95 36 Fnce–InvsmntMgt 65 –44.5 –3.1
+24 11 43 79 Banks–Midwest 82 –26.7 –2.4
+25 3 12 178 ComptrSftwr–Mdcl 92 –33.1 –1.4
+26 12 1 102 Medical–Genetics .. –28.8 –7.3
+27 48 82 49 Insrnce–Prp/Cas/Titl 81 –35.6 –5.0
+28 8 7 137 Retail/Whlsle–Food 87 –26.1 –1.7
+29 13 10 32 Elec–MilitarySystems 91 –8.1 –3.0
+30 49 125 134 Utility–WaterSupply 84 –26.3 –3.0
+31 45 80 21 Medical–GenercDrgs 87 –19.7 –3.0
+32 39 45 51 CommlSvcs–Misc 90 –40.7 –3.2
+33 60 102 74 Utility–ElctricPwr 83 –35.9 –3.6
+34 137 168 73 FnancepblInvFdbnd .. –23.9 0.0
+35 23 51 164 Banks–SuprRgional 84 –34.3 –0.1
+36 40 18 30 Medical–Systems/Eqp 85 –43.6 –3.6
+37 50 40 20 PollutionCntrl–Svcs 90 –21.2 –6.6
+38 77 39 181 Comptr–PrphrlEqp .. –32.6 0.0
+39 42 124 17 DvrsifiedOprtions 82 –30.4 –5.6
+40 84 146 83 CommlSvcs–Hlthcre .. –39.6 –2.0
+41 143 120 9 Oil&Gas–USRoyalty 85 –16.2 –1.7
+42 29 17 28 Leisr–Tys/Gms/Hbby .. –21.9 –1.6
+43 35 11 53 Mdical/Dntal–Srvcs 84 –42.7 –5.4
+44 37 108 89 Apparel–Shoes&Rel 84 –42.4 –1.7
+45 24 61 52 CmmlSvcs–Cnsltng 88 –35.3 –4.4
+46 81 65 84 Food–Confectionery .. –9.1 –2.5
+47 32 14 97 RetlWhsleBldgPrds 87 –22.1 –3.0
+48 27 46 122 InvstmntBrokers 82 –56.9 –5.1
+49 67 94 141 HsholdofficFurnitr .. –50.3 –5.3
+50 74 107 85 Mdcal–WhlsleDrg 83 –32.7 –3.1
+51 75 114 43 Retail–MjrDscChns .. –31.0 –1.0
+52 62 81 78 Rtail/Whlsle–At/Prts 83 –38.2 –2.1
+53 57 55 56 Househld–Applncs .. –40.0 –2.7
+54 53 72 24 Containers 82 –37.6 –4.2
+55 46 27 13 Trnsportation–Trck 80 –23.0 +0.4
+56 17 8 54 Rtail–Clthing/Shoe 84 –43.4 –2.6
+57 159 170 68 Oil&Gas–Trnsprt/Pip 87 –37.0 –2.0
+58 64 103 191 Mdical–HlthMntOrg 80 –54.6 –7.2
+59 76 134 50 Beverages–Alcoholic 77 –29.5 –1.3
+60 20 16 6 Bldg–A/C&HeatingP 75 –25.3 –5.1
+61 66 93 5 Bldg–Rsidnt/Comml 55 –19.8 –2.7
+62 55 56 133 Internet–Software .. –45.7 –3.1
+63 68 28 14 Chemicals–Specialty 75 –43.8 –6.6
+64 44 57 66 Cmpter–TechSrvcs 86 –34.1 –4.0
+65 87 132 121 Medical/Dntal–Sppls 85 –37.6 –4.8
+66 70 105 138 Telecom–WirlssEqp 76 –44.8 –3.4
+67 26 42 61 Rtail–HmeFrnshngs .. –31.4 –1.9
+68 71 34 10 Transportation–Rail 91 –9.3 –4.2
+69 58 104 96 FuneralSvcs&Rel .. –35.1 –2.4
+70 69 135 147 Leisre–Mvies&Rel 51 –42.0 –2.4
+71 65 68 55 FnancialSrvcs–Misc 80 –55.1 –5.5
+72 36 62 80 Finance–Reit .. –43.3 –5.7
+73 52 37 59 ComptrSftwr–Entr 84 –49.8 –2.8
+74 28 29 158 Mdcal–NrsngHmes 84 –51.2 –8.2
+75 101 119 185 Telecom–Services 73 –52.6 –2.4
+76 56 23 194 Compter–Netwrking 78 –51.5 –2.5
+77 187 192 190 Textile–Mill/Hsehold .. –68.7 –0.1
+78 85 91 81 Elec–Scntific/Msrng 78 –44.1 –4.2
+79 38 67 187 Retail–LeisurePrds .. –55.6 –3.5
+80 120 162 37 Bvrages–SftDrinks 80 –44.8 –1.7
+81 54 86 124 Retail–Restaurants 82 –49.2 –0.8
+82 106 88 177 ComptrSftwr–Scrity .. –48.1 –3.5
+83 59 144 151 Media–Radio/Tv 54 –59.8 –3.7
+84 97 71 109 Insurance–Life 66 –41.6 –6.0
+85 73 141 182 Bldg–Mbile/Mfg&Rv .. –55.1 –5.9
+86 88 66 110 Bldg–Mntnance&S .. –33.7 –3.5
+87 113 166 152 Retail–MailOrder&Di .. –50.8 –4.1
+88 133 139 26 AgriculturalOprtions 66 –42.0 –4.0
+89 93 25 161 Telecom–Equipment 69 –51.6 –2.9
+90 94 85 173 RtailWhlsleOffcSup .. –43.9 –2.9
+91 122 112 34 Transportation–Svcs 81 –27.4 –1.2
+92 108 133 157 Rtail/Whlslecmp/Cll .. –48.4 –4.4
+93 80 70 119 Elec–SmicondctrMfg 75 –52.1 –1.2
+94 118 126 123 ComptrSftwr–Fincl 83 –49.3 –5.3
+95 61 60 136 CommlSvcs–Stffng .. –47.5 –2.9
+96 123 101 104 Aerospce/DfnseEqp 83 –50.0 –6.1
+97 179 181 149 Oil&Gas–Rfing/Mkt 70 –55.5 –3.6
+98 51 31 77 Apprel–ClthingMfg 73 –43.9 –2.9
+99 126 158 64 Telecom–WirlssSvcs 84 –57.6 –1.7
+100 90 15 171 Bldg–Paint&Allied 59 –35.5 –7.8
+101 79 30 99 Bldg–CnstrPrds/Msc 65 –43.7 –3.2
+102 95 115 107 Bldg–HandTools 64 –39.6 –4.0
+103 124 122 106 Elec–SemicndctrEqp .. –56.5 –2.9
+104 100 118 174 OfficeSuppliesMfg .. –49.3 –3.0
+105 132 174 40 Telecom–SrvcsFrgn 75 –50.9 –3.4
+106 47 98 139 CmmlSvcs–MrktRch 82 –40.2 –4.9
+107 112 147 129 Cmptr–IntgrtdSyst 76 –45.0 –4.4
+108 139 74 188 Houshld–CnsmerElc .. –54.2 –3.3
+109 105 33 186 Intrnet–NtwrkSltns .. –51.0 –2.9
+110 110 167 31 Food–MeatProducts .. –42.5 –3.3
+111 99 155 86 RealEstateOprtions 49 –34.5 –2.0
+112 78 64 162 Leisure–Products 53 –53.9 –2.7
+113 86 32 25 PollutnCntrl–Eqp 77 –39.8 –3.0
+114 102 129 38 Trnsprt–AirFreight .. –43.3 –5.8
+115 96 109 183 Auto/Trck–RplcPrts .. –59.3 –7.4
+116 144 97 175 Telcom–FibrOptcs .. –55.8 –1.4
+117 109 127 135 CommlSvcs–Leasing 72 –44.6 –3.6
+118 98 24 15 Mchnry–GenIndstrl 69 –46.0 –4.0
+119 116 92 130 CompterSftwr–Dsgn 80 –45.7 –2.5
+120 165 180 113 Financ–PblInvFdeqt .. –50.0 –3.0
+121 154 163 72 Aerospace/Defense .. –45.1 –3.1
+122 72 52 75 Bldg–WoodPrds .. –44.1 –4.1
+123 125 90 145 Internet–Isp .. –52.1 –5.5
+124 92 73 88 Trnsprttion–EqpMfg .. –45.6 –3.6
+125 129 151 169 Media–Books .. –52.5 –5.9
+126 135 153 144 CommlSvcs–Prntng .. –59.2 –5.3
+127 121 142 170 ConsumerProd–Misc .. –58.0 –5.7
+128 63 36 192 Fincecnsmer/CmlLns 73 –51.6 –4.5
+129 107 54 148 Internet–Content 82 –53.1 –4.0
+130 142 154 118 Elec–ContractMfg .. –45.2 –3.3
+131 157 117 44 CmptrSftwr–Edu .. –48.6 –4.6
+132 83 87 93 Paper&PaperProduc 55 –55.5 –6.4
+133 82 20 180 Retail–Misc 77 –59.4 –3.4
+134 134 123 156 Media–Cble/StlliteTv 66 –53.8 –2.6
+135 138 69 76 Elec–Cmpnent/Cntr .. –49.9 –3.1
+136 103 83 105 Elctricl–Equipmnt 70 –54.0 –4.8
+137 131 128 114 ComptrSftwr–Dsktp .. –50.5 –3.8
+138 147 149 128 MetalPrds–Fstners .. –40.8 –2.0
+139 114 157 140 Banks–MoneyCntr .. –51.0 –6.5
+140 156 140 172 Comptr–DataStrge .. –54.0 –3.7
+141 111 148 116 Food–DairyProducts .. –40.1 –11
+142 89 19 167 Retail/Whlsle–Jwlry .. –53.0 –3.9
+143 130 99 163 Chemicals–Plastics .. –49.9 –5.3
+144 119 100 160 Bldg–Cment/Cncrt .. –50.7 –6.2
+145 169 194 91 Finc–PblInvFd–Fn .. –56.4 –3.5
+146 136 111 165 Elec–PrtsDistribtrs .. –54.4 –3.0
+147 128 79 63 Internet–ECommerce 72 –54.1 –3.6
+148 151 106 18 Chemicals–Basic .. –42.2 –4.9
+149 161 164 33 Media–Periodicals .. –51.1 –4.6
+150 150 185 153 AutoManufacturers .. –50.8 –7.3
+151 115 75 46 Mchnry–MtlHdlg .. –45.9 –6.8
+152 145 77 27 Medcal–Hospitals .. –43.3 –6.6
+153 152 143 82 Insrnce–Acc&Heal .. –54.0 –7.9
+154 146 121 94 Elec–MiscProducts .. –55.8 –5.2
+155 127 175 146 RealEstateDevlpmt .. –58.2 –6.3
+156 140 35 8 Energy–Other 61 –58.3 –7.4
+157 164 172 45 Oil&Gas–IntlIntegra 70 –55.8 –6.1
+158 148 89 98 Retail–CnsmrElec .. –56.6 –4.4
+159 153 165 142 Office–Eqp&Autom .. –50.5 –7.4
+160 104 130 127 Comptr–Manufctrs .. –51.3 –3.7
+161 117 38 35 MetalProc&Fabrica 51 –59.5 –5.3
+162 149 131 155 Leisure–Services 57 –61.0 –3.8
+163 178 177 112 Househld–Housewrs .. –52.3 –2.5
+164 163 171 126 Media–Diversified 57 –60.3 –6.8
+165 183 50 2 Oil&Gas–USExplPro 67 –45.8 –7.0
+166 141 169 150 ComlSvcs–Advrtsng .. –60.7 –4.0
+167 171 156 117 Transportation–Ship .. –56.0 –5.3
+168 166 58 92 Bldg–HeavyConstr .. –58.1 –4.5
+169 155 116 57 Oil&Gas–IntlExplPr .. –62.3 –5.7
+170 168 176 143 Insrnce–Divrsified .. –62.3 –11
+171 176 193 195 Leisre–PhtoEqp/Rel .. –62.4 –3.9
+172 167 196 168 Media–Newspapers .. –65.3 –3.2
+173 162 188 12 MetalOres–Gld/Silvr 44 –63.9 –9.6
+174 180 159 189 Leisre–Gamng/Equip 55 –73.5 –3.7
+175 177 84 16 Oil&Gas–FieldServic 54 –56.8 –6.8
+176 160 137 179 Retail–DprtmntStrs .. –60.5 –1.0
+177 193 173 197 Fnanc–Mrtg&RelSvc .. –83.2 –4.3
+178 186 136 19 Oil&GascdnExplPro .. –47.1 –7.8
+179 184 145 176 Trucks&Parts–HvyD .. –64.5 –5.3
+180 189 160 7 Oil&Gas–Drilling 63 –53.4 –4.4
+181 158 110 132 Machnry–Tools&Re .. –54.5 –4.0
+182 188 195 90 Food–Flour&Grain .. –47.4 –5.3
+183 175 182 125 Banks–Foreign .. –60.3 –1.5
+184 173 152 159 Leisure–Hotels&Mot .. –59.9 –6.1
+185 181 178 29 Mchinry–Cnstr/Mng .. –58.7 –1.8
+186 174 63 70 Oil&Gas–Mchnry/Eq 56 –62.0 –8.5
+187 192 191 71 Oil&Gas–USIntgrt .. –58.8 –6.5
+188 170 150 41 MetalPrds–Distribtr .. –57.2 –7.4
+189 191 184 48 Oil&Gas–CdnIntgrt .. –56.0 –8.5
+190 182 186 3 Machinery–Farm .. –61.0 –6.1
+191 190 78 4 Chemicals–Fertilizers 66 –59.2 –4.4
+192 172 179 103 Auto/Trck–OrgnlEqp .. –68.3 –8.0
+193 195 190 11 MetalOres 54 –62.7 –6.0
+194 185 183 120 Auto/Trck–Tirs&M .. –67.2 –8.4
+195 194 187 1 Steel–Producers .. –64.4 –7.8
+196 196 189 166 Steel–SpcltyAlloys .. –75.7 –6.6
+197 197 197 193 Mining–Gems .. –78.5 –6.7
+
+103008
+1 2 2 154 Retail–Discnt&Vari .. +22.6+2.0
+2 7 3 184 Insurance–Brokers 85 –11.7+0.7
+3 4 5 69 Mdcal–Outpnt/HmCr 95 –15.5+3.0
+4 9 4 100 CommlSvcs–Schools 98 –4.2+4.8
+5 5 22 95 Retail–DrugStores .. –5.4–1.9
+6 1 9 131 Banks–Wst/Sthwst 86 –27.9+0.4
+7 41 53 65 Utility–GasDstribtn 86 –16.3+0.9
+8 14 59 22 Food–MscPrparation 92 –17.0–0.9
+9 43138 23 Tobacco 92 –16.2–2.5
+10 13 10 32 Elec–MilitarySystems 92 –1.9+0.3
+11 19 6 60 Medical–Biomed/Bth 91 –28.2+2.3
+12 18 13 101 ComlSvcs–Scrty 81 –34.9+1.6
+13 15 41 42 Soap&ClngPreparat .. –8.8+0.9
+14 6 44 111 Banks–Southeast 87 –21.7–0.7
+15 31 76 67 Cosmetics/PersnlCre 89 –22.8–0.2
+16 21 21 58 Medical–Products 91 –27.3+2.0
+17 33113 62 Mdcal–Drg/Dvrsified .. –5.8–2.9
+18 16 47 115 Retail–Spr/MiniMkts 88 –26.2+0.3
+19 10 48 39 Banks–Northeast 87 –16.0–0.2
+20 11 43 79 Banks–Midwest 83 –22.0–0.3
+21 91 49 196 Trnsprttin–Airlne 84 –37.9 –3.5
+22 22 96 108 Financ–Svings&Lo 89 –31.2 –0.2
+23 12 1 102 Medical–Genetics .. –22.8 +3.2
+24 3 12 178 ComptrSftwr–Mdcl 90 –27.7 +0.8
+25 30 26 87 Medical–EthicalDrgs 87 –30.5 –0.1
+26 25 95 36 Fnce–InvsmntMgt 69 –40.0 +1.3
+27 34 161 47 Fnanc–IdxTrckngFd .. –29.0 +1.0
+28 45 80 21 Medical–GenercDrgs 89 –14.6 +1.0
+29 48 82 49 Insrnce–Prp/Cas/Titl 81 –30.7 +1.9
+30 40 18 30 Medical–Systems/Eqp 88 –39.2 +2.5
+31 49 125 134 Utility–WaterSupply 85 –20.3 +1.4
+32 29 17 28 Leisr–Tys/Gms/Hbby .. –14.0 +1.8
+33 23 51 164 Banks–SuprRgional 85 –28.7 –3.1
+34 8 7 137 Retail/Whlsle–Food 86 –22.7 +0.5
+35 60 102 74 Utility–ElctricPwr 84 –31.1 –0.9
+36 39 45 51 CommlSvcs–Misc 90 –37.1 –0.3
+37 32 14 97 RetlWhsleBldgPrds 89 –14.5 +0.7
+38 75 114 43 Retail–MjrDscChns 91 –20.4 +2.0
+39 81 65 84 Food–Confectionery .. –1.2 +0.1
+40 77 39 181 Comptr–PrphrlEqp .. –29.0 –1.4
+41 143 120 9 Oil&Gas–USRoyalty 84 –13.1 +4.0
+42 50 40 20 PollutionCntrl–Svcs 84 –19.2 +2.4
+43 62 81 78 Rtail/Whlsle–At/Prts 85 –29.6 +4.3
+44 137 168 73 FnancepblInvFdbnd .. –23.3 0.0
+45 27 46 122 InvstmntBrokers 83 –51.9 –0.4
+46 42 124 17 DvrsifiedOprtions 82 –27.4 +1.8
+47 17 8 54 Rtail–Clthing/Shoe 86 –35.6 +2.0
+48 20 16 6 Bldg–A/C&HeatingP 77 –15.8 +2.3
+49 84 146 83 CommlSvcs–Hlthcre .. –37.8 –0.3
+50 38 67 187 Retail–LeisurePrds .. –51.8 +2.0
+51 67 94 141 HsholdofficFurnitr .. –47.0 –1.0
+52 35 11 53 Mdical/Dntal–Srvcs 78 –41.5 +1.9
+53 37 108 89 Apparel–Shoes&Rel 84 –39.2 +0.7
+54 74 107 85 Mdcal–WhlsleDrg 85 –30.2 –2.5
+55 71 34 10 Transportation–Rail 93 +1.5 +4.0
+56 46 27 13 Trnsportation–Trck 79 –18.4 +3.0
+57 24 61 52 CmmlSvcs–Cnsltng 84 –32.7 –0.4
+58 28 29 158 Mdcal–NrsngHmes 87 –48.1 +2.3
+59 159 170 68 Oil&Gas–Trnsprt/Pip 86 –34.6 +1.3
+60 58 104 96 FuneralSvcs&Rel .. –29.9 +0.9
+61 26 42 61 Rtail–HmeFrnshngs .. –29.1 +3.4
+62 70 105 138 Telecom–WirlssEqp 80 –40.3 +1.6
+63 56 23 194 Compter–Netwrking 84 –45.6 +2.9
+64 36 62 80 Finance–Reit .. –36.6 –1.8
+65 66 93 5 Bldg–Rsidnt/Comml 57 –15.8 +2.7
+66 65 68 55 FnancialSrvcs–Misc 80 –50.5 –0.8
+67 53 72 24 Containers 78 –33.2 0.0
+68 69 135 147 Leisre–Mvies&Rel 52 –38.8 +2.3
+69 76 134 50 Beverages–Alcoholic 76 –27.6 –0.4
+70 44 57 66 Cmpter–TechSrvcs 85 –30.1 +0.2
+71 68 28 14 Chemicals–Specialty 75 –38.0 +4.3
+72 87 132 121 Medical/Dntal–Sppls 83 –34.2 +2.2
+73 52 37 59 ComptrSftwr–Entr 83 –45.7 –0.3
+74 64 103 191 Mdical–HlthMntOrg 81 –54.1 –4.2
+75 106 88 177 ComptrSftwr–Scrity 87 –44.1 0.0
+76 55 56 133 Internet–Software .. –39.6 +3.0
+77 101 119 185 Telecom–Services 75 –50.2 –0.7
+78 73 141 182 Bldg–Mbile/Mfg&Rv .. –51.6 +3.1
+79 54 86 124 Retail–Restaurants 82 –44.4 +2.5
+80 133 139 26 AgriculturalOprtions 69 –37.7 +1.0
+81 63 36 192 Fincecnsmer/CmlLns 80 –49.1 –0.3
+82 51 31 77 Apprel–ClthingMfg 78 –36.6 +1.0
+83 120 162 37 Bvrages–SftDrinks 81 –39.0 +0.3
+84 118 126 123 ComptrSftwr–Fincl 82 –44.5 –1.2
+85 85 91 81 Elec–Scntific/Msrng 78 –40.9 +1.6
+86 59 144 151 Media–Radio/Tv 52 –56.5 +1.9
+87 90 15 171 Bldg–Paint&Allied 64 –28.0 +2.1
+88 100 118 174 OfficeSuppliesMfg .. –44.0 +0.8
+89 99 155 86 RealEstateOprtions 56 –30.8 +0.1
+90 57 55 56 Househld–Applncs .. –38.8 –0.4
+91 123 101 104 Aerospce/DfnseEqp 86 –43.0 +3.4
+92 122 112 34 Transportation–Svcs 81 –20.3 +2.2
+93 88 66 110 Bldg–Mntnance&S .. –29.8 +1.0
+94 79 30 99 Bldg–CnstrPrds/Msc 68 –41.2 +0.6
+95 97 71 109 Insurance–Life 64 –37.9 +0.4
+96 80 70 119 Elec–SmicondctrMfg 75 –48.3 +0.6
+97 132 174 40 Telecom–SrvcsFrgn 77 –44.6 +2.5
+98 94 85 173 RtailWhlsleOffcSup .. –39.4 +1.9
+99 96 109 183 Auto/Trck–RplcPrts .. –54.5 +3.5
+100 93 25 161 Telecom–Equipment 67 –47.5 +2.2
+101 86 32 25 PollutnCntrl–Eqp 78 –33.4 +2.0
+102 112 147 129 Cmptr–IntgrtdSyst 77 –41.4 –0.5
+103 124 122 106 Elec–SemicndctrEqp .. –54.8 –1.1
+104 155 116 57 Oil&Gas–IntlExpl Pr .. –54.6 +9.0
+105 61 60 136 CommlSvcs–Stffng .. –44.0 –0.3
+106 95 115 107 Bldg–HandTools 65 –35.0 +1.3
+107 187 192 190 Textile–Mill/Hsehold .. –68.0 –0.4
+108 78 64 162 Leisure–Products 57 –49.4 +2.6
+109 108 133 157 Rtail/Whlslecmp/Cll .. –45.8 +0.7
+110 105 33 186 Intrnet–NtwrkSltns .. –45.6 +2.7
+111 72 52 75 Bldg–WoodPrds .. –36.4 +6.2
+112 126 158 64 Telecom–WirlssSvcs 85 –51.2 +4.0
+113 113 166 152 Retail–MailOrder&Di .. –46.5 +4.0
+114 83 87 93 Paper&PaperProduc 56 –52.5 0.0
+115 154 163 72 Aerospace/Defense .. –39.3 –0.8
+116 179 181 149 Oil&Gas–Rfing/Mkt 69 –52.7 +2.8
+117 98 24 15 Mchnry–GenIndstrl 71 –40.4 +1.5
+118 102 129 38 Trnsprt–AirFreight .. –40.5 –1.7
+119 151 106 18 Chemicals–Basic 83 –32.2 +7.1
+120 128 79 63 Internet–ECommerce 77 –48.4 +3.7
+121 121 142 170 ConsumerProd–Misc .. –54.5 +0.4
+122 114 157 140 Banks–MoneyCntr 68 –47.1 +1.4
+123 129 151 169 Media–Books .. –47.8 +4.9
+124 165 180 113 Financ–PblInvFdeqt .. –45.9 +2.9
+125 107 54 148 Internet–Content 86 –47.4 +0.4
+126 150 185 153 AutoManufacturers .. +6.0 +5.0
+127 142 154 118 Elec–ContractMfg .. –42.3 –0.8
+128 125 90 145 Internet–Isp .. –47.2 +0.5
+129 103 83 105 Elctricl–Equipmnt 74 –48.9 +5.1
+130 111 148 116 Food–DairyProducts .. –29.5 –0.6
+131 109 127 135 CommlSvcs–Leasing 71 –39.6 +3.7
+132 156 140 172 Comptr–DataStrge .. –51.1 +0.7
+133 47 98 139 CmmlSvcs–MrktRch 78 –37.2 +0.5
+134 164 172 45 Oil&Gas–IntlIntegra 77 –47.8 +4.3
+135 144 97 175 Telcom–FibrOptcs .. –53.3 +2.2
+136 134 123 156 Media–Cble/StlliteTv 69 –49.0 0.0
+137 82 20 180 Retail–Misc 78 –57.0 +2.2
+138 119 100 160 Bldg–Cment/Cncrt .. –46.1 +6.8
+139 130 99 163 Chemicals–Plastics .. –44.9 +3.0
+140 110 167 31 Food–MeatProducts .. –43.3 +2.6
+141 92 73 88 Trnsprttion–EqpMfg .. –41.3 +3.2
+142 131 128 114 ComptrSftwr–Dsktp 72 –45.2 +0.2
+143 116 92 130 CompterSftwr–Dsgn 76 –42.7 –1.1
+144 169 194 91 Finc–PblInvFd–Fn .. –52.0 +3.3
+145 146 121 94 Elec–MiscProducts .. –53.5 –0.8
+146 147 149 128 MetalPrds–Fstners .. –36.7 +0.1
+147 183 50 2 Oil&Gas–USExplPro 72 –37.5 +6.9
+148 149 131 155 Leisure–Services 62 –56.9 +3.4
+149 138 69 76 Elec–Cmpnent/Cntr .. –45.5 +1.2
+150 157 117 44 CmptrSftwr–Edu .. –46.0 –0.5
+151 152 143 82 Insrnce–Acc&Heal .. –50.7 –1.8
+152 145 77 27 Medcal–Hospitals .. –39.8 +3.3
+153 115 75 46 Mchnry–MtlHdlg .. –42.4 +1.6
+154 161 164 33 Media–Periodicals .. –48.9 –0.7
+155 89 19 167 Retail/Whlsle–Jwlry .. –46.1 +1.8
+156 104 130 127 Comptr–Manufctrs .. –45.8 +2.6
+157 139 74 188 Houshld–CnsmerElc .. –53.1 –1.2
+158 153 165 142 Office–Eqp&Autom .. –43.9 –2.2
+159 135 153 144 CommlSvcs–Prntng .. –58.9 –5.3
+160 163 171 126 Media–Diversified 62 –55.2 +0.6
+161 136 111 165 Elec–PrtsDistribtrs .. –51.7 –0.4
+162 127 175 146 RealEstateDevlpmt .. –53.3 +1.3
+163 162 188 12 MetalOres–Gld/Silvr 49 –54.9 +13
+164 148 89 98 Retail–CnsmrElec .. –52.3 –1.1
+165 117 38 35 MetalProc&Fabrica 53 –53.3 +6.3
+166 166 58 92 Bldg–HeavyConstr .. –53.5 +3.7
+167 178 177 112 Househld–Housewrs .. –49.0 –1.6
+168 180 159 189 Leisre–Gamng/Equip 60 –67.9 +16
+169 186 136 19 Oil&GascdnExpl Pro .. –38.0 +11
+170 193 173 197 Fnanc–Mrtg&RelSvc .. –81.6 +4.9
+171 141 169 150 ComlSvcs–Advrtsng .. –57.7 +1.4
+172 171 156 117 Transportation–Ship .. –53.4 +2.7
+173 177 84 16 Oil&Gas–FieldServic 60 –50.6 +6.3
+174 168 176 143 Insrnce–Divrsified .. –57.5 –2.0
+175 167 196 168 Media–Newspapers .. –64.8 –1.4
+176 173 152 159 Leisure–Hotels&Mot .. –53.3 +5.4
+177 140 35 8 Energy–Other 60 –54.3 +6.1
+178 189 160 7 Oil&Gas–Drilling 68 –45.4 +8.5
+179 160 137 179 Retail–DprtmntStrs .. –55.5 +3.9
+180 158 110 132 Machnry–Tools&Re .. –49.0 +3.8
+181 184 145 176 Trucks&Parts–HvyD .. –59.2 +3.2
+182 188 195 90 Food–Flour&Grain .. –43.2 +0.9
+183 176 193 195 Leisre–PhtoEqp/Rel .. –62.0 –3.6
+184 174 63 70 Oil&Gas–Mchnry/Eq 62 –55.8 +7.6
+185 170 150 41 MetalPrds–Distribtr .. –50.1 +9.5
+186 175 182 125 Banks–Foreign .. –57.0 –1.6
+187 192 191 71 Oil&Gas–USIntgrt .. –52.4 +3.1
+188 182 186 3 Machinery–Farm .. –53.7 +5.7
+189 191 184 48 Oil&Gas–CdnIntgrt .. –48.7 +7.5
+190 190 78 4 Chemicals–Fertilizers 69 –52.0 +6.7
+191 172 179 103 Auto/Trck–OrgnlEqp .. –66.1 –0.4
+192 181 178 29 Mchinry–Cnstr/Mng .. –53.6 +3.5
+193 195 190 11 MetalOres 56 –57.4 +6.8
+194 194 187 1 Steel–Producers .. –59.7 +2.3
+195 196 189 166 Steel–SpcltyAlloys .. –70.8 +3.3
+196 185 183 120 Auto/Trck–Tirs&M .. –63.1 +1.8
+197 197 197 193 Mining–Gems .. –74.8 +9.0
+
+110308
+1 2 2 154 Retail–Discnt&Vari .. +26.1+1.1
+2 9 4 100 CommlSvcs–Schools 98 +5.5+4.3
+3 7 3 184 Insurance–Brokers 85 –8.7+4.4
+4 4 5 69 Mdcal–Outpnt/HmCr 95 –3.7+4.1
+5 1 9 131 Banks–Wst/Sthwst 86 –23.5+3.6
+6 5 22 95 Retail–DrugStores .. –1.7+0.9
+7 13 10 32 Elec–MilitarySystems 93 +6.5+3.8
+8 91 49 196 Trnsprttin–Airlne 86 –27.8+5.9
+9 41 53 65 Utility–GasDstribtn 87 –12.5+0.9
+10 14 59 22 Food–MscPrparation 91 –13.5+1.8
+11 19 6 60 Medical–Biomed/Bth 90 –23.7+2.6
+12 15 41 42 Soap&ClngPreparat .. –3.6+2.3
+13 6 44 111 Banks–Southeast 86 –18.6+2.3
+14 12 1 102 Medical–Genetics .. –16.0+4.4
+15 10 48 39 Banks–Northeast 88 –11.8+2.8
+16 31 76 67 Cosmetics/PersnlCre 86 –20.3+1.0
+17 43138 23 Tobacco 90 –14.1–0.2
+18 11 43 79 Banks–Midwest 82 –18.6+2.9
+19 21 21 58 Medical–Products 91 –22.7+3.0
+20 22 96 108 Financ–Svings&Lo 89 –28.1+2.2
+21 16 47 115 Retail–Spr/MiniMkts 88 –22.3 +2.8
+22 33 113 62 Mdcal–Drg/Dvrsified .. –5.2 +1.2
+23 30 26 87 Medical–EthicalDrgs 88 –26.2 +2.2
+24 18 13 101 ComlSvcs–Scrty 81 –29.4 +3.9
+25 3 12 178 ComptrSftwr–Mdcl 90 –24.5 +3.0
+26 48 82 49 Insrnce–Prp/Cas/Titl 81 –26.1 +5.1
+27 49 125 134 Utility–WaterSupply 88 –15.1 +2.8
+28 45 80 21 Medical–GenercDrgs 89 –7.6 +2.9
+29 40 18 30 Medical–Systems/Eqp 85 –37.2 +2.4
+30 39 45 51 CommlSvcs–Misc 89 –31.4 +4.5
+31 8 7 137 Retail/Whlsle–Food 86 –18.3 +1.3
+32 50 40 20 PollutionCntrl–Svcs 89 –9.8 +3.2
+33 25 95 36 Fnce–InvsmntMgt 67 –36.6 +3.0
+34 23 51 164 Banks–SuprRgional 83 –26.2 +3.6
+35 34 161 47 Fnanc–IdxTrckngFd .. –28.0 +0.4
+36 62 81 78 Rtail/Whlsle–At/Prts 89 –21.8 +7.0
+37 29 17 28 Leisr–Tys/Gms/Hbby .. –9.3 +4.6
+38 24 61 52 CmmlSvcs–Cnsltng 90 –24.4 +7.6
+39 27 46 122 InvstmntBrokers 83 –49.0 +2.8
+40 84 146 83 CommlSvcs–Hlthcre .. –33.1 +2.9
+41 32 14 97 RetlWhsleBldgPrds 87 –9.4 +2.1
+42 60 102 74 Utility–ElctricPwr 81 –29.4 –1.3
+43 143 120 9 Oil&Gas–USRoyalty 82 –9.3 +1.1
+44 17 8 54 Rtail–Clthing/Shoe 86 –31.9 +4.0
+45 81 65 84 Food–Confectionery .. +2.5 +1.0
+46 67 94 141 HsholdofficFurnitr .. –41.9 +3.8
+47 42 124 17 DvrsifiedOprtions 81 –20.7 +3.5
+48 35 11 53 Mdical/Dntal–Srvcs 79 –36.6 +3.9
+49 75 114 43 Retail–MjrDscChns 88 –19.9 +2.1
+50 57 55 56 Househld–Applncs .. –31.3 +6.8
+51 26 42 61 Rtail–HmeFrnshngs .. –23.6 +3.4
+52 46 27 13 Trnsportation–Trck 80 –11.7 +5.7
+53 28 29 158 Mdcal–NrsngHmes 85 –42.4 +4.8
+54 58 104 96 FuneralSvcs&Rel .. –25.2 +3.3
+55 37 108 89 Apparel–Shoes&Rel 85 –32.6 +4.6
+56 20 16 6 Bldg–A/C&HeatingP 75 –9.9 +5.4
+57 36 62 80 Finance–Reit .. –30.3 +6.1
+58 74 107 85 Mdcal–WhlsleDrg .. –27.1 +2.6
+59 44 57 66 Cmpter–TechSrvcs 87 –23.8 +3.3
+60 137 168 73 FnancepblInvFdbnd .. –23.1 +0.2
+61 159 170 68 Oil&Gas–Trnsprt/Pip 85 –32.1 +0.5
+62 94 85 173 RtailWhlsleOffcSup .. –26.6 +11
+63 70 105 138 Telecom–WirlssEqp 80 –36.3 +3.2
+64 52 37 59 ComptrSftwr–Entr 84 –43.1 +2.3
+65 65 68 55 FnancialSrvcs–Misc 80 –45.9 +3.1
+66 71 34 10 Transportation–Rail 92 +5.6 +3.3
+67 69 135 147 Leisre–Mvies&Rel 52 –34.0 +2.6
+68 56 23 194 Compter–Netwrking 82 –42.6 +3.2
+69 55 56 133 Internet–Software .. –36.7 +1.8
+70 68 28 14 Chemicals–Specialty 76 –32.3 +4.8
+71 87 132 121 Medical/Dntal–Sppls 81 –29.3 +3.7
+72 77 39 181 Comptr–PrphrlEqp .. –24.8 +1.2
+73 64 103 191 Mdical–HlthMntOrg 81 –52.1 +3.4
+74 76 134 50 Beverages–Alcoholic 74 –26.6 –1.3
+75 113 166 152 Retail–MailOrder&Di .. –46.4 +1.7
+76 38 67 187 Retail–LeisurePrds .. –47.8 +3.9
+77 101 119 185 Telecom–Services 72 –47.5 +4.0
+78 66 93 5 Bldg–Rsidnt/Comml 55 –13.4 +0.2
+79 106 88 177 ComptrSftwr–Scrity .. –41.7 +5.4
+80 54 86 124 Retail–Restaurants 83 –41.9 +2.7
+81 53 72 24 Containers 75 –28.9 +2.5
+82 90 15 171 Bldg–Paint&Allied 66 –21.2 +4.3
+83 122 112 34 Transportation–Svcs 82 –12.8 +3.8
+84 80 70 119 Elec–SmicondctrMfg 76 –45.1 +1.5
+85 96 109 183 Auto/Trck–RplcPrts .. –46.3 +11
+86 51 31 77 Apprel–ClthingMfg 78 –31.3 +5.6
+87 88 66 110 Bldg–Mntnance&S .. –23.6 +4.7
+88 59 144 151 Media–Radio/Tv 51 –55.6 +2.3
+89 85 91 81 Elec–Scntific/Msrng 76 –37.8 +2.0
+90 126 158 64 Telecom–WirlssSvcs 86 –46.6 +1.9
+91 73 141 182 Bldg–Mbile/Mfg&Rv .. –46.4 +6.7
+92 120 162 37 Bvrages–SftDrinks 78 –36.6 +1.8
+93 86 32 25 PollutnCntrl–Eqp 81 –27.0 +6.3
+94 100 118 174 OfficeSuppliesMfg .. –39.1 +3.9
+95 93 25 161 Telecom–Equipment 68 –44.4 +1.8
+96 79 30 99 Bldg–CnstrPrds/Msc 69 –36.5 +4.4
+97 61 60 136 CommlSvcs–Stffng .. –39.1 +4.2
+98 123 101 104 Aerospce/DfnseEqp 85 –39.2 +2.6
+99 78 64 162 Leisure–Products 57 –45.0 +5.5
+100 132 174 40 Telecom–SrvcsFrgn 75 –42.4 –1.1
+101 118 126 123 ComptrSftwr–Fincl 79 –41.3 +3.5
+102 124 122 106 Elec–SemicndctrEqp .. –51.0 +5.1
+103 133 139 26 AgriculturalOprtions 66 –35.4 +2.8
+104 108 133 157 Rtail/Whlslecmp/Cll .. –41.6 +3.3
+105 102 129 38 Trnsprt–AirFreight .. –33.5 +5.7
+106 112 147 129 Cmptr–IntgrtdSyst 76 –37.5 +1.9
+107 47 98 139 CmmlSvcs–MrktRch 78 –32.2 +2.6
+108 142 154 118 Elec–ContractMfg .. –39.0 +5.1
+109 151 106 18 Chemicals–Basic 86 –29.0 +1.0
+110 97 71 109 Insurance–Life 61 –39.8 –0.7
+111 179 181 149 Oil&Gas–Rfing/Mkt 69 –49.5 +3.4
+112 83 87 93 Paper&PaperProduc 57 –47.5 +5.2
+113 95 115 107 Bldg–HandTools 61 –31.8 +3.2
+114 105 33 186 Intrnet–NtwrkSltns .. –42.8 +2.6
+115 82 20 180 Retail–Misc 74 –55.1 +3.4
+116 63 36 192 Fincecnsmer/CmlLns 78 –46.3 +3.3
+117 121 142 170 ConsumerProd–Misc .. –50.3 +2.4
+118 72 52 75 Bldg–WoodPrds .. –32.5 +2.6
+119 139 74 188 Houshld–CnsmerElc .. –48.8 +3.2
+120 89 19 167 Retail/Whlsle–Jwlry .. –42.5 +3.1
+121 129 151 169 Media–Books .. –41.9 +4.6
+122 109 127 135 CommlSvcs–Leasing 72 –33.8 +4.8
+123 125 90 145 Internet–Isp .. –45.4 +0.8
+124 154 163 72 Aerospace/Defense .. –36.0 +2.0
+125 114 157 140 Banks–MoneyCntr 69 –44.1 +1.3
+126 130 99 163 Chemicals–Plastics .. –38.8 +3.9
+127 183 50 2 Oil&Gas–USExplPro 77 –30.3 +3.5
+128 92 73 88 Trnsprttion–EqpMfg .. –36.8 +4.2
+129 103 83 105 Elctricl–Equipmnt 75 –45.1 +3.1
+130 111 148 116 Food–DairyProducts .. –27.9 +2.1
+131 98 24 15 Mchnry–GenIndstrl 68 –36.8 +1.6
+132 116 92 130 CompterSftwr–Dsgn 74 –39.6 +2.8
+133 150 185 153 AutoManufacturers .. –19.9 –0.1
+134 138 69 76 Elec–Cmpnent/Cntr .. –41.3 +5.5
+135 107 54 148 Internet–Content 82 –48.0 +0.3
+136 119 100 160 Bldg–Cment/Cncrt .. –40.9 +6.3
+137 145 77 27 Medcal–Hospitals .. –31.9 +2.3
+138 128 79 63 Internet–ECommerce 74 –46.9 +1.9
+139 165 180 113 Financ–PblInvFdeqt .. –43.1 +2.5
+140 110 167 31 Food–MeatProducts .. –40.1 +3.0
+141 99 155 86 RealEstateOprtions 49 –29.4 +1.7
+142 147 149 128 MetalPrds–Fstners .. –34.1 +0.8
+143 164 172 45 Oil&Gas–IntlIntegra 77 –43.8 +1.0
+144 134 123 156 Media–Cble/StlliteTv 66 –45.4 +2.0
+145 115 75 46 Mchnry–MtlHdlg .. –37.5 +5.8
+146 156 140 172 Comptr–DataStrge .. –47.5 +3.4
+147 152 143 82 Insrnce–Acc&Heal .. –46.3 +5.0
+148 127 175 146 RealEstateDevlpmt .. –48.0 +5.8
+149 131 128 114 ComptrSftwr–Dsktp .. –44.2 +1.6
+150 155 116 57 Oil&Gas–IntlExplPr .. –46.7 +2.5
+151 146 121 94 Elec–MiscProducts .. –50.3 +3.0
+152 169 194 91 Finc–PblInvFd–Fn .. –49.3 +1.3
+153 144 97 175 Telcom–FibrOptcs .. –52.1 +1.2
+154 157 117 44 CmptrSftwr–Edu .. –46.8 –0.3
+155 153 165 142 Office–Eqp&Autom .. –38.5 +5.0
+156 117 38 35 MetalProc&Fabrica 55 –48.2 +4.2
+157 135 153 144 CommlSvcs–Prntng .. –51.8 +5.3
+158 136 111 165 Elec–PrtsDistribtrs .. –47.9 +3.1
+159 163 171 126 Media–Diversified 66 –50.4 +5.4
+160 161 164 33 Media–Periodicals .. –47.3 +1.9
+161 104 130 127 Comptr–Manufctrs .. –43.6 –1.8
+162 148 89 98 Retail–CnsmrElec .. –48.7 +2.5
+163 149 131 155 Leisure–Services 59 –55.8 –0.7
+164 177 84 16 Oil&Gas–FieldServic 64 –45.3 +2.6
+165 171 156 117 Transportation–Ship .. –46.7 +6.4
+166 180 159 189 Leisre–Gamng/Equip 65 –62.4 +12
+167 178 177 112 Househld–Housewrs .. –45.7 +8.5
+168 162 188 12 MetalOres–Gld/Silvr 44 –54.8 –2.7
+169 141 169 150 ComlSvcs–Advrtsng .. –55.5 +2.2
+170 166 58 92 Bldg–HeavyConstr .. –47.8 +4.7
+171 140 35 8 Energy–Other 59 –49.2 +2.0
+172 186 136 19 Oil&GascdnExplPro .. –33.5 +0.9
+173 170 150 41 MetalPrds–Distribtr .. –40.8 +7.2
+174 160 137 179 Retail–DprtmntStrs .. –49.7 +7.3
+175 167 196 168 Media–Newspapers .. –62.5 +2.1
+176 173 152 159 Leisure–Hotels&Mot .. –50.2 +3.1
+177 189 160 7 Oil&Gas–Drilling 71 –40.3 +0.6
+178 192 191 71 Oil&Gas–USIntgrt .. –45.1 +5.1
+179 188 195 90 Food–Flour&Grain .. –40.5 –3.3
+180 158 110 132 Machnry–Tools&Re .. –45.5 +1.0
+181 168 176 143 Insrnce–Divrsified .. –59.9 +0.8
+182 175 182 125 Banks–Foreign .. –53.1 –1.1
+183 193 173 197 Fnanc–Mrtg&RelSvc .. –79.2 +11
+184 182 186 3 Machinery–Farm .. –49.2 +4.8
+185 174 63 70 Oil&Gas–Mchnry/Eq 65 –51.4 +1.6
+186 191 184 48 Oil&Gas–CdnIntgrt .. –42.9 +3.4
+187 176 193 195 Leisre–PhtoEqp/Rel .. –61.8 +1.1
+188 190 78 4 Chemicals–Fertilizers 70 –48.4 +3.4
+189 187 192 190 Textile–Mill/Hsehold .. –74.1 –16
+190 184 145 176 Trucks&Parts–HvyD .. –58.0 –1.9
+191 172 179 103 Auto/Trck–OrgnlEqp .. –62.4 +7.9
+192 181 178 29 Mchinry–Cnstr/Mng .. –48.4 +1.9
+193 194 187 1 Steel–Producers .. –57.1 –0.5
+194 195 190 11 MetalOres 58 –56.1 +1.7
+195 196 189 166 Steel–SpcltyAlloys .. –68.6 +3.4
+196 185 183 120 Auto/Trck–Tirs&M .. –58.1 +8.5
+197 197 197 193 Mining–Gems .. –70.3 +11
