@@ -1,6 +1,0 @@
-ABC
-CLF
-CMG
-TNAV
-TPX
-VMW

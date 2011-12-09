@@ -26,7 +26,8 @@ function QueryForAllTickers()
     symbol=$1
     quote=$(curl -s "http://download.finance.yahoo.com/d/quotes.csv?s=${symbol}&f=sl1" | sed 's/.$//' ) #the trailing sed command strips a ^M that was at the end of each quote price
 #    echo ${symbol} ${quote}
- echo ${quote}   
+echo ${quote} | tr ' ' '\n'
+# echo ${quote}   
 }
 
 
@@ -44,10 +45,10 @@ else
 	do
 	    ticker=$(echo "$LINE" | tr '[a-z]' '[A-Z]' )
 	    Alltickers="${ticker}+${Alltickers}"
-	    QueryForQuote $ticker #OLD METHOD performs the query one ticker at a time which is a bit slow
+#	    QueryForQuote $ticker #OLD METHOD performs the query one ticker at a time which is a bit slow
 	done < "$1"
-#       echo "$Alltickers"
-#	QueryForAllTickers $Alltickers
+ #      echo "$Alltickers"
+	QueryForAllTickers $Alltickers
     else 
 	until [ -z "$1" ] #parse args as stock tickers
 	do
