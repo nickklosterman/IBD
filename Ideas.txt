@@ -1,0 +1,3 @@
+create script that tracks the stocks in the database and simulates purchasing of them. Maybe just need to identify which records aren't in a list anymore.
+Possibly allow editing of the list so that you can select which items you don't want to include.
+Possibly build gui.

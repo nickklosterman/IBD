@@ -145,16 +145,16 @@ pot,stt,hes,abx,rimm,ma,csx,eca,stj,apa,fslr,eog,gg,dvn,wfr,biib,zmh,chk,nue,qco
 ma,stt,hes,genz,gild,zmh,eog,biib,dyn,celg,wfr,hon,qcom,avp,abx,glw,nsc,nue,bni,abt
 
 2011-06-21
-celg,el,agn,biib,lo,mc,coh,pm,unh,aet,yum,wlp,apd,cbs,tmo,cl,wag,abt,hnz,crm
+celg,el,agn,biib,lo,mcd,coh,pm,unh,aet,yum,wlp,apd,cbs,tmo,cl,wag,abt,hnz,crm
 
 2011-06-28
-el,sbux,biib,a,agn,cern,lo,unh,mcd,pcp,bax,crm,ibm,aet,cbs,apd,amzw,wlp,tmo,vrx
+el,sbux,biib,a,agn,cern,lo,unh,mcd,pcp,bax,crm,ibm,aet,cbs,apd,amzn,wlp,tmo,vrx
 
 2011-07-06
 No BC on July 6?? I couldn't find it possibly didn't publish due to holiday
 
 2011-07-12
-nflx,ma,el,celg,v,sbux,biib,hal,dtv,coh,agn,lo,ebay,wynn,vmw,qcomm,a,mcd,crm,unh
+nflx,ma,el,celg,v,sbux,biib,hal,dtv,coh,agn,lo,ebay,wynn,vmw,qcom,a,mcd,crm,unh
 
 2011-07-19
 ma,el,v,sbux,biib,gg,coh,hal,ebay,wynn,vmw,agn,mcd,lo,bhi,crm,unh,goog,pcp,bax
@@ -184,7 +184,7 @@ Sep5
 gmcr,gg,abx,nem,amzn,ed,kmb,tgt,d,fe (only 10)
 
 2011-09-20
-gmcr,ma,v,isrg,abx,amxz,nem,pm,ebay,lo,pcp,kgc,bmy,biib,tjx,spg,coh,cost,yum,el
+gmcr,ma,v,isrg,abx,amzn,nem,pm,ebay,lo,pcp,kgc,bmy,biib,tjx,spg,coh,cost,yum,el
 
 2011-09-27
 ma,ebay,amzn,bmy,intc,tjx,biib,so,unh,ed,kmb,d,tgt,pcg,fe,nee,wlp,yhoo,hd (only 19)
@@ -199,7 +199,7 @@ celg,amzn,lo,bmy,biib,wmt,dell,msi,intu,lly,unp,rai,duk,pcg,kmb,tgt,nee,d,ppl,mo
 isrg,celg,nke,goog,amzn,lo,bmy,intu,biib,ctsh,wmt,msi,dell,gis,duk,rai,kmb,tgt,d,nee
 
 2011-10-25
-isrg,celg,pm,nke,vfc,atvi,gild,wpe,biib,tjx,wmt,intc,bbby,bmy,intu,cvx,pg,abt,lo,msi
+isrg,celg,pm,nke,vfc,atvi,gild,wpz,biib,tjx,wmt,intc,bbby,bmy,intu,cvx,pg,abt,lo,msi
 
 2011-11-01
 isrg,v,pm,nke,vfc,hcp,biib,coh,wpz,gild,atvi,intu,tjx,wmt,goog,intc,bbby,cvx,epd,ctsh

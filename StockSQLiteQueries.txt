@@ -3,3 +3,5 @@ sqlite3 ~/IBDdatabase.sqlite "select distinct(StockTicker) from BC20"
 sqlite3 ~/IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"
 sqlite3 IBDdatabase.sqlite "select * from IBD50 where StockTicker=\"V\""
 sqlite3 IBDdatabase.sqlite "select Date,Rank from IBD50 where StockTicker=\"V\" ORDER BY Date ASC"
+sqlite3 ~/IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC" > IBD50StockTickerList.txt 
+sqlite3 ~/IBDdatabase.sqlite "select distinct(StockTicker) from BC20" > BC20StockTickerList.txt
