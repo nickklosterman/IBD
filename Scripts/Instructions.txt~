@@ -1,0 +1,4 @@
+from the /Git/IBD folder
+run 
+python Scripts/IBD50PrepForDatabase.py
+This will grab and insert all data from /Data/IBD50.txt into the IBDdatabase.sqlite

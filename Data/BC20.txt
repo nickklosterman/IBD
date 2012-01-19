@@ -1,7 +1,8 @@
+#bumped due to IBD50 taking precedence on Tues after New Year and MLK
 2012-01-10
 v celg pm enb hum epd biib vrx goog gild yum qcom bmy pcp se tjx wmb sbux mrk aet
-2011-12-27 
-missing
+#2011-12-27 
+#missing ...maybe not missing in the sense that I didn't get it as much as missing as it wasn't published due to the holiday bump giving precedence to ibd50
 2011-12-20
 ma isrg v goog celg pm enb biib bmy epd nke yum se qcom el spg mrk pfe tjx abt
 2011-12-12
@@ -155,8 +156,8 @@ celg el agn biib lo mcd coh pm unh aet yum wlp apd cbs tmo cl wag abt hnz crm
 2011-06-28
 el sbux biib a agn cern lo unh mcd pcp bax crm ibm aet cbs apd amzn wlp tmo vrx
 
-2011-07-06
-missing
+#2011-07-06
+#missing
 
 2011-07-12
 nflx ma el celg v sbux biib hal dtv coh agn lo ebay wynn vmw qcom a mcd crm unh
@@ -182,8 +183,8 @@ gg abx mcd nem lo yum wmt ed jnj ppl tgt nee d aep
 2011-08-30
 abx nem lo yum biib bce wmt ed jnj mon tgt nee d mck aep fe 
 
-2011-09-05
-missing
+#2011-09-05
+#missing
 
 2011-09-13
 gmcr gg abx nem amzn ed kmb tgt d fe 

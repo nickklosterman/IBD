@@ -45,32 +45,47 @@ def get_historical_prices_plus_one_day(symbol, date):
           'ignore=.csv'
     print url
     days = urllib.urlopen(url).readlines()
+#    print days
     data = [day[:-2].split(',') for day in days]
+#    print data
     return data
 #end def get_historical_prices_plus_one_day
 def insert_data(database,table,date,symbol,rank,data):
 #    connection=sqlite3.connect(database)
 #    cursor=connection.cursor()
-#    cursor.execute('DROP TABLE IF EXISTS IBD50StockData2')
+#    cursor.execute('DROP TABLE IF EXISTS IBD50StockData')
 #    cursor.execute('DROP TABLE IF EXISTS IBD50StockData') #FOR SOME REASON YOU CAN'T USE A VARIABLE FOR THE TABLE NAME
 
 # NEEDED ANOTHER CURSOR OTHERWISE IT WOULD DESTROY THE RESULT SET WE HAD
-    cursor2.execute('CREATE TABLE IF NOT EXISTS IBD50StockData2 (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)')
-
-    cursor2.execute('INSERT INTO IBD50StockData2 VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (date,symbol,rank,data[1][0],data[1][1]*100,data[1][2]*100,data[1][3]*100,data[1][4]*100,data[1][5],data[1][6]*100))
-#    cursor.execute('INSERT INTO IBD50StockData2 VALUES(null, ?, ?, ?, ?,0,0,0,0,0,0)', (date,symbol,rank,data[1][0]))
+    cursor2.execute('CREATE TABLE IF NOT EXISTS IBD50StockData (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)')
+    Open=int(round(float(data[1][1])*100))
+    High=int(round(float(data[1][2])*100))
+    Low=int(round(float(data[1][3])*100))
+    Close=int(round(float(data[1][4])*100))
+#    =int(round(float(data[1][])*100))
+    Adj_Close=int(round(float(data[1][6])*100))
+#    print "Open:",Open
+#    cursor2.execute('INSERT INTO IBD50StockData VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (date,symbol,rank,data[1][0],data[1][1]*100,data[1][2]*100,data[1][3]*100,data[1][4]*100,data[1][5],data[1][6]*100))
+    cursor2.execute('INSERT INTO IBD50StockData VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (date,symbol,rank,data[1][0],Open,High,Low,Close,data[1][5],Adj_Close))
+#    cursor.execute('INSERT INTO IBD50StockData VALUES(null, ?, ?, ?, ?,0,0,0,0,0,0)', (date,symbol,rank,data[1][0]))
     return 0
 #end def insert_data
+def insert_error_data(database,table,date,symbol,rank):
+    errorcursor.execute('CREATE TABLE IF NOT EXISTS IBD50ErrorStockData (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER)')
+
+    errorcursor.execute('INSERT INTO IBD50ErrorStockData VALUES(null, ?, ?, ?)', (date,symbol,rank))
+#end def insert_error_data
 
 if (len(sys.argv) > 1):
     database=sys.argv[1]
 else:
     database="IBDdatabase.sqlite"
-    table="IBD50StockData2"
+    table="IBD50StockData"
 
 connection=sqlite3.connect(database)
 cursor=connection.cursor()
 cursor2=connection.cursor()
+errorcursor=connection.cursor()
 cursor.execute('select * from  IBD50')
 while True:
     row=cursor.fetchone()
@@ -82,13 +97,19 @@ while True:
     ticker=row[2]
     rank=row[3]
     output=get_historical_prices_plus_one_day(ticker, date )
-    print output
-    if output[0][4]=='Close':
-        quotedate=output[1][0]
-        closingprice=output[1][4]
-        print quotedate,closingprice
+#    print output[0][0]
+#    if len(output[0][0])!="Date": # a simple error check since this first field should be "Date"
+    if output[0][0]!="Date": # a simple error check since this first field should be "Date"
+        print "ERROR for ",ticker #enter this data into an errors database
+        insert_error_data(database,table,date,ticker,rank)
+    else:
+        print output
+        if output[0][4]=='Close':
+            quotedate=output[1][0]
+            closingprice=output[1][4]
+            print quotedate,closingprice
 #K        error=enter_data_into_database(database,table,date,ticker,rank,quotedate,output)
-        error=insert_data(database,table,date,ticker,rank,output)
+            error=insert_data(database,table,date,ticker,rank,output)
 
 connection.commit()
 cursor.close()
