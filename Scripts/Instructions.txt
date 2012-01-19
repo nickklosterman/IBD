@@ -1,0 +1,10 @@
+from the /Git/IBD folder
+run 
+python Scripts/DualPrepForDatabase.py
+
+This will grab and insert all data from /Data/IBD50.txt and /Data/BC20.txt into the IBDdatabase.sqlite
+then run
+python Scripts/GetHistoricalrices2.py
+this will grab the prices of the stock on the day following the publish date of the IBD50 list
+
+
