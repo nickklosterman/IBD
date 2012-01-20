@@ -1,3 +1,4 @@
+#BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays 
 #bumped due to IBD50 taking precedence on Tues after New Year and MLK
 2012-01-10
 v celg pm enb hum epd biib vrx goog gild yum qcom bmy pcp se tjx wmb sbux mrk aet
@@ -5,7 +6,7 @@ v celg pm enb hum epd biib vrx goog gild yum qcom bmy pcp se tjx wmb sbux mrk ae
 #missing ...maybe not missing in the sense that I didn't get it as much as missing as it wasn't published due to the holiday bump giving precedence to ibd50
 2011-12-20
 ma isrg v goog celg pm enb biib bmy epd nke yum se qcom el spg mrk pfe tjx abt
-2011-12-12
+2011-12-13
 isrg ma v goog pm enb nke epd bby biib yum tjx coh bmy apc sbux gild qcom intc ibm
 2011-12-06
 isrg ma v goog pm vfc biib nke apc unp coh el tjx bbby enb yum nsc intc gild bmy
@@ -35,7 +36,9 @@ rimm vmw pot aapl nov goog fcx mos pcp hal blk amzn wft nyx gild cme xto hpq abx
 celg abt amgn pg kr xom bmy esrx wmt wmi cvx so cb pfe usb wfc rtn duk bbt wye
 2007-11-13
 rimm pot aapl goog nyx mos ma blk gild cme slb oxy esrx wft hal lmt emr syk xto genz
-2009-07-25
+#2009-07-25 is a Saturday
+#2009-07-25
+2009-07-28
 pot rimm nov aapl ebay slb amzn pcp wft hal jnpr fcx celg goog nvda orcl hpq mos gild de
 2007-10-02
 vmw pot nov rimm ebay amzn pcp wft hal fcx goog aapl slb nvda orcl hpq jnpr mos celg csco
@@ -45,7 +48,7 @@ rimm vmw pot goog nov aapl ebay amzn pcp hal fcx slb nvda wft orcl hpq jnpr celg
 rimm vmw pot goog nov aapl ebay slb amzn hal fcx emc wft mos jnpr celg gild nvda orcl biib
 2007-10-23
 rimm vmw goog aapl amzn emc fcx nov nvda mos jnpr slb hal syk hpq ma celg blk biib abx
-2007-31-07
+2007-07-31
 aapl pot rimm nov slb amzn pcp jnpr fcx nvda wft hpq orcl amat ma celg cme cnq biib rci
 2007-07-24
 aapl rimm pot pcu nov slb rig hal pcp jnpr gsf wft csco tck amzn fcx ebay nvda hpq do
@@ -106,7 +109,7 @@ rimm fslr amzn v yum goog ebay aapl tri wfc ry ccl cme mon afl pot bns ibm wlp b
 2007-03-06
 pcu coh rimm gild pcar zmh syk nke nue de bam jci aapl fd fpl trv pru yhoo etr bax
 2009-03-10
-sgp amzn abx ma mos qxom tri wmtsu oxy mo imo yhoo
+sgp amzn abx ma mos qcom tri wmtsu oxy mo imo yhoo
 2008-03-11
 RIG MA NXY STT eca hes apa xto gg cnq csx su eog genz hal dvn chk celg orcl gild
 2007-03-13
@@ -213,7 +216,7 @@ isrg v pm nke vfc hcp biib coh wpz gild atvi intu tjx wmt goog intc bbby cvx epd
 2011-11-08
 isrg ma abx qpz nke atvi biib qcom el epd unp intu gild se wmt nem intc bbby nsc wmb
 2011-11-15
-isrg ma wpz nke goog qxom biib wmt coh el intu epd unp intc tjx nsc se nem bmy wmb
+isrg ma wpz nke goog qcom biib wmt coh el intu epd unp intc tjx nsc se nem bmy wmb
 
 2011-11-22
 ma pm epd biib qcom nke coh el tjx unp intc wmb abt wmt eog mrk hd tgt pfe rai
