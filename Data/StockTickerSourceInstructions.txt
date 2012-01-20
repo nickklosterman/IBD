@@ -1,0 +1,2 @@
+downloaded the NYSE and NASDAQ ticker lists from www.eoddata.com
+nicoceausescu|buttplugzebra
