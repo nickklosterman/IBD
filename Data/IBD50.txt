@@ -2,6 +2,8 @@
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 2012-01-30
 Ulta lulu alxn swi lqdt hmsy qcor aapl auy gold celg v dltr cmg dg mnst ma isrg tdg cvlt rost ebix tsco nuan ec hlf meli rgld aap nus gww fast ffiv int hum tjx shoo pii gild biib bwld vrsk tcbi intc nog cxo endp ntes pcl mnta
+2012-01-23
+Lqdt ulta swi qcor lulu alxn hmsy gold v dltr ebix nuan ec ma hlf celg isrg cvlt pii rost aap ffiv dg tsco cmg mnst gww hibb hum tdg meli nus fast aapl auy vrsk shoo tcbi endp int tjx intc gild biib prgo rgld bwld mnta pcln ntes
 2012-01-17
 Lqdt ulta alxn lulu isrg qcor hmsy swi gold v rost dltr nuan tsco ah ec ma celg hlf tdg pii dg sbny cmg ebix hum mnst gww aapl auy cvlt meli aap nus hibb fast vrsk tjx tcbi biib rgld int cxo prgo hcp mnta goog endp pcln ntes
 #date shift above due to MLK day
