@@ -1,7 +1,12 @@
-#BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays 
+#BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
+2012-02-14
+Alxn celg isrg cmi coh aapl yum biib gild pcln cmcsa vfc cat ma v tjx intc rl enb qcom
+2012-02-07
+Celg isrg cmi biib qcom gild aapl v coh ma intc unp enb cmcsa cat hcp yum lvs nov de
 #bumped due to IBD50 taking precedence on Tues after New Year and MLK
 2012-01-31
 Celg gild biib enb intc unp v epd coh yum de hcp cmcsa qcom dhr se tjx spg cat vrx
+#at first I thought se was a typo for de but se=spectra energy and was up 20% in 4 months and then missed earnings so can see it popping up then disappearing
 2012-01-24
 Celg gild biib yum v hum intc unp epd mcd qcom de sbux vrx cmcsa dhr se hcp tjx intu
 2012-01-10
