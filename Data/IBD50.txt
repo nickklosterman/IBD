@@ -1,5 +1,13 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
+2012-02-21
+Alxn gnc ulta lqdt aapl lulu swi bwld invn tdg v tsco cmg nus celg ma qcor val hmsy dltr rost ebix ffiv algn cvlt mnst shoo fosl pii fast cxo pcln hlf meli nuan int cmi gww tcbi cfx ago cern tdc pnra tal tjx coh shfl cf qsii
+#shfl is a gam(bl)ing stock ppl hoping to gamble out of debt ?? Cruise stox beat up? due to Carnival crash in italy
+#fosl is a supplier for kors
+2012-02-13
+Alxn ulta lqdt aapl lulu tdg swi bwld ma invn qcor v tsco hmsy ebix celg ec cmg rost dltr nus dg mnst pii cxo aap fast gold hlf nuan ffiv pnra cvlt gww tcbi meli algn int tjx biib coh cfx ago gild auy cern cmi shoo pcln ntes
+2012-02-06
+Lqdt alxn swi ulta isrg hmsy qcor lulu celg invn tsco ebix aapl ma auy ec v cmg tdg dltr nus nuan mnst gold bki meli dg aap cvlt fast cxo rost int bwld ffiv gww pii tcbi hum shoo biib nsr gild hlf tal intc coh expe ntes pcln
 2012-01-30
 Ulta lulu alxn swi lqdt hmsy qcor aapl auy gold celg v dltr cmg dg mnst ma isrg tdg cvlt rost ebix tsco nuan ec hlf meli rgld aap nus gww fast ffiv int hum tjx shoo pii gild biib bwld vrsk tcbi intc nog cxo endp ntes pcl mnta
 2012-01-23
