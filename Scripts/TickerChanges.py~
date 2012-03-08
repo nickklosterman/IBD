@@ -1,3 +1,0 @@
-#!/bin/bash
-wget http://www.nasdaq.com/markets/stocks/symbol-change-history.aspx -O /tmp/NASDAQ
-grep "<td class=\"body2\">" 
