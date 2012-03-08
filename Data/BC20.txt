@@ -1,4 +1,9 @@
 #BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
+2012-03-06
+Alxn aapl celg isrg cmi cmcsa vfc fast ma clr emc crm yum coh pcln v biib vrx qcom rl
+2012-02-28
+Alxn aapl celg isrg clr cmi vfc fast pcln ma cmcsa crm coh v intc yum cat nov biib qcom
+#do analysis showing how much price moves up before get on list
 2012-02-14
 Alxn celg isrg cmi coh aapl yum biib gild pcln cmcsa vfc cat ma v tjx intc rl enb qcom
 2012-02-07
