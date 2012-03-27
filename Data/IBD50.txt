@@ -1,5 +1,11 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
+2012-03-26
+Aapl alxn gnc lulu kors lqdt ulta pcln qcor swi ec invn fran save bwld hlf mnst nus cf sxci ma ntes cstr rost v cmg tsco ffiv clr shfl tdg dg val tdc swks ua fosl celg tibx meli vmw dltr shoo pii tjx tcbi fast asna simo slxp
+2012-03-19
+Aapl alxn lulu gnc kors lqdt pcln ulta qcor swi invn fran bwld save ec ma hlf cmg mnst nus sxci cstr v rost tsco ffiv val clr swks shfl cf celg tdg tibx cern ssw tdc cmi fosl meli vmw dltr shoo orly pnra ua simo ntes ubnt slxp
+2012-03-12
+Alxn lulu aapl ulta kors lqdt qcor swi pcln invn save ma ec v tsco rost hlf val mnst sswi nus clr celg tdg cmg dltr fosl shfl bki cern shoo tdc swks tjx fast tibx dg pnra nuan ffiv cvlt pii gww asna catm meli vrsk cmi tal ubnt
 2012-03-05
 Lulu kors aapl alxn ulta lqdt qcor swi tsco invn save pcln ec ma tdg cmg v hlf ssw nus mnst clr fire celg meli dltr rost val shoo tdc swks cern nuan fosl tjx fast gold catm dg ffiv pnra tal cmi pii gww coh asna cvlt disca ebix
 #what are all the moving avg metrics etc supposed to indicate? I suppose someone thought they were a good idea bc they indicated something. So what exactly is that?
