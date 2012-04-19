@@ -1,5 +1,11 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
+2012-04-16
+rgr aapl alxn gnc pcln ulta kors lqdt lulu sxci invn save qcor ma tsco swi bwld cmg ec cstr tdg rost v orly mnst disca  hlf tibx dg val nus tdc shfl cf celg vmw dltr wxs vrsk pnra tjx fosl pay epam ntes fran meli trip ubnt simo
+2012-04-09
+Aapl rgr alxn gnc lulu pcln ulta kors lqdt ma qcor invn save fran swi bwld sxci ec cstr rost hlf tsco mnst disca celg tdg cmg v vmw ffiv orly trip val fosl shfl cf tibx dg dltr wxs tjx pii ntes meli vrsk tdc algn ubnt simo slxp
+2012-04-02
+rgr aapl alxn gnc lulu kors pcln lqdt qcor swi bwld invn save fran cstr rost ffiv mnst cf ec ma hlf tsco cmg vmw nus fosl shfl disca tdg meli v trip val swks clr pii celg ntes dltr orly wxs algn tdc ua tjx fast ubnt simo slxp
 2012-03-26
 Aapl alxn gnc lulu kors lqdt ulta pcln qcor swi ec invn fran save bwld hlf mnst nus cf sxci ma ntes cstr rost v cmg tsco ffiv clr shfl tdg dg val tdc swks ua fosl celg tibx meli vmw dltr shoo pii tjx tcbi fast asna simo slxp
 2012-03-19
