@@ -1,0 +1,2 @@
+developer.yahoo.com/yql
+code.google.com/p/yahoo-finance-managed/wiki/YahooFinanceAPIs YQLAPI

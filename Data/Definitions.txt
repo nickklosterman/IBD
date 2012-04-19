@@ -1,0 +1,20 @@
+IBD® New America Index
+
+The IBD New America Index tracks the stocks of all companies covered in "The New America" for six months. The stocks that comprise this index will change slightly each day, as we add to the index any new stocks covered in the current day's "The New America" section, and delete any stocks that we featured exactly six months ago.
+
+IBD® 100 Index
+
+The IBD 100 was discontinued on January 3, 2011, and replaced with the IBD 50.  It was a computer-generated ranking of leading companies trading in the United States.  Rankings were based on a combination of each company's recent profit growth record; IBD's Composite Rating; and relative price performance in the most recent 12 months.  
+
+IBD® 50 Index
+
+The IBD 50 replaced the IBD 100 on January 3, 2011.  Improvements were made to the list, which have resulted in more institutional-quality stocks being included.  The IBD 50 runs every Monday in the IBD newspaper and can be found in the Screen Center every Friday evening around 9pm EST on Investors.com.  It is a computer-generated ranking of leading companies trading in the U.S.  Rankings are based on a combination of each company's recent profit growth record; IBD's Composite Rating, which includes key measures such as return on equity, sales growth and profit margins; and relative price performance in the last 12 months.  A company's inclusion in the list should not be viewed as a recommendation. 
+
+
+IBD® 85-85 Index
+
+The 85-85 Index is a computer-generated stock list published in the IBD paper every Friday. The stock list is generated based on the following criteria: 1) price above $15; 2) stock price within 15% of its 52-week high; 3) EPS and relative strength rating of 85 or greater; 4) average daily trading volume of 10,000 shares or more. Thus the number of stocks in the list varies week-to-week according to the number of stocks that meet the list's criteria.
+
+IBD® Big Cap 20
+
+The IBD Big Cap 20 is a computer-generated ranking of the leading large-capitalization companies trading in the U.S. The list is featured in the IBD paper every Tuesday. Rankings are based on a combination of each company's profit growth; IBD's Composite Rating, which includes key measures such as return on equity, sales growth and profit margins; and relative price strength in the past 12 months. Some of the companies also appear on the IBD 100, which features a blend of small- mid- and large-cap names. For investors who prefer less volatile investments with greater liquidity, the Big Cap 20 offers more mature yet still vibrant enterprises. Companies must have a minimum market value of $15 billion and trade more than 300,000 shares a day.
