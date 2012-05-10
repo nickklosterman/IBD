@@ -1,0 +1,20 @@
+select distinct(stockticker) from bc20;
+select distinct(date) from bc20;
+select count(distinct(date)) from bc20;
+select count(distinct(stockticker)) from bc20;
+select count(*) from bc20 where stockticker like "aapl";
+select date from bc20 where stockticker like "aapl" order by date asc;
+select date from bc20 where stockticker like "aapl" order by date desc;
+select date from bc20 where stockticker like "aapl" order by date asc limit 1;
+select date from bc20 where stockticker like "aapl" order by date desc limit 1;
+
+
+To create a matrix of rankings for a single stock:
+get the list of available dates (possibly set all ranks to 0)
+get the date,rank data for that stock.
+use the date as the index to set the rank for the date.
+Loop through and for all empty rankings have a decrementing counter and set the rank to that.
+
+
+Create script that will go through and get stock data for the specified stock on the date+1 given
+but want it to be displayed/viewable online! Interface database w/ java or javascript utlities.

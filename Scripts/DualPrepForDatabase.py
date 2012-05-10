@@ -28,10 +28,10 @@ def read_file_build_database(table,errortable,file,reportdayofweek):
         if line[0]=='#':
             counter=-1
             countermod=3
-            print "Comment",line[1:].strip()
+#            print("Comment",line[1:].strip())
         if countermod == 0:
             Date=line[:-1].strip() #chop off the newline at the end
-            print Date
+ #           print Date
         elif countermod == 1:
 #        String=line[:-1].split(',')#split variable on delimiter ','
             String=line[:-1].split()#split variable on delimiter
@@ -48,10 +48,11 @@ def read_file_build_database(table,errortable,file,reportdayofweek):
                     Front='INSERT INTO '+table
                     cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
                 elif reportdayofweek==0 and dayofweek==1:#case of IBD50 bumped on a Tuesday
+#                    print("---Tuesday Bump")
                     Front='INSERT INTO '+table
                     cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
-                    Front='INSERT INTO '+errortable #enter it into the error dbase just in case
-                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
+#                    Front='INSERT INTO '+errortable #enter it into the error dbase just in case
+#                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
                 else:
 #                if reportdayofweek!=dayofweek:
                     print "Date doesn't fall on appropriate day of week, Entering into Error Database:",errortable
@@ -67,7 +68,7 @@ if (len(sys.argv) > 2):
     database=sys.argv[1]
     IBD50 = open(sys.argv[2])
 else:
-    database="IBDdatabase.sqlite"
+    database="IBDdatabase.sqlite"  #need to jsut stick this stuff in an array and loop over it all
     table1="IBD50"
     file1 = open("Data/IBD50.txt")
     errortable1="IBD50Error"
@@ -76,12 +77,18 @@ else:
     file2 = open("Data/BC20.txt")
     errortable2="BC20Error"
     reportDayOfWeek2=1#tuesday
+    table3="IBD8585"
+    file3 = open("Data/8585.txt")
+    errortable3="IBD8585Error"
+    reportDayOfWeek3=4#friday
+
 
 connection=sqlite3.connect(database)
 cursor=connection.cursor()
 #from http://greeennotebook.com/2010/06/how-to-use-sqlite3-from-python-introductory-tutorial/
 read_file_build_database(table1,errortable1,file1,reportDayOfWeek1)
 read_file_build_database(table2,errortable2,file2,reportDayOfWeek2)
+read_file_build_database(table3,errortable3,file3,reportDayOfWeek3)
 
 
 
