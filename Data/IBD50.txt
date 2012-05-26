@@ -1,5 +1,16 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
+2012-05-23
+lqdt sxci alxn gnc tsco ulta swi mlnx aapl lulu qcor crus tdg pcln titn rost algn mnst arba ntes v tjx save wwww orly cern dg bwld tdc tcbi shfll cstr ma ua coo pii cvlt qpi ec cprt val disca clb sni bbby stmp trip shw amt cbst
+2012-05-21
+lqdt sxci gnc alxn swi rgr tsco ulta aapl lulu rost crus mlnx mnst qcor tdg pcln ntes titn algn tjx save cstr orly cern dg v arba tcbi wwww shfl val bwld tdc coo pii amt wpi ec ma cprt disca ua clb sni bbby trip vrsk stmp cbst
+
+2012-05-16
+Lqdt sxci gnc rgr alxn tsco aapl ulta swi orly crus algn mlnx mnst tjx lulu tdg pcln qcor kors rost save hibb cern dg dltr bwld arba tcbi wwww shfl cstr titn ec v coo pii amt wpi ntes ma val disca tdc ua sni bbby ffiv slxp cbst
+2012-05-14
+Lqdt sxci gnc rgr aapl tsco alxn lulu ulta kors crus swi orly mlnx mnst save pcln qcor tdg rost algn titn val hibb cstr cern dg dltr tcbi shfl wpi ec v ma bwld arba tjx pii amt ntes disca pnra tdc clb ua sni coo ffiv cbst slxp
+2012-05-09
+Lqdt sxci gnc rgr swi aapl alxn lulu pcln tdg tsco qcor kors crus orly mlnx save ulta algn rost cern titn val mnst cstr ec dg v ma dltr bwld arba hibb tcbi shfl wpi ntes tdc ffiv tjx pii amt Cprt disca clb ua coo slxp cbst ftnt
 2012-05-07
 Lqdt rgr sxci gnc alxn swi aapl lulu pcln tsco qcor cstr kors tdg crus orly rost titn mlnx ulta disca algn bwld cern dg val mnst save hibb wpi ec ma v dltr tcbi tjx shfl ntes arba tdc ffiv ua pii fosl amt tibx pnra nsr cbst ubnt
 2012-05-02
@@ -9,7 +20,7 @@ Gnc rgr lqdt sxci aapl alxn pcln qcor swi tsco ulta invn save kors ma titn crus 
 2012-04-25 
 lqdt rgr sxci gnc aapl alxn pcln ulta kors qcor ma save tsco swi lulu tdg titn cstr algn rost v orly mnst nus disca cmg hlf bwld dg dltr val shfl celg ec vrsk ffiv tjx pii ntes cern tdc ua fosl tal pay cf wpi ubnt simo cbst
 2012-04-23
-lqdt rgr gncsxci aapl alxn ulta pcln lulu kors save qcor ma tsco swi tdg titn cmg rost bwld hlf v val orly mnst nus disca celg cstr dg dltr shfl ec fran tibx trip vrsk tdc ffiv ua fosl tjx pii cf ntes vmw cern ubnt simo cbst
+lqdt rgr gnc sxci aapl alxn ulta pcln lulu kors save qcor ma tsco swi tdg titn cmg rost bwld hlf v val orly mnst nus disca celg cstr dg dltr shfl ec fran tibx trip vrsk tdc ffiv ua fosl tjx pii cf ntes vmw cern ubnt simo cbst
 2012-04-16
 rgr aapl alxn gnc pcln ulta kors lqdt lulu sxci invn save qcor ma tsco swi bwld cmg ec cstr tdg rost v orly mnst disca  hlf tibx dg val nus tdc shfl cf celg vmw dltr wxs vrsk pnra tjx fosl pay epam ntes fran meli trip ubnt simo
 2012-04-09
@@ -21,7 +32,7 @@ Aapl alxn gnc lulu kors lqdt ulta pcln qcor swi ec invn fran save bwld hlf mnst 
 2012-03-19
 Aapl alxn lulu gnc kors lqdt pcln ulta qcor swi invn fran bwld save ec ma hlf cmg mnst nus sxci cstr v rost tsco ffiv val clr swks shfl cf celg tdg tibx cern ssw tdc cmi fosl meli vmw dltr shoo orly pnra ua simo ntes ubnt slxp
 2012-03-12
-Alxn lulu aapl ulta kors lqdt qcor swi pcln invn save ma ec v tsco rost hlf val mnst sswi nus clr celg tdg cmg dltr fosl shfl bki cern shoo tdc swks tjx fast tibx dg pnra nuan ffiv cvlt pii gww asna catm meli vrsk cmi tal ubnt
+Alxn lulu aapl ulta kors lqdt qcor swi pcln invn save ma ec v tsco rost hlf val mnst ssw nus clr celg tdg cmg dltr fosl shfl bki cern shoo tdc swks tjx fast tibx dg pnra nuan ffiv cvlt pii gww asna catm meli vrsk cmi tal ubnt
 2012-03-05
 Lulu kors aapl alxn ulta lqdt qcor swi tsco invn save pcln ec ma tdg cmg v hlf ssw nus mnst clr fire celg meli dltr rost val shoo tdc swks cern nuan fosl tjx fast gold catm dg ffiv pnra tal cmi pii gww coh asna cvlt disca ebix
 #what are all the moving avg metrics etc supposed to indicate? I suppose someone thought they were a good idea bc they indicated something. So what exactly is that?
@@ -62,6 +73,8 @@ ulta lulu alxn gold qcor isrg ma hlf auy dltr swi ah pnra pii crr cvlt rgld meli
 ulta alxn isrg qcor lulu ma hlf cvlt pii crr swi ah gold tibx hmsy pnra dltr rgld tsco hans nus ppo auy ffiv tdg v meli int hibb rht nuan bpi prgo rost anss cmg hum rl deck gww dg cxo nog pcln vmw celg goog sprd ntes jcom
 2011-11-14
 lulu ulta alxn qcor gold isrg ma hlf pii rgld swi ah hmsy auy crr cvlt dltr pnra tsco hans nog cxo tibx v meli rost tdg nus dg gww hibb nuan pcln iag prgo celg gg cern int cmg hum rl rht deck biib vmw ego sprd goog rmbs
+
+# HS was the ticker for HEALTHSPRING, it was purchased by Cigna Healthcare (CI) in Jan 2012
 2011-06-20 
 nflx fosl hlf hs agp crr cmg ezpw tsco ah biib infa prgo altr ilmn abv otex endp swi armh hum hans dltr chsi nus rost ew jazz vmw meli ma nuva pnra coh chkp cvlt ftnt isrg shoo res lo dsw ntes deck wpi mdco srcl mnta veco celg
 
@@ -91,6 +104,8 @@ ah lulu hlf ulta bidu alxn nflx prgo bpi hans aapl pcln slw gold ma dltr cvlt ed
 
 2011-08-22
 ah alxn gold hlf slw hans aapl ma auy bpi prgo abv dltr rgld tdg cern gg cmg isrg v swi abx bwld shpgy ego wpi gfi nus biib jazz edu bvn hum lo otex nem chkp res iag bbby tjx ntes hmsy hibb dg wcn bexp ssri sprd actg
+#bexp isn't a valid ticker, nothing else is close except possibly expe
+#BEXP = Brigham Exploration Co, purchased by Statoil (Norway) (NYSE:STO)~ Dec 2011
 
 2011-08-29
 lulu ah alxn ulta aapl prgo hlf auy hans ma bpi abv ezpw gold slw dltr cern rgld nflx isrg cmg v swi hs tdg nus bwld ntes iag gg hmsy tsco shpgy wpi ego biib jazz hum hibb slh chkp wcn bbby lo abx sohu thor avgo ssri sprd
@@ -125,6 +140,7 @@ lulu alxn ulta hlf qcor isrg gold dltr hans ma auy pii ah swi aapl tibx v pnra c
 
 #SOLR has changed to GTAT
 #I have no idea if RADS was a legit ticker or what. I think it was legit and somehow it moved. I highly doubt that I mistyped the same ticker 3 times. -->maybe check when I had the 1wk subscript? doubt it covers when this time period tho
+#RADS -> RADIANT SYSTEMS, purchased by NCR ~Aug 2011
 
 
 #earnings reports.

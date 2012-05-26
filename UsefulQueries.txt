@@ -18,3 +18,6 @@ Loop through and for all empty rankings have a decrementing counter and set the 
 
 Create script that will go through and get stock data for the specified stock on the date+1 given
 but want it to be displayed/viewable online! Interface database w/ java or javascript utlities.
+
+
+sqlite3 IBDdatabase.sqlite "select distinct stockticker from IBD50" > IBD50StockTickerList.txt
