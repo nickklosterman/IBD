@@ -1,4 +1,9 @@
 #BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
+2012-05-22
+dg bbby hsy ecl ebay esrx dis axp cvs abt pcp cbs cl kmb pfe mo vz nee yhoo wmt
+2012-05-15
+Dg spg tjx vrx hsy gild esrx biib amgn usb amt bbby ecl ebay ko cvs hcp axp ppg wfm
+#the last ticker was wfmq but I changed it to wfm since it goes with that from the 8th and there isn't a wfmq ticker
 2012-05-08
 Pcln dg v spg yum vmw tjx vrx biib amt esrx ctxs hsy hd usb axp wfm vfc ebay amgn 
 2012-05-01
@@ -141,7 +146,7 @@ rimm fslr amzn v yum goog ebay aapl tri wfc ry ccl cme mon afl pot bns ibm wlp b
 2007-03-06
 pcu coh rimm gild pcar zmh syk nke nue de bam jci aapl fd fpl trv pru yhoo etr bax
 2009-03-10
-sgp amzn abx ma mos qcom tri wmtsu oxy mo imo yhoo
+sgp amzn abx ma mos qcom tri wmt su oxy mo imo yhoo
 2008-03-11
 RIG MA NXY STT eca hes apa xto gg cnq csx su eog genz hal dvn chk celg orcl gild
 2007-03-13
@@ -160,10 +165,12 @@ amzn goog genz bby ma v mhs aapl orcl bmy emc cme qcom fpl abx adp wag nem wmt c
 pot rig ma csx stt eca rimm blk hes hal fslr eog cnq gild ibm celg genz nke wft glw
 2007-04-10
 pcu rimm pot celg gild nue slb zmh orcl etr xto kss ceg mro ebay al wft aapl tmo fpl
+#ceg=Constellation Energy Group, merged w Exelon (EXC) ~Mar 2012
 2009-04-14
 v amzn rimm biib ma bby cvx cme mhs aapl orcl goog emc wag adp tri qcom ibm bk imo
 2007-04-17
 pcu slb pot gild nue celg mgm zmh ebay wft orcl xto al chk etr kss bni ceg sgp kr
+#BNI=burlington northern santa fe, bought by berkshire hathaway ~Nov 2009
 2008-04-22
 pot rig mos csx de cnq eca nbl hes apa px nue rimm ma wft nxy hal cat fslr su
 2008-04-29
@@ -246,7 +253,7 @@ isrg celg pm nke vfc atvi gild wpz biib tjx wmt intc bbby bmy intu cvx pg abt lo
 isrg v pm nke vfc hcp biib coh wpz gild atvi intu tjx wmt goog intc bbby cvx epd ctsh
 
 2011-11-08
-isrg ma abx qpz nke atvi biib qcom el epd unp intu gild se wmt nem intc bbby nsc wmb
+isrg ma abx wpz nke atvi biib qcom el epd unp intu gild se wmt nem intc bbby nsc wmb
 2011-11-15
 isrg ma wpz nke goog qcom biib wmt coh el intu epd unp intc tjx nsc se nem bmy wmb
 
@@ -255,3 +262,18 @@ ma pm epd biib qcom nke coh el tjx unp intc wmb abt wmt eog mrk hd tgt pfe rai
 
 
 #this is a comment
+#genzyme (genz) was acquired in April 2011 by the sanofi aventis group
+#xto energy (xto) was acquired in June 2010 by ExxonMobil
+#fd federated dept stores changed ticker to M (macy's) in June 2007
+#dna (genentech) was purchased by roche holdings (rog) in Apr 2009
+#fsh - fisher scientific merged w Thermo Electron to form TMO Thermo Fisher Scientific in 2006, however there was a FTC problem that prevented teh merger from fully completing until apr 2007 so this may be a reason as to why the ticker was still fsh in 2007
+#mhs medco health solutions was acquired by express scripts esrx on apr 2012
+#oxy is occidental petroleum group. not sure why this isn't being found
+#pcu = souther copper corp, change to (scco)
+#pcz petro canada was acquired by suncor energy (su) in 2009
+
+#sgp schering plugh merged with Merck in nov 2009
+#sii smith int'l acquired by Schlumerger ltd (slb) july 2010
+#vol volt information sciences changed to (visi)
+#wmi waste management changed to (wm)
+#wye wyeth acquired by pfizer oct 2009
