@@ -32,7 +32,7 @@ fi
 #filecontent=$( ` cat "/tmp/TickerList.txt"` | sort | uniq ) #this will cut down repeats a bit across the three (or more) indexes we follow
 filecontent=$(  cat "/tmp/TickerList.txt" | sort | uniq ) #this will cut down repeats a bit across the three (or more) indexes we follow
 
-#NOTE: the following two statements are very different. The first one places each line into a separate array element. The second one puts all the elements into a single variable. Arrays are declared with parens () around them so they are needed outside the command expansion for the cat command.
+#NOTE: the statement above and the following two statements are very different. The first one places each line into a separate array element. The second one puts all the elements into a single variable. Arrays are declared with parens () around them so they are needed outside the command expansion for the cat command.
 #filecontent=( $(  cat "/tmp/TickerList.txt" )) filecontent=$(  cat "/tmp/TickerList.txt" )
 
 #http://www.thegeekstuff.com/2010/06/bash-array-tutorial/
