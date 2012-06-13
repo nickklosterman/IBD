@@ -1,5 +1,13 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
+2012-06-06 
+lqdt gnc sxci alxnmlnx aapl lulu ulta qcor tdg algn crus swi rost mnst titn orly tjx wwww cstr ntes cmg dg bwld tcbi v ma cern val ua sni pii pcln wpi ec bbby fdo trip shw amt disca sbux ssys vrsk coo fds jbht swks ebay pkt
+2012-06-04
+lqdt sxci alxn gnc mlnx aapl ulta tsco lulu tdg crus swi rost mnst qcor ntes dltr algn dg orly tjx wwww cstr cmg titn bwld save tcbi v cern val sni ua wpi pcln ec fdo bbby pii trip shw ma disca coo jbht sbux amt cprt tdc cbst
+2012-05-30
+lqdt gnc sxci alxn swi mlnx aapl lulu ulta tdg rost crus algn mnst tsco qcor titn cmg orly save tjx wwww pcln cstr ntes v dg cern val bwld tcbi wpi tdc ua sni bbby shfl pii trip ec ma cprt disca coo stmp sbux shw amt clb fdo
+2012-05-29
+lqdt alxn gnc sxci tsco sni mlnx aapl ulta lulu qcor crus tdg rost algn mnst pcln titn dg tjx save tcbi cstr cmg orly v cern bwld wwww wpi ntes val tdc ua sni bbby shfl pii ec ma cprt disca coo stmp fdo trip sbux shw amt vrsk 
 2012-05-23
 lqdt sxci alxn gnc tsco ulta swi mlnx aapl lulu qcor crus tdg pcln titn rost algn mnst arba ntes v tjx save wwww orly cern dg bwld tdc tcbi shfll cstr ma ua coo pii cvlt qpi ec cprt val disca clb sni bbby stmp trip shw amt cbst
 2012-05-21
