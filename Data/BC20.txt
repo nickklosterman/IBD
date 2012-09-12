@@ -1,5 +1,23 @@
 #BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
+2012-08-07
+alxn pcln celg tjx biib amgn rost agu v cmcsa twc ebay erx hsy nwsa gild dtv cni spg dis
 
+2012-07-31
+alxn pcln tjx biib amgn rost v amt cmcsa agu goog esrx hsy ecl ebay gild cci wmt mo nwsa 
+2012-07-24
+alxn pcln v tjx rost hsy cmcsa esrx ebay amgn amt ecl biib mo mon hcp ppg cni nwsa cost 
+2012-07-17
+alxn tjx rost dg spg hsy amt cmcsa esrx biib amgn wfm ecl hcp wmt mon mck abt cvs cost
+2012-07-10
+alxn v tjx pcln dg ma rost cmcsa spg hsy amt wfm ecl biib amgn esrx mck ebay hcp ko
+2012-07-03
+alxn pcln tjx dg cmcsa ma hsy biib amt esrx exl amgn crm hca wfm mck amt unp ebay ko 
+2012-06-26
+alxn tjx dg ma cmcsa ecl ebay wfm biib amgn crm esrx hsy vfc syk mck cni mon ko dis
+2012-06-19 
+alxn rost dg cmcsa ma ecl amt esrx hsy biib amgn wfm bbby syk hcp cni ko dis mon agn
+2012-06-12 
+dg ecl ma hsy dis esrx cni hd twc cbs mon bmy agn kmb wmt mo nee vz mrk duk
 #only 17,skipped week due to monday mem day holiday
 2012-06-05 
 dg esrx dis cbs mon kmb wmt nee duk vz rai amzn so pep fe t pfe
@@ -156,7 +174,8 @@ RIG MA NXY STT eca hes apa xto gg cnq csx su eog genz hal dvn chk celg orcl gild
 2007-03-13
 pcu coh nue rimm cme pcar pot de gild al zmh syk kss nke aapl ben etr bam xto mro
 2009-03-17
-amzn ma bmy ibm qcom aapl emc wmt mo tri su hes dhr mrk ocy imo glw 
+amzn ma bmy ibm qcom aapl emc wmt mo tri su hes dhr mrk oxy imo glw 
+#in above oxy was ocy. changed 10-07-2012
 2007-03-20
 nue rimm pcar de syk nke al zmh aapl ceg fpl mro xto bam etr fd bax tmo rg jci
 2009-03-24
