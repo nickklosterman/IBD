@@ -69,18 +69,27 @@ if (len(sys.argv) > 2):
     IBD50 = open(sys.argv[2])
 else:
     database="IBDdatabase.sqlite"  #need to jsut stick this stuff in an array and loop over it all
+ 
     table1="IBD50"
     file1 = open("Data/IBD50.txt")
     errortable1="IBD50Error"
     reportDayOfWeek1=0#monday
+
     table2="BC20"
     file2 = open("Data/BC20.txt")
     errortable2="BC20Error"
     reportDayOfWeek2=1#tuesday
+
     table3="IBD8585"
     file3 = open("Data/8585.txt")
     errortable3="IBD8585Error"
     reportDayOfWeek3=4#friday
+
+
+    table4="Top200Composite"
+    file4 = open("Data/Top200Composite.txt")
+    errortable4="Top200CompositeError"
+    reportDayOfWeek4=4#friday
 
 
 connection=sqlite3.connect(database)
@@ -89,6 +98,7 @@ cursor=connection.cursor()
 read_file_build_database(table1,errortable1,file1,reportDayOfWeek1)
 read_file_build_database(table2,errortable2,file2,reportDayOfWeek2)
 read_file_build_database(table3,errortable3,file3,reportDayOfWeek3)
+read_file_build_database(table4,errortable4,file4,reportDayOfWeek4)
 
 
 
