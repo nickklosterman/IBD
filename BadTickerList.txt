@@ -1401,9 +1401,6 @@ ZUMZ
 EXBD
 EXPG
 
-FX
-
-
 NCII
 
 
