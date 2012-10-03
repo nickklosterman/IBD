@@ -77,3 +77,10 @@ grep "N/A" /tmp/Tickers.txt | sed 's/",.*//;s/"//' #awk '{ print $1 }'
 #touch BadTickerList.txt #this is needed if file not all ready created? NO
 date +%F >> BadTickerList.txt
 grep "N/A" /tmp/Tickers.txt | sed 's/",.*//;s/"//' >> BadTickerList.txt
+
+#NOTE: if you try to run this (without restricting the fields you look at) when the market isn't open then all tickers will have an N/A field
+
+#touch BadTickerList.txt #this is needed if file not all ready created? NO
+date +%F >> BadTickerList.txt
+cut -d , -f 1-3 /tmp/Tickers.txt |grep "N/A"  | sed 's/",.*//;s/"//' >> BadTickerList.txt
+
