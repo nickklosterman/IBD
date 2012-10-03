@@ -1,21 +1,25 @@
-class MovementMatrix:
 
-    def __init__(self,database,table,limit_number,offset_number):
+def prepprice(data):
+    temp=striphtml(data.rstrip())
+    temp2=temp[1:] #remove dollar sign
+    temp3=temp2.strip() #remove whitespace
+    p = re.compile(r',') #remove comma in price since that'll screw things up as far as outputting to csv.
+    return p.sub('',temp3)
+
+class RankMatrix:
+
+    def __init__(self,database,table):
         self.database=database
         self.table=table
-        self.limit_number=limit_number #limit number used for query
-        self.offset_number=offset_number
         self.Dates=self.GetDateList()
         self.Stocks=self.GetStockList()
-        self.Ranks=self.GetRankList()
-
 
     def GetDateList(self):
         dates=[]
         con = mdb.connect('localhost', 'nicolae', 'ceausescu', self.database)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT DISTINCT(Date) from %s ORDER BY DATE DESC LIMIT %s OFFSET %s" % (self.table,self.limit_number,self.offset_number)) #Desc New->Old, ASC Old->New i.e. new=most recent date, old=least recent date
+            cur.execute("SELECT DISTINCT(Date) from %s ORDER BY DATE DESC " % (self.table)) #Desc New->Old, ASC Old->New
             rows = cur.fetchall()
             for row in rows:
                 dates.append(row["Date"])
@@ -24,49 +28,19 @@ class MovementMatrix:
         con.close()
         return dates
 
-    def GetRankList(self):
-        ranks=[]
-        con = mdb.connect('localhost', 'nicolae', 'ceausescu', self.database)
-        with con:
-            cur = con.cursor(mdb.cursors.DictCursor)
-#            cur.execute("SELECT DISTINCT(Rank) from %s ORDER BY Rank ASC LIMIT %s OFFSET %s" % (self.table,self.limit_number,self.offset_number)) 
-            cur.execute("SELECT DISTINCT(Rank) from %s ORDER BY Rank ASC " % (self.table)) 
-            rows = cur.fetchall()
-            for row in rows:
-                ranks.append(row["Rank"])
-        con.commit()
-        cur.close()
-        con.close()
-        return ranks
-
-       
     def GetStockList(self):
         StockTickers=[]
         con = mdb.connect('localhost', 'nicolae', 'ceausescu', self.database)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            query=self.BuildQueryFromDates()
-            rowcount=int(cur.execute(query))
+            cur.execute("SELECT DISTINCT(StockTicker) from %s ORDER BY StockTicker ASC " % (self.table)) #ASC A->Z, Desc Z->A
             rows = cur.fetchall()
             for row in rows:
                 StockTickers.append(row["StockTicker"])
-                
         con.commit()
         cur.close()
         con.close()
         return StockTickers
-    def BuildQueryFromDates(self):
-        dictlength=len(self.Dates)
-        query="SELECT DISTINCT(StockTicker) FROM "+self.table+" WHERE "
-        for i in range(0,dictlength,1):
-            query+="DATE='" +self.Dates[i] + "' OR "  
-        query=query[:-3] #clip off the final " AND" which is unneeded
-        query+=" ORDER BY StockTicker ASC " 
-        return query
-
-    def BuildQueryFromDate(self,week):
-        query="SELECT StockTicker FROM "+self.table+" WHERE DATE='" +self.Dates[week] + "' ORDER BY StockTicker ASC " 
-        return query
 
 
     def GetRankForStockDate(self,StockTicker,Date):
@@ -87,24 +61,6 @@ class MovementMatrix:
         con.close()
         return rank
 
-    def GetStockTickerForRankDate(self,Rank,Date):
-        con = mdb.connect('localhost', 'nicolae', 'ceausescu', self.database)
-        with con:
-            cur = con.cursor(mdb.cursors.DictCursor)
-            resultcount=int(cur.execute("SELECT StockTicker from %s WHERE Date='%s' AND Rank='%s' " % (self.table,Date,Rank)) )
-#            resultcount=cur.row_count() got an error when tried to use this
-            if resultcount==1:
-                row=cur.fetchone()
-                stock=row['StockTicker']
-            elif resultcount==0:
-                stock="unknown"
-            else: #multiple entries (which shouldn't happen)
-                stock="unknown2"
-        con.commit()
-        cur.close()
-        con.close()
-        return stock
-
     def GetStockPriceForStockDate(self,StockTicker,Date):
 #        StockPrice=get_historical_prices(StockTicker,Date)
         StockData=get_historical_prices_plus_one_day(StockTicker,Date)
@@ -121,38 +77,59 @@ class MovementMatrix:
         StockPrice=closingprice
         return StockPrice
 
-    def GetStockFromDate(self,week):
-        StockTickers=[]
-        con = mdb.connect('localhost', 'nicolae', 'ceausescu', self.database)
-        with con:
-            cur = con.cursor(mdb.cursors.DictCursor)
-            query=self.BuildQueryFromDate(week)
-            rowcount=int(cur.execute(query))
-            rows = cur.fetchall()
-            for row in rows:
-                StockTickers.append(row["StockTicker"])
-                
-        con.commit()
-        cur.close()
-        con.close()
-        return StockTickers
-        
-        #Movers:
-    #WeekA and WeekB are indices for the Dates[] list.
-    #the stocks on the list for Dates[WeekA] are compared to the stocks on the list for Dates[WeekB]
-                
-    def Movers(self,weekA,weekB): 
-        New=self.GetStockFromDate(weekA)
-        Old=self.GetStockFromDate(weekB)
-        print("Tickers from weekB no longer on list at weekA")
-        for old in Old:
-            if old not in New:
-#                print(old,self.GetRankForStockDate(old,self.Dates[weekA])) can't use weekA herebecuase the stock is off the list by then!
-                print("%s %s" % (old,self.GetRankForStockDate(old,self.Dates[weekB])))
-        print("Tickers from weekA not on list at weekB")
-        for new in New:
-            if  new not in Old:
-                print("%s %s" % (new,self.GetRankForStockDate(new,self.Dates[weekA])))
+    def PrintRankStockHeader(self):
+        print(','), #leave blank space for stock column 
+        for s in self.Stocks: #print
+            print('%s.rank,%s.price,' % (s,s)),
+        print('')
+    def PrintStockHeader(self):
+        print(','),
+        for s in self.Stocks: #print
+            print('%s.stockprice,' % (s)),
+        print('')
+    def PrintRankHeader(self):
+        print(','),
+        for s in self.Stocks: #print
+            print('%s.rank,' % (s)),
+        print('')
+
+    def StockRankMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
+        self.PrintRankStockHeader()
+        for d in self.Dates:
+            print('%s' % (d)),
+            for s in self.Stocks:
+                rank=self.GetRankForStockDate(s,d)
+                if rank!=-1:
+                    sys.stdout.write('%s' % (rank))
+                print(','),
+                stockprice=self.GetStockPriceForStockDate(s,d)
+                if stockprice!=0.0:
+                    sys.stdout.write('%s' % (stockprice)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting.
+                print(','),                 
+            print('')
+
+    def RankMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
+        self.PrintRankHeader()
+        for d in self.Dates:
+            print('%s' % (d)),
+            for s in self.Stocks:
+                rank=self.GetRankForStockDate(s,d)
+                if rank!=-1:
+                    sys.stdout.write('%s' % (rank))
+                print(','),
+            print('')
+
+    def StockMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
+        self.PrintStockHeader()
+        for d in self.Dates:
+            print('%s' % (d)),
+            for s in self.Stocks:
+                stockprice=self.GetStockPriceForStockDate(s,d)
+                if stockprice!=0.0:
+                    sys.stdout.write('%s' % (stockprice)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting.
+                print(','),                 
+            print('')
+
 
 
     def RankMatrix(self):
@@ -165,27 +142,6 @@ class MovementMatrix:
                 if rank!=-1:
                     #print('%s' % (rank)),
                     sys.stdout.write('%s' % (rank)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting. http://codingrecipes.com/print-without-a-new-line-or-space-in-python
-                else:
-                    nine=9
-#                    print("-"),
-            #if not at end of list then output ,
-                print(','), #OR add to string and then remove last character when done with that string of dates
-            print("") #output EOL
-
-
-    def StockTickerMatrix(self):
-        self.PrintDates() #print header of dates
-        print("") #output EOL
-        for r in self.Ranks:
-            print('%s,' % (r)), #start new line with  the stock
-            for d in self.Dates:
-                stockticker=self.GetStockTickerForRankDate(r,d)
-                if stockticker!="":
-                    #print('%s' % (rank)),
-                    sys.stdout.write('%s' % (stockticker)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting. http://codingrecipes.com/print-without-a-new-line-or-space-in-python
-                else:
-                    nine=9
-#                    print("-"),
             #if not at end of list then output ,
                 print(','), #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
@@ -214,7 +170,7 @@ class MovementMatrix:
 ########### MAIN ############
 
 import sys
-import MySQLdb as mdb # in mysql-python package
+import MySQLdb as mdb
 import getopt
 #import YahooStockQuotes #http://stackoverflow.com/questions/714881/how-to-include-external-python-code-to-use-in-other-files
 from YahooStockQuotes import get_historical_prices_plus_one_day
@@ -224,16 +180,12 @@ outputfilename="RealEstateSalesMontgomeryCtyOhiooutput.txt"
 loginfile="/home/nicolae/.mysqllogin"
 table="BC20"
 database="StockMarketData"
-limit_num=2
-offset=0
 try:
-    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:m:f:', ['--input=',
+    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:', ['--input=',
                                                                         '--output=',
                                                                         '--loginfile=',
                                                                         '--table=',
                                                                         '--database=',
-                                                                        '--limit=',
-                                                                            '--offset=',
                                                                         ])
 except getopt.GetoptError, err:
     # print help information and exit:                                                                        
@@ -252,17 +204,13 @@ for opt, arg in options:
         table = arg
     elif opt in ('-d', '--database'):
         database = arg
-    elif opt in ('-m', '--limit'):
-        limit_num = arg
-    elif opt in ('-f', '--offset'):
-        offset = arg
     elif opt == '--version':
         version = arg
 
-
 #print(inputfilename,outputfilename,loginfile,table,database)
-MM=MovementMatrix(database,table,limit_num,offset)
-MM.RankMatrix()
-MM.Movers(0,1) #must call program as such : python MovementMatrix.py -m 9 -t IBD50 , otherwise we get an index out of range.
-MM.StockTickerMatrix()
-MM.StockMatrix()
+RM=RankMatrix(database,table)
+#RM.PrintDates()
+#RM.RankMatrix()
+RM.StockMatrix()
+#RM.RankMatrixTransposed()
+
