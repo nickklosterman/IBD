@@ -112,7 +112,7 @@ class MovementMatrix:
         closingprice=0.0
         quotedate=0
         if StockData[0][0]!="Date": # a simple error check since this first field should be "Date"   
-            print("ERROR for %s" % (StockTicker)) #enter this data into an errors database                    
+            print(("ERROR for %s" % (StockTicker))) #enter this data into an errors database                    
 #            insert_error_data(tableerror,date,ticker,rank)
         else:
              if StockData[0][4]=='Close':
@@ -148,18 +148,18 @@ class MovementMatrix:
         for old in Old:
             if old not in New:
 #                print(old,self.GetRankForStockDate(old,self.Dates[weekA])) can't use weekA herebecuase the stock is off the list by then!
-                print("%s %s" % (old,self.GetRankForStockDate(old,self.Dates[weekB])))
+                print(("%s %s" % (old,self.GetRankForStockDate(old,self.Dates[weekB]))))
         print("Tickers from weekA not on list at weekB")
         for new in New:
             if  new not in Old:
-                print("%s %s" % (new,self.GetRankForStockDate(new,self.Dates[weekA])))
+                print(("%s %s" % (new,self.GetRankForStockDate(new,self.Dates[weekA]))))
 
 
     def RankMatrix(self):
         self.PrintDates() #print header of dates
         print("") #output EOL
         for s in self.Stocks:
-            print('%s,' % (s)), #start new line with  the stock
+            print(('%s,' % (s)), end=' ') #start new line with  the stock
             for d in self.Dates:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
@@ -169,7 +169,7 @@ class MovementMatrix:
                     nine=9
 #                    print("-"),
             #if not at end of list then output ,
-                print(','), #OR add to string and then remove last character when done with that string of dates
+                print((','), end=' ') #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
 
 
@@ -177,7 +177,7 @@ class MovementMatrix:
         self.PrintDates() #print header of dates
         print("") #output EOL
         for r in self.Ranks:
-            print('%s,' % (r)), #start new line with  the stock
+            print(('%s,' % (r)), end=' ') #start new line with  the stock
             for d in self.Dates:
                 stockticker=self.GetStockTickerForRankDate(r,d)
                 if stockticker!="":
@@ -187,7 +187,7 @@ class MovementMatrix:
                     nine=9
 #                    print("-"),
             #if not at end of list then output ,
-                print(','), #OR add to string and then remove last character when done with that string of dates
+                print((','), end=' ') #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
 
 
@@ -195,19 +195,19 @@ class MovementMatrix:
         self.PrintDates() #print header of dates
         print("") #output EOL
         for s in self.Stocks:
-            print('%s,' % (s)), #start new line with  the stock
+            print(('%s,' % (s)), end=' ') #start new line with  the stock
             for d in self.Dates:
                 stockprice=self.GetStockPriceForStockDate(s,d)
                 if stockprice!=0.0:
                     sys.stdout.write('%s' % (stockprice)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting.
             #if not at end of list then output ,
-                print(','), #OR add to string and then remove last character when done with that string of dates
+                print((','), end=' ') #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
                 
     def PrintDates(self):
-        print(","),
+        print((","), end=' ')
         for d in self.Dates:
-            print("%s," % (d)),
+            print(("%s," % (d)), end=' ')
 
 
 
@@ -235,9 +235,9 @@ try:
                                                                         '--limit=',
                                                                             '--offset=',
                                                                         ])
-except getopt.GetoptError, err:
+except getopt.GetoptError as err:
     # print help information and exit:                                                                        
-    print str(err) # will print something like "option -a not recognized"                                         
+    print(str(err)) # will print something like "option -a not recognized"                                         
         #usage()                                                                                                  
     sys.exit(2)
 

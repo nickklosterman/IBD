@@ -86,8 +86,12 @@ isrg ma v goog pm vfc biib nke apc unp coh el tjx bbby enb yum nsc intc gild bmy
 pm nke el epd biib gild wmt eog lvs mrk hd rai tgt lly low cat exc yhoo csco 
 2008-12-23
 gild mhs genz qcom abt amgn adp cl bmy v mcd orcl pg wmt abx lly fpl so rtn pfe
+#mhs->esrx
+
 2008-12-02
 gild mhs sgp xom adp mcd amgn cvx pg bmy mmm so wmt d t cost dvn wye xto afl
+#mhs->esrx
+
 2007-12-04
 pot vmw aapl goog nyx pcp glw de fslr ma blk gild cme amzn genz mos wft emr syk esrx
 2008-12-09
@@ -96,6 +100,8 @@ gild mhs amgn adp bmy kr xom mcd pg cl cost so wmt rtn pfe t cmcsa fpl abx usb
 pot aapl goog nyx blk de mos fslr vmw ma gild pcp cme amzn genz emr syk glw wft hpq
 2008-12-16
 gild qcom mhs amgn adp bmy v xom mcd abx so pg wmt rtn lly oxy pfe wye t fpl 
+#mhs->esrx
+
 2007-12-18
 pot aapl vmw goog nyx de lmt mos fslr ma gild pcp cme genz syk wfr hpq xto emr stt
 2007-11-20
@@ -126,18 +132,28 @@ aapl pot rimm nov slb amzn pcp jnpr fcx nvda wft hpq orcl amat ma celg cme cnq b
 aapl rimm pot pcu nov slb rig hal pcp jnpr gsf wft csco tck amzn fcx ebay nvda hpq do
 2007-08-07
 pot aapl rimm nov pcp jnpr mos fcx csco hpq amat wft orcl stj nvda agn mhs celg cme biib
+#mhs->esrx
+
 2008-08-12
 rimm celg gild nsc fslr unp orcl px genz qcom stj ibm bax mdt adbe blk mcd symc tjx wu
 2007-08-21
 rimm nov ebay slb  syk jnpr nvda wft hpq mos mhs ma de biib bdx cvs itw coh ko dhr
+#mhs->esrx
+
 2008-08-26
 celg rimm genz fslr nsc mdt orcl gild px stj bax wu qcom adbe blk ibm syk hes esrx schw
 2007-08-28
 aapl rimm nov ebay slb jnpr nvda wft hpq syk biib mos vmw mhs de itw ma emc ko mgm
+#mhs->esrx
+
 2009-01-13
 gild sgp genz qcom mcd mhs amgn adp bmy v lly orcl ibm fpl bdx pfe rtn k wye wmi
+#mhs->esrx
+
 2007-09-11
 rimm nov ebay slb amzn wft hpq jnpr celg nvda biib mos orcl de stj mhs vmw tmo bdx agn
+#mhs->esrx
+
 2007-09-18
 rimm nov ebay slb amzn wft jnpr fcx celg nvda biib hpq stj mos de syk bhi vmw tmo orcl 
 2008-05-20
@@ -166,6 +182,7 @@ aapl pot rimm nov rig pcp slb wft bhi gsf amzn nvda aa tck ma nke fcx goog pcar 
 aapl pot rimm pcu nov rig pcp slb amzn nvda csco tck goog gsf ma fcx ebay pcar cat aa
 2007-05-01
 celg pot gild pcu nov pcar amzn al slb orcl vol sgp zmh tmo mhs exc aapl ebay bhi csco
+
 2008-05-06
 ma rimm rig hes nbl csx apa nxy nue aapl cnq hal px cat ibm fslr bni eog cvx chk
 2007-05-08
@@ -197,6 +214,7 @@ amzn ma orcl ibm emc cme bmy aapl fpl abx qcom adp wmt nem hes tri oxy wag su mo
 nue rimm gild pcar pot lvs orcl mro slb zmh nke xto fpl aapl kss de ceg gs etr vlo
 2009-03-31
 amzn goog genz bby ma v mhs aapl orcl bmy emc cme qcom fpl abx adp wag nem wmt cov
+
 2008-04-08
 pot rig ma csx stt eca rimm blk hes hal fslr eog cnq gild ibm celg genz nke wft glw
 2007-04-10
@@ -204,6 +222,7 @@ pcu rimm pot celg gild nue slb zmh orcl etr xto kss ceg mro ebay al wft aapl tmo
 #ceg=Constellation Energy Group, merged w Exelon (EXC) ~Mar 2012
 2009-04-14
 v amzn rimm biib ma bby cvx cme mhs aapl orcl goog emc wag adp tri qcom ibm bk imo
+
 2007-04-17
 pcu slb pot gild nue celg mgm zmh ebay wft orcl xto al chk etr kss bni ceg sgp kr
 #BNI=burlington northern santa fe, bought by berkshire hathaway ~Nov 2009
@@ -215,7 +234,7 @@ pot rig ma oxy csx de nbl hes hal apa fslr nue rimm nov eca wft cnq nxy px cat
 
 2009-09-03
 gild mhs genz abx abt mcd bax d fpl goog orcl bmy peg ibm k mdlz nem unh xto amzn
-#kft->mdlz
+#kft->mdlz mhs->esrx
 
 2007-02-06
 coh lvs rimm mgm syk nyx pcu cme pcar pot gs ben ms csco frx de gild nue mco zmh

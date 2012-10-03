@@ -87,7 +87,7 @@ def query_for_data(tablequery,tabledata,tableerror):
         ticker=row[2]
         rank=row[3]
         output=get_historical_prices_plus_one_day(ticker, date )
-        print date,ticker #,output
+        print date,ticker
         if output[0][0]!="Date": # a simple error check since this first field should be "Date"
             print "ERROR for ",ticker #enter this data into an errors database
             insert_error_data(tableerror,date,ticker,rank)
