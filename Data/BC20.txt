@@ -1,4 +1,17 @@
 #BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
+
+2012-09-18
+alxn celg rost esrx biib amgn aapl hca crm goog ebay tjx cni gild unp gps v cmcsa dtv agu
+2012-09-11
+alxn esrx goog amgn celg tjx biib agu ebay aapl gps crm cmcsa dtv vrx twc gild vlo cni hsy
+#no bc20 due to labor day
+2012-08-28
+alxn rost esrx biib amgn tjx celg goog gps cni ebay v unp crm hsy gild vlo cmcsa dtv agu
+
+2012-08-21
+alxn rost esrx amgn goog biib ebay tjx cmcsa gps agu cni unp twc crm dtv hsy v dis cci
+2012-08-14
+alxn tjx esrx biib amgn agu celg rost goog cmcsa twc cni v dtv hsy ebay gild crm unp dis
 2012-08-07
 alxn pcln celg tjx biib amgn rost agu v cmcsa twc ebay erx hsy nwsa gild dtv cni spg dis
 

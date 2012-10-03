@@ -1,0 +1,46 @@
+aapl,142
+bac,480
+bwld,320
+c,8
+crox,65
+rmcc,600
+jsda,214
+pot,54
+rimm,18
+#fields: purchase date,purchase price,shares purchased, purchase commission,??total cost..just sum of those prev, current price
+#items to calculate:total gain/loss, annualized return,include price to sell in cost of return
+#place data in sqlite database. when retrieve data update current stock price. (won't need date for this guy since it should be update every time we run script. in worst case just look at the timestamp on the database for the time when the data was pulled.
+#format output nicely
+#use xml??
+#write in C,C++ using libaries, Java, Python, bash
+#frontend to add new investments.
+
+#!/bin/bash
+function ComputeYearsSincePUrchase()
+{
+PurchaseDate=${1} #or could query for it. here and have it returned to this variable. write a generic query funciton.
+
+
+PurchaseYear=$(PurchaseDate:0:4)
+PurchaseMonth=$(PurchaseDate:5:2)
+PurchaseDay=$(PurchaseDate:8:2)
+
+CurrentYear=$( date +%Y )
+CurrentDayofYear=$( date +%j ) #include leading 0
+CurrentDayofYearStripped=${CurrentDayofYear//0} #find longest 0 pattern and replace with nothing
+CurrentMonth=$( date +%m )
+CurrentDay=$( date +%d ) #use --utc for utc time
+
+}
+
+function isLeapYear()
+{
+flag=0
+Year=$( date +%Y )
+Remainder=$( $year % 4 ) #Leap years are divisible by 4
+if [[ $Remainder -eq 0 ]]
+then 
+flag=1
+fi
+echo $flag
+}
