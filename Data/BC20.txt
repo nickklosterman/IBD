@@ -214,7 +214,8 @@ pot rig ma oxy csx de nbl hes hal apa fslr nue rimm nov eca wft cnq nxy px cat
 
 
 2009-09-03
-gild mhs genz abx abt mcd bax d fpl goog orcl bmy peg ibm k kft nem unh xto amzn
+gild mhs genz abx abt mcd bax d fpl goog orcl bmy peg ibm k mdlz nem unh xto amzn
+#kft->mdlz
 
 2007-02-06
 coh lvs rimm mgm syk nyx pcu cme pcar pot gs ben ms csco frx de gild nue mco zmh
@@ -250,7 +251,8 @@ aapl ma v el mcd bhi vmw isrg celg hal sbux biib pm ebay coh gg agn lo wynn goog
 gmcr aapl ma isrg el mcd pcln vmw v hal sbux ebay bhi amzn pm nbl coh lvs biib lo
 
 2011-08-09
-ma pm mcd bmy gis nke kft mon exc d 
+ma pm mcd bmy gis nke mdlz mon exc d 
+#kft->mdlz
 
 2011-08-16
 gmcr ma v abx mcd nem epd el nbl mon ed d 
