@@ -47,7 +47,7 @@ def read_file_build_database(table,errortable,file,reportdayofweek):
                 dayofweek=date(int(year),int(month),int(day)).weekday()
                 #perform a date check on teh data being entered. BC20 is published on Tuesday IBD50 on Monday except when bank holiday falls on Monday then it falls on a Tuesday
                 if 1==1: #here we ignore the DotW check since they sorta have moved and I imagine that if they moved in the future it'd break a whole bunch. in the end I don't think I really care if I have the date 100% right.
-                    query='INSERT INTO '+table+' VALUES(null,'+Date+',"'+String[counter2].strip().upper()+'",'+str(counter2+1)+')' #needed to quote the string for entry
+                    query='INSERT INTO '+table+' VALUES(null,"'+Date+'","'+String[counter2].strip().upper()+'",'+str(counter2+1)+')' #needed to quote the string for entry, also needed to quote the date or it gets chopped when its sqlite enters and validates/converts it.
 #                    print(query)
                     cursor.execute(query)
                 else:
