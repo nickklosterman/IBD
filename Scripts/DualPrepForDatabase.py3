@@ -1,3 +1,5 @@
+#!/usr/bin/env/python 
+# -*- python -*-
 import sqlite3
 import sys #for cmd line arguments
 from datetime import date #for .weekday() function
@@ -44,20 +46,25 @@ def read_file_build_database(table,errortable,file,reportdayofweek):
                 Rank=counter2+1
                 dayofweek=date(int(year),int(month),int(day)).weekday()
                 #perform a date check on teh data being entered. BC20 is published on Tuesday IBD50 on Monday except when bank holiday falls on Monday then it falls on a Tuesday
-                if reportdayofweek==dayofweek:
-                    Front='INSERT INTO '+table
-                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
-                elif reportdayofweek==0 and dayofweek==1:#case of IBD50 bumped on a Tuesday
-#                    print("---Tuesday Bump")
-                    Front='INSERT INTO '+table
-                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
-#                    Front='INSERT INTO '+errortable #enter it into the error dbase just in case
-#                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
+                if 1==1: #here we ignore the DotW check since they sorta have moved and I imagine that if they moved in the future it'd break a whole bunch. in the end I don't think I really care if I have the date 100% right.
+                    query='INSERT INTO '+table+' VALUES(null,'+Date+',"'+String[counter2].strip().upper()+'",'+str(counter2+1)+')' #needed to quote the string for entry
+#                    print(query)
+                    cursor.execute(query)
                 else:
-#                if reportdayofweek!=dayofweek:
-                    print("Date doesn't fall on appropriate day of week, Entering into Error Database:",errortable)
-                    Front='INSERT INTO '+errortable #enter it into the error dbase just in case
-                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
+                    if reportdayofweek==dayofweek:
+                        Front='INSERT INTO '+table
+                        cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
+                    elif reportdayofweek==0 and dayofweek==1:#case of IBD50 bumped on a Tuesday
+                        #                    print("---Tuesday Bump")
+                        Front='INSERT INTO '+table
+                        cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
+                        #                    Front='INSERT INTO '+errortable #enter it into the error dbase just in case
+                        #                    cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
+                    else:
+                        #                if reportdayofweek!=dayofweek:
+                        print("Date doesn't fall on appropriate day of week, Entering into Error Database:",errortable)
+                        Front='INSERT INTO '+errortable #enter it into the error dbase just in case
+                        cursor.execute(Front+' VALUES(null, ?, ?, ?)', (Date,String[counter2].strip().upper(),counter2+1))
                 #cursor.execute(Query) Using this method I don't think the strnigs were being quoted when they needed to
                 counter2+=1
         counter+=1
@@ -89,7 +96,7 @@ else:
     table4="Top200Composite"
     file4 = open("Data/Top200Composite.txt")
     errortable4="Top200CompositeError"
-    reportDayOfWeek4=4#friday
+    reportDayOfWeek4=3#thursday 4#friday
 
 
 connection=sqlite3.connect(database)
