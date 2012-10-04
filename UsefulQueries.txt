@@ -21,3 +21,32 @@ but want it to be displayed/viewable online! Interface database w/ java or javas
 
 
 sqlite3 IBDdatabase.sqlite "select distinct stockticker from IBD50" > IBD50StockTickerList.txt
+sqlite3 IBDdatabase.sqlite "select count(*) from BC20 where stockticker like 'alxn' and rank = 1 and date like '2012-09-18'"
+sqlite3 IBDdatabase.sqlite "select * from BC20 where Date='2012-07-31'"
+sqlite3 IBDdatabase.sqlite "select distinct date from BC20"
+sqlite3 IBDdatabase.sqlite "drop IBD50StockData"
+
+
+sqlite3 IBDdatabase.sqlite " select count(*) from BC20StockData where id not in ( select min(id) from BC20StockData group by rank,stockticker,date ) "
+
+#delete duplicate records
+sqlite3 IBDdatabase.sqlite " delete from BC20StockData where id not in ( select min(id) from BC20StockData group by rank,stockticker,date ) "
+
+#trying to match across tables
+sqlite3.exe IBDdatabaseMod.sqlite " select * from BC20 where id not in ( select BC20.id from BC20 LEFT JOIN BC20StockData WHERE BC20.rank=BC20StockData.rank and BC20.stockticker=BC20StockData.stockticker and BC20.date=BC20StockData.date ) "
+
+select * from BC20StockData where StockTicker like "PCLN" and Rank=1 and Date="2012-05-08"
+
+#this should return 0 records, stating that we don't have duplicates in BC20
+select * from BC20 where id not in ( select min(id) from BC20 group by rank,stockticker,date )
+
+#show duplicates in BC20StockData
+select * from BC20StockData where id not in ( select min(id) from BC20StockData group by rank,stockticker,date )
+
+There will be a discrepancy between the number of BC20 records and BC20StockData records due to ticker changes/removals
+
+sqlite3 IBDdatabase.sqlite .schema
+sqlite3 IBDdatabase.sqlite .table
+
+#output a 1 if table exists
+sqlite3 IBDdatabase.sqlite " select case when tbl_name ='BC20' then 1 else 0 end  from sqlite_master where type='table' and name='BC20' order by name"
