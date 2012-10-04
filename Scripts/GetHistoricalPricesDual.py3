@@ -50,7 +50,7 @@ def get_historical_prices(symbol, date):
     return data
 #end def get_historical_prices
 
-_CounterSentinel = 4 #max possible holidays in a row where markets might be closed so we look at next day.
+_CounterSentinel = 5 #max possible holidays in a row where markets might be closed so we look at next day.
 #we could avoid all this by just using the day of instead of day +1
 def get_historical_prices_plus_one_day(symbol, date):
     """
@@ -209,8 +209,8 @@ else:
     tableerror2="BC20ErrorStockData"
 #I could simplify this by updating the "tablequery" table with the stock data, alternately I could do a join to cut down on redundant data.
     inputList=[["IBD50","IBD50StockData","IBD50StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
-    print("Using restricted set")
-    inputList=[["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
+#    print("Using restricted set")
+#    inputList=[["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
     for item in inputList:
         connection=sqlite3.connect(database)
         query_for_data(item)

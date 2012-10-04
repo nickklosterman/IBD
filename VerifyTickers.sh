@@ -2,7 +2,7 @@
 
 bash OutputStockTickers.sh #create /tmp/TickerList.txt
 
-if [ 1 -lt 1 ]
+if [ 1 -eq 0 ]
 then
 
     bash ~/Git/BashScripts/Financial/StockScripts/GetCompanyNameFromTicker.sh /tmp/TickerList.txt #this is slow bc it pings fo reach separate ticker symbol
