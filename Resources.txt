@@ -1,6 +1,18 @@
 http://benjisimon.blogspot.com/2009/01/truly-simple-stock-api.html
 http://www.gummy-stuff.org/Yahoo-data.htm
 
+http://www.yqlblog.net/blog/2009/06/02/getting-stock-information-with-yql-and-open-data-tables/ using open tables, pretty much the same info seen below.
+
+The developer.yahoo.com is the url for the console app. the query.yahooapis.com is the query to use to return the data.
+XML:
+http://developer.yahoo.com/yql/console/?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20%28%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22%29%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22)%0A%09%09&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env
+JSON:
+http://developer.yahoo.com/yql/console/?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20%28%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22%29%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22)%0A%09%09&format=json&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env&callback=cbfunc
+
+I wanted the major indices but couldn't run the normal query on ^DJI, ^GSPC, ^IXIC. When searching for obtaining the info I saw Yahoo display the url (https://www.google.com/search?q=yahoo+finance+sp+500+index&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a#hl=en&client=firefox-a&hs=eRy&rls=org.mozilla:en-US%3Aofficial&sclient=psy-ab&q=yahoo+finance+djia+index&oq=yahoo+finance+djia+index&gs_l=serp.3..0i30j0i8i30.105611.107866.0.108124.4.4.0.0.0.0.109.363.3j1.4.0.les%3B..0.0...1c.1.rdq31XhGpHc&pbx=1&bav=on.2,or.r_gc.r_pw.r_qf.&fp=27ebbc7ad671d56a&bpcl=34622188&biw=1181&bih=772) for the ticker with %5E in place of the ^. This worked for ^GSPC and ^IXIC but doesn't work for ^DJI. 
+
 also check in the 
 #http://www.commandlinefu.com/commands/view/2086/command-line-to-get-the-stock-quote-via-yahoo
 #http://www.seangw.com/wordpress/index.php/2010/01/formatting-stock-data-from-yahoo-finance/   for formatting options

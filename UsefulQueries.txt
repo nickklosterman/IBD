@@ -50,3 +50,7 @@ sqlite3 IBDdatabase.sqlite .table
 
 #output a 1 if table exists
 sqlite3 IBDdatabase.sqlite " select case when tbl_name ='BC20' then 1 else 0 end  from sqlite_master where type='table' and name='BC20' order by name"
+
+#attempt at inner join. phail
+time sqlite3.exe IBDdatabase.sqlite "select B.rank, B.stockticker,B.date,A.Close from BC20 B INNER JOIN BC20StockData A on B.date = A.date INNER JOIN BC20StockData C on C.rank=A.rank INNER JOIN BC20StockData D on D.stockticker=A.stockticker where B.date='?' or C.rank='?' or D.stockticker='?'"
+#decided to just normalize the db instead of abusing it. 
