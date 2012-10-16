@@ -160,6 +160,7 @@ def query_for_data(tablelist):
 #    Query='SELECT * FROM BC20 WHERE DATE="2012-07-31"'
 #    Query='SELECT * FROM BC20 WHERE ID>735 Limit 100'
 #    Query='SELECT * FROM IBD50 WHERE ID>2340 Limit 100'
+    Query='SELECT * FROM IBD50 WHERE ID>23 Limit 2'
     querycursor=connection.cursor()
     querycursor.execute(Query)
     rowcounter=0

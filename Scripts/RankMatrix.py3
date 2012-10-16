@@ -181,11 +181,11 @@ loginfile="/home/nicolae/.mysqllogin"
 table="BC20"
 database="StockMarketData"
 try:
-    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:', ['--input=',
-                                                                        '--output=',
-                                                                        '--loginfile=',
-                                                                        '--table=',
-                                                                        '--database=',
+    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:', ['input=', #py3k got rid of requiring the leading --option for long options.
+                                                                        'output=',
+                                                                        'loginfile=',
+                                                                        'table=',
+                                                                        'database=',
                                                                         ])
 except getopt.GetoptError as err:
     # print help information and exit:                                                                        
