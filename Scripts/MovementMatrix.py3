@@ -227,13 +227,13 @@ database="StockMarketData"
 limit_num=2
 offset=0
 try:
-    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:m:f:', ['--input=',
-                                                                        '--output=',
-                                                                        '--loginfile=',
-                                                                        '--table=',
-                                                                        '--database=',
-                                                                        '--limit=',
-                                                                            '--offset=',
+    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:m:f:', ['input=',   #py3k got rid if requiring the leading --stuff for long options
+                                                                        'output=',
+                                                                        'loginfile=',
+                                                                        'table=',
+                                                                        'database=',
+                                                                        'limit=',
+                                                                            'offset=',
                                                                         ])
 except getopt.GetoptError as err:
     # print help information and exit:                                                                        
