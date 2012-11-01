@@ -1,7 +1,14 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
-
+2012-10-29
+ddd kors ctrx tdg rmd wpi v dva gnrc tcbi pol crus gnc sni ssys swi lope wwww esrx g ulta prgo pii disca nvo armh gold elli amcx tfm val ipxl paa myl aem alxn pnra cern ma vrx ipgp jah coo shw ebay slw rnf petm cvlt nsr
+2012-10-24
+kors ctrx rmd wpi tcbi dva alxn tdg wwww acom pii v cvlt val sni jah crus ssys gnc lope ma esrx disca ipxl armh gold shw ulta lulu tsco g  rvbd agu pol scss pnra tfm  ipgp coo ebay slw meli nsr petm hdb  paa vrx wsm rnf anv
+2012-10-22 
+kors tdg ctrx alxn rmd tcbi wpi gnc pii wwww dva v disca val sni gold jah crus shw ssys aapl scss lope ma cvlt esrx ipxl  g qihu lulu pnra tfm ulta tsco vrx coo pol ebay slw elli nsr petm agu ipgp ua anv gild meli acom prgo 
+2012-10-17
+swi kors mlnx ctrx algn alxn tdg wpi lulu flt rmd wwww lope tcbi cvlt dva crus qihu aapl meli gnc v pii val sni gold jah ssys pnra esrx goog disca shw ulta ma nsr g vrx ipxl anss xxia elliacom tsco tdc tfm bwld biib ipgp cbst
 2012-10-15
 swi kors mlnx algn tdg alxn ctrx flt rmd dva wwww gnrc wpi gnc lulu lope cvlt ssys v goog esrx ipxl sni jah crus qihu aapl pii disca val gold shw tsco pnra ma nsr g vrx xxia elli ulta cbst tdc petm tfm paa anss coo ebay celg
 
