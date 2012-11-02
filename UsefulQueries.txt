@@ -56,3 +56,5 @@ time sqlite3.exe IBDdatabase.sqlite "select B.rank, B.stockticker,B.date,A.Close
 #decided to just normalize the db instead of abusing it. 
 sqlite3 IBDdatabase.sqlite "select count(distinct(date)) from BC20"
 sqlite3 IBDdatabase.sqlite "select count(rank) from BC20 where stockticker like 'alxn'"
+
+sqlite3 IBDdatabase.sqlite "select stockticker,rank,date from BC20 where stockticker like 'alxn' order by date asc"
