@@ -72,20 +72,15 @@ def query_for_stocks(tablelist):
 
 
 def query_for_stocks_min_occurrence(tablelist,stocklist,minoccurrence):
-    print("This doesn't work")
     check_tables_exist(tablelist)    
     tablequery=tablelist[0]
     tabledata=tablelist[1]
- #   print(tablequery,tabledata)
     querycursor=connection.cursor()
+    StockList=[]
     for stock in stocklist:
-        Query='SELECT COUNT(DATE) FROM '+tablequery+' WHERE STOCKTICKER LIKE "'+stock+'"'
+        Query='SELECT COUNT(DATE) FROM '+tablequery+' WHERE STOCKTICKER LIKE "'+stock.lower()+'"'
         querycursor.execute(Query)
-        rowcounter=0
-        StockList=[]
         while True: #needed so we can use the 'break' in case a row is empty
-            #        print(rowcounter)
-            rowcounter+=1
             row=querycursor.fetchone()
             if row == None: #this should never happen
                 break
@@ -99,7 +94,6 @@ def query_for_ibd_rank(tablelist,datelist,stocklist):
     check_tables_exist(tablelist)    
     tablequery=tablelist[0]
     tabledata=tablelist[1]
-#    print(tablequery,tabledata)
     querycursor=connection.cursor()
     RankList=[]
     for stock in stocklist:
@@ -114,7 +108,7 @@ def query_for_ibd_rank(tablelist,datelist,stocklist):
             else:
                 RankList.append(row[0])
                 rank=row[0]
-            print(stock,date,rank)
+            print('%s,%s,%s' % (stock,date,rank))
     querycursor.close()
     return RankList
 
@@ -124,14 +118,14 @@ if (len(sys.argv) > 1):
 else:
     database="IBDdatabase.sqlite"
 #I could simplify this by updating the "tablequery" table with the stock data, alternately I could do a join to cut down on redundant data.
-inputList=[["IBD50","IBD50StockData"],["BC20","BC20StockData"]]#,["IBD8585","IBD8585StockData"],["Top200Composite","Top200CompositeStockData"]]
+inputList=[["IBD50","IBD50StockData"],["BC20","BC20StockData"],["IBD8585","IBD8585StockData"],["Top200Composite","Top200CompositeStockData"]]
 for item in inputList:
     connection=sqlite3.connect(database)
     datelist=query_for_dates(item)
     stocklist=query_for_stocks(item)
-    stocklist2=query_for_stocks_min_occurrence(item,stocklist,3)
-    print(stocklist2)
-#    ranklist=query_for_ibd_rank(item,datelist,stocklist2)
+    stocklist2=query_for_stocks_min_occurrence(item,stocklist,13)
+#    print(stocklist2)
+    ranklist=query_for_ibd_rank(item,datelist,stocklist2)
 #    print(datelist,stocklist,stocklist2)
     connection.commit()
 quit()
