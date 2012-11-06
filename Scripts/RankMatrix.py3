@@ -1,4 +1,4 @@
-
+#!/usr/bin/python
 def prepprice(data):
     temp=striphtml(data.rstrip())
     temp2=temp[1:] #remove dollar sign
