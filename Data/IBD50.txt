@@ -1,6 +1,12 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
+2012-11-07 
+ddd kors tdg ocn rmd cvlt ctrx tcbi wpi qihu lope pol gnrc lmca swi v ssys cybx pii val armh slca lulu tfm gold ulta myl sni agu dva amcx prgo cern hdb alk ma odfl coo rnf nsr jah shw ebay aem wsm bcei stx pnra petm cprt 
+2012-11-05
+ddd kors tdg cvlt ctrx ocn tcbi rmd wpi qihu lope pol gnrc v swi val ssys amcx pii disca armh sni lulu vrx nvo myl gold dva prgo esrx tfm ma agu coo jah rnf bcei ulta paa cprt odfl thor ame shw ebay ci aem slw wsm nsr 
+2012-10-31
+ddd kors ctrx tdg rmd wpi v dva gnrc tcbi pol crus gnc sni ssys swi lope wwww esrx g ulta prgo pii disca nvo armh gold amcx tfm val ipxl paa mylaem alxn pnra cern ma vrx ipgp jah coo shw ebay slw rnf petm cvlt nsr 
 2012-10-29
 ddd kors ctrx tdg rmd wpi v dva gnrc tcbi pol crus gnc sni ssys swi lope wwww esrx g ulta prgo pii disca nvo armh gold elli amcx tfm val ipxl paa myl aem alxn pnra cern ma vrx ipgp jah coo shw ebay slw rnf petm cvlt nsr
 2012-10-24
