@@ -77,38 +77,40 @@ if (len(sys.argv) > 2):
 else:
     database="IBDdatabase.sqlite"  #need to jsut stick this stuff in an array and loop over it all
  
-    table1="IBD50"
-    file1 = open("Data/IBD50.txt")
-    errortable1="IBD50Error"
-    reportDayOfWeek1=0#monday
+    # table1="IBD50"
+    # file1 = open("Data/IBD50.txt")
+    # errortable1="IBD50Error"
+    # reportDayOfWeek1=0#monday
 
-    table2="BC20"
-    file2 = open("Data/BC20.txt")
-    errortable2="BC20Error"
-    reportDayOfWeek2=1#tuesday
+    # table2="BC20"
+    # file2 = open("Data/BC20.txt")
+    # errortable2="BC20Error"
+    # reportDayOfWeek2=1#tuesday
 
-    table3="IBD8585"
-    file3 = open("Data/8585.txt")
-    errortable3="IBD8585Error"
-    reportDayOfWeek3=4#friday
+    # table3="IBD8585"
+    # file3 = open("Data/8585.txt")
+    # errortable3="IBD8585Error"
+    # reportDayOfWeek3=4#friday
 
 
-    table4="Top200Composite"
-    file4 = open("Data/Top200Composite.txt")
-    errortable4="Top200CompositeError"
-    reportDayOfWeek4=3#thursday 4#friday
+    # table4="Top200Composite"
+    # file4 = open("Data/Top200Composite.txt")
+    # errortable4="Top200CompositeError"
+    # reportDayOfWeek4=3#thursday 4#friday
 
+    TableList=[ "IBD50", "BC20","IBD8585","Top200Composite" ]
+    FileList=["Data/IBD50.txt","Data/BC20.txt","Data/8585.txt","Data/Top200Composite.txt"]
+    ErrorTableList=[ "IBD50Error", "BC20Error","IBD8585Error","Top200CompositeError" ]
+    ReportDayOfWeekList=[0,1,4,3] #yet this doesn't work 100% since the ibd50 appear on Mon and Wed now. 
 
 connection=sqlite3.connect(database)
 cursor=connection.cursor()
 #from http://greeennotebook.com/2010/06/how-to-use-sqlite3-from-python-introductory-tutorial/
-read_file_build_database(table1,errortable1,file1,reportDayOfWeek1)
-read_file_build_database(table2,errortable2,file2,reportDayOfWeek2)
-read_file_build_database(table3,errortable3,file3,reportDayOfWeek3)
-read_file_build_database(table4,errortable4,file4,reportDayOfWeek4)
 
-
-
+for index in range(len(TableList)):
+    file_handler=open(FileList[index])
+    read_file_build_database(TableList[index],ErrorTableList[index],file_handler,ReportDayOfWeekList[index])
+    file_handler.close()
 
 
 connection.commit()
