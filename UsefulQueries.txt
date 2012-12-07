@@ -58,3 +58,23 @@ sqlite3 IBDdatabase.sqlite "select count(distinct(date)) from BC20"
 sqlite3 IBDdatabase.sqlite "select count(rank) from BC20 where stockticker like 'alxn'"
 
 sqlite3 IBDdatabase.sqlite "select stockticker,rank,date from BC20 where stockticker like 'alxn' order by date asc"
+
+
+sqlite3 IBDdatabase.sqlite "select distinct(date) from bc20  where date > '2012-10-17' order by date asc"
+2012-10-23
+2012-10-30
+2012-11-06
+2012-11-13
+2012-11-20
+[arch-nicky@arch-nicky IBD]$ sqlite3 IBDdatabase.sqlite "select * from BC20 INNER Join IBD50 on BC20.StockTicker = IBD50.StockTicker limit 4;
+> "
+3|2012-11-20|V|3|4524|2011-08-01|V|42
+3|2012-11-20|V|3|4561|2011-08-08|V|29
+3|2012-11-20|V|3|4611|2011-08-15|V|29
+3|2012-11-20|V|3|4652|2011-08-22|V|20
+[arch-nicky@arch-nicky IBD]$ sqlite3 IBDdatabase.sqlite "select BC20.StockTicker,IBD50.Rank from BC20 INNER Join IBD50 on BC20.StockTicker = IBD50.StockTicker limit 4;"
+V|4
+V|5
+V|7
+V|7
+[arch-nicky@arch-nicky IBD]$ sqlite3 IBDdatabase.sqlite "select BC20.StockTicker,IBD50.Rank from BC20 INNER Join IBD50 on BC20.StockTicker = IBD50.StockTicker limit 4;"
