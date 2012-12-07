@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#NOTE: there isn't a mysql-python port for python3
+# http://dev.mysql.com/doc/connector-python/en/connector-python-install.html
 class MovementMatrix:
 
     def __init__(self,database,table,limit_number,offset_number):
