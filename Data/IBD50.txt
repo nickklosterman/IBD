@@ -1,8 +1,25 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
-2012-11-26
 
+
+2012-12-10
+ddd kors flt rgr cvlt v rmd wpi swi ever hdb pol armh ssys ocn htz lmca lope gnrc ctrx nsr nvo tdg alk myl fmx stx tcbi xxia ingr tsm lulu celg qihu biib ma ipgp shw amcx ebay emn elli rnf ulta pcln soda petm trmb cf ttm
+
+2012-12-12
+ddd cvlt flt rgr wpi kors rmd swi v pol lope hdb armh ssys ocn gnrc stx htz celg lmca nsr tdg ctrx xxia alk myl lulu nvo tcbi biib trmb thor fmx qihu vrx ingr cf ipgp tsm shw ebay emn elli rnf slca ma amcx disca val pkg
+
+2012-12-05
+ddd rgr kors flt cvlt rmd swi v hdb armh ssys pol lope ocn wpi qihu gnrc htz soda tdg ctrx celg nvo alk myl fmx ulta lulu lmca nsr biib ingr ipgp elli pcln pii tcbi ma tsm shw val ebay rnf petm sni cf jah amcx disca emn
+
+2012-12-03
+ddd rgr kors flt cvlt swi rmd v hdb armh ssys pol ocn wpi lope gnrc lmca tdg ctrx htz qihu pii alk myl ulta nsr tcbi ma tsm fmx shw val ebay elli lulu pcln ann celg soda nvo sni ingr jah amcx rnf petm biib crus ipgp trmb
+
+2012-11-28
+ddd kors flt rgr cvlt mlnx rmd ocn swi v hdb  pol armh ssys slca lope gnrc wp tdg pii myl lmca ctrx tcbi alk shw lulu qihu nvo nsr sni ma fmx val elli celg biib thor ipgp jah ebay rnf petm cprt odfl fis amcx dva aem pkg
+
+2012-11-26
+ddd kors flt rgr mlnx cvlt v ocn rmd armh pol ssys gnrc swi hdb htz wpi pii ctrx tcbi lmca lope tdg alk myl fmx shw qihu nvo sni ma thor val dva lulu slca celg petm biib cprt tsm jah elli rnf pcln nsr vrx trmb odfl fis
 2012-11-21
 ddd kors mlnx rgr v ocn rmd cvlt armh qihu slca pol ssy sgnrc lulu wpi swi ctrx hdb lmca lope tdg tcbi shw pii alk sni ma myl petm biib jah fmx val dva celg vrx nvo cprtt ws elli rnf pcln cern tjx trmb odfl fis amcx nsr 
 2012-11-19
