@@ -1,13 +1,14 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
-
-2013-1-7
+2013-01-14
+ddd flt cvlt kors airm swi armh ocn stx rmd qihu soda slca celg v pol ssys htz lmca xxia gnrc wdc alk wor rmb ever nsr vrx ipgp open ma arun ingr tsm trip emn bcei rnf pii tdg nvo pir hdb ttm shw ebay elli ctsh ctrx myl
+2013-01-07
 ddd flt cvlt swi soda ssy skors rmd arm ocn stx qihu pol xxia htz lmca v gnrc airm open wor trmb ipgp slca rgr tdg wdc hdb myl alk trip emn elli nsr ingr tsm ebay bcei pii vrx ctrx ma odfl fet shw disca kmx dnkn ann pir
 
-2013-1-9
+2013-01-09
 ddd flt kors swi cvlt armh rmd airm soda v ocn qihu pol slca xxia  ssys htz stx lmca gnrc rgr celg wor trm ipgp alk pii tdg vrx ctrx open ma trip emn elli bcei ann wdc nsr myl ingr disca shw wbay rnf dnkn nvo hdb arun odfl
-2013-1-2
+2013-01-02
 ddd flt cvlt ocn stx kors rmd soda swi armh qihu ssys xxia pol gnrc lulu lmca v ipgp htz wdc tdg hdb airm wpi open trmb dknk slca pii nsr lope vrx myl ttm trip                        emn ebay elli ulta rgr pir alk ingr shw kmx bcei ann nvo tsm
 
 2012-12-31
@@ -17,9 +18,11 @@ ddd flt cvlt rmd swi armh ocn ssy sgnrc stx kors qihu pol wpi soda lmca v hdb xx
 dddk cvlt flt kors ocn rmd wpi lmca armh ssys qihu gnrc pol htz stx v swi hdb xxia ipgp lulu nsr lope alk soda pii tdg vrx myl slca wdc nvo ctrx pir ingr trmb trip emn elli bcei rgr open tsm ttm shw disca ebay kmx ann ma
 
 2012-12-24
-
+ddd cvlt flt kors ocn rmd armh ssys gnrc stx wpi qihu pol lmca v swi hdb xxia htz nsr alk ipgp lulu tdg vrx ctrx soda pii wdc nvo myl ingr trmb emn elli bcei slca pir tcbi tsm shw trip disca ebay kmx ann celg ma fmx ttm
 2012-12-19
+ddd kors cvlt flt ocn rmd wpi lmca v hdb armh pol gnrc ssys htz lulu soda qihu swi lope stx nsr ctrx pir alk myl ipgp ann pii tdg vrx ingr fmx trip emn elli nvo tcbi trmb ttm shw disca ebay bcei petm biib ma tsm val pkg
 2012-12-17
+ddd cvlt kors flt rmd wpi rgr v hdb armh lope popl ssys ocn swi lmca gnrc htz lulu nsr ctrx alk stx qihu nvo vrx myl soda ingr emn celg pii tcbi biib trmb ipgp tsm fmx shw ebay elli rnf bcei petm tdg ma thor cprt amcx disca
 
 2012-12-10
 ddd kors flt rgr cvlt v rmd wpi swi ever hdb pol armh ssys ocn htz lmca lope gnrc ctrx nsr nvo tdg alk myl fmx stx tcbi xxia ingr tsm lulu celg qihu biib ma ipgp shw amcx ebay emn elli rnf ulta pcln soda petm trmb cf ttm
