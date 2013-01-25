@@ -8,12 +8,13 @@
 # parse out price
 # perform math calc using bc
 # printout comparison line by line
-
+#TODO: parse options as well as quote list, maybe quotes in comma delimited list and options just tacked on to curl uri, have accept file as list of stocks as well.
 function QueryForQuote() #OLD METHOD
 {
     symbol=$1
-    quote=$(curl -s "http://download.finance.yahoo.com/d/quotes.csv?s=${symbol}&f=l1" | sed 's/.$//' ) #the trailing sed command strips a ^M that was at the end of each quote price
-    if [ $quote == "0.00" ]
+    quote=$(curl -s "http://download.finance.yahoo.com/d/quotes.csv?s=${symbol}&f=l1wj6k5" | sed 's/.$//' ) #the trailing sed command strips a ^M that was at the end of each quote price
+CurrPrice=$(echo "$quote"  | cut -d ',' -f 1) # only grab the current price which in this case is the first element of the returned tuples. 
+    if [ $CurrPrice == "0.00" ]
     then
 #        echo "uh oh!"
 	echo "$symbol" >> BadStockTickers.txt
@@ -21,6 +22,16 @@ function QueryForQuote() #OLD METHOD
     echo ${symbol} ${quote}
     
 }
+
+function QueryForQuoteWithOptions() 
+{
+    symbol=$1
+    options=$2
+    quote=$(curl -s "http://download.finance.yahoo.com/d/quotes.csv?s=${symbol}&f=${options}" | sed 's/.$//' ) 
+    echo ${symbol} ${quote}
+    
+}
+
 function QueryForAllTickers()
 {
     symbol=$1
