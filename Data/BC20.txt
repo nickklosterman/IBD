@@ -1,7 +1,10 @@
 #BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
 
+2013-01-15
+celg hca v ctsh ebay regn cmcsa vrx ma crm ry gild orcl goog ppg disca bns msi unp tmo
+
 2013-01-08
-celg v ebay hca cmcsa goog ry regn crx ctsh ma orcl shw crm yhoo bns amgn tmo ppg gild
+celg v ebay hca cmcsa goog ry regn vrx ctsh ma orcl shw crm yhoo bns amgn tmo ppg gild
 
 #2012-12-25, 2013-01-01
 2012-12-18
@@ -243,7 +246,8 @@ pcu coh nue rimm cme pcar pot de gild al zmh syk kss nke aapl ben etr bam xto mr
 amzn ma bmy ibm qcom aapl emc wmt mo tri su hes dhr mrk oxy imo glw 
 #in above oxy was ocy. changed 10-07-2012
 2007-03-20
-nue rimm pcar de syk nke al zmh aapl ceg fpl mro xto bam etr fd bax tmo rg jci
+nue rimm pcar de syk nke al zmh aapl ceg fpl mro xto bam etr fd bax tmo rci jci
+#rg change to rci 
 2009-03-24
 amzn ma orcl ibm emc cme bmy aapl fpl abx qcom adp wmt nem hes tri oxy wag su mo
 2007-03-27
