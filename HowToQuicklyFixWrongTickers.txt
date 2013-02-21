@@ -1,0 +1,12 @@
+initiate screen.
+Split screen : C-a C-S
+navigate to Git/IBD/Data in one view (ViewA)
+in the other view open up /tmp/Tickers.txt -> this is easier to view than BadTickerList.txt as it gives you some context to tickers that wrong ticker might actually be.
+
+in (ViewA) execute : find . -type f -print | xargs sed -i 's/wbay/ebay/g' ; find . -type f -print | xargs sed -i 's/wihu/qihu/g' of tickers that are to be corrected as you view the list of incorrect tickers in the other view.
+could create a file of the replacements, one per line and execute: 
+
+while read Line
+do 
+find . -type f -print | xargs sed -i 's/${Line}/g' 
+done < $file 
