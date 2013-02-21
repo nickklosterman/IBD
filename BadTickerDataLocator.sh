@@ -9,7 +9,7 @@ while read LINE
 do
     tickernotfound=$LINE
     echo "----" $tickernotfound "-----"
-    for table in "ibd8585" "ibd50" "bc20"
+    for table in "ibd8585" "ibd50" "bc20" "top200composite"
     do
 	echo $table
 	results=$(sqlite3 IBDdatabase.sqlite "select date from $table where stockticker like '$tickernotfound' order by date desc;")

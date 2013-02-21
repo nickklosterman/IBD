@@ -23,7 +23,7 @@ ABW-B
 ABX	Barrick Gold Corp.
 ACC	American Campus Communities Inc
 ACE	Ace Limited
-ACG	Alliancebernstein Income Fund Inc
+ACG	Alliancebernsrein Income Fund Inc
 ACH	Aluminum Corporation Of China Ltd
 ACI	Arch Coal
 ACM	Aecom Technology Corp.
@@ -521,8 +521,8 @@ CE	Celanese Corp.
 CEA	China Eastern Airlines Corp Ltd
 CEC	Cec Entertainment
 CEE	Central Europe And Russia Fund
-CEG	Constellation Energy Group
-CEG-A	Constellation Energy
+CEG	Consrellation Energy Group
+CEG-A	Consrellation Energy
 CEL	Cellcom Israel
 CEM	Clearbridge Energy Mlp Fund Inc.
 CEO	Cnooc Limited
@@ -1265,7 +1265,7 @@ GUA	Gulf Power Company Series 2011A
 GUL	Gulf Power Company
 GUT	Gabelli Utility Trust
 GUT-A	Gabelli Util Pfd A
-GVA	Granite Construction Inc.
+GVA	Granite Consrruction Inc.
 GWF	Wells Fargo & Company
 GWR	Genesee & Wyoming
 GWW	W.W. Grainger
@@ -1413,7 +1413,7 @@ HVB	Uestra Hannoversche Verkehrsbetriebe Ag
 HVT	Haverty Furniture Companies
 HVT.A	Haverty Furn Cl A Sc
 HW	Headwaters Inc.
-HWD	Harry Winston Diamond Corp.
+HWD	Harry Winsron Diamond Corp.
 HXL	Hexcel Corp.
 HXM	Desarrolladora Homex
 HYB	New America High
@@ -1757,7 +1757,7 @@ LUB	Luby's
 LUK	Leucadia National Corp.
 LUV	Southwest Airlines Company
 LUX	Luxottica Group S.P.A.
-LVB	Steinway Musical Instruments
+LVB	Steinway Musical Insrruments
 LVLT	Level 3 Communications
 LVS	Las Vegas Sands
 LXK	Lexmark International
@@ -1964,7 +1964,7 @@ MWG	Morgan Stanley Cap Tr IV Gtd Cap Secs
 MWO	Morgan Stanley Cap Tr V Gtd Cap Secs
 MWR	Morgan Stanley Cap Tr III Capital Trust Securiti
 MWV	Meadwestvaco Corp.
-MWW	Monster Worldwide
+MWW	Monsrer Worldwide
 MX	Magnachip Semiconductor Corp.
 MXE	Mexico Equity And
 MXE.P	Mexico Eq And Inc Fd
@@ -2668,9 +2668,9 @@ SGZ	Selective Insurance Group
 SHAW	Shaw Group Inc.
 SHG	Shinhan Financial Group Co Ltd
 SHI	Sinopec Shangai Petrochemical Company Ltd
-SHO	Sunstone Hotel Investors
-SHO-A	Sunstone Hotel Pfd A
-SHO-D	Sunstone Hotel Investors Inc.
+SHO	Sunsrone Hotel Investors
+SHO-A	Sunsrone Hotel Pfd A
+SHO-D	Sunsrone Hotel Investors Inc.
 SHP	Shangpharma Corp.
 SHS	Sauer-Danfoss Inc.
 SHW	Sherwin-Williams Company
@@ -2783,8 +2783,8 @@ STRI	Str Holdings Inc
 STT	State Street Corp
 STV	China Digital Tv Holding Co.
 STWD	Starwood Property Trust
-STZ	Constellation Brands Inc
-STZ.B	Constellation Brd B
+STZ	Consrellation Brands Inc
+STZ.B	Consrellation Brd B
 SU	Suncor Energy Inc.
 SUG	Southern Union Company
 SUI	Sun Communities
@@ -2957,7 +2957,7 @@ TWO	Two Harbors Investments Corp
 TWX	Time Warner Inc.
 TX	Ternium S.A.
 TXI	Texas Industries
-TXN	Texas Instruments Inc.
+TXN	Texas Insrruments Inc.
 TXT	Textron Inc.
 TY	Tri Continental Corp.
 TY.P	Tri Contl Cp 2.50 Pr
@@ -3019,7 +3019,7 @@ USM	United States Cellular Corp.
 USNA	Usana Health Sciences Inc.
 USU	Usec Inc.
 UTF	Cohen & Steers Infrastructure Fund
-UTI	Universal Technical Institute Inc
+UTI	Universal Technical Insritute Inc
 UTL	Unitil Corp.
 UTX	United Technologies Corp.
 UVV	Universal Corp.

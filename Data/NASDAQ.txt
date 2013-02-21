@@ -255,7 +255,7 @@ AXFN	MSCI Ex US Financials Sector
 AXTI	Axt Inc
 AZPN	Aspen Technology
 BABY	Natus Medical Inc.
-BAGL	Einstein Noah Restaurant Group
+BAGL	Einsrein Noah Restaurant Group
 BAMM	Books-A-Million
 BANC	First Pactrust Bancorp
 BANF	Bancfirst Corp.
@@ -391,7 +391,7 @@ CAC	Camden National Corp.
 CACB	Cascade Bancorp
 CACC	Credit Acceptance Corp.
 CACH	Cache
-CADC	China Advanced Construction
+CADC	China Advanced Consrruction
 CADX	Cadence Pharmaceuticals
 CAFI	Camco Financial Corp.
 CAKE	The Cheesecake Factory Inc.
@@ -626,7 +626,7 @@ CSKI	China Sky One Medical
 CSOD	Cornerstone Ondemand Inc.
 CSPI	Csp Inc.
 CSRE	Csr Plc
-CSTR	Coinstar
+CSTR	Coinsrar
 CSUND	China Sunergy Co.
 CSWC	Capital Southwest Corp.
 CTAS	Cintas Corp.
@@ -634,7 +634,7 @@ CTBC	The Connecticut Bank And Trust
 CTBI	Community Trust Bancorp
 CTCH	Commtouch Software Ltd
 CTCM	Ctc Media
-CTCT	Constant Contact
+CTCT	Consrant Contact
 CTDC	China Technology Development
 CTEL	City Telecom [H.K.] Limited
 CTFO	China Transinfo Technology
@@ -851,7 +851,7 @@ ESBF	Esb Financial Corp.
 ESBK	The Elmira Savings Bank Fsb
 ESCA	Escalade Inc.
 ESEA	Euroseas Ltd
-ESGR	Enstar Group Limited
+ESGR	Ensrar Group Limited
 ESIC	Easylink Services International Corp.
 ESIO	Electro Scientific Industries
 ESLT	Elbit Systems Ltd
@@ -883,7 +883,7 @@ EZCH	Ezchip Semiconductor Limited
 EZPW	Ezcorp
 FABK	First Advantage Bancorp
 FACE	Physicians Formula Holdings
-FALC	Falconstor Software
+FALC	Falconsror Software
 FARM	Farmer Brothers Company
 FARO	Faro Technologies
 FAST	Fastenal Company
@@ -899,7 +899,7 @@ FCAL	First California Financial Group
 FCAP	First Capital
 FCBC	First Community Bancshares
 FCCO	First Community Corp.
-FCCY	1St Constitution Bancorp [Nj]
+FCCY	1St Consritution Bancorp [Nj]
 FCEL	Fuelcell Energy
 FCFC	Firstcity Financial Corp.
 FCFS	First Cash Financial Services
@@ -938,7 +938,7 @@ FHCO	Female Health Company
 FIBK	First Interstate Bancsystem
 FINL	The Finish Line
 FIRE	Sourcefire
-FISI	Financial Institutions
+FISI	Financial Insritutions
 FISV	Fiserv
 FITB	Fifth Third Bancorp
 FITBP	Fifth Third Bancorp
@@ -1147,7 +1147,7 @@ HGSH	China Hgs Real Estate
 HGSI	Human Genome Sciences
 HHGP	Hudson Highland Group
 HIBB	Hibbett Sports
-HIFS	Hingham Institution For Savings
+HIFS	Hingham Insritution For Savings
 HIHO	Highway Holdings
 HILL	Dot Hill Systems Corp.
 HIMX	Himax Technologies
@@ -1241,7 +1241,7 @@ IGOI	Igo Inc
 IGOV	S&P Intl Treasury Bond Fund
 IGTE	Igate Corp.
 III	Information Services Group
-IIIN	Insteel Industries
+IIIN	Insreel Industries
 IIJI	Internet Initiative Japan
 IILG	Interval Leisure Group
 IIN	Intricon Corp.
@@ -1534,7 +1534,7 @@ MDRX	Allscripts Healthcare Solutions
 MDSO	Medidata Solutions
 MDTH	Medcath Corp.
 MDVN	Medivation
-MEAD	Meade Instruments
+MEAD	Meade Insrruments
 MEAS	Measurement Specialties
 MEDH	Medquist Holdings Inc.
 MEDW	Mediware Information Systems
@@ -1570,7 +1570,7 @@ MIPS	Mips Technologies
 MITI	Micromet
 MITK	Mitek Systems Inc
 MITL	Mitel Networks Corp.
-MKSI	Mks Instruments
+MKSI	Mks Insrruments
 MKTAY	Makita
 MKTG	Responsys Inc.
 MKTX	Marketaxess Holdings
@@ -1592,7 +1592,7 @@ MNOV	Medicinova
 MNRK	Monarch Financial Holdings
 MNRKP	Monarch Financial Holdings
 MNRO	Monro Muffler Brake
-MNST	Monster Beverage Corp
+MNST	Monsrer Beverage Corp
 MNTA	Momenta Pharmaceuticals
 MNTG	Mtr Gaming Group
 MNTX	Manitex International
@@ -1655,7 +1655,7 @@ NANO	Nanometrics Inc.
 NANX	Nanophase Technologies Corp.
 NASB	Nasb Financial Inc.
 NATH	Nathan's Famous
-NATI	National Instruments Corp.
+NATI	National Insrruments Corp.
 NATL	National Interstate Corp.
 NATR	Nature's Sunshine Products
 NAUH	National American University Holdings
@@ -1742,7 +1742,7 @@ NVEC	Nve Corp.
 NVGN	Novogen Limited
 NVGND	Novogen Limited
 NVLS	Novellus Systems
-NVMI	Nova Measuring Instruments Ltd
+NVMI	Nova Measuring Insrruments Ltd
 NVSL	Naugatuck Valley Financial Corp.
 NVTL	Novatel Wireless
 NWBI	Northwest Bancshares
@@ -1788,7 +1788,7 @@ ONCY	Oncolytics Biotech
 ONEQ	Fidelity Nasdaq Composite
 ONFC	Oneida Financial
 ONNN	On Semiconductor Corp.
-ONSM	Onstream Media Corp.
+ONSM	Onsrream Media Corp.
 ONTY	Oncothyreon Inc .
 ONVI	Onvia
 ONXX	Onyx Pharmaceuticals
@@ -2040,7 +2040,7 @@ QLGC	Qlogic Corp.
 QLIK	Qlik Technologies Inc.
 QLTI	Qlt Inc.
 QLTY	Quality Distribution
-QNST	Quinstreet
+QNST	Quinsrreet
 QQEW	Nasdaq-100 Equal Weighted
 QQQ	QQQ Trust
 QQQC	
@@ -2354,7 +2354,7 @@ STNR	Steiner Leisure Limited
 STON	Stonemor Partners L.P.
 STRA	Strayer Education
 STRC	Sri/Surgical Express
-STRL	Sterling Construction Company Inc
+STRL	Sterling Consrruction Company Inc
 STRM	Streamline Health Solutions
 STRN	Sutron Corp.
 STRS	Stratus Properties
@@ -2517,7 +2517,7 @@ TWIN	Twin Disc Inc.
 TWMC	Trans World Entertainment
 TWTC	Tw Telecom Inc.
 TXCC	Transwitch Corp.
-TXN	Texas Instruments Inc.
+TXN	Texas Insrruments Inc.
 TXRH	Texas Roadhouse
 TYPE	Monotype Imaging Holdings Inc.
 TZOO	Travelzoo Inc
@@ -2593,7 +2593,7 @@ VCLK	Valueclick
 VCLT	Vg Long-Term ETF
 VCSH	Vg Short-Term ETF
 VDSI	Vasco Data Security International
-VECO	Veeco Instruments Inc.
+VECO	Veeco Insrruments Inc.
 VELT	Velti Plc
 VGIT	Vg Intermediate -Term Bond ETF
 VGLT	Vg Long-Term Government Bond ETF

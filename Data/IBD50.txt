@@ -2,6 +2,24 @@
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
 
+2013-02-20
+flt ddd soda qihu kors armh ocn airm celg strza htz car slca xxia cvlt mx pol alk emn wdr wor mpc nsr vrx gnrc rgr lope wdc blk cvi open pir tup fmx hca uhs bcei ctrx dnkn ci tsm jah cprt amcx arun ksu mdco rmd v trip 
+
+2013-02-19
+ddd flt soda qihu kors armh ocn airm celg strza htz car xxia slca cvlt emn mx wdr pol wor mpc rgr nsr vrx alk gnrc pir open blk hca cvi wdc ci tup uhs bcei ctrx dnkn trip cprt jah fmx mdco yndx v ssys pkg amcx ebay rmd 
+
+2013-02-13
+ddd flt qihu kors celg cvlt soda armh ocn strza airm slca xxia emn pol gnrc htz nsr wdr ssys wor mpc vrx alk mx fosl pir open ci blk tup hca rgr dnkn cprt disca trip uhs bcei yndx rmd wwww wdc fmx jah ebay v pkg amcx swi 
+2013-02-11
+ddd flt celg qihu airm cvlt soda kors armh strza ocn slca xxia htz emn pol gnrc ssys nsr vrx wdr wor mpc rgr alk mx ci blk cprt hca trip wdc tup fmx jah disca uhs ebay bcei rmd wwww v dnkn open pir egov pkg ctsh ma ipgp 
+2013-02-06
+ddd flt gmcr airm celg soda qihu cvlt rgr strza armh slca htz ocn xxia ssys kors vrx emn pol wor gnrc mpc v nsr wdr hca rmd ctrx alk blk tup cprt fmx arun jah disca uhs ebay bcei ctsh pir trmb amcx trip rnf dnkn wdc ma swi 
+2013-02-04
+ddd flt gmcr airm celg cvlt soda qihu htz armh slca strza xxia ocn emn  gnrc ssys kors nsr vrx pol mpc arun wdr wor rmd v alk tup blk cprt fmx rgr open jah disca uhs ebay swi ctrx dnkn ctsh wdc trmb bcei rnf pir myl ipgp pkg 
+
+2013-01-30
+ddd flt qihu airm cvlt soda celg kors rmd slca strza htz ocn xxia armh pol ssys gnrc wor v vrx alk arun wdr trmb blk nsr swi cprt fmx trip rgr ctrx open wdc tup jah disca uhs bcei dnkn odfl pkg amcx val shw ebay emn ctsh pir 
+
 2013-01-28
 ddd flt cvlt soda qihu gmcr stx airm celg kors slca strza htz rmd xxia armh ssys ocn pol gnrc swi v wdc wor alk trmb dnkn nsr vrx ctrx blk ipgp trip rgr pii odfl fmx shw disca uhs ppg ebay bcei tdg pir open ma arun cprt ingr
 
@@ -21,9 +39,9 @@ ddd flt cvlt swi soda ssys kors rmd mtor ocn stx qihu pol xxia htz lmca v gnrc a
 #arm->mtor
 
 2013-01-09
-ddd flt kors swi cvlt armh rmd airm soda v ocn qihu pol slca xxia  ssys htz stx lmca gnrc rgr celg wor trm ipgp alk pii tdg vrx ctrx open ma trip emn elli bcei ann wdc nsr myl ingr disca shw wbay rnf dnkn nvo hdb arun odfl
+ddd flt kors swi cvlt armh rmd airm soda v ocn qihu pol slca xxia  ssys htz stx lmca gnrc rgr celg wor trm ipgp alk pii tdg vrx ctrx open ma trip emn elli bcei ann wdc nsr myl ingr disca shw ebay rnf dnkn nvo hdb arun odfl
 2013-01-02
-ddd flt cvlt ocn stx kors rmd soda swi armh qihu ssys xxia pol gnrc lulu lmca v ipgp htz wdc tdg hdb airm wpi open trmb dknk slca pii nsr lope vrx myl ttm trip emn ebay elli ulta rgr pir alk ingr shw kmx bcei ann nvo tsm
+ddd flt cvlt ocn stx kors rmd soda swi armh qihu ssys xxia pol gnrc lulu lmca v ipgp htz wdc tdg hdb airm wpi open trmb dnkn slca pii nsr lope vrx myl ttm trip emn ebay elli ulta rgr pir alk ingr shw kmx bcei ann nvo tsm
 
 2012-12-31
 ddd flt cvlt rmd swi armh ocn ssys gnrc stx kors qihu pol wpi soda lmca v hdb xxia ipgp htz lulu wdc tdg vrx nvo trmb pii nsr open alk myl ttm trip emn elli dnkn slca pir ingr shw ebay kmx bcei ulta lope ctrx ma odfl tsm
@@ -70,7 +88,7 @@ ddd kors tdg ocn rmd cvlt ctrx tcbi wpi qihu lope pol gnrc lmca swi v ssys cybx 
 2012-11-05
 ddd kors tdg cvlt ctrx ocn tcbi rmd wpi qihu lope pol gnrc v swi val ssys amcx pii disca armh sni lulu vrx nvo myl gold dva prgo esrx tfm ma agu coo jah rnf bcei ulta paa cprt odfl thor ame shw ebay ci aem slw wsm nsr 
 2012-10-31
-ddd kors ctrx tdg rmd wpi v dva gnrc tcbi pol crus gnc sni ssys swi lope wwww esrx g ulta prgo pii disca nvo armh gold amcx tfm val ipxl paa mylaem alxn pnra cern ma vrx ipgp jah coo shw ebay slw rnf petm cvlt nsr 
+ddd kors ctrx tdg rmd wpi v dva gnrc tcbi pol crus gnc sni ssys swi lope wwww esrx g ulta prgo pii disca nvo armh gold amcx tfm val ipxl paa myl aem alxn pnra cern ma vrx ipgp jah coo shw ebay slw rnf petm cvlt nsr 
 2012-10-29
 ddd kors ctrx tdg rmd wpi v dva gnrc tcbi pol crus gnc sni ssys swi lope wwww esrx g ulta prgo pii disca nvo armh gold elli amcx tfm val ipxl paa myl aem alxn pnra cern ma vrx ipgp jah coo shw ebay slw rnf petm cvlt nsr
 2012-10-24
@@ -78,7 +96,7 @@ kors ctrx rmd wpi tcbi dva alxn tdg wwww acom pii v cvlt val sni jah crus ssys g
 2012-10-22 
 kors tdg ctrx alxn rmd tcbi wpi gnc pii wwww dva v disca val sni gold jah crus shw ssys aapl scss lope ma cvlt esrx ipxl  g qihu lulu pnra tfm ulta tsco vrx coo pol ebay slw elli nsr petm agu ipgp ua anv gild meli acom prgo 
 2012-10-17
-swi kors mlnx ctrx algn alxn tdg wpi lulu flt rmd wwww lope tcbi cvlt dva crus qihu aapl meli gnc v pii val sni gold jah ssys pnra esrx goog disca shw ulta ma nsr g vrx ipxl anss xxia elliacom tsco tdc tfm bwld biib ipgp cbst
+swi kors mlnx ctrx algn alxn tdg wpi lulu flt rmd wwww lope tcbi cvlt dva crus qihu aapl meli gnc v pii val sni gold jah ssys pnra esrx goog disca shw ulta ma nsr g vrx ipxl anss xxia elli acom tsco tdc tfm bwld biib ipgp cbst
 2012-10-15
 swi kors mlnx algn tdg alxn ctrx flt rmd dva wwww gnrc wpi gnc lulu lope cvlt ssys v goog esrx ipxl sni jah crus qihu aapl pii disca val gold shw tsco pnra ma nsr g vrx xxia elli ulta cbst tdc petm tfm paa anss coo ebay celg
 
@@ -135,101 +153,101 @@ alxn swi kors mlnx aapl ctrx hmsy tfm acom algn rost wwww tcbi fran rgr wpi gnc 
 alxn swi mlnx ctrx aapl fran kors algn hmsy rost tfm wwww tcbi rgr wpi tjx val crus gnc dg v flt prgo sni gnrc acom tdc dva esrx cf ipxl biib ew jah shw tdg rmd it dks elli lope nsr vo agu ihs xxia stx  rnf cbst ntes
 
 2012-08-08
-swi alxn ctrx mlnx aapl algn kors gnc rost hmsy mnst wwww tfm tjx tcbi wpi dg v fran ulta prgo jah crus rgr gnrc acom dva val ipxl sni biib ew shw pcln tdg rmd tdc dks elli tsco pnra cbst unp cf save paa nsr ntes ftnt flt
+swi alxn ctrx mlnx aapl algn kors gnc rost hmsy mnsr wwww tfm tjx tcbi wpi dg v fran ulta prgo jah crus rgr gnrc acom dva val ipxl sni biib ew shw pcln tdg rmd tdc dks elli tsco pnra cbst unp cf save paa nsr ntes ftnt flt
 2012-08-06
-alxn ctrx swi mlnx aapl hmsy tfm gnc kors algn rost gnrc wwww dg tjx tcbi wpi v prgo mnst crus tdg ulta acom dva fran rgr cf val sni biib ew shw jah rmd nvo dks ihs elli pcln tsco cbst unp tdc ipxl paa xxia ebay wnr nsr
+alxn ctrx swi mlnx aapl hmsy tfm gnc kors algn rost gnrc wwww dg tjx tcbi wpi v prgo mnsr crus tdg ulta acom dva fran rgr cf val sni biib ew shw jah rmd nvo dks ihs elli pcln tsco cbst unp tdc ipxl paa xxia ebay wnr nsr
 
 2012-08-01
-alxn swi mlnx aapl ctrx rgr hmsy tfm gnc kors algn gnrc rost v mnst tjx tcbi wwww amt fran dg acom dva crus tdg prgo ma val wxs vrsk wpi save biib ew ihs shw pcln ulta sni nvo paa cf tsco pnra jah pkt cbst tdc nsr flt
+alxn swi mlnx aapl ctrx rgr hmsy tfm gnc kors algn gnrc rost v mnsr tjx tcbi wwww amt fran dg acom dva crus tdg prgo ma val wxs vrsk wpi save biib ew ihs shw pcln ulta sni nvo paa cf tsco pnra jah pkt cbst tdc nsr flt
 2012-07-30
-alxn swi mlnx crus hmsy aapl rgr kors gnc algn rost gnrc mnst tjx tcbi amt fran lqdt dg v dva tfm wwww tdg ulta wpi prgo acom ma val ew pcln pnra wxs biib ihs shw cf shfl vrsk save swi nvo tsco pii ftnt flt nsr tdc slxp
+alxn swi mlnx crus hmsy aapl rgr kors gnc algn rost gnrc mnsr tjx tcbi amt fran lqdt dg v dva tfm wwww tdg ulta wpi prgo acom ma val ew pcln pnra wxs biib ihs shw cf shfl vrsk save swi nvo tsco pii ftnt flt nsr tdc slxp
 2012-07-25
-mlnx aapl alxn gnc qcor crus swi kors algn rost dg wwww gnrc mnst tjx rgr pcln v tcbi amt tdg cf dva val hibb trip wpi ulta ma tfm shfl wxs paa shw fran cstr cern bwld hmsy save sni biib orly prgo vrsk nvo tdc slxp flt cost
+mlnx aapl alxn gnc qcor crus swi kors algn rost dg wwww gnrc mnsr tjx rgr pcln v tcbi amt tdg cf dva val hibb trip wpi ulta ma tfm shfl wxs paa shw fran cstr cern bwld hmsy save sni biib orly prgo vrsk nvo tdc slxp flt cost
 2012-07-23
-mlnx aapl alxn gnc crus algn tdg qcor kors swi rost gnrc dg tjx wwww dltr v mnst tcbi amt rgr pcln cf dva hibb trip wpi bwld ma shfl tfm val save wxs shw fran cern paa ulta orly prgo agu hmsy vrsk tdc flt slxp ntes ftnt cbst
+mlnx aapl alxn gnc crus algn tdg qcor kors swi rost gnrc dg tjx wwww dltr v mnsr tcbi amt rgr pcln cf dva hibb trip wpi bwld ma shfl tfm val save wxs shw fran cern paa ulta orly prgo agu hmsy vrsk tdc flt slxp ntes ftnt cbst
 2012-07-18
-gnc ctrx alxn aapl rost mlnx dltr qcor tdg swi dg wwww gnrc mnst tjx tcbi amt kors algn crus dva v tfm save lope cf bwld trip rgr wpi ulta ma shfl val hibb fran cern vrsk orly prgo wks hmsy paa sni nvo pcln flt slxp ntes cbst
+gnc ctrx alxn aapl rost mlnx dltr qcor tdg swi dg wwww gnrc mnsr tjx tcbi amt kors algn crus dva v tfm save lope cf bwld trip rgr wpi ulta ma shfl val hibb fran cern vrsk orly prgo wks hmsy paa sni nvo pcln flt slxp ntes cbst
 #NVO-novo nordisk for all the obese pl in the world managing diabetes
 2012-07-16
-ctrx gnc mlnx alxn aapl mnst tdg dltr algn rost swi wwww gnrc dg tjx tcbi qcor rgr amt kors lope crus dba tfm save ulta val bwld cern v hibb trip wpi cf ma shfl hmsy vrsk sni hpy cstr pcln orly prgo wxs paa ntes flt slxp cbst
+ctrx gnc mlnx alxn aapl mnsr tdg dltr algn rost swi wwww gnrc dg tjx tcbi qcor rgr amt kors lope crus dba tfm save ulta val bwld cern v hibb trip wpi cf ma shfl hmsy vrsk sni hpy cstr pcln orly prgo wxs paa ntes flt slxp cbst
 2012-07-11
-gnc mlnx ctrx alxn aapl kors algn mnst tdg qcor dltr gnrc lope swi crus dg rost wwww cstr ulta tfm tjx save tcbi fran rgr amt dva v val hibb ntes cern hmsy trip cf bwld ma fdo sni pcln wpi prgo vrsk nvo paa dks hpy slxp flt
+gnc mlnx ctrx alxn aapl kors algn mnsr tdg qcor dltr gnrc lope swi crus dg rost wwww cstr ulta tfm tjx save tcbi fran rgr amt dva v val hibb ntes cern hmsy trip cf bwld ma fdo sni pcln wpi prgo vrsk nvo paa dks hpy slxp flt
 #no ibd 50 on july 4th (wed)
 2012-07-09 
-gnc qcor ctrx mlnx alxn cstr aapl crus algn swi mnst wwww gnrc tdg dltr kors lope rost dg ulta tfm tjx save tcbi amt cf ntes ma v bwld dva val hibb fran rgr pcln cern disca trip prgo hmsy sni dks wpi wxs fdo hpy pkt slxp flt 
+gnc qcor ctrx mlnx alxn cstr aapl crus algn swi mnsr wwww gnrc tdg dltr kors lope rost dg ulta tfm tjx save tcbi amt cf ntes ma v bwld dva val hibb fran rgr pcln cern disca trip prgo hmsy sni dks wpi wxs fdo hpy pkt slxp flt 
 2012-07-02
-qcor ctrx alxn gnc lqdt crus mlnx tdg cstr algn swi mnst wwww aapl kors lope ulta dg pcln cf rost tjx tcbi amt v dva tfm disca val save trip ntes cern bwld sni prgo ma tdc jbht unp hmsy wxs ctxs ihs pkt wpi agu vrsk slxp nsr 
+qcor ctrx alxn gnc lqdt crus mlnx tdg cstr algn swi mnsr wwww aapl kors lope ulta dg pcln cf rost tjx tcbi amt v dva tfm disca val save trip ntes cern bwld sni prgo ma tdc jbht unp hmsy wxs ctxs ihs pkt wpi agu vrsk slxp nsr 
 2012-06-27
-qcor ctrx alxn gnc mlnx kors swi algn mnst aapl crus tdg wwww cstr ulta dg dltr rost tjx lope orly v tfm save tcbi amt pcln ntes cf cmg ma val disca trip tsco prgo bwld dva cern sni fdo ua ssys tdc ihs jbht ebay pkt slxp flt
+qcor ctrx alxn gnc mlnx kors swi algn mnsr aapl crus tdg wwww cstr ulta dg dltr rost tjx lope orly v tfm save tcbi amt pcln ntes cf cmg ma val disca trip tsco prgo bwld dva cern sni fdo ua ssys tdc ihs jbht ebay pkt slxp flt
 2012-06-25
-qcor ctrx alxn gnc swi mlnx aapl cstr kors algn rost crus mnst wwww tdg ulta dltr dg v tjx save pcln orly tfm tcbi amt ntes cmg ma cern dva disca trip tsco bwld tdc ua sni fdo cf prgo pii ssys ec unp vrsk ctxs jbht ame ebay
+qcor ctrx alxn gnc swi mlnx aapl cstr kors algn rost crus mnsr wwww tdg ulta dltr dg v tjx save pcln orly tfm tcbi amt ntes cmg ma cern dva disca trip tsco bwld tdc ua sni fdo cf prgo pii ssys ec unp vrsk ctxs jbht ame ebay
 2012-06-20
-lqdt qcor ctrx alxn algn swi mlnx aapl ulta dltr rost crus mnst wwww tdg cstr kors ntes dg tjx save tsco pcln orly cern v bwld tfm tcbi ua cmg ec disca tdc trip amt ma sni fdo jbht shw ssys prgo dva bbby pii rht wpi cf slxp
+lqdt qcor ctrx alxn algn swi mlnx aapl ulta dltr rost crus mnsr wwww tdg cstr kors ntes dg tjx save tsco pcln orly cern v bwld tfm tcbi ua cmg ec disca tdc trip amt ma sni fdo jbht shw ssys prgo dva bbby pii rht wpi cf slxp
 2012-06-18 
-lqdt qcor ctrx alxn mlnx aapl gnc algn ulta swi dltr crus rost mnst tdg dg orly tjx wwww cstr pcln ntes bwld cern v tcbi ua amt cmg ma tfm save sni fdo trip ec prgo val disca shw ssys wpi lulu pii jbht vrsk bbby ame rht cbst
+lqdt qcor ctrx alxn mlnx aapl gnc algn ulta swi dltr crus rost mnsr tdg dg orly tjx wwww cstr pcln ntes bwld cern v tcbi ua amt cmg ma tfm save sni fdo trip ec prgo val disca shw ssys wpi lulu pii jbht vrsk bbby ame rht cbst
 2012-06-13
-lqdt qcor ctrx alxn gnc mlnx aapl tdg ulta swi rost crus mnst wwww cstr algn dltr orly dg tjx fran pcln ntes cern v tfm tcbi amt lulu cmg ma bwld val disca save ua sni trip fdo pii shw ssys wpi ec prgo ame jbht vrsk bbby cbst
+lqdt qcor ctrx alxn gnc mlnx aapl tdg ulta swi rost crus mnsr wwww cstr algn dltr orly dg tjx fran pcln ntes cern v tfm tcbi amt lulu cmg ma bwld val disca save ua sni trip fdo pii shw ssys wpi ec prgo ame jbht vrsk bbby cbst
 2012-06-11 
-lqdt gnc ctrx alxn mlnx aapl qcor tdg ulta algn crus swi rost mnst ntes dltr dg tjx wwww cstr pcln cmg orly v bwld val save tcbi sni amt cern ua pii wpi ec ma disca fdo trip shw dks sbux ssys vrsk bbby ame jbht swks prgo cbst
+lqdt gnc ctrx alxn mlnx aapl qcor tdg ulta algn crus swi rost mnsr ntes dltr dg tjx wwww cstr pcln cmg orly v bwld val save tcbi sni amt cern ua pii wpi ec ma disca fdo trip shw dks sbux ssys vrsk bbby ame jbht swks prgo cbst
 2012-06-06 
-lqdt gnc ctrx alxn mlnx aapl lulu ulta qcor tdg algn crus swi rost mnst titn orly tjx wwww cstr ntes cmg dg bwld tcbi v ma cern val ua sni pii pcln wpi ec bbby fdo trip shw amt disca sbux ssys vrsk coo fds jbht swks ebay pkt
+lqdt gnc ctrx alxn mlnx aapl lulu ulta qcor tdg algn crus swi rost mnsr titn orly tjx wwww cstr ntes cmg dg bwld tcbi v ma cern val ua sni pii pcln wpi ec bbby fdo trip shw amt disca sbux ssys vrsk coo fds jbht swks ebay pkt
 2012-06-04
-lqdt ctrx alxn gnc mlnx aapl ulta tsco lulu tdg crus swi rost mnst qcor ntes dltr algn dg orly tjx wwww cstr cmg titn bwld save tcbi v cern val sni ua wpi pcln ec fdo bbby pii trip shw ma disca coo jbht sbux amt cprt tdc cbst
+lqdt ctrx alxn gnc mlnx aapl ulta tsco lulu tdg crus swi rost mnsr qcor ntes dltr algn dg orly tjx wwww cstr cmg titn bwld save tcbi v cern val sni ua wpi pcln ec fdo bbby pii trip shw ma disca coo jbht sbux amt cprt tdc cbst
 2012-05-30
-lqdt gnc ctrx alxn swi mlnx aapl lulu ulta tdg rost crus algn mnst tsco qcor titn cmg orly save tjx wwww pcln cstr ntes v dg cern val bwld tcbi wpi tdc ua sni bbby shfl pii trip ec ma cprt disca coo stmp sbux shw amt clb fdo
+lqdt gnc ctrx alxn swi mlnx aapl lulu ulta tdg rost crus algn mnsr tsco qcor titn cmg orly save tjx wwww pcln cstr ntes v dg cern val bwld tcbi wpi tdc ua sni bbby shfl pii trip ec ma cprt disca coo stmp sbux shw amt clb fdo
 2012-05-29
-lqdt alxn gnc ctrx tsco sni mlnx aapl ulta lulu qcor crus tdg rost algn mnst pcln titn dg tjx save tcbi cstr cmg orly v cern bwld wwww wpi ntes val tdc ua sni bbby shfl pii ec ma cprt disca coo stmp fdo trip sbux shw amt vrsk 
+lqdt alxn gnc ctrx tsco sni mlnx aapl ulta lulu qcor crus tdg rost algn mnsr pcln titn dg tjx save tcbi cstr cmg orly v cern bwld wwww wpi ntes val tdc ua sni bbby shfl pii ec ma cprt disca coo stmp fdo trip sbux shw amt vrsk 
 2012-05-23
-lqdt ctrx alxn gnc tsco ulta swi mlnx aapl lulu qcor crus tdg pcln titn rost algn mnst arba ntes v tjx save wwww orly cern dg bwld tdc tcbi shfl cstr ma ua coo pii cvlt wpi ec cprt val disca clb sni bbby stmp trip shw amt cbst
+lqdt ctrx alxn gnc tsco ulta swi mlnx aapl lulu qcor crus tdg pcln titn rost algn mnsr arba ntes v tjx save wwww orly cern dg bwld tdc tcbi shfl cstr ma ua coo pii cvlt wpi ec cprt val disca clb sni bbby stmp trip shw amt cbst
 2012-05-21
-lqdt ctrx gnc alxn swi rgr tsco ulta aapl lulu rost crus mlnx mnst qcor tdg pcln ntes titn algn tjx save cstr orly cern dg v arba tcbi wwww shfl val bwld tdc coo pii amt wpi ec ma cprt disca ua clb sni bbby trip vrsk stmp cbst
+lqdt ctrx gnc alxn swi rgr tsco ulta aapl lulu rost crus mlnx mnsr qcor tdg pcln ntes titn algn tjx save cstr orly cern dg v arba tcbi wwww shfl val bwld tdc coo pii amt wpi ec ma cprt disca ua clb sni bbby trip vrsk stmp cbst
 2012-05-16
-Lqdt ctrx gnc rgr alxn tsco aapl ulta swi orly crus algn mlnx mnst tjx lulu tdg pcln qcor kors rost save hibb cern dg dltr bwld arba tcbi wwww shfl cstr titn ec v coo pii amt wpi ntes ma val disca tdc ua sni bbby ffiv slxp cbst
+Lqdt ctrx gnc rgr alxn tsco aapl ulta swi orly crus algn mlnx mnsr tjx lulu tdg pcln qcor kors rost save hibb cern dg dltr bwld arba tcbi wwww shfl cstr titn ec v coo pii amt wpi ntes ma val disca tdc ua sni bbby ffiv slxp cbst
 2012-05-14
-Lqdt ctrx gnc rgr aapl tsco alxn lulu ulta kors crus swi orly mlnx mnst save pcln qcor tdg rost algn titn val hibb cstr cern dg dltr tcbi shfl wpi ec v ma bwld arba tjx pii amt ntes disca pnra tdc clb ua sni coo ffiv cbst slxp
+Lqdt ctrx gnc rgr aapl tsco alxn lulu ulta kors crus swi orly mlnx mnsr save pcln qcor tdg rost algn titn val hibb cstr cern dg dltr tcbi shfl wpi ec v ma bwld arba tjx pii amt ntes disca pnra tdc clb ua sni coo ffiv cbst slxp
 2012-05-09
-Lqdt ctrx gnc rgr swi aapl alxn lulu pcln tdg tsco qcor kors crus orly mlnx save ulta algn rost cern titn val mnst cstr ec dg v ma dltr bwld arba hibb tcbi shfl wpi ntes tdc ffiv tjx pii amt Cprt disca clb ua coo slxp cbst ftnt
+Lqdt ctrx gnc rgr swi aapl alxn lulu pcln tdg tsco qcor kors crus orly mlnx save ulta algn rost cern titn val mnsr cstr ec dg v ma dltr bwld arba hibb tcbi shfl wpi ntes tdc ffiv tjx pii amt Cprt disca clb ua coo slxp cbst ftnt
 2012-05-07
-Lqdt rgr ctrx gnc alxn swi aapl lulu pcln tsco qcor cstr kors tdg crus orly rost titn mlnx ulta disca algn bwld cern dg val mnst save hibb wpi ec ma v dltr tcbi tjx shfl ntes arba tdc ffiv ua pii fosl amt tibx pnra nsr cbst ubnt
+Lqdt rgr ctrx gnc alxn swi aapl lulu pcln tsco qcor cstr kors tdg crus orly rost titn mlnx ulta disca algn bwld cern dg val mnsr save hibb wpi ec ma v dltr tcbi tjx shfl ntes arba tdc ffiv ua pii fosl amt tibx pnra nsr cbst ubnt
 2012-05-02
-Rgr gnc ctrx alxn pcln qcor lqdt kors swi aapl tsco invn ulta cstr lulu ma titn crus orly rost mlnx disca tdg algn v bwld cern mnst save cf ec dg dltr val shfl wpi ntes fran meli wxs vrsk arba tdc ffiv ua fosl ftnt ubnt nsr cbst
+Rgr gnc ctrx alxn pcln qcor lqdt kors swi aapl tsco invn ulta cstr lulu ma titn crus orly rost mlnx disca tdg algn v bwld cern mnsr save cf ec dg dltr val shfl wpi ntes fran meli wxs vrsk arba tdc ffiv ua fosl ftnt ubnt nsr cbst
 2012-04-30
-Gnc rgr lqdt ctrx aapl alxn pcln qcor swi tsco ulta invn save kors ma titn crus orly rost mlnx disca cstr lulu tdg v mnst ec algn dg dltr val bwld hlf vrsk shfl cf wpi cern trip wxs arba tdc ffiv ua tcbi tjx ftnt ubnt nsr cbst
+Gnc rgr lqdt ctrx aapl alxn pcln qcor swi tsco ulta invn save kors ma titn crus orly rost mlnx disca cstr lulu tdg v mnsr ec algn dg dltr val bwld hlf vrsk shfl cf wpi cern trip wxs arba tdc ffiv ua tcbi tjx ftnt ubnt nsr cbst
 2012-04-25 
-lqdt rgr ctrx gnc aapl alxn pcln ulta kors qcor ma save tsco swi lulu tdg titn cstr algn rost v orly mnst nus disca cmg hlf bwld dg dltr val shfl celg ec vrsk ffiv tjx pii ntes cern tdc ua fosl tal pay cf wpi ubnt simo cbst
+lqdt rgr ctrx gnc aapl alxn pcln ulta kors qcor ma save tsco swi lulu tdg titn cstr algn rost v orly mnsr nus disca cmg hlf bwld dg dltr val shfl celg ec vrsk ffiv tjx pii ntes cern tdc ua fosl tal pay cf wpi ubnt simo cbst
 2012-04-23
-lqdt rgr gnc ctrx aapl alxn ulta pcln lulu kors save qcor ma tsco swi tdg titn cmg rost bwld hlf v val orly mnst nus disca celg cstr dg dltr shfl ec fran tibx trip vrsk tdc ffiv ua fosl tjx pii cf ntes vmw cern ubnt simo cbst
+lqdt rgr gnc ctrx aapl alxn ulta pcln lulu kors save qcor ma tsco swi tdg titn cmg rost bwld hlf v val orly mnsr nus disca celg cstr dg dltr shfl ec fran tibx trip vrsk tdc ffiv ua fosl tjx pii cf ntes vmw cern ubnt simo cbst
 2012-04-16
-rgr aapl alxn gnc pcln ulta kors lqdt lulu ctrx invn save qcor ma tsco swi bwld cmg ec cstr tdg rost v orly mnst disca  hlf tibx dg val nus tdc shfl cf celg vmw dltr wxs vrsk pnra tjx fosl pay epam ntes fran meli trip ubnt simo
+rgr aapl alxn gnc pcln ulta kors lqdt lulu ctrx invn save qcor ma tsco swi bwld cmg ec cstr tdg rost v orly mnsr disca  hlf tibx dg val nus tdc shfl cf celg vmw dltr wxs vrsk pnra tjx fosl pay epam ntes fran meli trip ubnt simo
 2012-04-09
-Aapl rgr alxn gnc lulu pcln ulta kors lqdt ma qcor invn save fran swi bwld ctrx ec cstr rost hlf tsco mnst disca celg tdg cmg v vmw ffiv orly trip val fosl shfl cf tibx dg dltr wxs tjx pii ntes meli vrsk tdc algn ubnt simo slxp
+Aapl rgr alxn gnc lulu pcln ulta kors lqdt ma qcor invn save fran swi bwld ctrx ec cstr rost hlf tsco mnsr disca celg tdg cmg v vmw ffiv orly trip val fosl shfl cf tibx dg dltr wxs tjx pii ntes meli vrsk tdc algn ubnt simo slxp
 2012-04-02
-rgr aapl alxn gnc lulu kors pcln lqdt qcor swi bwld invn save fran cstr rost ffiv mnst cf ec ma hlf tsco cmg vmw nus fosl shfl disca tdg meli v trip val swks clr pii celg ntes dltr orly wxs algn tdc ua tjx fast ubnt simo slxp
+rgr aapl alxn gnc lulu kors pcln lqdt qcor swi bwld invn save fran cstr rost ffiv mnsr cf ec ma hlf tsco cmg vmw nus fosl shfl disca tdg meli v trip val swks clr pii celg ntes dltr orly wxs algn tdc ua tjx fast ubnt simo slxp
 2012-03-26
-Aapl alxn gnc lulu kors lqdt ulta pcln qcor swi ec invn fran save bwld hlf mnst nus cf ctrx ma ntes cstr rost v cmg tsco ffiv clr shfl tdg dg val tdc swks ua fosl celg tibx meli vmw dltr shoo pii tjx tcbi fast asna simo slxp
+Aapl alxn gnc lulu kors lqdt ulta pcln qcor swi ec invn fran save bwld hlf mnsr nus cf ctrx ma ntes cstr rost v cmg tsco ffiv clr shfl tdg dg val tdc swks ua fosl celg tibx meli vmw dltr shoo pii tjx tcbi fast asna simo slxp
 2012-03-19
-Aapl alxn lulu gnc kors lqdt pcln ulta qcor swi invn fran bwld save ec ma hlf cmg mnst nus ctrx cstr v rost tsco ffiv val clr swks shfl cf celg tdg tibx cern ssw tdc cmi fosl meli vmw dltr shoo orly pnra ua simo ntes ubnt slxp
+Aapl alxn lulu gnc kors lqdt pcln ulta qcor swi invn fran bwld save ec ma hlf cmg mnsr nus ctrx cstr v rost tsco ffiv val clr swks shfl cf celg tdg tibx cern ssw tdc cmi fosl meli vmw dltr shoo orly pnra ua simo ntes ubnt slxp
 2012-03-12
-Alxn lulu aapl ulta kors lqdt qcor swi pcln invn save ma ec v tsco rost hlf val mnst ssw nus clr celg tdg cmg dltr fosl shfl bki cern shoo tdc swks tjx fast tibx dg pnra nuan ffiv cvlt pii gww asna catm meli vrsk cmi tal ubnt
+Alxn lulu aapl ulta kors lqdt qcor swi pcln invn save ma ec v tsco rost hlf val mnsr ssw nus clr celg tdg cmg dltr fosl shfl bki cern shoo tdc swks tjx fast tibx dg pnra nuan ffiv cvlt pii gww asna catm meli vrsk cmi tal ubnt
 2012-03-05
-Lulu kors aapl alxn ulta lqdt qcor swi tsco invn save pcln ec ma tdg cmg v hlf ssw nus mnst clr fire celg meli dltr rost val shoo tdc swks cern nuan fosl tjx fast gold catm dg ffiv pnra tal cmi pii gww coh asna cvlt disca ebix
+Lulu kors aapl alxn ulta lqdt qcor swi tsco invn save pcln ec ma tdg cmg v hlf ssw nus mnsr clr fire celg meli dltr rost val shoo tdc swks cern nuan fosl tjx fast gold catm dg ffiv pnra tal cmi pii gww coh asna cvlt disca ebix
 #what are all the moving avg metrics etc supposed to indicate? I suppose someone thought they were a good idea bc they indicated something. So what exactly is that?
 2012-02-27
-Alxn gnc lulu lqdt kors qcor aapl ulta swi ec invn ma tdg v tsco clr fire celg cmg mnst pcln meli hlf rost val nus tdc tal fosl fast dltr shoo ffiv swks cvlt cmi gww pii ago gold cf cxo hmsy cern algn nvo tjx tcbi ebix ubnt
+Alxn gnc lulu lqdt kors qcor aapl ulta swi ec invn ma tdg v tsco clr fire celg cmg mnsr pcln meli hlf rost val nus tdc tal fosl fast dltr shoo ffiv swks cvlt cmi gww pii ago gold cf cxo hmsy cern algn nvo tjx tcbi ebix ubnt
 2012-02-21
-Alxn gnc ulta lqdt aapl lulu swi bwld invn tdg v tsco cmg nus celg ma qcor val hmsy dltr rost ebix ffiv algn cvlt mnst shoo fosl pii fast cxo pcln hlf meli nuan int cmi gww tcbi cfx ago cern tdc pnra tal tjx coh shfl cf qsii
+Alxn gnc ulta lqdt aapl lulu swi bwld invn tdg v tsco cmg nus celg ma qcor val hmsy dltr rost ebix ffiv algn cvlt mnsr shoo fosl pii fast cxo pcln hlf meli nuan int cmi gww tcbi cfx ago cern tdc pnra tal tjx coh shfl cf qsii
 #shfl is a gam(bl)ing stock ppl hoping to gamble out of debt ?? Cruise stox beat up? due to Carnival crash in italy
 #fosl is a supplier for kors
 2012-02-13
-Alxn ulta lqdt aapl lulu tdg swi bwld ma invn qcor v tsco hmsy ebix celg ec cmg rost dltr nus dg mnst pii cxo aap fast gold hlf nuan ffiv pnra cvlt gww tcbi meli algn int tjx biib coh cfx ago gild auy cern cmi shoo pcln ntes
+Alxn ulta lqdt aapl lulu tdg swi bwld ma invn qcor v tsco hmsy ebix celg ec cmg rost dltr nus dg mnsr pii cxo aap fast gold hlf nuan ffiv pnra cvlt gww tcbi meli algn int tjx biib coh cfx ago gild auy cern cmi shoo pcln ntes
 2012-02-06
-Lqdt alxn swi ulta isrg hmsy qcor lulu celg invn tsco ebix aapl ma auy ec v cmg tdg dltr nus nuan mnst gold bki meli dg aap cvlt fast cxo rost int bwld ffiv gww pii tcbi hum shoo biib nsr gild hlf tal intc coh expe ntes pcln
+Lqdt alxn swi ulta isrg hmsy qcor lulu celg invn tsco ebix aapl ma auy ec v cmg tdg dltr nus nuan mnsr gold bki meli dg aap cvlt fast cxo rost int bwld ffiv gww pii tcbi hum shoo biib nsr gild hlf tal intc coh expe ntes pcln
 2012-01-30
-Ulta lulu alxn swi lqdt hmsy qcor aapl auy gold celg v dltr cmg dg mnst ma isrg tdg cvlt rost ebix tsco nuan ec hlf meli rgld aap nus gww fast ffiv int hum tjx shoo pii gild biib bwld vrsk tcbi intc nog cxo endp ntes pcl mnta
+Ulta lulu alxn swi lqdt hmsy qcor aapl auy gold celg v dltr cmg dg mnsr ma isrg tdg cvlt rost ebix tsco nuan ec hlf meli rgld aap nus gww fast ffiv int hum tjx shoo pii gild biib bwld vrsk tcbi intc nog cxo endp ntes pcl mnta
 2012-01-23
-Lqdt ulta swi qcor lulu alxn hmsy gold v dltr ebix nuan ec ma hlf celg isrg cvlt pii rost aap ffiv dg tsco cmg mnst gww hibb hum tdg meli nus fast aapl auy vrsk shoo tcbi endp int tjx intc gild biib prgo rgld bwld mnta pcln ntes
+Lqdt ulta swi qcor lulu alxn hmsy gold v dltr ebix nuan ec ma hlf celg isrg cvlt pii rost aap ffiv dg tsco cmg mnsr gww hibb hum tdg meli nus fast aapl auy vrsk shoo tcbi endp int tjx intc gild biib prgo rgld bwld mnta pcln ntes
 2012-01-17
-Lqdt ulta alxn lulu isrg qcor hmsy swi gold v rost dltr nuan tsco ah ec ma celg hlf tdg pii dg sbny cmg ebix hum mnst gww aapl auy cvlt meli aap nus hibb fast vrsk tjx tcbi biib rgld int cxo prgo hcp mnta goog endp pcln ntes
+Lqdt ulta alxn lulu isrg qcor hmsy swi gold v rost dltr nuan tsco ah ec ma celg hlf tdg pii dg sbny cmg ebix hum mnsr gww aapl auy cvlt meli aap nus hibb fast vrsk tjx tcbi biib rgld int cxo prgo hcp mnta goog endp pcln ntes
 #date shift above due to MLK day
 2012-01-09
 Lqdt alxn qcor ulta aapl cxo gold ma swi v hmsy rost dltr goog tdg pii dg cmg nuan ebix hans hum lulu ah cvlt rgld aap sbny nus hibb gww tjx tcbi fast auy prgo int biib hlf celg meli tsco nog vrsk intc jazz hcp ntes endp asml
@@ -325,7 +343,7 @@ lulu alxn ulta hlf qcor isrg gold dltr hans ma auy pii ah swi aapl tibx v pnra c
 
 #earnings reports.
 #FT.com
-#Hansens natural --->maker of Monster energy drink. Trying to expand to Europe
+#Hansens natural --->maker of Monsrer energy drink. Trying to expand to Europe
 #Blackberry use in Europe vs iPhone
 
 #Some type of acyclic graph of the stocks and their price ranges. Map movement and how their indicators moved.
