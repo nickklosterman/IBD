@@ -2,6 +2,9 @@
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
 
+2013-03-13
+flt gmcr ll celg ocn wlk mdco airm alk htz rgr slca grfs away car 
+
 2013-02-20
 flt ddd soda qihu kors armh ocn airm celg strza htz car slca xxia cvlt mx pol alk emn wdr wor mpc nsr vrx gnrc rgr lope wdc blk cvi open pir tup fmx hca uhs bcei ctrx dnkn ci tsm jah cprt amcx arun ksu mdco rmd v trip 
 
