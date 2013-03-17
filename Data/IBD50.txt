@@ -1,9 +1,10 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
-
+2013-03-18
+flt ll gmcr celg ocn wlk airm mdco cvlt alk htz grfs slca car xxia pol away rgr mmx armh evr wdc open trip prlb arun vrx abg wdr wor mpc emn blk jah hca gnrc uhs cvi jazz bcei axll nsr uthr myl swi fmx ci ssys stx oas
 2013-03-13
-flt gmcr ll celg ocn wlk mdco airm alk htz rgr slca grfs away car 
+flt gmcr ll celg ocn wlk mdco airm alk htz rgr slca grfs away car xxia armh pol evr prlb arun cvlt open trip mx mpc vrx wdc emn wdr wor jazz uthr qihu blk jah hca uhs cvi myl abg pkg gnrc bcei axll pir nsr swi oas pcln
 
 2013-02-20
 flt ddd soda qihu kors armh ocn airm celg strza htz car slca xxia cvlt mx pol alk emn wdr wor mpc nsr vrx gnrc rgr lope wdc blk cvi open pir tup fmx hca uhs bcei ctrx dnkn ci tsm jah cprt amcx arun ksu mdco rmd v trip 
