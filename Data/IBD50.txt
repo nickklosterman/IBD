@@ -1,6 +1,18 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
+2013-04-15
+gmcr flt celg ll prlb away alk ddd mdco grfs htz ocn car slca sbgi airm wdc vrx trip armh wdr open fmx mx ci ssy skr blk tup wlk uthr wddr jah evr gnrc mpc biib pol ingr pkg uhs regn rmd cern pir qihu smtc kmx nsm pcln 
+2013-04-10
+gmcr flt celg ll prlb ocn alk grfs open htz slca mdco sbgi car airm away vrx wdc wlk ddd armh fmx pol wdr kr mpc emd mx ci wor blk stx pkg gnrc uhs ssys ingr tup jah hca bcei cvi pir trip biib al ksu axll regn nsm 
+2013-04-08
+flt gmcr celg ll prlb mdco ocn alk grfs open htz slca sbgi car airm away vrx wdc wlk rmd ci kr mpc fmx pol wdr ingr jah tup pkg gnrc uhs bcei ddd cvlt mx trip wdr stx blk evr hca biib cvi uthr dnkn v axll regn swi 
+2013-04-03
+flt gmcr ll celg mdco away ocn alk airm prlb htz vrx slca sbgi car cvlt grfs open wlk armh xxia evr ddd wdc mx trip kr blk uhs mpc rmd ci pol wdr jah tup hca gnrc v fmx ingr pkg biib bcei cvi arun ssys nsm nsr regn 
+2013-04-01
+gmcr flt celg ll ocn away prlb mdco alk wlk htz airm sbgi slca grfs car cvlt vrx open mx xxia trip pol armh evr wdc ssys wdr wor blk gnrc mpc abg kr jah tup hca uhs arun rmd v smtc pkg bcei cvi axll rgr nsr oas regn
+2013-03-27
+flt gmcr ll celg mdco ocn alk wlk airm grfs htz away slca sbgi car cvlt open mx pol xxia prlb vrx trip armh evr mpc arun wor blk jah hca rgr wdr abg ssys kr tup gnrc uhs cvi wdc smtc pkg bcei axll nsr v ctb oas swi 
 2013-03-25
 flt gmcr ll celg mdco airm alk wlk grfs ocn htz away slca sbgi car pol cvlt vrx trip xxia evr open mx mpc abg prlb rgr ssys wdr wor blk jah tup hca gnrc uhs cvi arun emn kr axll wdc ctb pkg al ksu psx nsr swi oas
 2013-03-20
