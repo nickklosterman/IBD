@@ -1,6 +1,32 @@
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
-#I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bought or sold? Does the brokerage house who is the market for a stock sell that data?
+#I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bough
+t or sold? Does the brokerage house who is the market for a stock sell that data?
+
+2013-05-29
+gmcr flt ll trip ocn celg meli ddd nus htz vrx amba lope evr prlb mpc ilmn biib mdco alk gnrc ssys act vlo wlk jazz lyb smtc pol open pkg armh wwww psx wor blk tmd uhs slca icon sbgi snts cvi alks brli v ci cboe regn pcln 
+2013-05-28
+gmcr flt ll ocn celg trip ddd meli ns htz prlb lope amba alk mpc ilmn vrx biib evr mdco armh gnrc open act vlo smtc ssys pkg slca jazz lyb wwww psx cboe wor blk tmo icon nsm sbgi snts cvi wlk pcln rmd v pol oii kr regn 
+2013-05-22
+gmcr ll flt ocn meli celg trip ddd prlb htz nus amba alk ilmn armh mpc act vlo evr mdco ssys open biib away rndx pkg slca v gnrc psx cboe oii blk kr wdr icon nsm sbgi snts cvi regn lyb wlk pcln wwww rmd pol vrx wor lulu 
+
+2013-05-20
+gmcr ll flt ocn celg alk meli ddd prlb htz mdco amba trip nus armh ilmn qihu evr vlo ssys act lyb v abg vrx pkg blk biib yndx wwww rmd gwr pol psx oii open kr wdr slca nsm sbgi snts wlk pcln pir gnrc cboe uthr regn lulu 
+2013-05-15
+gmcr flt ll alk celg ddd prlb ocn mdco meli htz evr trip armh nus ilmn qihu abg ssys pkg biib act vlo uhs away rmd v gwr vrx oii wor kr open uthr vclk blk icon nsm sbgi snts regn wlk paa pir ci cboe wdr gwre lulu alxn 
+2013-05-13
+gmcr flt ll alk prlb celg ocn lad mdco meli htz armh ddd qihu evr nus ilmn trip abg pkg paa kr act biib nsm vlo rmd v gwr ci cboe oii wor open uthr vclk blk uhs icon gwre sbgi snts regn away kors ever kmx wsm lulu pcln 
+2013-05-08
+gmcr flt ll celg alk prlb lad ocn meli mdco htz armh ddd evr qihu vlo trip abg ilmn pkg biib v open kr nus paa oii vrx cboe blk uhs icon gwre nsm snts wlk hfc endp gwr wor uthr kmx cvrr slca bcei save sbgi regn cvi yndx 
+2013-05-06
+gmcr flt ll alk celg prlb lad ocn mdco armh htz ddd gnrc evr trip qihu vlo ilmn pkg kr biib grfs v abg open away gwr ci cboe vrx oii wor uthr blk uhs icon sbgi gnc kmx slca bcei nsm regn cvlt nus rmd pir meli dnkn lulu 
+2013-05-01
+gmcr flt ll lad alk celg evr mdco ocn armh htz car vrx grfs trip qihu biib  prlb ddd ilmn pkg kr away abg uthr vlo ci mx blk uhs icon sbgi rmd oii wor slca gnrc hca gnc cern meli ssys wdr kmx bcei elli gwre save nsm lulu 
+
+2013-04-29
+gmcr flt ll alk celg evr mdco ocn armh htz trip car sbgi slca grfs qihu biib away vrx ilmn kr prlb abg pkg ci blk uhs icon cern mx wor uthr gnrc v bwld wdr kmx hca bcei gwre cvi regn wlk rmd open cmg ever oii nsm meli
+2013-04-24
+gmcr flt celg ll mdco away alk prlb ocn htz vrx car sbgi slca grfs wdc trip fmx ilmn qihu kr pkg tup cvlt uthr mx jah biib ddd rmd cern open pol ci ingr blk gnrc uhs arun emn cmg wor goog hca bcei gwre cvi nsm lulu meli 
 2013-04-22
 gmcr flt ll celg away mdco alk grfs ocn htz vrx car sbgi slca trip prlb wdc qihu kr fmx tup uthr open ci evr biib ddd cern ilmn pol ingr jah uhs ksu regn rmd pnra cmg wor blk hca gnrc cvi v tsco wsm pkg tmo gwre nsm 
 2013-04-17
