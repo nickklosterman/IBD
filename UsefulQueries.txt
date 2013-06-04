@@ -8,6 +8,8 @@ select date from bc20 where stockticker like "aapl" order by date desc;
 select date from bc20 where stockticker like "aapl" order by date asc limit 1;
 select date from bc20 where stockticker like "aapl" order by date desc limit 1;
 
+select distinct(date) from bc20 limit 2 offset 0;
+sqlite3 IBDdatabase.sqlite "select distinct(date) from bc20 order by date desc limit 2 offset 0;"
 
 To create a matrix of rankings for a single stock:
 get the list of available dates (possibly set all ranks to 0)
