@@ -2,6 +2,23 @@
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bough
 t or sold? Does the brokerage house who is the market for a stock sell that data?
+#how much do these stocks beat the market by? I figure they have to otherwise they wouldn't be on this list, but there is nothing saying that they do beat the market. 
+#for - forestar group 
+#top ranked, low price stocks 
+2013-06-24
+gmcr flt prlb lad ocn ll nus ddd celg htz amba trip gnrc meli ilmn vrx jazz wwww ci cboe wlk pcln mdco yndx smtc rpxc ssys pkg act evr lyb v endp oii save sbgi snts away gnc rmd pvh hlf dnkn tmo icon cvlt pol afsi regn kors 
+2013-06-19
+gmcr flt lad prlb ocn ll ddd celg htz nus amba trip gnrc meli ilmn vrx evr jazz wwww ssys cboe act wlk pcln yndx rpxc v endp pkg lyb mdco smtc alk nsr mpc oii nsm save sbgi snts away kors gnc pvh ntes pol ci regn cvlt alks 
+#ryl dhi and phm fell ~10% on fears of rising mortgage/interst rates
+2013-06-17
+gmcr flt lad ocn ll ddd jazz prlb celg htz amba nus trip meli gnrc ilmn vrx wlk mdco wwww ssys cboe act alk v mpc endp pkg evr pcln lyb yndx smtc oii biib uhs icon save sbgi snts away kors nsr ntes dnkn ci open wor regn alks 
+2013-06-12
+gmcr flt lad ocn ll ddd jazz prlb celg htz amba trip meli gnrc nus mdco wwww ilmn vrx alk mpc ssys cboe pkg biib act wlk away pcln yndx v ci uhs icon save snts kors smtc endp ntes open oii wor blk kr wdr slca nsm regn alks 
+
+2013-06-10
+gmcr flt lad ll ocn trip ddd jazz prlb celg htz amba meli gnrc nus mpc ilmn mdco alk wwww vrx act vlo cboe pkg biib wlk kors v open wdr uhs icon away pcln smtc ntes psx ci oii wor blk nsm save sbgi snts cvi regn alks lulu
+2013-06-05
+gmcr flt lad ll ocn trip celg lope meli htz ddd amba gnrc jazz ilmn prlb nus alk mpc brx wlk lvb smtc pkg biib act icon evr mdco wwww v psx open wor tmo save sbgi snts vlo yndx pol ci cboe blk wdr edu alks regn kors lulu
 2013-06-03
 gmcr flt lad ll trip celg ocn ddd lope htz meli amba gnrc vrx jazz prlb alk nus mpc ilmn biib evr smtx act vlo lyb wlk ssys open pkg yndx mdco armh wwww psx pol ci cboe wor blk tmo icon uhs slca save sbgi snts pcln alks regn 
 2013-05-29
