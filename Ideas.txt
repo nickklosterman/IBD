@@ -1,3 +1,11 @@
 create script that tracks the stocks in the database and simulates purchasing of them. Maybe just need to identify which records aren't in a list anymore.
 Possibly allow editing of the list so that you can select which items you don't want to include.
 Possibly build gui.
+
+Sat Sep 21 15:02:34 EDT 2013
+output json for ingestion into a webpage 
+Other better data formats?
+Easy ingestion to another app? what is time needed to invest in such an app?
+load local file, or load from sqlite, load form mysql dbase
+compare current list to their price at beginning of year. see how it has performed.
+create table for each stock with date and ticker price 
