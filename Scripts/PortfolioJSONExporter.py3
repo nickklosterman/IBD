@@ -168,9 +168,9 @@ def query_for_data(table):
             purchaseprice=sharePrice*sharesToBuy+commissionToBuy
 #            print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
             if table=="IBD50" and rank!=50:
-                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,rank:%i,sharePurchasePrice:%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
+                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
             else:
-                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,rank:50,sharePurchasePrice:%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,sharePrice))
+                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":50,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,sharePrice))
         """output ending elements to enclose the json array and element"""
         print("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) 
         leftoverInvestmentAmount=0.0
@@ -191,7 +191,7 @@ investmentAmount is the amount that is used to calculate the number of shares to
 using the leftoverInvestmentAmountFlag will mean that the 1st stock will be always a bit artificially low since it wont' have any leftover amounts to take advantage of.
 if the investmentAmount is less than the max price of any of the shares of stock then you won't buy any!!!
 
-
+I was contemplating adding the option to specify the number of stock shares to buy, but that seems a bit ridiculous.....although for some reason that idea intrigues me.
 """
 investmentAmount=1000
 investmentAmountFlag=False
