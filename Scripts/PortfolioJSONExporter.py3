@@ -19,6 +19,14 @@ def get_next_date(date):
     oneday=datetime.timedelta(1)
     dateplusone=date_conv+datetime.timedelta(days=1)
     return dateplusone
+
+
+def get_date(date):
+    month=int(date[5:7])
+    day=int(date[8:10]) 
+    year=int(date[0:4])
+    date_conv=datetime.date(year,month,day)
+    return date_conv
     
 #
 def get_historical_prices(symbol, date):
@@ -28,26 +36,36 @@ def get_historical_prices(symbol, date):
     
     Returns a nested list.
     """
-    print(date)
-    date=get_next_date(date)
-    print(date)
+    date=get_date(date)
+
 #the date goes month(jan=0) day year
+    # url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
+    #       'd=%s&' % str(int(date[5:7]) - 1) + \
+    #       'e=%s&' % str(int(date[8:10])) + \
+    #       'f=%s&' % str(int(date[0:4])) + \
+    #       'g=d&' + \
+    #       'a=%s&' % str(int(date[5:7]) - 1) + \
+    #       'b=%s&' % str(int(date[8:10])) + \
+    #       'c=%s&' % str(int(date[0:4])) + \
+    #       'ignore=.csv'
     url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
-          'd=%s&' % str(int(date[5:7]) - 1) + \
-          'e=%s&' % str(int(date[8:10])) + \
-          'f=%s&' % str(int(date[0:4])) + \
+          'd=%s&' % str(int(date.month) - 1) + \
+          'e=%s&' % str(int(date.day)) + \
+          'f=%s&' % str(int(date.year)) + \
           'g=d&' + \
-          'a=%s&' % str(int(date[5:7]) - 1) + \
-          'b=%s&' % str(int(date[8:10])) + \
-          'c=%s&' % str(int(date[0:4])) + \
+          'a=%s&' % str(int(date.month) - 1) + \
+          'b=%s&' % str(int(date.day)) + \
+          'c=%s&' % str(int(date.year)) + \
           'ignore=.csv'
+
     days = urllib.request.urlopen(url).readlines()
     data=[] #python3 method , 
     for day in days: #day[0] holds the fields names, day[1+] holds the data values
 #        print(day) 
         dayStr = str(day, encoding='utf8')
         data.append( dayStr[:-2].split(','))
-    return data
+#    print(data)  #this is what 'data' looks like --> [['Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'Adj Clos'], ['2013-09-24', '110.09', '111.08', '108.15', '110.42', '596200', '110.4']]
+    return float(data[1][4])
 #end def get_historical_prices
 
 _CounterSentinel = 5 #max possible holidays in a row where markets might be closed so we look at next day.
@@ -153,7 +171,7 @@ def query_for_data(table):
             ticker=row2[0]
             rank=row2[1]
             dateSplit=date.split('-')
-            purchaseprice=666
+            purchaseprice=get_historical_prices(ticker,date)*10 #buy 10 shares
             if table=="IBD50" and rank!=50:
                 print('{ "ticker": "%s", "shares": 10, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":7,"commissionToSell":7,rank:%i}, ' % ( ticker,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],rank))
             else:
