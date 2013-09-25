@@ -98,6 +98,9 @@ def get_historical_prices_plus_one_day(symbol, date):
 
 
 def query_for_entry(table,date,symbol,rank):
+    """
+    QQuery the database for the number of records present for a particular ticker on a given date with a certain rank
+    """
     querycursor=connection.cursor()
     Query='SELECT COUNT(*) FROM  '+table+' WHERE stockticker LIKE "'+symbol+'" AND date LIKE "'+date+'" and rank = '+str(rank)
     querycursor.execute(Query)
@@ -105,8 +108,10 @@ def query_for_entry(table,date,symbol,rank):
     numrecords=int(row[0])
     return numrecords
 
-#insert dollar values as integers since sqlite doesn't have a decimal datatype
 def insert_data(table,date,symbol,rank,data):
+    """
+    insert dollar values as cent values (integers) since sqlite doesn't have a decimal datatype
+    """
     insertcursor=connection.cursor()
     Query='CREATE TABLE IF NOT EXISTS '+table+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
     insertcursor.execute(Query)
@@ -122,6 +127,9 @@ def insert_data(table,date,symbol,rank,data):
 #end def insert_data
 
 def insert_error_data(table,date,symbol,rank):
+    """
+    Insert the date symbol and rank of any stock that an error was produced on
+    """
     errorcursor=connection.cursor()
     Query='CREATE TABLE IF NOT EXISTS '+table+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER)'
     errorcursor.execute(Query)
@@ -149,18 +157,18 @@ def check_tables_exist(tablelist):
     cursor.close()
 
 
-#def query_for_data(tablequery,tabledata,tableerror):
+
 def query_for_data(tablelist):
+    """
+    Loop over all rows in the provided table and get the historical price plus one day and insert that data into our data table
+    """
     check_tables_exist(tablelist)    
-    tablequery=tablelist[0]
-    tabledata=tablelist[1]
-    tableerror=tablelist[2]
-    print(tablequery,tabledata,tableerror)
+    tablequery=tablelist[0] """ table we are querying """
+    tabledata=tablelist[1] """ table we will insert stock data  into """
+    tableerror=tablelist[2] """ table that error ticker/data/rank will be placed in """
+
     Query='SELECT * FROM '+tablequery
-#    Query='SELECT * FROM BC20 WHERE DATE="2012-07-31"'
-#    Query='SELECT * FROM BC20 WHERE ID>735 Limit 100'
-#    Query='SELECT * FROM IBD50 WHERE ID>2340 Limit 100'
-    Query='SELECT * FROM IBD50 WHERE ID>23 Limit 2'
+    
     querycursor=connection.cursor()
     querycursor.execute(Query)
     rowcounter=0
@@ -171,25 +179,22 @@ def query_for_data(tablelist):
         row=querycursor.fetchone()
         if row == None:
             break
-    #        print row
-        ID=row[0] #not used/needed
+
+#        ID=row[0] #not used/needed
         date=row[1]
         ticker=row[2]
         rank=row[3]
-    #        print(ID,date,ticker)
+
         numrecords=query_for_entry(tabledata,date,ticker,rank)
         if (numrecords==0): #retrieve and insert data if record isn't present
             output=get_historical_prices_plus_one_day(ticker, date )
-            print(ID,date,ticker,output)
+            print(date,ticker,output)
             if len(output)!=2 or output[0][0]!="Date": # a simple error check since this first field should be "Date"
                 print("ERROR for ",ticker) #enter this data into an errors database
                 print(row,output)
                 insert_error_data(tableerror,date,ticker,rank)
             else:
                 if float(output[1][4])>0: #make sure field for closing price is a number
-#                if output[0][4]=='Close': #or could do if int(output[1][2])>0 
-#                    quotedate=output[1][0]
- #                   closingprice=output[1][4]
                     error=insert_data(tabledata,date,ticker,rank,output)
         else:
             print('There are %s duplicate records.' % numrecords)
