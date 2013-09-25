@@ -115,23 +115,6 @@ def get_historical_prices_plus_one_day(symbol, date):
 #end def get_historical_prices_plus_one_day
 
 
-def query_for_entry(table,date,symbol,rank):
-    querycursor=connection.cursor()
-    Query='SELECT COUNT(*) FROM  '+table+' WHERE stockticker LIKE "'+symbol+'" AND date LIKE "'+date+'" and rank = '+str(rank)
-    querycursor.execute(Query)
-    row=querycursor.fetchone()
-    numrecords=int(row[0])
-    return numrecords
-
-def insert_error_data(table,date,symbol,rank):
-    errorcursor=connection.cursor()
-    Query='CREATE TABLE IF NOT EXISTS '+table+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER)'
-    errorcursor.execute(Query)
-    Query='INSERT INTO '+table
-    errorcursor.execute(Query+' VALUES(null, ?, ?, ?)', (date,symbol,rank))
-    errorcursor.close()
-#end def insert_error_data
-
 def check_tables_exist(table):
     cursor=connection.cursor()
     Query="select case when tbl_name ='"+table+"' then 1 else 0 end  from sqlite_master where type='table' and name='"+table+"' order by name"
@@ -155,6 +138,10 @@ def query_for_data(table):
     Query='SELECT distinct(date) FROM '+table
     querycursor1=connection.cursor()
     querycursor1.execute(Query)
+    sharesToBuy=10
+    commissionToBuy=7.0
+    commissionToSell=7.0
+    leftoverInvestmentAmount=0.0
     while True: #needed so we can use the 'break' in case a row is empty
         row=querycursor1.fetchone()
         if row == None:
@@ -171,26 +158,92 @@ def query_for_data(table):
             ticker=row2[0]
             rank=row2[1]
             dateSplit=date.split('-')
-            purchaseprice=get_historical_prices(ticker,date)*10 #buy 10 shares
+            sharePrice=get_historical_prices(ticker,date)
+            if(leftoverInvestmentAmountFlag):
+                sharesToBuy=math.floor((investmentAmount-commissionToBuy+leftoverInvestmentAmount)/sharePrice)
+            else :
+                sharesToBuy=math.floor((investmentAmount-commissionToBuy)/sharePrice)
+            leftoverInvestmentAmount=investmentAmount-sharesToBuy*sharePrice+leftoverInvestmentAmount
+
+            purchaseprice=sharePrice*sharesToBuy+commissionToBuy
+#            print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
             if table=="IBD50" and rank!=50:
-                print('{ "ticker": "%s", "shares": 10, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":7,"commissionToSell":7,rank:%i}, ' % ( ticker,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],rank))
+                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,rank:%i,sharePurchasePrice:%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
             else:
-                print('{ "ticker": "%s", "shares": 10, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":7,"commissionToSell":7,rank:50} ' % ( ticker,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0]))
-        print("]},")
+                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,rank:50,sharePurchasePrice:%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,sharePrice))
+        """output ending elements to enclose the json array and element"""
+        print("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) 
+        leftoverInvestmentAmount=0.0
         querycursor2.close()
     querycursor1.close()
 #end def query_for_data
 
+
+
 #-----------------MAIN-------------------------
-if (len(sys.argv) > 1):
-    database=sys.argv[1]
-else:
-    database="IBDdatabase.sqlite"
-    inputList=["IBD50","BC20","IBD8585","Top200Composite"]
-    for item in inputList:
-        connection=sqlite3.connect(database)
-        query_for_data(item)
-        connection.commit()
+import getopt  #for command line options
+#import sys
+import math #for floor
+
+
+""" 
+investmentAmount is the amount that is used to calculate the number of shares to purchase. Fractional shares are not allowed. Any unused money can then cascade to the next investment purchase, being added to the investment amount. This is enabled with the leftoverInvestmentAmountFlag  
+using the leftoverInvestmentAmountFlag will mean that the 1st stock will be always a bit artificially low since it wont' have any leftover amounts to take advantage of.
+if the investmentAmount is less than the max price of any of the shares of stock then you won't buy any!!!
+
+
+"""
+investmentAmount=1000
+investmentAmountFlag=False
+#leftoverInvestmentAmount=0.0
+leftoverInvestmentAmountFlag=False
+database="IBDdatabase.sqlite"
+
+#print(sys.argv[1:])
+
+#pretty much straight from : http://docs.python.org/release/3.1.5/library/getopt.html
+#took me a while to catch that for py3k that you don't need the leading -- for the long options
+#sadly optional options aren't allowed. says it in the docs :( http://docs.python.org/3.3/library/getopt.html
+try:
+    options, remainder = getopt.gnu_getopt(sys.argv[1:], 'o:a:i:lsd:', ['investment-amount=',
+                                                                        'output=',
+                                                                        'leftover-investment-amount',
+                                                                        'spillover',
+                                                                        'database=',
+                                                                        'alert='
+                                                                ])
+except getopt.GetoptError as err:
+    print( str(err)) # will print something like "option -a not recognized"                                         
+    usage()                                                                                                  
+    sys.exit(2)
+
+for opt, arg in options:
+    if opt in ('-i', '--investment-amount'):
+        investmentAmount=float(arg)
+        investmentAmountFlag=True
+    elif opt in ('-o', '--output'):
+        outputfilename=arg
+    elif opt in ('-d', '--database'):
+        database=arg
+    elif opt in ('-s', '--spillover'):
+        leftoverInvestmentAmountFlag=True
+    elif opt in ('-a', '--alert'): #check for stocks where loss is > 8 %
+        alertflag=True
+        try:
+            alertPercent=float(arg) #will it break if an opt isn't specified?
+        except ValueError:
+            alertPercent=8
+        if alertPercent > 1:
+            alertPercent=alertPercent/100;
+    else:
+        assert False, "unhandled option"
+
+
+inputList=["IBD50","BC20","IBD8585","Top200Composite"]
+for item in inputList:
+    connection=sqlite3.connect(database)
+    query_for_data(item)
+    connection.commit()
 
 quit()
 #http://www.comp.mq.edu.au/units/comp249/pythonbook/pythoncgi/pysqlite.html
