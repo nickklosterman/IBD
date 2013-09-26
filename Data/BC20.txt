@@ -9,13 +9,13 @@ lnkd celg pcln biib vrx ctsh fb eog alxn act clr ma lvs regn mga pxd wlp cog gil
 #none on 2013-09-02 bc of labor day
 
 2013-08-27
-lnkd celg act plcn biib vrx fb eog mga wlp sbux lvs cog ma viab aet tsla noc gild lmt 
+lnkd celg act pcln biib vrx fb eog mga wlp sbux lvs cog ma viab aet tsla noc gild lmt 
 
 2013-08-20
 lnkd pcln act biib vrx fb sbux mga wlp ma lvs viab eog noc gild ltd aet tsla nflx cog 
 
 2013-08-13
-lnkd celg plcn act biib vrx fb sbux ma mco mga eog wlp viab bbby tsla gild lvs noc clr 
+lnkd celg pcln act biib vrx fb sbux ma mco mga eog wlp viab bbby tsla gild lvs noc clr 
 
 #exone (xone) does laser sintering 3d printing. 3d systems (ddd) just bought Phenix systems which has laser sintering and ceramic printing capabilities
 2013-08-06
@@ -227,7 +227,7 @@ gild qcom mhs amgn adp bmy v xom mcd abx so pg wmt rtn lly oxy pfe wye t fpl
 #mhs->esrx
 
 2007-12-18
-pot aapl vmw goog nyx de lmt mos fslr ma gild pcp cme genz syk wfr hpq xto emr stt
+pot aapl vmw goog nyx de lmt mos fslr ma gild pcp cme genz syk wfm hpq xto emr stt
 2007-11-20
 bbry fslr ma blk gild cme lmt mos esrx pcp wft genz trow oxy xto schw emr hpq cvs mon
 2007-11-27
@@ -281,7 +281,7 @@ bbry nov ebay slb amzn wft hpq jnpr celg nvda biib mos orcl de stj mhs vmw tmo b
 2007-09-18
 bbry nov ebay slb amzn wft jnpr fcx celg nvda biib hpq stj mos de syk bhi vmw tmo orcl 
 2008-05-20
-bbry rig hes nbl oxy apa csx nxy nue ma swn nov eca wft su cnq dvn hal px ibm
+bbry rig hes nbl oxy apa csx nyx nue ma swn nov eca wft su cnq dvn hal px ibm
 2008-06-03
 ma bbry hes nbl csx apa oxy su swn nov mur eca wft cvx px ibm bni cnq dvn fslr
 2007-06-05
@@ -308,13 +308,13 @@ aapl pot bbry pcu nov rig pcp slb amzn nvda csco tck goog gsf ma fcx ebay pcar c
 celg pot gild pcu nov pcar amzn al slb orcl vol sgp zmh tmo mhs exc aapl ebay bhi csco
 
 2008-05-06
-ma bbry rig hes nbl csx apa nxy nue aapl cnq hal px cat ibm fslr bni eog cvx chk
+ma bbry rig hes nbl csx apa nyx nue aapl cnq hal px cat ibm fslr bni eog cvx chk
 2007-05-08
 celg pot gild nov al wft pcar bbry amzn sgp rig exc etr ma gs slb zmh orcl vlo stj
 2009-05-12
 bbry amzn v fslr aapl yum bby goog ebay tri ma ccl fpl ry wag xto ibm qcom wfc cvs
 2008-05-13
-bbry ma nbl hes oxy apa csx nxy su nue swn nov eca wft cnq hal px ibm cat fslr
+bbry ma nbl hes oxy apa csx nyx su nue swn nov eca wft cnq hal px ibm cat fslr
 2007-05-15
 pot aapl nov wft pcp amzn celg gild bbry rig pcar slb tcx vlo fsh tmo cat ma gs zmh
 2009-05-19
@@ -352,9 +352,9 @@ v amzn bbry biib ma bby cvx cme mhs aapl orcl goog emc wag adp tri qcom ibm bk i
 pcu slb pot gild nue celg mgm zmh ebay wft orcl xto al chk etr kss bni ceg sgp kr
 #BNI=burlington northern santa fe, bought by berkshire hathaway ~Nov 2009
 2008-04-22
-pot rig mos csx de cnq eca nbl hes apa px nue bbry ma wft nxy hal cat fslr su
+pot rig mos csx de cnq eca nbl hes apa px nue bbry ma wft nyx hal cat fslr su
 2008-04-29
-pot rig ma oxy csx de nbl hes hal apa fslr nue bbry nov eca wft cnq nxy px cat
+pot rig ma oxy csx de nbl hes hal apa fslr nue bbry nov eca wft cnq nyx px cat
 
 
 2009-09-03
@@ -368,10 +368,10 @@ coh lvs bbry mgm syk nyx pcu cme pcar pot gs ben ms csco frx de gild nue mco zmh
 ma stt hes orcl genz gild hon zmh cme csx bby biib abt bax abx qcom nem nke bk ntrs
 
 2008-02-26
-pot stt hes abx bbry ma csx eca stj apa fslr eog gg dvn wfr biib zmh chk nue qcom
+pot stt hes abx bbry ma csx eca stj apa fslr eog gg dvn wfm biib zmh chk nue qcom
 
 2008-02-12
-ma stt hes genz gild zmh eog biib dyn celg wfr hon qcom avp abx glw nsc nue bni abt
+ma stt hes genz gild zmh eog biib dyn celg wfm hon qcom avp abx glw nsc nue bni abt
 
 2011-06-21
 celg el agn biib lo mcd coh pm unh aet yum wlp apd cbs tmo cl wag abt hnz crm

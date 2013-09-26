@@ -179,6 +179,15 @@ def query_for_data(table):
 #end def query_for_data
 
 
+def usage():
+    print("")
+    print("i investment-amount=")
+    print("o output=")
+    print("leftover-investment-amount")
+    print("s spillover")
+    print("d database=")
+    print("a alert=")
+
 
 #-----------------MAIN-------------------------
 import getopt  #for command line options
