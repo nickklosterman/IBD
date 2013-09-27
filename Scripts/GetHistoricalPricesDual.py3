@@ -188,9 +188,12 @@ def query_for_data(tablelist):
     Loop over all rows in the provided table and get the historical price plus one day and insert that data into our data table
     """
     check_tables_exist(tablelist)    
-    tablequery=tablelist[0] """ table we are querying """
-    tabledata=tablelist[1] """ table we will insert stock data  into """
-    tableerror=tablelist[2] """ table that error ticker/data/rank will be placed in """
+    """ table we are querying """
+    tablequery=tablelist[0]
+    """ table we will insert stock data  into """ 
+    tabledata=tablelist[1] 
+    """ table that error ticker/data/rank will be placed in """
+    tableerror=tablelist[2] 
 
     Query='SELECT * FROM '+tablequery
     
