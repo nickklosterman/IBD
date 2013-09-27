@@ -43,10 +43,23 @@ def get_historical_prices(symbol, date):
           'ignore=.csv'
     days = urllib.request.urlopen(url).readlines()
     data=[] #python3 method , 
-    for day in days: #day[0] holds the fields names, day[1+] holds the data values
-#        print(day) 
-        dayStr = str(day, encoding='utf8')
-        data.append( dayStr[:-2].split(','))
+    try:
+        for day in days: #day[0] holds the fields names, day[1+] holds the data values
+            #        print(day) 
+            dayStr = str(day, encoding='utf8')
+            data.append( dayStr[:-2].split(','))
+            
+    except urllib.error.HTTPError as err:
+        if err.code == 404: #try incrementing date again
+            counter+=1
+            if (counter > _CounterSentinel) :
+                print("uh oh")
+                done=True
+                data=[["error"]]
+                #days = urllib.request.urlopen('http://www.djinnius.com').readlines() #get some byte data that will fail and throw an error. This is awful that I'm relying on an outside source to help set an error. I should hand define the error (I tried using buffer() and memoryview() since using str(,encoding) expects a vuffer,bytearray or byte object but no dice. I also could try to move the 
+        else:
+            raise
+
     return data
 #end def get_historical_prices
 
@@ -107,6 +120,18 @@ def query_for_entry(table,date,symbol,rank):
     row=querycursor.fetchone()
     numrecords=int(row[0])
     return numrecords
+
+def queryForCountOnTableDateSymbolRankQuotedate(table,date,symbol,rank,quotedate):
+    """
+    QQuery the database for the number of records present for a particular ticker on a given date with a certain rank with a certain quotedate
+    """
+    querycursor=connection.cursor()
+    Query='SELECT COUNT(*) FROM  '+table+' WHERE stockticker LIKE "'+symbol+'" AND date LIKE "'+date+'" and rank = '+str(rank)+' and quotedate like "'+quotedate'"'
+    querycursor.execute(Query)
+    row=querycursor.fetchone()
+    numrecords=int(row[0])
+    return numrecords
+
 
 def insert_data(table,date,symbol,rank,data):
     """
@@ -198,6 +223,27 @@ def query_for_data(tablelist):
                     error=insert_data(tabledata,date,ticker,rank,output)
         else:
             print('There are %s duplicate records.' % numrecords)
+
+        """
+        repeat the operation, but get the data for the present day
+        """
+        numrecords= queryForCountOnTableDateSymbolRankQuotedate(tabledata,date,ticker,rank,date)
+        if (numrecords==0): #retrieve and insert data if record isn't present
+            output=get_historical_prices(ticker, date )
+            print(date,ticker,output)
+            if len(output)!=2 or output[0][0]!="Date": # a simple error check since this first field should be "Date"
+                print("ERROR for ",ticker) #enter this data into an errors database
+                print(row,output)
+                insert_error_data(tableerror,date,ticker,rank)
+            else:
+                if float(output[1][4])>0: #make sure field for closing price is a number
+                    error=insert_data(tabledata,date,ticker,rank,output)
+        else:
+            print('There are %s duplicate records.' % numrecords)
+
+
+
+
     querycursor.close()
 #end def query_for_data
 

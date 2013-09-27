@@ -1,3 +1,6 @@
+#!/usr/bin/env/python
+# -*- python -*- 
+
 import sqlite3
 #sqlite3 IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"
 print("This script takes the stock ticker change list generated from GetStockTickerChanges.sh and puts them into a sqlite3 database. This checks to see if a particular symbol is all ready entered to prevent multiples.")

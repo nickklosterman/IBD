@@ -1,3 +1,5 @@
+#!/usr/bin/env/python
+# -*- python -*- 
 import sys #for cmd line arguments
 import urllib.request, urllib.parse, urllib.error #for getting quotes from net
 #
