@@ -182,11 +182,11 @@ def query_for_data(table):
             leftoverInvestmentAmount=investmentAmount-sharesToBuy*sharePrice+leftoverInvestmentAmount
 
             purchaseprice=sharePrice*sharesToBuy+commissionToBuy
-#            print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
+            #  print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
 
-
-
-""" this needs to be reworked for the other tables, grab count at that date and base it off count for omitting the ending , """
+            """ 
+            this needs to be reworked for the other tables, grab count at that date and base it off count for omitting the ending , 
+            """
             if table=="IBD50" and rank!=50:
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
             else:
@@ -269,7 +269,7 @@ for opt, arg in options:
     else:
         assert False, "unhandled option"
 
-print("{\"portfolio\": { [")
+print("{\"portfolio\":  [")
 
 inputList=["IBD50","BC20","IBD8585","Top200Composite"]
 for item in inputList:

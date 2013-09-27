@@ -12,11 +12,11 @@ import sqlite3
 import sys #for cmd line arguments
 from datetime import date #for .weekday() function
 
-def read_file_build_database(table,errortable,file)
-"""
-This function simply drops and then recreates the desired table and its accompanying errortable
-It then inserts the data from 
-"""
+def read_file_build_database(table,errortable,myfile):
+    """
+    This function simply drops and then recreates the desired table and its accompanying errortable
+    It then inserts the data from 
+    """
     Query="DROP TABLE IF EXISTS "+table
     print(Query)
     cursor.execute(Query)
@@ -33,8 +33,9 @@ It then inserts the data from
 
     counter=0
     countermod=0
-    for line in file:
-        if not line.strip():""" if this is a blank line, reset our counter"""
+    for line in myfile:
+        """ if this is a blank line, reset our counter """
+        if not line.strip():
             counter=-1
             countermod=3
 
@@ -47,7 +48,8 @@ It then inserts the data from
         if countermod == 0:
             Date=line[:-1].strip() #chop off the newline at the end
 
-        """the next line *MUST* be a data line of tickers. I should perform an error check in case  """
+            """this comment must be indented otherwise elif barfs"""
+            """the next line *MUST* be a data line of tickers. I should perform an error check in case  """
         elif countermod == 1:
             String=line[:-1].split()#split variable on delimiter, removing newline at the end
             counter2=0
