@@ -65,7 +65,7 @@ def get_historical_prices(symbol, date):
             dayStr = str(day, encoding='utf8')
             data.append( dayStr[:-2].split(','))
             #    print(data)  #this is what 'data' looks like --> [['Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'Adj Clos'], ['2013-09-24', '110.09', '111.08', '108.15', '110.42', '596200', '110.4']]
-            output=float(data[1][4])
+        output=float(data[1][4])
     except urllib.error.HTTPError as err:
         if err.code == 404: #try incrementing date again
             import traceback
@@ -183,6 +183,10 @@ def query_for_data(table):
 
             purchaseprice=sharePrice*sharesToBuy+commissionToBuy
 #            print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
+
+
+
+""" this needs to be reworked for the other tables, grab count at that date and base it off count for omitting the ending , """
             if table=="IBD50" and rank!=50:
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
             else:
