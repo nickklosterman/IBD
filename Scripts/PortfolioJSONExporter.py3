@@ -37,7 +37,7 @@ def get_historical_prices(symbol, date):
     Returns a nested list.
     """
     date=get_date(date)
-    output=-10.0
+    output=-1.0
 #the date goes month(jan=0) day year
     # url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
     #       'd=%s&' % str(int(date[5:7]) - 1) + \
@@ -149,6 +149,18 @@ def check_tables_exist(table):
     cursor.close()
 
 
+def queryTableDateForCount(table,date):
+    """
+    QQuery the database for the number of records present for a particular ticker on a given date with a certain rank
+    """
+    querycursor=connection.cursor()
+    Query='SELECT COUNT(*) FROM  '+table+' WHERE  date LIKE "'+date+'"'
+    querycursor.execute(Query)
+    row=querycursor.fetchone()
+    numrecords=int(row[0])
+    return numrecords
+
+
 def query_for_data(table):
     check_tables_exist(table)    
     Query='SELECT distinct(date) FROM '+table
@@ -163,6 +175,7 @@ def query_for_data(table):
         if row == None:
             break
         date=row[0]
+        recordCountForDate=queryTableDateForCount(table,date)
         Query2="Select stockticker,rank from "+table+" where date=\""+date+"\""
         print(" {\"portfolioName\":\"%s %s\", \"display\":\"yes\", \"portfolioStocks\":[" % (table,date))
         querycursor2=connection.cursor()
@@ -175,22 +188,32 @@ def query_for_data(table):
             rank=row2[1]
             dateSplit=date.split('-')
             sharePrice=get_historical_prices(ticker,date)
-            if(leftoverInvestmentAmountFlag):
-                sharesToBuy=math.floor((investmentAmount-commissionToBuy+leftoverInvestmentAmount)/sharePrice)
-            else :
-                sharesToBuy=math.floor((investmentAmount-commissionToBuy)/sharePrice)
-            leftoverInvestmentAmount=investmentAmount-sharesToBuy*sharePrice+leftoverInvestmentAmount
-
-            purchaseprice=sharePrice*sharesToBuy+commissionToBuy
-            #  print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
-
-            """ 
-            this needs to be reworked for the other tables, grab count at that date and base it off count for omitting the ending , 
             """
-            if table=="IBD50" and rank!=50:
+            Rest the commissions
+            """
+            commissionToBuy=7.0
+            commissionToSell=7.0
+
+            if (sharePrice != -1.0):
+                if(leftoverInvestmentAmountFlag):
+                    sharesToBuy=math.floor((investmentAmount-commissionToBuy+leftoverInvestmentAmount)/sharePrice)
+                else :
+                    sharesToBuy=math.floor((investmentAmount-commissionToBuy)/sharePrice)
+                leftoverInvestmentAmount=investmentAmount-sharesToBuy*sharePrice+leftoverInvestmentAmount
+
+                purchaseprice=sharePrice*sharesToBuy+commissionToBuy
+                #  print(sharesToBuy,leftoverInvestmentAmount,purchaseprice,sharePrice)
+            else:
+                sharesToBuy=0
+                purchaseprice=0
+                commissionToBuy=0
+                commissionToSell=0
+                sharePrice=0
+            if rank!=recordCountForDate:
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
             else:
-                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":50,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,sharePrice))
+                print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
+
         """output ending elements to enclose the json array and element"""
         print("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) 
         leftoverInvestmentAmount=0.0
@@ -226,7 +249,7 @@ investmentAmount=1000
 investmentAmountFlag=False
 #leftoverInvestmentAmount=0.0
 leftoverInvestmentAmountFlag=False
-database="IBDdatabase.sqlite"
+database="IBDdatabase.sqlite.copy"
 
 errorLog=[]
 

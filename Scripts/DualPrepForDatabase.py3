@@ -5,6 +5,8 @@
 """
 This program is used to clear out and then insert the data tables for the collected IBD lists.
 The data is placed into the IBDdatabase.sqlite file.
+
+The stock data (prices) are not removed and replaced
 """
 
 
