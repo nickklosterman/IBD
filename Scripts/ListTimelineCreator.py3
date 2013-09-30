@@ -7,8 +7,9 @@ import sqlite3
 """
 TODO:
 get the proper update syntax working
-make a small test case for easier/faster testing
-Entries should never have the same begindate and enddate. This is happening so there is a flaw in the logic, perform outgoing before incoming?
+make a small test case for easier/faster testing --> crop off all but the last few entries of a list (i.e. BC20.txt) run DualPrepForDatabase.py and you'll only have a few records. 
+Entries should never have the same begindate and enddate. This is happening so there is a flaw in the logic, perform outgoing before incoming? --> I think this is solved by performing the Outgoing before the Incoming
+Perform analysis looking to see if the stocks come and go off the list. if there is a good number that flutter on/off by 1 week, perform calc to see what would happen if you had a week trade delay. And the trade only occurred if the stock didn't come back on the list. How would that extend the runs?
 """
 
 
@@ -35,13 +36,21 @@ class  StockContinuousRunOnList:
             """
             perform outgoing beffore incoming so you don't hit on the ercord you just inserted.
             """
-            print("swap these two")
-            for item in incoming:
-                self.insertBeginData(self.continuousRunTable,item,self.currentDate)
+            
+            #print("swap these two")
+            # for item in incoming:
+            #     self.insertBeginData(self.continuousRunTable,item,self.currentDate)
+            # for item in outgoing:
+            #     id=self.findID(self.continuousRunTable,item)
+            #     if id != -1:
+            #         self.insertEndData(self.continuousRunTable,id,self.currentDate)
+
             for item in outgoing:
                 id=self.findID(self.continuousRunTable,item)
                 if id != -1:
                     self.insertEndData(self.continuousRunTable,id,self.currentDate)
+            for item in incoming:
+                self.insertBeginData(self.continuousRunTable,item,self.currentDate)
 
 
             self.moveTickerLists()
@@ -49,6 +58,7 @@ class  StockContinuousRunOnList:
 
     def dropContinuousRunDatabase(self):
         cursor=connection.cursor()
+        print("Dropping continuous run table and starting anew. \n Remove after Testing")
         Query='DROP TABLE IF EXISTS  '+self.continuousRunTable
         cursor.execute(Query)
         
@@ -75,7 +85,7 @@ class  StockContinuousRunOnList:
         return 0
 
     def findID(self,table,tickerRank):
-        print(tickerRank) #D'oh! I previously called this variable ticker, yet it was a list. I needed just the ticker and not the rank. it was goofing up the sql query. http://stackoverflow.com/questions/12952546/sqlite3-interfaceerror-error-binding-parameter-1-probably-unsupported-type
+        #print(tickerRank) #D'oh! I previously called this variable ticker, yet it was a list. I needed just the ticker and not the rank. it was goofing up the sql query. http://stackoverflow.com/questions/12952546/sqlite3-interfaceerror-error-binding-parameter-1-probably-unsupported-type
         findcursor=connection.cursor()
         Query='SELECT Id FROM '+table + ' WHERE StockTicker="'+tickerRank[0]+'" AND EndDate is null'
         #print(Query)
@@ -89,11 +99,11 @@ class  StockContinuousRunOnList:
         data=-1
         while True:
             row=findcursor.fetchone()
-            print(row)
+            #print(row)
             if row == None:
                 break
             data=row[0]
-        print(data)
+        #print(data)
         findcursor.close()        
         #data=-1
         #print("remove that")
@@ -166,11 +176,12 @@ def usage():
 """ 
 """
 
-database="IBDdatabase.sqlite.copy"
+database="IBDdatabase.sqlite"
 
-inputList=[ "IBD50","BC20","IBD8585","Top200Composite"]
+
 inputList=[ "IBD50"] #,"BC20","IBD8585","Top200Composite"]
 inputList=[ "BC20"]
+inputList=[ "IBD50","BC20","IBD8585","Top200Composite"]
 for item in inputList:
     connection=sqlite3.connect(database)
     ContinuousRun=StockContinuousRunOnList(item)
