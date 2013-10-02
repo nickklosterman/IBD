@@ -209,9 +209,11 @@ def query_for_data(table):
                 commissionToBuy=0
                 commissionToSell=0
                 sharePrice=0
-            if rank!=recordCountForDate:
+            if rank!=recordCountForDate: 
+                #                print(rank,recordCountForDate)
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
             else:
+                #print(rank,recordCountForDate)
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
 
         """output ending elements to enclose the json array and element"""
@@ -249,7 +251,7 @@ investmentAmount=1000
 investmentAmountFlag=False
 #leftoverInvestmentAmount=0.0
 leftoverInvestmentAmountFlag=False
-database="IBDdatabase.sqlite.copy"
+database="IBDdatabase.sqlite"
 
 errorLog=[]
 
@@ -293,8 +295,8 @@ for opt, arg in options:
         assert False, "unhandled option"
 
 print("{\"portfolio\":  [")
-
-inputList=["IBD50","BC20","IBD8585","Top200Composite"]
+#inputList=["IBD50","BC20","IBD8585","Top200Composite"]
+inputList=["BC20","IBD8585","Top200Composite"]
 for item in inputList:
     connection=sqlite3.connect(database)
     query_for_data(item)
