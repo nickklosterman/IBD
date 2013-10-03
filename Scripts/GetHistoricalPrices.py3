@@ -49,47 +49,21 @@ def get_historical_prices(symbol, date):
 
 
 
-def query_for_entry(table,date,symbol,rank):
-    """
-    QQuery the database for the number of records present for a particular ticker on a given date with a certain rank
-    """
-    querycursor=connection.cursor()
-    Query='SELECT COUNT(*) FROM  '+table+' WHERE stockticker LIKE "'+symbol+'" AND date LIKE "'+date+'" and rank = '+str(rank)
-    querycursor.execute(Query)
-    row=querycursor.fetchone()
-    numrecords=int(row[0])
-    return numrecords
-
-def queryForCountOnTableDateSymbolRankQuotedate(table,date,symbol,rank,quotedate):
+def queryForExistenceOnTableDateSymbol(table,date,symbol):
     """
     QQuery the database for the number of records present for a particular ticker on a given date with a certain rank with a certain quotedate
     """
     querycursor=connection.cursor()
-    Query='SELECT COUNT(*) FROM  '+table+' WHERE stockticker LIKE "'+symbol+'" AND date LIKE "'+date+'" and rank = '+str(rank)+' and quotedate like "'+quotedate+'"'
+    Query='SELECT COUNT(*) FROM  '+table+' WHERE stockticker LIKE "'+symbol+'" AND date LIKE "'+date+'"'
     querycursor.execute(Query)
-    row=querycursor.fetchone()
-    numrecords=int(row[0])
+    numrecords=0
+    while True:
+        row=querycursor.fetchone()
+        if row == None:
+            break
+        numrecords=int(row[0])
     return numrecords
 
-
-def insert_data(table,date,symbol,rank,data):
-    """
-    insert dollar values as cent values (integers) since sqlite doesn't have a decimal datatype
-    """
-    insertcursor=connection.cursor()
-    Query='CREATE TABLE IF NOT EXISTS '+table+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
-    insertcursor.execute(Query)
-    Open=int(round(float(data[1][1])*100))
-    High=int(round(float(data[1][2])*100))
-    Low=int(round(float(data[1][3])*100))
-    Close=int(round(float(data[1][4])*100))
-    Adj_Close=int(round(float(data[1][6])*100))
-    Query='INSERT INTO '+table
-    insertcursor.execute(Query+' VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (date,symbol,rank,data[1][0],Open,High,Low,Close,data[1][5],Adj_Close))
-    insertcursor.close()
-    connection.commit()
-    return 0
-#end def insert_data
 
 def insertData(table,date,symbol,rank,data):
     """
@@ -97,15 +71,16 @@ def insertData(table,date,symbol,rank,data):
     No longer has QuoteDate field
     """
     insertcursor=connection.cursor()
-    Query='CREATE TABLE IF NOT EXISTS '+table+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER,  Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
-    insertcursor.execute(Query)
+    #Table created in check_tables_exist
+    #Query='CREATE TABLE IF NOT EXISTS '+table+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER,  Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
+    #insertcursor.execute(Query)
     Open=int(round(float(data[1][1])*100))
     High=int(round(float(data[1][2])*100))
     Low=int(round(float(data[1][3])*100))
     Close=int(round(float(data[1][4])*100))
     Adj_Close=int(round(float(data[1][6])*100))
     Query='INSERT INTO '+table
-    insertcursor.execute(Query+' VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (date,symbol,rank,Open,High,Low,Close,data[1][5],Adj_Close))
+    insertcursor.execute(Query+' VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (date,symbol,rank,Open,High,Low,Close,data[1][5],Adj_Close))
     insertcursor.close()
     connection.commit()
     return 0
@@ -124,6 +99,19 @@ def insert_error_data(table,date,symbol,rank):
     #connection.commit()
 #end def insert_error_data
 
+def dropStockDataStockDataErrorTable():
+    """
+
+    """
+    errorcursor=connection.cursor()
+    Query='DROP TABLE IF EXISTS StockData'
+    errorcursor.execute(Query)
+    Query='DROP TABLE IF EXISTS StockDataError'
+    errorcursor.execute(Query)
+    errorcursor.close()
+    #connection.commit()
+#end def insert_error_data
+
 def check_tables_exist(tablelist):
     cursor=connection.cursor()
     for table in tablelist:
@@ -133,7 +121,8 @@ def check_tables_exist(tablelist):
         row=cursor.fetchone()
         if row == None or int(row[0]==0):
             if table==tablelist[1]:
-                Query='CREATE TABLE IF NOT EXISTS '+tablelist[1]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
+                #                Query='CREATE TABLE IF NOT EXISTS '+tablelist[1]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
+                Query='CREATE TABLE IF NOT EXISTS '+tablelist[1]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
             if table==tablelist[2]:
                 Query='CREATE TABLE IF NOT EXISTS '+tablelist[2]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER)'
             cursor.execute(Query)
@@ -157,6 +146,7 @@ def query_for_data(tablelist):
     tableerror=tablelist[2] 
 
     Query='SELECT * FROM '+tablequery
+
     
     dateTickerRankCursor=connection.cursor()
     dateTickerRankCursor.execute(Query)
@@ -170,11 +160,10 @@ def query_for_data(tablelist):
         date=row[1]
         ticker=row[2]
         rank=row[3]
-#        print(row)
         """
         repeat the operation, but get the data for the present day
         """
-        numrecords= queryForCountOnTableDateSymbolRankQuotedate(tabledata,date,ticker,rank,date)
+        numrecords= queryForExistenceOnTableDateSymbol(tabledata,date,ticker)
         if (numrecords==0): #retrieve and insert data if record isn't present
             output=get_historical_prices(ticker, date )
             #print(date,ticker,output)
@@ -184,13 +173,7 @@ def query_for_data(tablelist):
                 insert_error_data(tableerror,date,ticker,rank)
             else:
                 if float(output[1][4])>0: #make sure field for closing price is a number
-                    error=insert_data(tabledata,date,ticker,rank,output)
-        #else:
-        #    print('There are %s duplicate records.' % numrecords)
-
-
-
-
+                    error=insertData(tabledata,date,ticker,rank,output)
     dateTickerRankCursor.close()
 #end def query_for_data
 
@@ -234,7 +217,7 @@ def queryForData(table):
         """
         repeat the operation, but get the data for the present day
         """
-        numrecords= queryForCountOnTableDateSymbolRankQuotedate(tabledata,date,ticker,rank,date)
+        numrecords= queryForExistenceOnTableDateSymbol(tabledata,date,ticker)
         if (numrecords==0): #retrieve and insert data if record isn't present
             output=get_historical_prices(ticker, date )
             #print(date,ticker,output)
@@ -244,7 +227,7 @@ def queryForData(table):
                 insert_error_data(tableerror,date,ticker,rank)
             else:
                 if float(output[1][4])>0: #make sure field for closing price is a number
-                    error=insert_data(tabledata,date,ticker,rank,output)
+                    error=insertData(tabledata,date,ticker,rank,output)
         #else:
         #    print('There are %s duplicate records.' % numrecords)
 
@@ -263,19 +246,23 @@ else:
     database="IBDdatabase.sqlite"
     inputList=[["IBD50","IBD50StockData","IBD50StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
 
+
+
+
 #enter all data into "StockData" table ....hmmm  I don't benefit from eliminating redundant values so how much of a performance hit am I willing to take to keep all data in one table?
     inputList=[["IBD50","StockData","StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
 #    print("Using restricted set")
 #    inputList=[["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
     for item in inputList:
         connection=sqlite3.connect(database)
-        query_for_data(item)
-#query_for_data(tablequery1,tableenterdata1,tableerror1)
-#query_for_data(tablequery2,tableenterdata2,tableerror2)
-        #connection.commit()
+        print("DROPPING Table StockData and StockDataError!!!!!!!!!!!")
+        dropStockDataStockDataErrorTable()
 
-#if connection:
-#    connection.close()
+        if 0:
+            query_for_data(item)
+        if 1:
+            queryForData(item[0])
+
 quit()
 #http://www.comp.mq.edu.au/units/comp249/pythonbook/pythoncgi/pysqlite.html
 #http://docs.python.org/library/sqlite3.html http://zetcode.com/db/sqlitepythontutorial/
