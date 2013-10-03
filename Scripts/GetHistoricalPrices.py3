@@ -255,8 +255,10 @@ else:
 #    inputList=[["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
     for item in inputList:
         connection=sqlite3.connect(database)
-        print("DROPPING Table StockData and StockDataError!!!!!!!!!!!")
-        dropStockDataStockDataErrorTable()
+        
+        if 0:
+            print("DROPPING Table StockData and StockDataError!!!!!!!!!!!")
+            dropStockDataStockDataErrorTable()
 
         if 0:
             query_for_data(item)
