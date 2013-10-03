@@ -29,6 +29,30 @@ def get_date(date):
     return date_conv
     
 #
+
+def queryDatabaseForOpenPrice(symbol,date):
+    table="StockData"
+    check_tables_exist(table)    
+    Query='SELECT Open FROM '+table
+    Query='SELECT Open FROM  '+table+' WHERE  date LIKE "'+date+'" AND StockTicker LIKE "'+symbol+'"'
+    querycursor1=connection.cursor()
+    querycursor1.execute(Query)
+    openPrice=-1
+    while True: #needed so we can use the 'break' in case a row is empty
+        row=querycursor1.fetchone()
+        if row == None:
+            break
+        openPrice=row[0]
+    return openPrice
+
+
+def getHistoricalPrice(symbol,date):
+    openPrice=queryDatabaseForOpenPrice(symbol,date)
+    if openPrice!=-1:
+        return openPrice
+    else:
+        return get_historical_prices(symbol,date)
+
 def get_historical_prices(symbol, date):
     """
     Get historical prices for the given ticker symbol.
@@ -80,56 +104,8 @@ def get_historical_prices(symbol, date):
     else:
         #raise
         import traceback
-        
-
     return output
 #end def get_historical_prices
-
-_CounterSentinel = 5 #max possible holidays in a row where markets might be closed so we look at next day.
-#we could avoid all this by just using the day of instead of day +1
-def get_historical_prices_plus_one_day(symbol, date):
-    """
-    Get historical prices for the given ticker symbol.
-    Returns a nested list.
-    """
-  #  print(date)
-    done=False
-    counter=0
-    while not done:
-        date=get_next_date(str(date))
- ## I NEED TO AVOID ANY DATE THAT THE MARKET IS CLOSED
- #   print(date)
-#the date goes month(jan=0) day year
-        url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
-            'd=%s&' % str(int(date.month) - 1) + \
-            'e=%s&' % str(int(date.day) ) + \
-            'f=%s&' % str(int(date.year)) + \
-            'g=d&' + \
-            'a=%s&' % str(int(date.month) - 1) + \
-            'b=%s&' % str(int(date.day) ) + \
-            'c=%s&' % str(date.year) + \
-            'ignore=.csv'
-        print( url)
-        try:
-            days = urllib.request.urlopen(url).readlines()
-            done=True
-            data=[] #python3 method
-            for day in days: #day[0] holds the fields names, day[1+] holds the data values
-#        print(day) 
-                dayStr = str(day, encoding='utf8')
-                data.append( dayStr[:-2].split(','))
-        except urllib.error.HTTPError as err:
-            if err.code == 404: #try incrementing date again
-                counter+=1
-                if (counter > _CounterSentinel) :
-                    print("uh oh")
-                    done=True
-                    data=[["error"]]
-                    #days = urllib.request.urlopen('http://www.djinnius.com').readlines() #get some byte data that will fail and throw an error. This is awful that I'm relying on an outside source to help set an error. I should hand define the error (I tried using buffer() and memoryview() since using str(,encoding) expects a vuffer,bytearray or byte object but no dice. I also could try to move the 
-            else:
-                raise
-    return data
-#end def get_historical_prices_plus_one_day
 
 
 def check_tables_exist(table):
@@ -177,6 +153,7 @@ def query_for_data(table):
         date=row[0]
         recordCountForDate=queryTableDateForCount(table,date)
         Query2="Select stockticker,rank from "+table+" where date=\""+date+"\""
+        OutputStream((" {\"portfolioName\":\"%s %s\", \"display\":\"yes\", \"portfolioStocks\":[" % (table,date)))
         print(" {\"portfolioName\":\"%s %s\", \"display\":\"yes\", \"portfolioStocks\":[" % (table,date))
         querycursor2=connection.cursor()
         querycursor2.execute(Query2)
@@ -194,7 +171,7 @@ def query_for_data(table):
             commissionToBuy=7.0
             commissionToSell=7.0
 
-            if (sharePrice != -1.0):
+            if (sharePrice != -1.0 and sharePrice != 0 ):
                 if(leftoverInvestmentAmountFlag):
                     sharesToBuy=math.floor((investmentAmount-commissionToBuy+leftoverInvestmentAmount)/sharePrice)
                 else :
@@ -212,12 +189,15 @@ def query_for_data(table):
             if rank!=recordCountForDate: 
                 #                print(rank,recordCountForDate)
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
+                OutputStream(('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice)))
             else:
                 #print(rank,recordCountForDate)
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
+                OutputStream('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice)))
 
         """output ending elements to enclose the json array and element"""
         print("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) 
+        OutputStream("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) )
         leftoverInvestmentAmount=0.0
         querycursor2.close()
     querycursor1.close()
@@ -233,8 +213,17 @@ def usage():
     print("d database=")
     print("a alert=")
 
+def OutputStream(arg):
+    output+=arg
 
 #-----------------MAIN-------------------------
+
+
+
+
+#def main
+
+
 import getopt  #for command line options
 #import sys
 import math #for floor
@@ -252,7 +241,9 @@ investmentAmountFlag=False
 #leftoverInvestmentAmount=0.0
 leftoverInvestmentAmountFlag=False
 database="IBDdatabase.sqlite"
-
+outputfilename="output.json"
+outputFilenameFlag=False
+output=""
 errorLog=[]
 
 #print(sys.argv[1:])
@@ -279,6 +270,7 @@ for opt, arg in options:
         investmentAmountFlag=True
     elif opt in ('-o', '--output'):
         outputfilename=arg
+        outputFilenameFlag=True
     elif opt in ('-d', '--database'):
         database=arg
     elif opt in ('-s', '--spillover'):
@@ -295,13 +287,26 @@ for opt, arg in options:
         assert False, "unhandled option"
 
 print("{\"portfolio\":  [")
+
+OutputStream("{\"portfolio\":  [")
 #inputList=["IBD50","BC20","IBD8585","Top200Composite"]
 inputList=["BC20","IBD8585","Top200Composite"]
 for item in inputList:
     connection=sqlite3.connect(database)
     query_for_data(item)
     connection.commit()
+
 print("]}")
+
+
+OutputStream("]}")
+
+if outputFilenameFlag:
+    fileHandle=open(outputFilename,'w')
+    fileHandle.write(output)
+    fileHandle.close()
+
+
 quit()
 #http://www.comp.mq.edu.au/units/comp249/pythonbook/pythoncgi/pysqlite.html
 #http://docs.python.org/library/sqlite3.html http://zetcode.com/db/sqlitepythontutorial/
