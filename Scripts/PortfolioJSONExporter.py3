@@ -11,16 +11,6 @@ import datetime #for date and timedelta
 import sys #for cmd line arguments
 import urllib.request, urllib.parse, urllib.error #for getting quotes from net
 
-def get_next_date(date):
-    month=int(date[5:7])
-    day=int(date[8:10]) 
-    year=int(date[0:4])
-    date_conv=datetime.date(year,month,day)
-    oneday=datetime.timedelta(1)
-    dateplusone=date_conv+datetime.timedelta(days=1)
-    return dateplusone
-
-
 def get_date(date):
     month=int(date[5:7])
     day=int(date[8:10]) 
@@ -164,7 +154,7 @@ def query_for_data(table):
             ticker=row2[0]
             rank=row2[1]
             dateSplit=date.split('-')
-            sharePrice=get_historical_prices(ticker,date)
+            sharePrice=getHistoricalPrice(ticker,date) #get_historical_prices(ticker,date)
             """
             Rest the commissions
             """
