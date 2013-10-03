@@ -143,7 +143,7 @@ def query_for_data(table):
         date=row[0]
         recordCountForDate=queryTableDateForCount(table,date)
         Query2="Select stockticker,rank from "+table+" where date=\""+date+"\""
-        OutputStream((" {\"portfolioName\":\"%s %s\", \"display\":\"yes\", \"portfolioStocks\":[" % (table,date)))
+        #OutputStream((" {\"portfolioName\":\"%s %s\", \"display\":\"yes\", \"portfolioStocks\":[" % (table,date)))
         print(" {\"portfolioName\":\"%s %s\", \"display\":\"yes\", \"portfolioStocks\":[" % (table,date))
         querycursor2=connection.cursor()
         querycursor2.execute(Query2)
@@ -179,15 +179,18 @@ def query_for_data(table):
             if rank!=recordCountForDate: 
                 #                print(rank,recordCountForDate)
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
-                OutputStream(('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice)))
+                #OutputStream(('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f}, ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice)))
             else:
                 #print(rank,recordCountForDate)
                 print('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice))
-                OutputStream('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice)))
+                #OutputStream(('{ "ticker": "%s", "shares": %d, "totalPurchasePrice": %0.2f, "purchaseDate": "%s/%s/%s","commissionToBuy":%0.2f,"commissionToSell":%0.2f,"rank":%i,"sharePurchasePrice":%0.2f} ' % ( ticker,sharesToBuy,purchaseprice,dateSplit[1],dateSplit[2],dateSplit[0],commissionToBuy,commissionToSell,rank,sharePrice)))
 
-        """output ending elements to enclose the json array and element"""
+        """output ending elements to enclose the json array and element
+        --> I need a way to sstrip off that trailing , when it is the last record
+        it works ok looping over all the tables, it is just the last comma needs to be stripped out to make the output fully valid json 
+        """
         print("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) 
-        OutputStream("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) )
+        #OutputStream(("],\"uninvestedMoney\":%0.2f}," % (leftoverInvestmentAmount)) )
         leftoverInvestmentAmount=0.0
         querycursor2.close()
     querycursor1.close()
@@ -203,8 +206,9 @@ def usage():
     print("d database=")
     print("a alert=")
 
-def OutputStream(arg):
-    output+=arg
+
+#def #OutputStream(arg):
+    fileOutput+=arg
 
 #-----------------MAIN-------------------------
 
@@ -230,12 +234,13 @@ investmentAmount=1000
 investmentAmountFlag=False
 #leftoverInvestmentAmount=0.0
 leftoverInvestmentAmountFlag=False
-database="IBDdatabase.sqlite"
+database="IBDdatabase.sqlite.copy"
 outputfilename="output.json"
 outputFilenameFlag=False
 output=""
 errorLog=[]
-
+global fileOutput
+fileOutput=""
 #print(sys.argv[1:])
 
 #pretty much straight from : http://docs.python.org/release/3.1.5/library/getopt.html
@@ -278,9 +283,10 @@ for opt, arg in options:
 
 print("{\"portfolio\":  [")
 
-OutputStream("{\"portfolio\":  [")
+#OutputStream("{\"portfolio\":  [")
 #inputList=["IBD50","BC20","IBD8585","Top200Composite"]
-inputList=["BC20","IBD8585","Top200Composite"]
+inputList=["IBD50"]
+#inputList=["BC20","IBD8585","Top200Composite"]
 for item in inputList:
     connection=sqlite3.connect(database)
     query_for_data(item)
@@ -289,7 +295,7 @@ for item in inputList:
 print("]}")
 
 
-OutputStream("]}")
+#OutputStream("]}")
 
 if outputFilenameFlag:
     fileHandle=open(outputFilename,'w')
