@@ -1,0 +1,25 @@
+Thu Oct  3 22:21:44 EDT 2013
+scatter plot of Avg Rank vs price increase (doubt there is a correlation at all, but check anyway)
+comparison to SP500 for same period
+gnuplot output 
+research financial math, financial plots see if there are any plot types all ready used that might be useful
+Output PDF report w gnuplots oa stocks time seires data perhaps  plot 5tickers/ graph
+Gnuplot has capability to output for web w/interactive capabilites. 
+
+skip getting stock data of those w / an entry in error table
+
+crontab task to update historical data, also upload database to dropbox/djinnius or something. create backup 
+
+[DONE]dump stock data into central StockData database. each list is on a different day so you won't gain any benefit from preventing multiple entries, and you'll probably sufffer a bit of a performance hit since all data is dumped in one spot, you'll proly keep yourself more sane (at least right now) 
+
+research using openbloomberg or another trading platforms api
+
+Analysis of at $7/trade how much you would actually make or how much you'd have to spend to make any profit. or make a reasonable profit. 
+
+what is the typical % gain/loss when on the list?
+
+for each list also include a "stock" for each of the major indices so that you can track compared to those quite easily : sp500 nasdaq dow jones wilshire...
+
+compute ARR while on lsit and save in table, add in metric to deduct trading costs and taxes and see how desirable it is.
+
+A BIG CAVEAT FOR MY DATA is that most of it occurred AFTER the market downturn when things were heading up. So the stocks may seem pretty good, but did they beat the overall market?
