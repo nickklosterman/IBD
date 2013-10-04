@@ -11,6 +11,9 @@ import datetime #for date and timedelta
 import sys #for cmd line arguments
 import urllib.request, urllib.parse, urllib.error #for getting quotes from net
 
+from YahooStockQuotes import getHistoricalStockPrices 
+
+
 def get_date(date):
     month=int(date[5:7])
     day=int(date[8:10]) 
@@ -41,62 +44,11 @@ def getHistoricalPrice(symbol,date):
     if openPrice!=-1:
         return openPrice
     else:
-        return get_historical_prices(symbol,date)
-
-def get_historical_prices(symbol, date):
-    """
-    Get historical prices for the given ticker symbol.
-    Date format is 'YYYYMMDD'
-    
-    Returns a nested list.
-    """
-    date=get_date(date)
-    output=-1.0
-#the date goes month(jan=0) day year
-    # url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
-    #       'd=%s&' % str(int(date[5:7]) - 1) + \
-    #       'e=%s&' % str(int(date[8:10])) + \
-    #       'f=%s&' % str(int(date[0:4])) + \
-    #       'g=d&' + \
-    #       'a=%s&' % str(int(date[5:7]) - 1) + \
-    #       'b=%s&' % str(int(date[8:10])) + \
-    #       'c=%s&' % str(int(date[0:4])) + \
-    #       'ignore=.csv'
-    url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
-          'd=%s&' % str(int(date.month) - 1) + \
-          'e=%s&' % str(int(date.day)) + \
-          'f=%s&' % str(int(date.year)) + \
-          'g=d&' + \
-          'a=%s&' % str(int(date.month) - 1) + \
-          'b=%s&' % str(int(date.day)) + \
-          'c=%s&' % str(int(date.year)) + \
-          'ignore=.csv'
-    try:
-        days = urllib.request.urlopen(url).readlines()
-        data=[] #python3 method , 
-        for day in days: #day[0] holds the fields names, day[1+] holds the data values
-            #        print(day) 
-            dayStr = str(day, encoding='utf8')
-            data.append( dayStr[:-2].split(','))
-            #    print(data)  #this is what 'data' looks like --> [['Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'Adj Clos'], ['2013-09-24', '110.09', '111.08', '108.15', '110.42', '596200', '110.4']]
-        output=float(data[1][4])
-    except urllib.error.HTTPError as err:
-        if err.code == 404: #try incrementing date again
-            import traceback
-            errorLog.append(err)
-                #days = urllib.request.urlopen('http://www.djinnius.com').readlines() #get some byte data that will fail and throw an error. This is awful that I'm relying on an outside source to help set an error. I should hand define the error (I tried using buffer() and memoryview() since using str(,encoding) expects a vuffer,bytearray or byte object but no dice. I also could try to move the 
-    except urllib.error.URLError as err:
-        import traceback
-        errorLog.append(err)
-    except Exception as err:
-        import traceback
-        errorLog.append(err)
-    else:
-        #raise
-        import traceback
-    return output
-#end def get_historical_prices
-
+        data=getHistoricalStockPrices(symbol,date)
+        if data!="None":
+            return data[1][4]
+        else:
+            return 0
 
 def check_tables_exist(table):
     cursor=connection.cursor()
@@ -285,7 +237,7 @@ print("{\"portfolio\":  [")
 
 #OutputStream("{\"portfolio\":  [")
 #inputList=["IBD50","BC20","IBD8585","Top200Composite"]
-inputList=["IBD50"]
+inputList=["BC20"]
 #inputList=["BC20","IBD8585","Top200Composite"]
 for item in inputList:
     connection=sqlite3.connect(database)

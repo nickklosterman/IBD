@@ -8,3 +8,5 @@ python Scripts/GetHistoricalrices2.py
 this will grab the prices of the stock on the day following the publish date of the IBD50 list
 
 
+Python modules must be in files ending in .py. They can't be in files with other extennsions.
+
