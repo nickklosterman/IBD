@@ -3,6 +3,12 @@
 import sqlite3
 
 
+"""
+This program goes through the individual lists and creates a continuous run table.
+This table holds the begin date and end date of when a stock was on a list.
+Each run is listed separately in the database.
+"""
+
 
 """
 TODO:
