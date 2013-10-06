@@ -6,6 +6,15 @@ t or sold? Does the brokerage house who is the market for a stock sell that data
 #for - forestar group 
 #top ranked, low price stocks 
 
+2013-10-07
+flt nus gmcr yndx prlb lad jazz celg nq ll tngo noah avg trip hlf wwww fb advs invn pcln vrx lope amba rgr evr praa ocn gnrc act meli bidu qihu kors ssnc clr pii save ddd pxd ulta armh biib edu ntes myl tho epam cvlt regn alxn 
+
+2013-10-02
+flt nus gmcr lad prlb celg hlf yndx nq tngo noah jazz avg ocn ll trip wwww fb advs evr pcln praa lope amba invn act save meli vrx ddd bidu qihu ssnc kors rgr gnrc armh clr ssys biib pii pxd epam icon ulta ntes gnc cvlt regn alxn 
+
+#yndx, qiwi <-- what is qiwi's ticker? on Rus stock exchange?
+
+
 2013-09-30
 nus flt gmcr lad prlb celg ocn hlf nq avg tngo noah jazz yndx ll trip wwww fb advs gnrc evr pcln lope vrx amba qihu invn praa act save meli ddd ssnc rgr kors armh biib ssys pii bidu pxd clr icon sbux epam ntes ma regn alxn cvlt 
 2013-09-25
