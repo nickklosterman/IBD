@@ -1,8 +1,22 @@
 import sys #for cmd line arguments
+
+#from urllib import *
 import urllib #for getting quotes from net
-#
+import urllib.error 
+import urllib.request
+
+import urllib.request, urllib.parse, urllib.error #for getting quotes from net
 
 """
+you'll get the following error if you don't import urrllib.error 
+ File "/home/puffjay/Repo/Github/IBD/Scripts/YahooStockQuotes.py", line 33, in getHistoricalStockPrices
+    except urllib.error.HTTPError as err:
+"""
+
+
+
+"""
+NOTE 
 per http://docs.python.org/3/tutorial/modules.html#importing-from-a-package
 this filie to be a module must have the .py extension
 """
@@ -26,19 +40,27 @@ def getHistoricalStockPrices(symbol, date):
           'c=%s&' % str(int(date[0:4])) + \
           'ignore=.csv'
     data="None"
+    #print(url)
     try:
-            days = urllib.request.urlopen(url).readlines()
-            data = [day[:-2].split(',') for day in days]
+        days = urllib.request.urlopen(url).readlines()
+        #print(days)
+        # Sun Oct  6 12:04:04 EDT 2013: I think something changed as this was working before without the decoding (the data is a byte string now and not a string) 
+        days[0]=days[0].decode('ascii')
+        days[1]=days[1].decode('ascii')
+        data = [day[:-2].split(',') for day in days]
     except urllib.error.HTTPError as err:
-        if err.code == 404: #try incrementing date again
-            import traceback
-#            errorLog.append(err)
-                #days = urllib.request.urlopen('http://www.djinnius.com').readlines() #get some byte data that will fail and throw an error. This is awful that I'm relying on an outside source to help set an error. I should hand define the error (I tried using buffer() and memoryview() since using str(,encoding) expects a vuffer,bytearray or byte object but no dice. I also could try to move the 
-    except urllib.error.URLError as err:
+        print(err)
         import traceback
+#            errorLog.append(err)
+    except urllib.error.URLError as err:
+        print(err)
+        import traceback
+
  #       errorLog.append(err)
     except Exception as err:
+        print(err)
         import traceback
+
   #      errorLog.append(err)
     else:
         #raise

@@ -1,7 +1,14 @@
 #!/usr/bin/env/python
 # -*- python -*- 
 import sqlite3
+
+"""
+This program loops through the provided database tables and outputs (almost) valid JSON for ingestion by my StockTrackerJSON.py3 script
+the final , in the list will need to be removed to make the output valid JSON.
+"""
+
 #sqlite3 IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"
+
 
 #curl -s "http://ichart.finance.yahoo.com/table.csv?s=YHOO&a=11&b=2&c=2005&d=11&e=2&f=2005&g=d&f=sl1&ignore=.csv"
 
