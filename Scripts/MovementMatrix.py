@@ -216,7 +216,7 @@ class MovementMatrix:
 import sys
 import MySQLdb as mdb # in mysql-python package
 import getopt
-#import YahooStockQuotes #http://stackoverflow.com/questions/714881/how-to-include-external-python-code-to-use-in-other-files
+#http://stackoverflow.com/questions/714881/how-to-include-external-python-code-to-use-in-other-files
 from YahooStockQuotes import get_historical_prices_plus_one_day
 inputfilename="RealEstateSalesData/MontgomeryCountyOhio/temp.csv" #SALES_2012_RES.csv"                            
 inputfilename="RealEstateSalesData/MontgomeryCountyOhio/SALES_2012_RES.csv"

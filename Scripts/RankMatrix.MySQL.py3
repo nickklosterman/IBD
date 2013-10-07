@@ -1,3 +1,5 @@
+#!/usr/bin/python
+#M-x python-mode
 
 def prepprice(data):
     temp=striphtml(data.rstrip())
@@ -68,8 +70,9 @@ class RankMatrix:
         closingprice=0.0
         quotedate=0
         if StockData[0][0]!="Date": # a simple error check since this first field should be "Date"   
-            print("ERROR for %s" % (StockTicker)) #enter this data into an errors database                    
-#            insert_error_data(tableerror,date,ticker,rank)
+            #print("ERROR for %s" % (StockTicker)) #enter this data into an errors database                    
+            #insert_error_data(tableerror,date,ticker,rank)
+            bob=0
         else:
              if StockData[0][4]=='Close':
                 quotedate=StockData[1][0]
