@@ -1,12 +1,11 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
+#M-x python-mode
 
 """
 This program outputs a csv matrix of data
 """
 
-from YahooStockQuotes import getHistoricalStockPrices 
-
-
+from StockSQLiteHelpers import getHistoricalOpenPrice
 
 def prepprice(data):
     temp=striphtml(data.rstrip())
@@ -66,71 +65,85 @@ class RankMatrix:
 
         return rank
 
+
+        """
+        deprecated
+        """
     def GetStockPriceForStockDate(self,StockTicker,Date):
         #print(StockTicker,Date)
-        StockData=getHistoricalStockPrices(StockTicker,Date)
+        StockData=getHistoricalStockPrice(StockTicker,Date)
         #print(StockData)
         openPrice=0.0
         if StockData[0][0]!="Date": # a simple error check since this first field should be "Date"   
-            print("ERROR for %s" % (StockTicker)) #enter this data into an errors database                    
-#            insert_error_data(tableerror,date,ticker,rank)
+            #print("ERROR for %s" % (StockTicker)) #enter this data into an errors database                    
+            
+	    # insert_error_data(tableerror,date,ticker,rank)
+            bob=0
         else:
              if StockData[0][4]=='Close':
                 openPrice=StockData[1][4]
 
         return openPrice
 
+    def GetStockOpenPriceForStockDate(self,StockTicker,Date):
+        #print(StockTicker,Date)
+
+        openPrice=getHistoricalOpenPrice(StockTicker,Date)
+
+        return openPrice
+
+
     def PrintRankStockHeader(self):
-        print(','), #leave blank space for stock column 
+        print(',',end="") #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.rank,%s.price,' % (s,s)),
+            print('%s.rank,%s.price,' % (s,s),end="")
         print('')
     def PrintStockHeader(self):
-        print(','),
+        print(',',end="") #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.stockprice,' % (s)),
+            print('%s.stockprice,' % (s),end="")
         print('')
     def PrintRankHeader(self):
-        print(','),
+        print(',',end="") #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.rank,' % (s)),
+            print('%s.rank,' % (s),end="")
         print('')
 
     def StockRankMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
         self.PrintRankStockHeader()
         for d in self.Dates:
-            print('%s' % (d)),
+            print('%s' % (d),end="")
             for s in self.Stocks:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
                     sys.stdout.write('%s' % (rank))
-                print(','),
-                stockprice=self.GetStockPriceForStockDate(s,d)
+                print(',',end="")
+                stockprice=self.GetStockOpenPriceForStockDate(s,d)
                 if stockprice!=0.0:
-                    sys.stdout.write('%s' % (stockprice)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting.
-                print(','),                 
+                    sys.stdout.write('%s' % (stockprice)) 
+                print(',',end="")                 
             print('')
 
-    def RankMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
+    def RankMatrixTransposed(self): 
         self.PrintRankHeader()
         for d in self.Dates:
-            print('%s' % (d)),
+            print('%s' % (d),end="")
             for s in self.Stocks:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
                     sys.stdout.write('%s' % (rank))
-                print(','),
+                print(',',end="")
             print('')
 
-    def StockMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
+    def StockMatrixTransposed(self):
         self.PrintStockHeader()
         for d in self.Dates:
-            print('%s' % (d)),
+            print('%s' % (d),end="")
             for s in self.Stocks:
-                stockprice=self.GetStockPriceForStockDate(s,d)
+                stockprice=self.GetStockOpenPriceForStockDate(s,d)
                 if stockprice!=0.0:
-                    sys.stdout.write('%s' % (stockprice)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting.
-                print(','),                 
+                    sys.stdout.write('%s' % (stockprice)) 
+                print(',',end="")                 
             print('')
 
 
@@ -139,14 +152,14 @@ class RankMatrix:
         self.PrintDates() #print header of dates
         print("") #output EOL
         for s in self.Stocks:
-            print('%s,' % (s)), #start new line with  the stock
+            print('%s,' % (s),end="") #start new line with  the stock
             for d in self.Dates:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
                     #print('%s' % (rank)),
                     sys.stdout.write('%s' % (rank)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting. http://codingrecipes.com/print-without-a-new-line-or-space-in-python
             #if not at end of list then output ,
-                print(','), #OR add to string and then remove last character when done with that string of dates
+                print(',',end="") #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
 
 
@@ -154,21 +167,34 @@ class RankMatrix:
         self.PrintDates() #print header of dates
         print("") #output EOL
         for s in self.Stocks:
-            print('%s,' % (s)), #start new line with  the stock
+            print('%s,' % (s),end="") #start new line with  the stock
             for d in self.Dates:
-                stockprice=self.GetStockPriceForStockDate(s,d)
+                stockprice=self.GetStockOpenPriceForStockDate(s,d)
                 if stockprice!=0.0:
-                    sys.stdout.write('%s' % (stockprice)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting.
+                    sys.stdout.write('%s' % (stockprice)) 
             #if not at end of list then output ,
-                print(','), #OR add to string and then remove last character when done with that string of dates
+                print(',',end="") #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
                 
+    """
+    Print the dates out 
+    leave first column empty as the stock tickers will occupy this column 
+    """
     def PrintDates(self):
-        print(","),
+        print(",",end="")
         for d in self.Dates:
-            print("%s," % (d)),
+            print("%s," % (d),end="")
 
 
+
+def RunTest():
+    RM=RankMatrix(database,tableList[0])
+    #RM.PrintDates()
+    #RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
+    #RM.StockMatrix()
+    #RM.RankMatrixTransposed()
+    RM.StockMatrixTransposed()
+    #RM.StockRankMatrixTransposed()
 
 ########### MAIN ############
 
@@ -176,10 +202,11 @@ import sys
 
 import sqlite3
 import getopt
-#import YahooStockQuotes #http://stackoverflow.com/questions/714881/how-to-include-external-python-code-to-use-in-other-files
-from YahooStockQuotes import get_historical_prices_plus_one_day
+
+
 tableList=["BC20","IBD50","IBD8585","Top200Composite"]
 database="IBDdatabase.sqlite"
+database="IBDTestDatabase.sqlite"
 try:
     options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:', ['--input=',
                                                                         '--output=',
@@ -205,13 +232,13 @@ for opt, arg in options:
     elif opt == '--version':
         version = arg
 
+RunTest()
 #print(inputfilename,outputfilename,loginfile,table,database)
-RM=RankMatrix(database,tableList[0])
-#RM.PrintDates()
-#RM.RankMatrix()
-
-RM.StockMatrix()
-
-
-#RM.RankMatrixTransposed()
+if 0:
+    RM=RankMatrix(database,tableList[0])
+    #RM.PrintDates()
+    
+    #RM.RankMatrix()
+    RM.StockMatrix()
+    RM.RankMatrixTransposed()
 
