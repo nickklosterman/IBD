@@ -17,7 +17,7 @@ def queryDatabaseForOpenPrice(symbol,date):
         if row == None:
             break
         openPrice=row[0]
-    return openPrice
+    return openPrice/100 #the price is stored in cents since the sqlite doesn't have a decimal data type.
 
 def getHistoricalOpenPrice(symbol,date):
     openPrice=queryDatabaseForOpenPrice(symbol,date)

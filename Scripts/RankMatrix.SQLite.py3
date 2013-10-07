@@ -7,15 +7,8 @@ This program outputs a csv matrix of data
 
 from StockSQLiteHelpers import getHistoricalOpenPrice
 
-def prepprice(data):
-    temp=striphtml(data.rstrip())
-    temp2=temp[1:] #remove dollar sign
-    temp3=temp2.strip() #remove whitespace
-    p = re.compile(r',') #remove comma in price since that'll screw things up as far as outputting to csv.
-    return p.sub('',temp3)
-
 class RankMatrix:
-    
+   
     def __init__(self,database,table):
         self.database=database
         self.table=table
@@ -26,8 +19,12 @@ class RankMatrix:
 
     def GetDateList(self):
         dates=[]
+        orderBy="A"
         queryCursor=self.connection.cursor()
-        queryCursor.execute("SELECT DISTINCT(Date) from %s ORDER BY DATE DESC " % (self.table)) #Desc New->Old, ASC Old->New 
+        if orderBy=="A":
+            queryCursor.execute("SELECT DISTINCT(Date) from %s ORDER BY DATE ASC " % (self.table)) #Desc New->Old, ASC Old->New 
+        elif orderBy=="D":
+            queryCursor.execute("SELECT DISTINCT(Date) from %s ORDER BY DATE DESC " % (self.table)) #Desc New->Old, ASC Old->New 
         while True:
             row=queryCursor.fetchone()
             #print(row)
@@ -98,6 +95,12 @@ class RankMatrix:
         for s in self.Stocks: #print
             print('%s.rank,%s.price,' % (s,s),end="")
         print('')
+    def PrintStockRankHeader(self):
+        print(',',end="") #leave blank space for stock column 
+        for s in self.Stocks: #print
+            print('%s.rank,%s.price,' % (s,s),end="")
+        print('')
+
     def PrintStockHeader(self):
         print(',',end="") #leave blank space for stock column 
         for s in self.Stocks: #print
@@ -109,10 +112,10 @@ class RankMatrix:
             print('%s.rank,' % (s),end="")
         print('')
 
-    def StockRankMatrixTransposed(self): #useful for outputting data in suitable format for gnuplot
-        self.PrintRankStockHeader()
+    def StockRankMatrixTransposed(self): 
+        self.PrintStockRankHeader()
         for d in self.Dates:
-            print('%s' % (d),end="")
+            print('%s,' % (d),end="")
             for s in self.Stocks:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
@@ -123,6 +126,23 @@ class RankMatrix:
                     sys.stdout.write('%s' % (stockprice)) 
                 print(',',end="")                 
             print('')
+
+    def StockRankMatrix(self): 
+        print("not done, not sure if worthwhile")
+        # print("I don't think this works properly. There needs to be a,  ")
+        # self.PrintStockRankHeader()
+        # for d in self.Dates:
+        #     print('%s' % (d),end="")
+        #     for s in self.Stocks:
+        #         rank=self.GetRankForStockDate(s,d)
+        #         if rank!=-1:
+        #             sys.stdout.write('%s' % (rank))
+        #         print(',',end="")
+        #         stockprice=self.GetStockOpenPriceForStockDate(s,d)
+        #         if stockprice!=0.0:
+        #             sys.stdout.write('%s' % (stockprice)) 
+        #         print(',',end="")                 
+        #     print('')
 
     def RankMatrixTransposed(self): 
         self.PrintRankHeader()
@@ -193,8 +213,8 @@ def RunTest():
     #RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
     #RM.StockMatrix()
     #RM.RankMatrixTransposed()
-    RM.StockMatrixTransposed()
-    #RM.StockRankMatrixTransposed()
+    #RM.StockMatrixTransposed()
+    RM.StockRankMatrixTransposed()
 
 ########### MAIN ############
 
