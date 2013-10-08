@@ -56,8 +56,8 @@ class  StockAverageDaysForContinuousRunOnList:
         avgDaysOnList=-1
         if self.counter> 0:    
             avgDaysOnList=self.totalDaysOnList/self.counter
-        print("Average days on list for "+table+" is "+str(avgDaysOnList))
-        print("Minimum days on list: "+str(self.minDays)+" Maximum days on list:"+str(self.maxDays))
+        print("Average days on list for %s os %0.2f." % (table,avgDaysOnList))
+        print("Minimum days on list: %d; Maximum days on list: %d."%(self.minDays,self.maxDays))
 
 
     def queryGetDatesList(self):
@@ -80,10 +80,13 @@ def usage():
 
 """ 
 """
+print("need usage and getopt")
 
 database="IBDdatabase.sqlite.continuousrun"
+database="IBDTestDatabase.sqlite"
 
 inputList=[ "IBD50ContinuousRun","BC20ContinuousRun","IBD8585ContinuousRun","Top200CompositeContinuousRun"]
+inputList=["BC20ContinuousRun"]
 for item in inputList:
     connection=sqlite3.connect(database)
     ContinuousRun=StockAverageDaysForContinuousRunOnList(item)

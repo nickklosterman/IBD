@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- python -*-
 #M-x python-mode
 
 """
@@ -55,8 +56,10 @@ class StockDataRetriever:
             for d in self.Dates:
                 stockData=getHistoricalData(s,d)
                 print(".",end="")
-                print(stockData,end="")
-                if stockData!=0:
+                #print(stockData,end="")
+                
+                if stockData!=0 and stockData!="None":  #0 is returned if their is all ready data in the db, None is returned if there is an error obtaining data from Yahoo.
+                    #print(stockData)
                     rank=self.GetRankForStockDate(s,d)
                     returnVal=insertStockData(self.outputTable,d,s,rank,stockData) 
                 

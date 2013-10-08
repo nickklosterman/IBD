@@ -183,11 +183,13 @@ def usage():
 """
 
 database="IBDdatabase.sqlite"
+database="IBDTestDatabase.sqlite"
 
 
 inputList=[ "IBD50"] #,"BC20","IBD8585","Top200Composite"]
-inputList=[ "BC20"]
+
 inputList=[ "IBD50","BC20","IBD8585","Top200Composite"]
+inputList=[ "BC20"]
 for item in inputList:
     connection=sqlite3.connect(database)
     ContinuousRun=StockContinuousRunOnList(item)

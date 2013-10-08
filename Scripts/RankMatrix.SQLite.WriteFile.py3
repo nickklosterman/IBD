@@ -93,135 +93,122 @@ class RankMatrix:
 
 
     def PrintRankStockHeader(self):
-        print(',',end="") #leave blank space for stock column 
+        print(',',end="",file=f) #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.rank,%s.price,' % (s,s),end="")
-        print('')
+            print('%s.rank,%s.price,' % (s,s),end="",file=f)
+        print('',file=f)
     def PrintStockRankHeader(self):
-        print(',',end="") #leave blank space for stock column 
+        print(',',end="",file=f) #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.rank,%s.price,' % (s,s),end="")
-        print('')
+            print('%s.rank,%s.price,' % (s,s),end="",file=f)
+        print('',file=f)
 
     def PrintStockHeader(self):
-        print(',',end="") #leave blank space for stock column 
+        print(',',end="",file=f) #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.stockprice,' % (s),end="")
-        print('')
+            print('%s.stockprice,' % (s),end="",file=f)
+        print('',file=f)
     def PrintRankHeader(self):
-        print(',',end="") #leave blank space for stock column 
+        print(',',end="",file=f) #leave blank space for stock column 
         for s in self.Stocks: #print
-            print('%s.rank,' % (s),end="")
-        print('')
+            print('%s.rank,' % (s),end="",file=f)
+        print('',file=f)
 
     def StockRankMatrixTransposed(self): 
         self.PrintStockRankHeader()
         for d in self.Dates:
-            print('%s,' % (d),end="")
+            print('%s,' % (d),end="",file=f)
             for s in self.Stocks:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
-                    sys.stdout.write('%s' % (rank))
-                print(',',end="")
+                    print('%s' % (rank),sep='',end="",file=f) #                    sys.stdout.write('%s' % (rank))
+                print(',',end="",file=f)
                 stockprice=self.GetStockOpenPriceForStockDate(s,d)
                 #if stockprice!=0.0:
                 if stockprice>0.0:
-                    sys.stdout.write('%s' % (stockprice)) 
-                print(',',end="")                 
-            print('')
+                    print('%s' % (stockprice),sep='',end="",file=f) #                    sys.stdout.write('%s' % (stockprice)) 
+                print(',',end="",file=f)                 
+            print('',file=f)
 
     def StockRankMatrix(self): 
         print("not done, not sure if worthwhile")
-        # print("I don't think this works properly. There needs to be a,  ")
-        # self.PrintStockRankHeader()
-        # for d in self.Dates:
-        #     print('%s' % (d),end="")
-        #     for s in self.Stocks:
-        #         rank=self.GetRankForStockDate(s,d)
-        #         if rank!=-1:
-        #             sys.stdout.write('%s' % (rank))
-        #         print(',',end="")
-        #         stockprice=self.GetStockOpenPriceForStockDate(s,d)
-        #         if stockprice!=0.0:
-        #             sys.stdout.write('%s' % (stockprice)) 
-        #         print(',',end="")                 
-        #     print('')
 
     def RankMatrixTransposed(self): 
         self.PrintRankHeader()
         for d in self.Dates:
-            print('%s,' % (d),end="")
+            print('%s,' % (d),end="",file=f)
             for s in self.Stocks:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
-                    sys.stdout.write('%s' % (rank))
-                print(',',end="")
-            print('')
+                    print('%s' % (rank),sep='',end="",file=f) #                    sys.stdout.write('%s' % (rank))
+                print(',',end="",file=f)
+            print('',file=f)
 
     def StockMatrixTransposed(self):
         self.PrintStockHeader()
         for d in self.Dates:
-            print('%s,' % (d),end="")
+            print('%s,' % (d),end="",file=f)
             for s in self.Stocks:
                 stockprice=self.GetStockOpenPriceForStockDate(s,d)
                 if stockprice!=0.0:
-                    sys.stdout.write('%s' % (stockprice)) 
-                print(',',end="")                 
-            print('')
+                    print('%s' % (stockprice),sep='',end="",file=f) #                    sys.stdout.write('%s' % (stockprice)) 
+                print(',',end="",file=f)                 
+            print('',file=f)
 
 
 
     def RankMatrix(self):
         self.PrintDates() #print header of dates
-        print("") #output EOL
+        print("",file=f ) #output EOL
         for s in self.Stocks:
-            print('%s,' % (s),end="") #start new line with  the stock
+            print('%s,' % (s),end="",file=f) #start new line with  the stock
             for d in self.Dates:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
                     #print('%s' % (rank)),
-                    sys.stdout.write('%s' % (rank)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting. http://codingrecipes.com/print-without-a-new-line-or-space-in-python
+                    #sys.stdout.write('%s' % (rank)) #the print was adding a padding space, this was causing OOCalc to then interpret the numbers as strings, preventing proper charting. http://codingrecipes.com/print-without-a-new-line-or-space-in-python
+                    print('%s' % (rank),sep='',end="",file=f) 
             #if not at end of list then output ,
-                print(',',end="") #OR add to string and then remove last character when done with that string of dates
-            print("") #output EOL
+                print(',',end="",file=f) #OR add to string and then remove last character when done with that string of dates
+            print("",file=f) #output EOL
 
 
     def StockMatrix(self):
         self.PrintDates() #print header of dates
-        print("") #output EOL
+        print("",file=f) #output EOL
         for s in self.Stocks:
-            print('%s,' % (s),end="") #start new line with  the stock
+            print('%s,' % (s),end="",file=f) #start new line with  the stock
             for d in self.Dates:
                 stockprice=self.GetStockOpenPriceForStockDate(s,d)
                 if stockprice!=0.0:
-                    sys.stdout.write('%s' % (stockprice)) 
+                    print('%s' % (stockprice),sep='',end="",file=f) #                    sys.stdout.write('%s' % (stockprice)) 
             #if not at end of list then output ,
-                print(',',end="") #OR add to string and then remove last character when done with that string of dates
-            print("") #output EOL
+                print(',',end="",file=f) #OR add to string and then remove last character when done with that string of dates
+            print("",file=f) #output EOL
                 
     """
     Print the dates out 
     leave first column empty as the stock tickers will occupy this column 
     """
     def PrintDates(self):
-        print(",",end="")
+        print(",",end="",file=f)
         for d in self.Dates:
-            print("%s," % (d),end="")
+            print("%s," % (d),end="",file=f)
 
 
 
 def RunTest(inputTable):
-    print(inputTable)
+    print(inputTable,file=f)
     RM=RankMatrix(database,inputTable)
     #RM.PrintDates()
     RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
     #RM.StockMatrix()
-    print("")
+    print("",file=f)
     RM.RankMatrixTransposed()
     #RM.StockMatrixTransposed()
     #RM.StockRankMatrixTransposed()
-    print("")   
-    print("")
+    print("",file=f)   
+    print("",file=f)
 
 ########### MAIN ############
 
@@ -232,9 +219,9 @@ import getopt
 
 
 tableList=["BC20","IBD50","IBD8585","Top200Composite"]
-database="IBDdatabase.sqlite"
-database="IBDTestDatabase.sqlite"
+database="IBDdatabase.sqlite" #database="IBDTestDatabase.sqlite"
 outputFormat=1
+outputfilename="RankMatrixOutputfile.csv"
 try:
     options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:o:l:t:d:f:', ['--input=',
                                                                           '--output=',
@@ -262,8 +249,9 @@ for opt, arg in options:
         outputFormat = arg
     elif opt == '--version':
         version = arg
-for table in tableList:
-    RunTest(table)
+with open(outputfilename,'r+') as f:
+    for table in tableList:
+        RunTest(table)
 #print(inputfilename,outputfilename,loginfile,table,database)
 if 0:
     RM=RankMatrix(database,tableList[0])
