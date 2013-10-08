@@ -1,52 +1,13 @@
 #!/usr/bin/env/python
 # -*- python -*- 
 import sqlite3
-#sqlite3 IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"
 
 #curl -s "http://ichart.finance.yahoo.com/table.csv?s=YHOO&a=11&b=2&c=2005&d=11&e=2&f=2005&g=d&f=sl1&ignore=.csv"
 
 import sys #for cmd line arguments
 import urllib.request, urllib.parse, urllib.error #for getting quotes from net
-    
-#
-def get_historical_prices(symbol, date):
-    """
-    Get historical prices for the given ticker symbol.
-    Date format is 'YYYYMMDD'
-    
-    Returns a nested list.
-    """
-    print(symbol,date)
-#the date goes month(jan=0) day year
-    url = 'http://ichart.yahoo.com/table.csv?s=%s&' % symbol + \
-          'd=%s&' % str(int(date[5:7]) - 1) + \
-          'e=%s&' % str(int(date[8:10])) + \
-          'f=%s&' % str(int(date[0:4])) + \
-          'g=d&' + \
-          'a=%s&' % str(int(date[5:7]) - 1) + \
-          'b=%s&' % str(int(date[8:10])) + \
-          'c=%s&' % str(int(date[0:4])) + \
-          'ignore=.csv'
-    data=[] #python3 method , 
-    try:
-        days = urllib.request.urlopen(url).readlines()
 
-        for day in days: #day[0] holds the fields names, day[1+] holds the data values
-            dayStr = str(day, encoding='utf8')
-            data.append( dayStr[:-2].split(','))
-            
-    except urllib.error.HTTPError as err:
-        print(err.code)
-        if err.code == 404: #try incrementing date again
-            print("Error: %s %s" % (symbol,date))
-        else:
-            print(err) #raise
-    except urllib.error.URLError as err:
-        print(err) #raise
-
-    return data
-#end def get_historical_prices
-
+from YahooStockQuotes import getHistoricalStockPrices 
 
 
 def queryForExistenceOnTableDateSymbol(table,date,symbol):
@@ -165,7 +126,7 @@ def query_for_data(tablelist):
         """
         numrecords= queryForExistenceOnTableDateSymbol(tabledata,date,ticker)
         if (numrecords==0): #retrieve and insert data if record isn't present
-            output=get_historical_prices(ticker, date )
+            output=getHistoricalStockPrices(ticker, date )
             #print(date,ticker,output)
             if len(output)!=2 or output[0][0]!="Date": # a simple error check since this first field should be "Date"
                 print("ERROR for ",ticker) #enter this data into an errors database
@@ -179,7 +140,7 @@ def query_for_data(tablelist):
 
 def queryForData(table):
     """
-    Loop over all rows in the provided table and get the historical price plus one day and insert that data into our data table
+    Loop over all rows in the provided table and get the historical price and insert that data into our data table
     All stock data goes into StockData and StockDataError
     The ContinuousRun tables are subsets of the full tables and therefore they don't need to be processed.
     Each list happens on a separate day so we don't need to check for duplicate entries as that *shouldn't* ever happen.
@@ -219,7 +180,7 @@ def queryForData(table):
         """
         numrecords= queryForExistenceOnTableDateSymbol(tabledata,date,ticker)
         if (numrecords==0): #retrieve and insert data if record isn't present
-            output=get_historical_prices(ticker, date )
+            output=getHistoricalStockPrices(ticker, date )
             #print(date,ticker,output)
             if len(output)!=2 or output[0][0]!="Date": # a simple error check since this first field should be "Date"
                 print("ERROR for ",ticker) #enter this data into an errors database
@@ -243,14 +204,14 @@ def queryForData(table):
 if (len(sys.argv) > 1):
     database=sys.argv[1]
 else:
-    database="IBDdatabase.sqlite"
+    database="IBDTestDatabase.sqlite"
     inputList=[["IBD50","IBD50StockData","IBD50StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
-
 
 
 
 #enter all data into "StockData" table ....hmmm  I don't benefit from eliminating redundant values so how much of a performance hit am I willing to take to keep all data in one table?
     inputList=[["IBD50","StockData","StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
+    inputList=[["BC20","BC20StockData","BC20StockDataError"]]
 #    print("Using restricted set")
 #    inputList=[["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
     for item in inputList:
