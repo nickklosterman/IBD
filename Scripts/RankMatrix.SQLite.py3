@@ -122,7 +122,8 @@ class RankMatrix:
                     sys.stdout.write('%s' % (rank))
                 print(',',end="")
                 stockprice=self.GetStockOpenPriceForStockDate(s,d)
-                if stockprice!=0.0:
+                #if stockprice!=0.0:
+                if stockprice>0.0:
                     sys.stdout.write('%s' % (stockprice)) 
                 print(',',end="")                 
             print('')
@@ -210,11 +211,11 @@ class RankMatrix:
 def RunTest():
     RM=RankMatrix(database,tableList[0])
     #RM.PrintDates()
-    #RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
+    RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
     #RM.StockMatrix()
-    #RM.RankMatrixTransposed()
+    RM.RankMatrixTransposed()
     #RM.StockMatrixTransposed()
-    RM.StockRankMatrixTransposed()
+    #RM.StockRankMatrixTransposed()
 
 ########### MAIN ############
 

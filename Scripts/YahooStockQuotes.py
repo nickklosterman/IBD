@@ -22,7 +22,7 @@ this filie to be a module must have the .py extension
 """
 
 
-def getHistoricalStockPrices(symbol, date):
+def getHistoricalStockData(symbol, date):
     """
     Get historical prices for the given ticker symbol.
     Date format is 'YYYYMMDD'
