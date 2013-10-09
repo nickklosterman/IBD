@@ -141,6 +141,8 @@ class RankMatrix:
                 rank=self.GetRankForStockDate(s,d)
                 if rank!=-1:
                     print('%s' % (rank),sep='',end="",file=f) #                    sys.stdout.write('%s' % (rank))
+                #else:
+                #    print('30',sep='',end='',file=f) #still output something even if is off list. 
                 print(',',end="",file=f)
             print('',file=f)
 
@@ -201,7 +203,7 @@ def RunTest(inputTable):
     print(inputTable,file=f)
     RM=RankMatrix(database,inputTable)
     #RM.PrintDates()
-    RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
+    #RM.RankMatrix() #this will be the fastest since no calls are made to get prices.
     #RM.StockMatrix()
     print("",file=f)
     RM.RankMatrixTransposed()
@@ -217,9 +219,12 @@ import sys
 import sqlite3
 import getopt
 
-
-tableList=["BC20","IBD50","IBD8585","Top200Composite"]
-database="IBDdatabase.sqlite" #database="IBDTestDatabase.sqlite"
+if 0:
+    database="IBDdatabase.sqlite" 
+    tableList=["BC20","IBD50","IBD8585","Top200Composite"]
+else:
+    tableList=["BC20"]
+    database="IBDTestDatabase.sqlite"
 outputFormat=1
 outputfilename="RankMatrixOutputfile.csv"
 try:
@@ -249,7 +254,8 @@ for opt, arg in options:
         outputFormat = arg
     elif opt == '--version':
         version = arg
-with open(outputfilename,'r+') as f:
+
+with open(outputfilename,'wt') as f:
     for table in tableList:
         RunTest(table)
 #print(inputfilename,outputfilename,loginfile,table,database)
