@@ -1,0 +1,45 @@
+#Dump data into database?? or 
+DualPrepForDatabase.py3
+
+ListTimelineCreator.py3
+	#Examine performance of the continuous runs
+	AnalyzeContinuousRunPerformance.py3
+	#Determine stats on number of days a stock was on a list
+	DaysOnListAnalyzer.py3
+
+CreateTimeSeriesArrayFromSQLiteDB.py3
+
+
+GetHistoricalPrices.py3
+GetHistoricalPricesDual.py
+GetHistoricalPricesDual.py3
+
+#Loops over a table, looping over all dates and tickers getting stock data, not just the getting stockdata for days that the stock was ranked.
+GetStockDataForAllDates.py3
+	#script to loop over all 4 tables running the above script
+	GetAllDateTickerStockData.sh
+
+GetStockQuotesv2.sh
+GetStockTickerChanges.sh
+IBD100Stats.sh
+
+
+MovementMatrix.py
+MovementMatrix.py3
+
+PortfolioJSONExporter.py3
+
+#outputs csv arrays of data
+RankMatrix.MySQL.py3
+#prints to a file
+RankMatrix.SQLite.WriteFile.py3
+#prints to stdout
+RankMatrix.SQLite.py3
+RankMatrix.py
+RankMatrix.py3
+
+WriteStockTickerChanges.py
+
+Libraries:
+YahooStockQuotes.py
+StockSQLiteHelpers.py
