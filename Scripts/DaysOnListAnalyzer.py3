@@ -5,7 +5,7 @@ import sqlite3
 """
 This script determines the avg number of days on each of the four IBD lists that I look at.
 If the stock is still on the list but hasn't exited the list, it isn't taken into acct.
-
+ListTimeLineCreator must have been run first.
 """
 
 from datetime import date
