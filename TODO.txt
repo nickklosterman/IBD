@@ -55,3 +55,5 @@ automate testing of the Refresh Script
 utilize the temp directory
 Add the SP500 and other indexes to the ticker list to check performance, may need to tweak insertion as they proly won't have  volume etc. Could use a ETF that tracks them as a proxy.
 
+Thu Oct 24 11:53:52 EDT 2013
+[DONE]reverse engineer the static stock graphs on pages like : http://finance.yahoo.com/q/ta?s=XONE+Basic+Tech.+Analysis hmmm I all ready have this in my GetDailyStockChart*.sh
