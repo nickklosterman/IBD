@@ -6,7 +6,9 @@ t or sold? Does the brokerage house who is the market for a stock sell that data
 #for - forestar group 
 #top ranked, low price stocks 
 
-
+#looking at winners/loser for the week, it looks like IBD50 has better prospects for short sales than for 'winners' as the shorts typically do 10+% over the course of the week. 
+2013-10-04
+nus fb prlb flt save act jazz algn noah xrs yndx pcln praa ll ssys vrx amba ddd rgr gnrc wll edu wdr cmg lope qihu lvs ua ssnc hlf ulta gnc clr meli pkg pii epam evr sbux gntx ma hxl wx pxd trip tsco wwww biib kors alxn 
 2013-10-30
 nus prlb jazz flt save algn act pcln noah xrs amba yndx gnrc wll hlf  ocn ll lope rx fb qihu  tngo ssnc lvs invn celg clr edu wwww cmg ddd ua evr meli pkg gntx wddr pii pxd wx epam trip rgr kors tsco ulta gnc ssys alxn regn 
 2013-10-28
