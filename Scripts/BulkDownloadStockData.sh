@@ -10,7 +10,7 @@ function DownloadYahooDataFile()
 
 if [ $# -lt 1 ]
 then
-    echo "scriptname.sh directions;"
+    echo "$0 directions;"
 else
     if [ -f "$1" ] #if we specified a file on the command line then read the file and spit it out else parse args as stock tickers
     then
