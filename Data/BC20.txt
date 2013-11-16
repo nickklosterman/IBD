@@ -2,6 +2,8 @@
 #calculate a volatility score of the index , ie how much the stocks move on and off. but to that volatility what is the likelihood it'll come back on and still be doing ok. just bc leaves list doesn't mean it isn't doing well. 
 
 
+2013-11-12
+act plcn ma cmg ctsh nbl pcp mck cern nke noc goog ba cbs mu amp mga rost myl axp 
 2013-11-05
 fb act lvs pcln clr vrx biib ctsh  nbl eog alxn cmg pcp mck disca goog chk cern apc nke 
 2013-10-29
