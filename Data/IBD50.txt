@@ -6,7 +6,12 @@ t or sold? Does the brokerage house who is the market for a stock sell that data
 #for - forestar group 
 #top ranked, low price stocks 
 
+#is a certain type of stock prone to large falls? do non tech stecks have fewer occurrences of drastic falls?
+2013-11-18
+nus fb jazz save act prlb flt noah xrs pcln rgr away ll wx slxp amba cmg ddd pxd gnrc ssnc ua clr ulta lvs yndx hlf algn lope ssys qihu kors wll vrx edu open pii wdr akrx uri mdco tsco gnc evr sbux ma gntx slca alxn biib 
 
+2013-11-13
+nus fb jazz save prlb act flt noah xrs ddd pcln rgr ll algn slxp amba cmg ssnc clr gnrc lvs yndx lope qihu pxd kors ulta gnc wll vrx pii wdr ssys akrx ua praa evr sbux edu ma open trip slca tsco away mdco hlf pkg biib alxn 
 2013-11-11
 nus fb prlb save act flt jazz noah xrx ll algn slxp amba ddd lope cmg pcln rgr ssnc gnrc yndx clr vrx wdr qihu lvs praa wll edu ssys akrx kors ua ulta hlf gnc evr ma pii hxl wx slca  trip crzo sbux wwww pkg gntx biib alxn 
 2013-11-06
