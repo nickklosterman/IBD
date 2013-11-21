@@ -7,7 +7,7 @@ sqlite3 IBDdatabase.sqlite 'SELECT distinct(stockticker) from IBD8585 ORDER BY s
 sqlite3 IBDdatabase.sqlite 'SELECT distinct(stockticker) from Top200Composite ORDER BY stockticker asc;' >> /tmp/tickers.txt
 
 #sort the tickers
-sort /tmp/tickers.txt -u > uniquetickers.txt
+sort /tmp/tickers.txt -u > /tmp/uniquetickers.txt
 
 echo "Unique tickers in uniquetickers.txt"
 
@@ -16,7 +16,7 @@ while read symbol
 do
 #echo "\"http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv\" -O ${symbol}.csv" >> /tmp/tickerurlfile.txt
 echo "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" >> /tmp/tickerurlfile.txt
-done < uniquetickers.txt
+done < /tmp/uniquetickers.txt
 
 cat /tmp/tickerurlfile.txt | parallel "wget {}"
 

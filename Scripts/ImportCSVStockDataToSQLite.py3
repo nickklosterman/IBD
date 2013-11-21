@@ -63,8 +63,10 @@ class ImportYahooStockCSVData:
     def loopOverFiles(self):
         for csvfile in self.fileList:
             print(csvfile)
-            ticker=(csvfile.split('.'))[0]
-            ticker=ticker.strip()
+            # ticker=(csvfile.split('.'))[0] #extract ticker if file is named ticker.csf
+            # ticker=ticker.strip()
+            ticker=csvfile[12:-12] #extract ticker if file is named table.csv?s=TICKER&ignore=.csv
+            print(ticker)
             #csvfile sure the file size isn't 0       
             if (os.stat(csvfile).st_size!=0):
                 with open(csvfile,'rt') as csvFileHandle:
