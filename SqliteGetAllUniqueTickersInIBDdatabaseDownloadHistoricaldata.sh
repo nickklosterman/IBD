@@ -1,10 +1,11 @@
 #!/bin/bash
 
+databaseFile="IBDdatabase.sqlite"
 #pull all over the unique tickers from each table
-sqlite3 IBDdatabase.sqlite 'SELECT distinct(stockticker) from IBD50 ORDER BY stockticker asc;' > /tmp/tickers.txt
-sqlite3 IBDdatabase.sqlite 'SELECT distinct(stockticker) from BC20 ORDER BY stockticker asc;' >> /tmp/tickers.txt
-sqlite3 IBDdatabase.sqlite 'SELECT distinct(stockticker) from IBD8585 ORDER BY stockticker asc;' >> /tmp/tickers.txt
-sqlite3 IBDdatabase.sqlite 'SELECT distinct(stockticker) from Top200Composite ORDER BY stockticker asc;' >> /tmp/tickers.txt
+sqlite3 "${databaseFile}" 'SELECT distinct(stockticker) from IBD50 ORDER BY stockticker asc;' > /tmp/tickers.txt
+sqlite3 "${databaseFile}" 'SELECT distinct(stockticker) from BC20 ORDER BY stockticker asc;' >> /tmp/tickers.txt
+sqlite3 "${databaseFile}" 'SELECT distinct(stockticker) from IBD8585 ORDER BY stockticker asc;' >> /tmp/tickers.txt
+sqlite3 "${databaseFile}" 'SELECT distinct(stockticker) from Top200Composite ORDER BY stockticker asc;' >> /tmp/tickers.txt
 
 #sort the tickers
 sort /tmp/tickers.txt -u > /tmp/uniquetickers.txt
@@ -22,6 +23,20 @@ cat /tmp/tickerurlfile.txt | parallel "wget {}"
 
 # Remove files of length/size 0
 find . -type f -size 0 -print0 | xargs -0 rm 
+
+#Perform rename and column header rename
+for filename in *.csv
+do 
+#change the column name "Adj Close" to "Adj_Close" for easier access
+sed "1 s/Adj Close/Adj_Close/" -i "${filename}"
+
+newFilename=`echo $filename | sed 's/table.csv?s=//;s/&ignore=//'`
+ticker=`echo $filename | sed 's/table.csv?s=//;s/&ignore=.csv//'`
+mv "${filename}" $newFilename
+
+#import data into our database
+sqlite3 "${databaseFile}" ".import $newFilename $ticker"
+done
 
 
 

@@ -96,8 +96,10 @@ else
     # echo "please enter y or n"
     # read response
 
+    echo "File cleanup - creating gzipped tar archive of all .csv files"
+    tar -cvzf YahooHistoricalDataFiles.tar.gz *.csv
     #file cleanup
-    rm *.csv #damnit these are being deleted before they are being imported
+    #    rm *.csv #damnit these are being deleted before they are being imported
 
 
     #python Scripts/ImportCSVStockDataToSQLite.py3  umm I think I want the one with bulk transactions....

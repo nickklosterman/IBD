@@ -2,8 +2,12 @@
 #calculate a volatility score of the index , ie how much the stocks move on and off. but to that volatility what is the likelihood it'll come back on and still be doing ok. just bc leaves list doesn't mean it isn't doing well. 
 
 #analysis of ipo offer price vs. open price on first day of trading. Analyze return possibilities/probabilities for mortals. 
-#Fedex & UPS control about 9-% of the US package delivery market
 
+
+2013-12-03
+ACT PCLN LVS VRX MA CTSH PCP BIIB CMG ALXN MCK DISCA NKE GOOG AMP CERN AXP NOC AMTD MYL
+
+#Fedex & UPS control about 90% of the US package delivery market
 2013-11-26
 act pcln lvs vrx ma cmg ctsh pcp sbux biib nke alxn mck nbl amp cern noc goog amtd disca 
 2013-11-19
