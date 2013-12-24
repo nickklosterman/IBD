@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # #These are extractors for pdf IBD
 # #you need to copy the relevant list out of the pdf and stick it in a file. 
 # #for IBD50 and BC20 you need to copy the large blocks with the graph as the ticker isn't included in the small sidebar list
@@ -23,11 +25,25 @@
 # #the above is basically cutting off everything after the p/e and accumulation grade. this then gives us a clean est of space delimited fields to use awk on
 
 
-#!/bin/bash
 
 inputfilename=${1}
 
-#assumes input of IBD20130819.pdf.txt
+#BC20 and IBD50, could be used for 8585 but not all in the 8585 get boxes
+extract-from-detail-boxes() {
+    grep Group ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," | tr '\n' ' '
+    grep Grp ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," | tr '\n' ' '
+}
+
+extract-from-top200(){
+    awk '{ print $(NF-3) }' ${1}  | sed 's/[[:lower:]]/ /g;s/^ +*.//g' | awk '{ print $NF }' | tr '\n' ' '
+}
+
+extract-from-8585(){
+    sed -n -e 's/^\([^<]*\) [1-9][1-9] [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' '
+}
+
+
+#assumes input of IBD20130819*
 get-date-from-filename() {
 input=${1}
 year=${input:3:4}
@@ -36,12 +52,29 @@ day=${input:9:2}
 echo "$year-$month-$day"
 }
 
-get-date-from-filename "IBD20131523"
+#test
+#get-date-from-filename "IBD20131523"
 
-
-until [ -z "$1" ]
+for item in IBD201*.pdf.txt
+#until [ -z "$1" ]
 do    	
-echo		"Processing parameter of: '$1'"
-     
-shift
+    echo "Processing '$item'"
+    myfile=$(basename ${item} )
+    
+    results=$( extract-from-detail-boxes ${item} )  # there has got to be a better way to do this calling an array of function if no results found
+    outputType="IBD50/BC20"
+    if [[ ${#results} -lt 20 ]]
+    then 
+	results=$( extract-from-8585 ${item} )
+	outputType="8585"
+	if [[ ${#results} -lt 300 ]]
+	then 
+	    results=$( extract-from-top200 ${item} )
+    outputType="Top200"
+	fi
+    fi
+    echo "${outputType}"
+    get-date-from-filename ${myfile}
+    echo "${results}"
+    shift
 done
