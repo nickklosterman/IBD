@@ -80,3 +80,59 @@ V|5
 V|7
 V|7
 [arch-nicky@arch-nicky IBD]$ sqlite3 IBDdatabase.sqlite "select BC20.StockTicker,IBD50.Rank from BC20 INNER Join IBD50 on BC20.StockTicker = IBD50.StockTicker limit 4;"
+
+
+//create a list of the dates & ranks for a ticker with all dates; ie if no entry was found we have an empty field for that date's rank.
+create temp table DatesList as select distinct(date) from BC20;
+create temp table TickerDetails as select rank,date from BC20 where stockticker like "BIIB";
+select * from DatesList left outer join TickerDetails on DatesList.date = TickerDetails.date;
+
+//using the above 'create' statements
+create temp table CombinedDatesTickerDetails as select * from DatesList left outer join TickerDetails on DatesList.date = TickerDetails.date;
+select * from PRGO inner join CombinedDatesTickerDetails on PRGO.date = CombinedDatesTickerDetails.date;  //here PRGO is the yahoo historical stock data that we download
+select * from BIIB inner join CombinedDatesTickerDetails on BIIB.date = CombinedDatesTickerDetails.date;  //here BIIB is the yahoo historical stock data that we download
+//the resultant table should be a list of dates w rank and corresponding stock price. the stock price (shoudl) be present whether a rank is present or not. 
+
+#Tue Dec 24 15:45:19 EST 2013
+select stockticker,count(stockticker) as count_stockticker from BC20 group by stockticker;
+create temp table TimesOnList as select stockticker,count(stockticker) from BC20 group by stockticker;
+select * from TimesOnList order by "count(stockticker)" desc;
+
+
+#Wed Dec 25 15:01:45 EST 2013
+---> you really need to use AS statements so that you know what the columns of data are and can access them.
+
+//create a list of the dates & ranks for a ticker with all dates; ie if no entry was found we have an empty field for that date's rank.
+CREATE TEMPORARY TABLE DatesList AS SELECT DISTINCT(date) AS distinct_date FROM BC20;
+CREATE TEMPORARY TABLE TickerDetails AS SELECT rank,date FROM BC20 WHERE stockticker LIKE "${ticker}";
+SELECT * FROM DatesList LEFT OUTER JOIN TickerDetails ON DatesList.date = TickerDetails.date;
+
+//the resultant table should be a list of dates w rank and corresponding stock price. the stock price (shoudl) be present whether a rank is present or not. 
+CREATE TEMPORARY TABLE DatesList AS SELECT DISTINCT(date) AS distinct_date FROM BC20;
+CREATE TEMPORARY TABLE ${ticker}Details AS SELECT rank,date FROM BC20 WHERE stockticker LIKE "${ticker}";
+CREATE TEMPORARY TABLE CombinedDates%{ticker}Details AS SELECT * FROM DatesList LEFT OUTER JOIN ${ticker}Details ON DatesList.date = ${ticker}Details.date;
+--> use variable for these: here ${ticker} is the yahoo historical stock data that we download
+SELECT * FROM ${ticker} INNER JOIN CombinedDates${ticker}Details ON ${ticker}.date = CombinedDates${ticker}Details.date;  
+
+
+SELECT stockticker,count(stockticker) AS count_stockticker FROM BC20 GROUP BY stockticker;
+CREATE TEMPORARY TABLE TimesOnList AS SELECT stockticker,count(stockticker) AS count_sticker FROM BC20 GROUP BY stockticker;
+SELECT * FROM TimesOnList ORDER BY count_sticker DESC; /// --> alternate method to "count(stockticker)" desc;
+
+
+#########
+databasefilename="IBDTestDatabaseBC20.sqlite"
+databaselist=('BC20' 'IBD50' '8585' 'Top200Composite')
+for database in $databaselist
+do 
+sqlite3 $databasefilename "CREATE TEMPORARY TABLE TimesOnList AS SELECT stockticker,count(stockticker) AS count_sticker FROM $database GROUP BY stockticker;"
+sqlite3 $databasefilename "CREATE TEMPORARY TABLE DatesList AS SELECT DISTINCT(date) AS distinct_date FROM $database;"
+
+tickerlist=$(sqlite3 $databasefilename  "select distinct(stockticker) from $database")
+for ticker in $tickerlist do 
+
+sqlite3 $databasefilename "CREATE TEMPORARY TABLE ${ticker}Details AS SELECT rank,date FROM BC20 WHERE stockticker LIKE ${ticker};"
+sqlite3 $databasefilename "CREATE TEMPORARY TABLE CombinedDates${ticker}Details AS SELECT * FROM DatesList LEFT OUTER JOIN ${ticker}Details ON DatesList.date = ${ticker}Details.date;"
+sqlite3 $databasefilename "SELECT * FROM ${ticker} INNER JOIN CombinedDates${ticker}Details ON ${ticker}.date = CombinedDates${ticker}Details.date;" 
+done
+done
