@@ -62,7 +62,14 @@ do
     myfile=$(basename ${item} )
     
     results=$( extract-from-detail-boxes ${item} )  # there has got to be a better way to do this calling an array of function if no results found
-    outputType="IBD50/BC20"
+    #guessing on the length of the result as to which list this came from
+    if [[ ${#results} -lt 100 ]]
+    then 
+	outputType="BC20"
+    else
+	outputType="IBD50"
+    fi
+    
     if [[ ${#results} -lt 20 ]]
     then 
 	results=$( extract-from-8585 ${item} )
@@ -78,3 +85,4 @@ do
     echo "${results}"
     shift
 done
+echo "based on the output type we could insert the desired data into the appropriate file instead of simply printing it out. That would save a cut/past step. We could easily just have a test run flag and then a insert flag."
