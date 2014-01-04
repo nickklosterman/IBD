@@ -136,3 +136,6 @@ sqlite3 $databasefilename "CREATE TEMPORARY TABLE CombinedDates${ticker}Details 
 sqlite3 $databasefilename "SELECT * FROM ${ticker} INNER JOIN CombinedDates${ticker}Details ON ${ticker}.date = CombinedDates${ticker}Details.date;" 
 done
 done
+
+#the date values must be quoted.
+select * from BC20 where date > "2012-12-31" and date < "2014-01-01";
