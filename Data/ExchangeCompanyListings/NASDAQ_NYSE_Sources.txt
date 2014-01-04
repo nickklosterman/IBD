@@ -1,0 +1,18 @@
+I believe that I got the nasdaq and nyse listings from eoddata.com
+http://eoddata.com/symbols.aspx then select the exchange 
+
+SP500
+http://en.wikipedia.org/wiki/List_of_S%26P_500_companies <-- has a nice list of SP500 companies and a change log w reasons
+http://en.wikipedia.org/wiki/S%26P_500
+http://www.spindices.com/indices/equity/sp-500
+
+NYSE NASDAQ AMEX lists
+http://www.nasdaq.com/screening/company-list.aspx just have to solve a captcha to get csv
+{NYSE|NASDAQ|AMEX}companylist.csv came from this site
+
+NYSE 
+http://www.nyse.com/about/listed/lc_all_overview.html
+http://www.nyse.com/about/listed/lc_ny_industry.html nice industry/sector breakdown table 
+
+NASDAQ
+en.wikipedia.org/wiki/NASDAQ-100#ComponentsL <-- similar but not as good. the official nasdaq.com site didn't seem to show the 100 and their weighting. 

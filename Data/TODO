@@ -1,4 +1,6 @@
+[OBSOLETEE due to separation of lists]
 format BC20,IBD 50 , 8585 files such that they have a header or have that identifier in the filename. 
+[DONE via separation of lists]
 Then have a script key off the filename and dump the data in the appropriate file/database
 Or just have a script that enters the data into the database and skips putting it in an "organized" text file.
 If go the text file route, would want to see if there is a bash method to check if a files contents are wholly contained in another file.

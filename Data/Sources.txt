@@ -1,1 +1,0 @@
-I believe that I got the nasdaq and nyse listings from eoddata.com
