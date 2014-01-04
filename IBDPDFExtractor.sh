@@ -69,7 +69,8 @@ do
     else
 	outputType="IBD50"
     fi
-    
+
+#if the extract from detail boxes returned too short of a result to be considered valid    
     if [[ ${#results} -lt 20 ]]
     then 
 	results=$( extract-from-8585 ${item} )
@@ -86,3 +87,4 @@ do
     shift
 done
 echo "based on the output type we could insert the desired data into the appropriate file instead of simply printing it out. That would save a cut/past step. We could easily just have a test run flag and then a insert flag."
+echo "***85 85 shouldn't come from the boxes, but the sidebar list."
