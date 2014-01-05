@@ -1,26 +1,17 @@
 #!/usr/bin/env/python
 # -*- python -*- 
+
 import sys #for cmd line arguments
 import urllib.request, urllib.parse, urllib.error #for getting quotes from net
-#
-
-
-
 
 """
-
-
-THIS WILL NOT WORK AS A MODULE AS http://docs.python.org/3/tutorial/modules.html#importing-from-a-package 
-STATES THAT THE FILE MUST END IN .PY NOT .PY3
-
-
-
+THIS WILL NOT WORK AS A MODULE AS http://docs.python.org/3/tutorial/modules.html#importing-from-a-package STATES THAT THE FILE MUST END IN .PY NOT .PY3
 """
 
 
 # to use:
 # from YahooStockQuotes import getHistoricalStockPrices 
-def getHistoricalStockPrices(symbol, date):
+def getHistoricalStockData(symbol, date):
     """
     Get historical prices for the given ticker symbol.
     Date format is 'YYYYMMDD'
