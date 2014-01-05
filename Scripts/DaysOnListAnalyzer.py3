@@ -81,6 +81,7 @@ def usage():
 """ 
 """
 print("need usage and getopt")
+print("--->ListTimeLineCreator must be run first to create the continuous run list that is needed by this program.")
 
 database="IBDdatabase.sqlite.continuousrun"
 database="IBDTestDatabase.sqlite"
@@ -90,5 +91,4 @@ inputList=["BC20ContinuousRun"]
 for item in inputList:
     connection=sqlite3.connect(database)
     ContinuousRun=StockAverageDaysForContinuousRunOnList(item)
-
 quit()

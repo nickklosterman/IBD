@@ -41,10 +41,20 @@ echo ${quote} | tr ' ' '\n'
 # echo ${quote}   
 }
 
+function instructions()
+{
+echo "
+This program takes either a) a file with 
+a list of stock tickers, one per line or 
+b) tickers space delimited on the command
+line for retrieval of quote data.
+"
+}
 
 if [ $# -lt 1 ]
 then
-    echo "scriptname.sh directions;"
+    echo "$0 directions;"
+    instructions
 else
     if [ -f "BadStockTickers.txt" ]
     then 

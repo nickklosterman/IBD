@@ -1,5 +1,10 @@
 #!/usr/bin/env/python
 # -*- python -*- 
+'''
+It appears this is an unfinished script to go through and compute ARR 
+for each stock in the database.
+'''
+
 import sqlite3
 #sqlite3 IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"
 
@@ -231,17 +236,14 @@ def queryForData(table):
         #else:
         #    print('There are %s duplicate records.' % numrecords)
 
-
-
-
     dateTickerRankCursor.close()
 #end def query_for_data
 
 
-def caveatEmptor():
+#def caveatEmptor():
 
-def resultsIfInvestedInSP500(self):
-    """
+    def resultsIfInvestedInSP500(self):
+        """
         I still need tofigure out why the numbers come out awful for the mutual funds.
         """
         currentSP500=float(getSharePrice("%5EGSPC"))
@@ -281,7 +283,7 @@ def resultsIfInvestedInSP500(self):
         return yearsElapsed+daysDiff
 
 
-def computeARR(startDate,endDate,startPrice,endPrice):
+#def computeARR(startDate,endDate,startPrice,endPrice):
     
 
 
@@ -291,9 +293,6 @@ if (len(sys.argv) > 1):
 else:
     database="IBDdatabase.sqlite"
     inputList=[["IBD50","IBD50StockData","IBD50StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]
-
-
-
 
 #enter all data into "StockData" table ....hmmm  I don't benefit from eliminating redundant values so how much of a performance hit am I willing to take to keep all data in one table?
     inputList=[["IBD50","StockData","StockDataError"],["BC20","BC20StockData","BC20StockDataError"],["IBD8585","IBD8585StockData","IBD8585StockDataError"],["Top200Composite","Top200CompositeStockData","Top200CompositeStockDataError"]]

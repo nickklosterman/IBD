@@ -1,6 +1,15 @@
 #!/usr/bin/python
-#NOTE: there isn't a mysql-python port for python3
-# http://dev.mysql.com/doc/connector-python/en/connector-python-install.html
+
+
+'''
+NOTE: there isn't a mysql-python port for python3
+I therefore believe this .py3 file to not work. It appears from diff
+to have the python3 versions of print. However without a working
+mysql-python, the script won't work
+
+http://dev.mysql.com/doc/connector-python/en/connector-python-install.html
+'''
+
 class MovementMatrix:
 
     def __init__(self,database,table,limit_number,offset_number):

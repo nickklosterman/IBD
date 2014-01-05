@@ -1,5 +1,12 @@
 #!/usr/bin/env/python
 # -*- python -*- 
+'''
+This script attempts to perform bulk import of csv data
+into a SQLite database.
+It globs all csv files in the current directory and 
+sticks the data in a StockData.sqlite database.
+'''
+
 import sqlite3
 import glob
 import os

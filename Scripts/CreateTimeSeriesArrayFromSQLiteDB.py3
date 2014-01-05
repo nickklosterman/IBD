@@ -1,5 +1,9 @@
 #!/usr/bin/env/python
 # -*- python -*- 
+'''
+This is effectively superseded by the results of CreateMasterDateRankStockDataAnalysisDatabases.sh; regardless, it loops through the table building a stock,date,rank output with a sentinel value if no rank is present for a particular day.
+'''
+
 import sqlite3
 #sqlite3 IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"
 
@@ -15,14 +19,14 @@ def check_tables_exist(tablelist):
     cursor=connection.cursor()
     for table in tablelist:
         Query="select case when tbl_name ='"+table+"' then 1 else 0 end  from sqlite_master where type='table' and name='"+table+"' order by name"
-    #    print(Query)
+        #print(Query)
         cursor.execute(Query)
         row=cursor.fetchone()
         if row == None or int(row[0]==0):
+            if table==tablelist[0]:
+                Query='CREATE TABLE IF NOT EXISTS '+tablelist[0]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
             if table==tablelist[1]:
-                Query='CREATE TABLE IF NOT EXISTS '+tablelist[1]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
-            if table==tablelist[2]:
-                Query='CREATE TABLE IF NOT EXISTS '+tablelist[2]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER)'
+                Query='CREATE TABLE IF NOT EXISTS '+tablelist[1]+' (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER)'
             cursor.execute(Query)
         else:
             print("returned None")
@@ -117,13 +121,15 @@ if (len(sys.argv) > 1):
     database=sys.argv[1]
 else:
     database="IBDdatabase.sqlite"
+#threshold for output
+MinOccurrences=13
 #I could simplify this by updating the "tablequery" table with the stock data, alternately I could do a join to cut down on redundant data.
 inputList=[["IBD50","IBD50StockData"],["BC20","BC20StockData"],["IBD8585","IBD8585StockData"],["Top200Composite","Top200CompositeStockData"]]
 for item in inputList:
     connection=sqlite3.connect(database)
     datelist=query_for_dates(item)
     stocklist=query_for_stocks(item)
-    stocklist2=query_for_stocks_min_occurrence(item,stocklist,13)
+    stocklist2=query_for_stocks_min_occurrence(item,stocklist,MinOccurrences)
 #    print(stocklist2)
     ranklist=query_for_ibd_rank(item,datelist,stocklist2)
 #    print(datelist,stocklist,stocklist2)

@@ -9,12 +9,25 @@
 # perform math calc using bc
 # printout comparison line by line
 
+function instructions()
+{
+echo "
+This script is meant to interact with a MySQL database.
+It grabs the distince tickers from the IBD100 table then
+goes and grabs the quote data from Yahoo and 
+determines if the most recent closing price is 
+greater than or less than the avg closing price
+found in the database for that ticker."
+}
+
 if [ $# -lt 0 ]
 then
-    echo "scriptname.sh directions;"
+    echo "$0 directions;"
+    instructions
 else
     mysql --skip-column-names -s --database StockMarketData -e "select distinct symbol from IBD100 order by symbol asc" -pceausescu > /tmp/IBD100stocks.txt
-    stocklist=$(cat /tmp/IBD100stocks.txt | tr "\n" "+" )
+    echo " I believe the following call will fail for more than 200 stocks"
+   stocklist=$(cat /tmp/IBD100stocks.txt | tr "\n" "+" )
     wget "http://download.finance.yahoo.com/d/quotes.csv?s=${stocklist}&f=sl1&e=csv" -O /tmp/quotes.csv -nv
 
     cat /tmp/quotes.csv

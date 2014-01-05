@@ -4,6 +4,7 @@
 
 """
 This program loops over a database table and obtains stock data for all date and stock ticker combinations
+This program does work, but I believe a bulk download and insertion is faster.
 """
 
 from StockSQLiteHelpers import getHistoricalData,insertStockData
