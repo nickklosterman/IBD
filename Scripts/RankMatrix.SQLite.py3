@@ -5,6 +5,9 @@
 
 """
 This program outputs a csv matrix of data
+Various data is output;
+a matrix of dates x ranks, each cell holds the ticker for that date & rank
+a matrix of dates x stocks, each cell holds the stock price on taht date & stock
 """
 
 from StockSQLiteHelpers import getHistoricalOpenPrice

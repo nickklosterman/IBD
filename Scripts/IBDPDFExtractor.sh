@@ -1,5 +1,25 @@
 #!/bin/bash
-
+function instructions()
+{
+echo "
+This script is to be used to extract the IBD list data from
+table data copied directly from the IBD pdfs into a text file.
+It is meant to be run in a directory of text files whose names
+match that of the IBD PDF file with a .txt extension tacked on.
+This allows the script to extract the date.
+Output is the determined list the data came from followed by 
+the date followed by a list of stocks in appropriate 
+order on the following line.
+The IBD50 and BC20 lists must be copied from the blocks with 
+their charts. The ranks can be muddled as the script will
+reorder for proper ingestion by DualPrepForDatabase.py3
+The Weekly Review 85 85 list must be copied from the sidebar
+and the order should be kept. All stocks are not provided with
+block and chart in the main page so we can't use that.
+The Top200Composite stocks should be copied with all column 
+data.
+"
+}
 # #These are extractors for pdf IBD
 # #you need to copy the relevant list out of the pdf and stick it in a file. 
 # #for IBD50 and BC20 you need to copy the large blocks with the graph as the ticker isn't included in the small sidebar list
@@ -54,7 +74,7 @@ echo "$year-$month-$day"
 
 #test
 #get-date-from-filename "IBD20131523"
-
+instructions
 for item in IBD201*.pdf.txt
 #until [ -z "$1" ]
 do    	

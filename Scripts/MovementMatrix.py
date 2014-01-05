@@ -1,5 +1,13 @@
-class MovementMatrix:
+'''
+This script uses a local MySQL database.
+Various data is output;
+a matrix of dates x ranks, each cell holds the ticker for that date & rank
+a matrix of dates x stocks, each cell holds the stock price on taht date & stock
+a list of stocks on Week X that weren't on Week Y.
+I believe that most of this can be done internally to the database.
+'''
 
+class MovementMatrix:
     def __init__(self,database,table,limit_number,offset_number):
         self.database=database
         self.table=table
@@ -171,7 +179,6 @@ class MovementMatrix:
             #if not at end of list then output ,
                 print(','), #OR add to string and then remove last character when done with that string of dates
             print("") #output EOL
-
 
     def StockTickerMatrix(self):
         self.PrintDates() #print header of dates

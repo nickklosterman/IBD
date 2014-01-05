@@ -4,7 +4,11 @@ import sqlite3
 
 """
 This program loops through the provided database tables and outputs (almost) valid JSON for ingestion by my StockTrackerJSON.py3 script
-the final , in the list will need to be removed to make the output valid JSON.
+the final , in the list will need to be removed to make the output valid JSON. I need to rewrite the logic so that the output is valid json.
+
+The program allows you to specify an investment amount for each stock in the list, and the maximum number of whole shares
+that can be purchased is bought with that amount. 
+You can specify that any leftover money is then added to the next purchase "bucket."
 """
 
 #sqlite3 IBDdatabase.sqlite "select distinct(StockTicker) from IBD50 order by StockTicker ASC"

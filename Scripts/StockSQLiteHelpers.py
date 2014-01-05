@@ -1,4 +1,12 @@
+'''
+contains helper functions:
+queryDatabaseForOpenPrice : get the Open price for a stock on a particular date
+queryDatabaseForCount :  get the count of data for a stock on a particular date (used by getHistoricalData to see if the database contains any data for that stock/date pair)
+getHistoricalData :   
+insertStockData : inserts ticker,rank,date and historical stock data into a table.
+getHistoricalOpenPrice : first checks for the data in the database, otherwise performs a call to the yahoo api
 
+'''
 from YahooStockQuotes import getHistoricalStockData  
 
 import sqlite3
@@ -38,7 +46,8 @@ def queryDatabaseForCount(symbol,date):
 
 def getHistoricalData(symbol,date):
     if (queryDatabaseForCount(symbol,date)>0):
-        return 0
+        #we should get the data from Yahoo and return that
+        return 0 
     else:
         return getHistoricalStockData(symbol,date)
 
@@ -49,6 +58,7 @@ def getHistoricalOpenPrice(symbol,date):
     else:
         data=getHistoricalStockData(symbol,date)
         if data!="None":
+            #we should also save the data in the database 
             return data[1][4]
         else:
             return 0

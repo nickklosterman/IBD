@@ -2,10 +2,11 @@
 # -*- python -*- 
 import sqlite3
 
-
 """
 This program goes through the individual lists and 
-
+outputs JSON suitable for ingestion by PythonStockTracker 
+where a stock is "purchased" when it first occurs on a 
+list; possibly could be done inside database
 """
 
 
@@ -59,7 +60,6 @@ class  StockFirstAppearance:
             else:
                 print('')
             counter+=1
-
         print(']}')
 
     def queryGetStockFirstAppearanceList(self):
@@ -82,14 +82,12 @@ class  StockFirstAppearance:
 test=0
 
 if test:
-    
     database="IBDTestDatabase.sqlite"
     inputList=[ "IBD50"] #,"BC20","IBD8585","Top200Composite"]
     inputList=[ "BC20"]
 else:
     database="IBDdatabase.sqlite"
     inputList=[ "IBD50","BC20","IBD8585","Top200Composite"]
-
 counter=1
 stopCounter=len(inputList)
 print('{"portfolio":[')

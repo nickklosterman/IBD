@@ -1,5 +1,9 @@
 #!/usr/bin/python
-# this script is meant to recover the tickers from a file which contains the raw text copied form the eIBD pdf and placed in a text file. 
+'''
+this script is meant to recover the tickers from a file which contains the raw text copied form the eIBD pdf and placed in a text file. 
+it currently uses a hardcoded input file and date for the output json.
+json-like output is produced which is appropriate to be used later on for PythonStockTracker
+'''
 inputFile="top200composite20100114.txt"
 fileHandle=open(inputFile,'r')
 #fileHandle.write(output)

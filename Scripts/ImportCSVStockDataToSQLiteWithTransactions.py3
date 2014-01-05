@@ -1,6 +1,10 @@
 #!/usr/bin/env/python                                                                               
 # -*- python -*-
-
+'''
+This script attempts to perform bulk import of csv data
+into a SQLite database using transactions for improved 
+performance.
+'''
 #http://stackoverflow.com/questions/5942402/python-csv-to-sqlite
 
 import csv, sqlite3, time, glob, getopt, sys,os

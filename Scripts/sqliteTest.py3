@@ -1,4 +1,8 @@
-
+# -*- python -*- 
+'''
+A test script to demonstrate the .executemany command
+on a dataset in sqlite3.
+'''
 import sqlite3
 
 class IterChars:
