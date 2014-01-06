@@ -1,5 +1,5 @@
 '''
-contains helper functions:
+contains helper functions: relies on YahooStockQuotes.py
 queryDatabaseForOpenPrice : get the Open price for a stock on a particular date
 queryDatabaseForCount :  get the count of data for a stock on a particular date (used by getHistoricalData to see if the database contains any data for that stock/date pair)
 getHistoricalData :   

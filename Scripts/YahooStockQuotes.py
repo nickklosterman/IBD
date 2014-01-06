@@ -1,6 +1,12 @@
 #!/usr/bin/env/pythong
 # -*- pythong -*- 
 '''
+contains helper functions
+getHistoricalStockData - gets historical stock data for a given symbol,date pair from Yahoo
+'''
+
+
+'''
 [DONE] TODO : a driver script 
 python:
 from YahooStockQuotes import getHistoricalStockData 
