@@ -9,13 +9,13 @@ ListTimelineCreator.py3
 
 CreateTimeSeriesArrayFromSQLiteDB.py3
 
-
+??Deprecated in favor of SqliteGetAllUniqueTickersInIBDdatabaseDownloadHistoricaldata.sh
 GetHistoricalPrices.py3
 GetHistoricalPricesDual.py
 GetHistoricalPricesDual.py3
 
 #Loops over a table, looping over all dates and tickers getting stock data, not just the getting stockdata for days that the stock was ranked.
-GetStockDataForAllDates.py3
+GetStockDataForAllDates.py3  <-- I believe I now know how to do this inside sqlite w a query
 	#script to loop over all 4 tables running the above script
 	GetAllDateTickerStockData.sh
 
@@ -29,7 +29,7 @@ MovementMatrix.py3
 
 PortfolioJSONExporter.py3
 
-#outputs csv arrays of data
+#outputs csv arrays of data  <--useful for gnuplot
 RankMatrix.MySQL.py3
 #prints to a file
 RankMatrix.SQLite.WriteFile.py3
@@ -43,3 +43,172 @@ WriteStockTickerChanges.py
 Libraries:
 YahooStockQuotes.py
 StockSQLiteHelpers.py
+
+
+---
+AnalyzeContinuousRunPerformance.py3
+
+BadTickerDataLocator.sh - This script takes a list of bad tickers as a file,
+it then loops over each ticker and queries the IBDdatabase.sqlite
+file locating the records location in the database.
+The list of bad tickers is obtained by running the 
+VerifyTickers.sh script.
+
+BulkDownloadStockData.sh - get Yahoo Historical data with tickers specified in a file or on command line
+BulkTickerChangeSed.sh - change tickers from ticker change pairs provided in a file
+BuyAtFirstAppearancePerformanceAnalyzer.py3 - outputs JSON suitable for ingestion by PythonStockTracker where a stock is "purchased" when it first occurs on a list; possibly could be done inside database
+
+convertSQLiteDumpToMySQLDump.py - does what it says
+
+CreateMasterDateRankStockDataAnalysisDatabases.sh - Performs all necessary operations to create a resultant table that holds date,rank,historical stock data in one table ; requires a database
+
+CreateTimeSeriesArrayFromSQLiteDB.py3 - this is effectively superseded by the results of CreateMasterDateRankStockDataAnalysisDatabases.sh; regardless, it loops through the table building a stock,date,rank output with a sentinel value if no rank is present for a particular day.
+
+DaysOnListAnalyzer.py3 - This script determines the avg number of days on each of the four
+ IBD lists that I look at. If the stock is still on the list but hasn't exited the list, 
+it isn't taken into acct. ListTimeLineCreator must have been run first.
+
+DualPrepForDatabase.py3 - This program is used to clear out and then insert the data tables 
+for the collected IBD lists. The data is placed into the IBDdatabase.sqlite file.
+
+examineQueriesVsWRitingout.txt 
+extractTickersFromIBDTop200FromPDF.py - this script is meant to recover the tickers from a file 
+which contains the raw text copied form the eIBD pdf and placed in a text file.  it currently 
+uses a hardcoded input file and date for the output json. json-like output is produced which 
+is appropriate to be used later on for PythonStockTracker
+
+
+GetAllDateTickerStockData.sh - Driver for GetStockDataForAllDates.py3; all data placed into "StockData" table
+
+GetHistoricalPricesDual.py
+GetHistoricalPricesDual.py3
+
+GetHistoricalPricesDual.py3.backup
+GetHistoricalPricesDual.py3.bak
+GetHistoricalPrices.py3
+
+GetStockDataForAllDates.py3 - This program loops over a database table and
+ obtains stock data for all date and stock ticker combinations.
+ This program does work, but I believe a bulk download and insertion is faster.
+
+GetStockQuotesv2.sh - This program takes either a) a file with a list of stock
+ tickers, one per line or b) tickers space delimited on the command line for retrieval of quote data.
+
+GetStockTickerChanges.sh - This script grabs the stock ticker change 
+list from nasdaq.com. Results placed in /Data/ChangeTickerList.txt
+
+IBD100Stats.sh - This script is meant to interact with a MySQL database.
+It grabs the distince tickers from the IBD100 table then
+goes and grabs the quote data from Yahoo and 
+determines if the most recent closing price is 
+greater than or less than the avg closing price
+found in the database for that ticker."
+
+IBDdatabase.sqlite
+IBDPDFExtractor.sh - This script is to be used to extract the IBD list data from
+table data copied directly from the IBD pdfs into a text file.
+It is meant to be run in a directory of text files whose names
+match that of the IBD PDF file with a .txt extension tacked on.
+This allows the script to extract the date.
+Output is the determined list the data came from followed by 
+the date followed by a list of stocks in appropriate 
+order on the following line.
+The IBD50 and BC20 lists must be copied from the blocks with 
+their charts. The ranks can be muddled as the script will
+reorder for proper ingestion by DualPrepForDatabase.py3
+The Weekly Review 85 85 list must be copied from the sidebar
+and the order should be kept. All stocks are not provided with
+block and chart in the main page so we can't use that.
+The Top200Composite stocks should be copied with all column 
+data.
+
+
+ImportCSVStockDataToSQLite.py3
+ImportCSVStockDataToSQLiteWithTransactions.py3
+
+Instructions.txt
+ListTimelineCreator.py3 - This program goes through the individual lists and creates a continuous run table.
+This table holds the begin date and end date of when a stock was on a list.
+Each run is listed separately in the database.
+
+PortfolioJSONExporter.py3 - This program loops through the provided database tables and outputs (almost) valid JSON for ingestion by my StockTrackerJSON.py3 script
+the final , in the list will need to be removed to make the output valid JSON. I need to rewrite the logic so that the output is valid json.
+The program allows you to specify an investment amount for each stock in the list, and the maximum number of whole shares
+that can be purchased is bought with that amount. 
+You can specify that any leftover money is then added to the next purchase "bucket."
+
+RankMatrix.MySQL.py3
+RankMatrix.py
+RankMatrix.py3
+RankMatrix.py3.bak -- need to sort through these and git rm the dupes
+
+RankMatrix.SQLite.py3 - This program outputs a csv matrix of data
+Various data is output;
+a matrix of dates x ranks, each cell holds the ticker for that date & rank
+a matrix of dates x stocks, each cell holds the stock price on that date & stock
+
+RankMatrix.SQLite.WriteFile.py3 - This program outputs a csv matrix of data
+Various data is output;
+a matrix of dates x ranks, each cell holds the ticker for that date & rank
+a matrix of dates x stocks, each cell holds the stock price on that date & stock
+This version "prints" the output to a file. It is using the python paradigm to print
+the data not to stdout, but to a file.
+
+
+RefreshFromSourceFiles.sh
+RefreshStockDataForTickersOnList.sh - This program pulls all the tickers from the IBD50,BC20,IBD8585, and Top200Composite
+tables and downloads the latest historical data from yahoo and places the data in 
+a database with each ticker having its own table. The table name is the ticker.
+
+Resources.txt
+SqliteGetAllUniqueTickersInIBDdatabaseDownloadHistoricaldata.sh --- this is an almost identical version of RefreshStockDataForTickersOnList, I need to make sure whichever is kept has all the desired functionality
+SqliteGetAllUniqueTickersInIBDdatabase.sh - This script outputs a list of the unique sorted stock tickers 
+from IBD50,BC20,IBD8585 and Top200Composite
+
+sqliteTest.py3 - A test script to demonstrate the .executemany command
+on a dataset in sqlite3.
+
+StockSQLiteHelpers.py - contains helper functions: relies on YahooStockQuotes.py
+queryDatabaseForOpenPrice : get the Open price for a stock on a particular date
+queryDatabaseForCount :  get the count of data for a stock on a particular date (used by getHistoricalData to see if the database contains any data for that stock/date pair)
+getHistoricalData :   
+insertStockData : inserts ticker,rank,date and historical stock data into a table.
+getHistoricalOpenPrice : first checks for the data in the database, otherwise performs a call to the yahoo api
+
+
+touchAndOpenIBDTxtFiles.sh - This script creates a .txt file for 
+each IBDYYYYMMDD.pdf file creating
+a IBDYYYYMMDD.pdf.txt file and then
+opening all IBD.txt files in emacs
+
+VerifyTickers.sh -  "This program verifies stock tickers in bulk.
+It first obtains a list of all unique tickers 
+in our database. It then attempts to get the
+most recent stock data from Yahoo for that
+ticker. If N/A is returned then that ticker
+is marked as a dead ticker.
+I believe that if this script is run on a day
+when the market is closed all tickers will 
+show as invalid.
+
+This script takes the stock ticker change list generated from GetStockTickerChanges.sh and puts them into a sqlite3 database. This checks to see if a particular symbol is all ready entered to prevent multiples."
+WriteStockTickerChanges.py
+WriteStockTickerChanges.py3
+
+YahooStockQuotes.py - contains helper functions
+getHistoricalStockData - gets historical stock data for a given symbol,date pair from Yahoo
+
+
+Deprecated:
+BC20PrepForDatabase.py
+GetHistoricalPrices2.py
+GetHistoricalPrices.py
+GetStockQuotes.sh
+IBD50PrepForDatabase.py
+IBD50PrepForDatabase.py.old
+IBD50PrepForDatabase.sh.old
+
+__pycache__:
+StockSQLiteHelpers.cpython-33.pyc
+YahooStockQuotes.cpython-33.pyc
+
