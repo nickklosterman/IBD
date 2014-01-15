@@ -43,8 +43,6 @@ set y2label '4*x' tc lt 2
 plot 2*x linetype 1, 4*x linetype 2 axes x1y2
 http://stackoverflow.com/questions/2827650/plotting-two-axes-in-gnuplot
 
-
-
 Fri Oct 11 21:59:05 EDT 2013
 Grab the SP500 data once and make all other calls use that.
 
@@ -57,3 +55,9 @@ Add the SP500 and other indexes to the ticker list to check performance, may nee
 
 Thu Oct 24 11:53:52 EDT 2013
 [DONE]reverse engineer the static stock graphs on pages like : http://finance.yahoo.com/q/ta?s=XONE+Basic+Tech.+Analysis hmmm I all ready have this in my GetDailyStockChart*.sh
+
+Sat Jan  4 17:01:34 EST 2014
+Remove dependence on hard coded IBDdatabase.sqlite
+Create a script that uses the historic data in the database and creates json for PythonStockTracker for each list entry
+Create a script that performs the movement matrix on sqlite data
+Figure out the correct joins to do to easily determine which stocks went on in Week X and which were dropped when compared to Week X-1

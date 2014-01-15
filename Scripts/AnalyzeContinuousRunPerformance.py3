@@ -6,6 +6,8 @@ from datetime import date
 """
 relies on database having a StockData table
 and a ContinuousRun table
+ListTimeLineCreator.py3 must have been run on the database before this script is run
+Otherwise, there is no ContinuousRun Data to compare against.
 """
 
 
@@ -94,7 +96,6 @@ def usage():
 
 database="IBDdatabase.sqlite"
 database="IBDTestDatabase.sqlite"
-
 
 inputList=[ "IBD50"] #,"BC20","IBD8585","Top200Composite"]
 
