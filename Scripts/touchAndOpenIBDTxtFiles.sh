@@ -11,4 +11,5 @@ for item in IBD201*.pdf
 do 
     touch $item.txt
 done
+acroread IBD201*.pdf  &
 emacs IBD201*.txt
