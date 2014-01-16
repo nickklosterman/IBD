@@ -80,6 +80,7 @@ echo "
 this does all the temp work in one query so that only the desired resultant database is left"
     databasefilename="${1}"
     databaselist=('BC20') # 'IBD50' '8585' 'Top200Composite')
+    databaselist=('BC20' 'IBD50' '8585' 'Top200Composite')
     for database in $databaselist
     do 
 	sqlite3 $databasefilename "DROP TABLE IF EXISTS ${database}_DatesList;
@@ -92,6 +93,7 @@ CREATE TABLE IF NOT EXISTS ${database}_DatesList AS SELECT DISTINCT(date) FROM $
 	    CREATE TEMPORARY TABLE ${database}_${ticker}Details AS SELECT rank,date FROM ${database} WHERE stockticker LIKE '${ticker}';
 	    DROP TABLE IF EXISTS ${database}_CombinedDates${ticker}Details;
 	    CREATE TEMPORARY  TABLE ${database}_CombinedDates${ticker}Details AS SELECT * FROM ${database}_DatesList LEFT OUTER JOIN ${database}_${ticker}Details ON ${database}_DatesList.date = ${database}_${ticker}Details.date;
+            DROP TABLE IF EXISTS ${database}_${ticker}_Master;
 	    CREATE TABLE ${database}_${ticker}_Master AS SELECT * FROM ${ticker} INNER JOIN ${database}_CombinedDates${ticker}Details ON ${ticker}.date = ${database}_CombinedDates${ticker}Details.date;  " 
 	done
     done
