@@ -2,6 +2,14 @@
 #calculate a volatility score of the index , ie how much the stocks move on and off. but to that volatility what is the likelihood it'll come back on and still be doing ok. just bc leaves list doesn't mean it isn't doing well. 
 
 #analysis of ipo offer price vs. open price on first day of trading. Analyze return possibilities/probabilities for mortals. 
+
+
+2014-02-04
+FB ALXN ACT WYNN VRX BIIB CMG ILMN GOOG MU NFLX REGN GILD ROK CRM LMT ETE MCK TMO CMCSA 
+
+#2014-01-28
+#FB PCLN ALXN VRX BIIB CTSH ILMN VMW MCK QCOM AMTD NFLX GILD MU MGA SCHW UAL LMT NOC ROK 
+
 2014-01-28
 fb pcln alxn vrx biib ctsh ilmn vmw mck qcom amtd nflx gild mu mga schw ual lmt noc rok
 #no BC20 due to MLK day
