@@ -12,7 +12,7 @@ Yahoo."
 function DownloadYahooDataFile() 
 {
     symbol=$1
-    wget  "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" -O ${symbol}.csv
+    wget  "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" -O ${symbol}.csv &
 }
 
 
