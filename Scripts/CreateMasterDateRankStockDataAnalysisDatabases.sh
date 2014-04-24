@@ -79,10 +79,14 @@ then
 echo "
 this does all the temp work in one query so that only the desired resultant database is left"
     databasefilename="${1}"
-    databaselist=('BC20') # 'IBD50' '8585' 'Top200Composite')
-    databaselist=('BC20' 'IBD50' '8585' 'Top200Composite')
-    for database in $databaselist
-    do 
+#    databaselist=('BC20') # 'IBD50' '8585' 'Top200Composite') #for testing
+#    databaselist=('BC20' 'IBD50' '8585' 'Top200Composite') #for production
+    databaseArray=('BC20' 'IBD50' '8585' 'Top200Composite') #for production
+#    for database in $databaselist
+    for((i=0;i<${#databaseArray[@]};i++))
+    do
+        database=${databaseArray[${i}]}
+    	echo "Working on ${database}"
 	sqlite3 $databasefilename "DROP TABLE IF EXISTS ${database}_DatesList;
 CREATE TABLE IF NOT EXISTS ${database}_DatesList AS SELECT DISTINCT(date) FROM $database;"
 	tickerlist=$(sqlite3 $databasefilename  "SELECT distinct(stockticker) FROM ${database}")
