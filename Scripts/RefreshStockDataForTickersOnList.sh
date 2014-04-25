@@ -12,7 +12,7 @@ else
     inputDatabase="${1}"
     outputDatabase="${2}"
     echo "Pulling all unique tickers from IBD50,BC20,IBD8585, and Top200Composite"
-    #pull all over the unique tickers from each table
+    #pull all of the unique tickers from each table
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from IBD50 ORDER BY stockticker asc;' > /tmp/tickers.txt
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from BC20 ORDER BY stockticker asc;' >> /tmp/tickers.txt
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from IBD8585 ORDER BY stockticker asc;' >> /tmp/tickers.txt
