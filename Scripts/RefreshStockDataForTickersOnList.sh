@@ -32,10 +32,15 @@ else
     do
 	#echo "\"http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv\" -O ${symbol}.csv" >> /tmp/tickerurlfile.txt
 	echo "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" >> /tmp/tickerurlfile.txt
+#	wget "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" & #this hits yahoo too fast and they block you
     done < /tmp/uniquetickers.txt
 
     echo "Downloading data files from Yahoo"
     cat /tmp/tickerurlfile.txt | parallel "wget {}" #this really doesn't seem to do it in parallel. still quite slow.
+    # while read url
+    # do 
+    # 	wget url &   #really should just do this when I read the symbols. 
+    # done < /tmp/tickerurlfile.txt
 
     echo "Removing files of size 0"
     # Remove files of length/size 0; this will complain if no files are found. How to trap that occurrence?
