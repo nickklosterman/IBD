@@ -32,10 +32,18 @@ else
     do
 	#echo "\"http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv\" -O ${symbol}.csv" >> /tmp/tickerurlfile.txt
 	echo "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" >> /tmp/tickerurlfile.txt
+#	wget "http://ichart.yahoo.com/table.csv?s=${symbol}&ignore=.csv" & #this hits yahoo too fast and they block you
     done < /tmp/uniquetickers.txt
 
     echo "Downloading data files from Yahoo"
+
+
 #    cat /tmp/tickerurlfile.txt | parallel "wget {}" #this really doesn't seem to do it in parallel. still quite slow.
+    # while read url
+    # do 
+    # 	wget url &   #really should just do this when I read the symbols. 
+    # done < /tmp/tickerurlfile.txt
+
 The_Following_Code_isnt_Tested
     while read LINE
     do
