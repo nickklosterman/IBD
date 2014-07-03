@@ -35,7 +35,12 @@ else
     done < /tmp/uniquetickers.txt
 
     echo "Downloading data files from Yahoo"
-    cat /tmp/tickerurlfile.txt | parallel "wget {}" #this really doesn't seem to do it in parallel. still quite slow.
+#    cat /tmp/tickerurlfile.txt | parallel "wget {}" #this really doesn't seem to do it in parallel. still quite slow.
+The_Following_Code_isnt_Tested
+    while read LINE
+    do
+	wget -nc -nv $LINE &  #background the process to allow multiple downloads at once.
+    done < /tmp/tickerurlfile.txt
 
     echo "Removing files of size 0"
     # Remove files of length/size 0; this will complain if no files are found. How to trap that occurrence?
