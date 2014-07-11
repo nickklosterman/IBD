@@ -17,6 +17,12 @@ else
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from BC20 ORDER BY stockticker asc;' >> /tmp/tickers.txt
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from IBD8585 ORDER BY stockticker asc;' >> /tmp/tickers.txt
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from Top200Composite ORDER BY stockticker asc;' >> /tmp/tickers.txt
+    #add the nasdaq ticker
+    "^IXIC" >> /tmp/tickers.txt
+    #add the sp500 ticker
+    "^GSPC" >> /tmp/tickers.txt
+#    "^DJI" >> /tmp/tickers.txt
+
 
     echo "Sorting and obtaining unique tickers"
     #sort the tickers
@@ -44,7 +50,7 @@ else
     # 	wget url &   #really should just do this when I read the symbols. 
     # done < /tmp/tickerurlfile.txt
 
-The_Following_Code_isnt_Tested
+    echo "The_Following_Code_isnt_Tested" #well not fully tested
     while read LINE
     do
 	wget -nc -nv $LINE &  #background the process to allow multiple downloads at once.
@@ -119,6 +125,7 @@ The_Following_Code_isnt_Tested
 
 
     #to determine how risky an investment would've been, do a query to find the min and max of each ticker and get the dates. see how close the dates are as well.
-
+    #You'd need to apply some type of window, otherwise over time the min will typically be in the past and quite old
+    #also check to see if it is on a downward or upward trend
 
 fi
