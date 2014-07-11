@@ -11,6 +11,9 @@ then
 else
     inputDatabase="${1}"
     outputDatabase="${2}"
+#We need to make a copy of the inputDatabase to 'seed' teh outputDatabase or the outputDatabase won't have the BC20,IBD50, etc lists in them
+    cp $inputDatabase $outputDatabase
+
     echo "Pulling all unique tickers from IBD50,BC20,IBD8585, and Top200Composite"
     #pull all of the unique tickers from each table
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from IBD50 ORDER BY stockticker asc;' > /tmp/tickers.txt
@@ -18,9 +21,9 @@ else
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from IBD8585 ORDER BY stockticker asc;' >> /tmp/tickers.txt
     sqlite3 "${inputDatabase}" 'SELECT distinct(stockticker) from Top200Composite ORDER BY stockticker asc;' >> /tmp/tickers.txt
     #add the nasdaq ticker
-    "^IXIC" >> /tmp/tickers.txt
+    echo "^IXIC" >> /tmp/tickers.txt
     #add the sp500 ticker
-    "^GSPC" >> /tmp/tickers.txt
+    echo "^GSPC" >> /tmp/tickers.txt
 #    "^DJI" >> /tmp/tickers.txt
 
 
@@ -53,8 +56,11 @@ else
     echo "The_Following_Code_isnt_Tested" #well not fully tested
     while read LINE
     do
+#you can't background this! You need to wait for the files to be downloaded before processing the files >> Solved by using 'wait'
 	wget -nc -nv $LINE &  #background the process to allow multiple downloads at once.
     done < /tmp/tickerurlfile.txt
+
+    wait #this will wait for all backgrounded processes to complete before executing further code http://stackoverflow.com/questions/14254118/waiting-for-background-processes-to-finish-before-exiting-script
 
     echo "Removing files of size 0"
     # Remove files of length/size 0; this will complain if no files are found. How to trap that occurrence?
@@ -67,9 +73,12 @@ else
 
     #echo "Performing column header correction, renaming files to ticker symbol and importing data into ${database}."
 
+    echo "Loop over .csv files"
     #Perform rename and column header rename
     for filename in table*.csv 
     do 
+
+echo "$filename"
 	#REMOVED: this is not used since the .import will keep the first line if the schema for the table has been defined, therefore I need to remove the first line
 	#change the column name "Adj Close" to "Adj_Close" for easier access
 	#sed "1 s/Adj Close/Adj_Close/" -i "${filename}"
@@ -78,8 +87,9 @@ else
 	tail -n +2 "${filename}" > "${filename}.new" ; mv "${filename}.new" "${filename}" 
 	#sed -i -e "1d" "${filename}" #sed is supposed to be slower than tail 
 
-	newFilename=`echo $filename | sed 's/table.csv?s=//;s/&ignore=//'`
-	ticker=`echo $filename | sed 's/table.csv?s=//;s/&ignore=.csv//'`
+	newFilename=`echo $filename | sed 's/table.csv?s=//;s/&ignore=//;s/%5E/_/'`
+	ticker=`echo $filename | sed 's/table.csv?s=//;s/&ignore=.csv//;s/%5E/_/'`
+echo "$newFilename $ticker"
 	mv "${filename}" $newFilename
 
 	#drop database, clear out old data. 
@@ -103,7 +113,8 @@ else
 	#sqlite3 "${database}" ".mode csv; .separator ','; .import ${newFilename} ${ticker}" #commands must be all issued at once since we aren't in a "sesscion" inside sqlite3. otherwise commands are reset since start a new session
 
 	#sqlite3 "${ouptutDatabase}" "CREATE UNIQUE INDEX 'index_date' on ${ticker} " #('index_date' ASC)
-	echo "CREATE UNIQUE INDEX 'index_date' on ${ticker} (Date);" >> /tmp/sqlitecommand.txt #('index_date' ASC)
+	#needed the "IF NOT EXISTS" otherwise it would complain that there was that index already for all but the first call; that doesn't make sense to me as I thought the indices were per table 
+	echo "CREATE UNIQUE INDEX IF NOT EXISTS 'index_date' on ${ticker} (Date);" >> /tmp/sqlitecommand.txt #('index_date' ASC)
     done
 
     #execute our queries
