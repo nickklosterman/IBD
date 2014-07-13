@@ -57,7 +57,9 @@ else
     while read LINE
     do
 #you can't background this! You need to wait for the files to be downloaded before processing the files >> Solved by using 'wait'
-	wget -nc -nv $LINE &  #background the process to allow multiple downloads at once.
+#	wget -nc -nv $LINE &  #background the process to allow multiple downloads at once.  # this often fails as we end up getting : failed: Name or service not known. ; wget: unable to resolve host address ‘ichart.yahoo.com’
+	wget -nc -nv $LINE  #
+
     done < /tmp/tickerurlfile.txt
 
     wait #this will wait for all backgrounded processes to complete before executing further code http://stackoverflow.com/questions/14254118/waiting-for-background-processes-to-finish-before-exiting-script
