@@ -80,9 +80,7 @@ echo "
 this does all the temp work in one query so that only the desired resultant database is left"
     databasefilename="${1}"
 #    databaselist=('BC20') # 'IBD50' '8585' 'Top200Composite') #for testing
-#    databaselist=('BC20' 'IBD50' '8585' 'Top200Composite') #for production
     databaseArray=('BC20' 'IBD50' '8585' 'Top200Composite') #for production
-#    for database in $databaselist
     for((i=0;i<${#databaseArray[@]};i++))
     do
         database=${databaseArray[${i}]}
