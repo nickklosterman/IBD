@@ -10,5 +10,7 @@ echo "-Begin BadTickerDataLocator.sh Execution"
 bash Scripts/BadTickerDataLocator.sh BadTickerList.txt > BadTickerListDataLocatorOutput.txt #>-- these files will be local to the calling script so we don't need ../
 echo "output written to BadTickerListDataLocatorOutput.txt"
 echo "-End BadTickerDataLocator.sh Execution"
-
+dateName=$( date +%Y-%m-%d )
+bash Scripts/PrepForStockApp.sh IBDdatabase.sqlite.${dateName}
+bash Scripts/IBDGnuplotter.sh IBDdatabase.sqlite.${dateName} 2013-07-15 2014-07-15
 echo "End MasterScript.sh Execution"

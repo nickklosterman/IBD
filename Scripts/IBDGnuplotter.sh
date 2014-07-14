@@ -1,11 +1,11 @@
 #table="IBD50"
 #ticker="CPRT"
-database="IBDdatabase.sqlite.12072014"
+database=$1 #"IBDdatabase.sqlite.12072014"
 date=`date +%Y-%m-%d`
 
 #these are the limits we will perform our sql query inside; there may be no data returned for these limits. If there is data returned, mindate & maxdate will hold the dates for the first and last datapoint inside the query limits
-querymindate="2013-07-13"
-querymaxdate="2014-12-31"
+querymindate=$2 #"2013-07-13"
+querymaxdate=$3 #2014-12-31"
 
 
 #for mytable in "BC20" #"IBD50" "BC20" "Top200Composite" "IBD8585"
@@ -50,7 +50,7 @@ then
 
 	gnuplot <<EOF
 set ylabel "% Change"
-set logscale y
+#set logscale y
 set yrange [0.8:2.6]
 set ytics nomirror
 

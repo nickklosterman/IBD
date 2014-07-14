@@ -13,6 +13,7 @@ The stock data (prices) are not removed and replaced
 import sqlite3
 import sys #for cmd line arguments
 from datetime import date #for .weekday() function
+import time
 
 def read_file_build_database(table,errortable,myfile):
     """
@@ -78,7 +79,9 @@ if (len(sys.argv) > 2):
     database=sys.argv[1]
     IBD50 = open(sys.argv[2])
 else:
-    database="IBDdatabase.sqlite"  #need to jsut stick this stuff in an array and loop over it all
+    date= (time.strftime("%Y-%m-%d"))
+
+    database="IBDdatabase.sqlite."+date  #need to jsut stick this stuff in an array and loop over it all
  
 
     TableList=[ "IBD50", "BC20","IBD8585","Top200Composite" ]
