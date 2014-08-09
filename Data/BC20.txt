@@ -1,6 +1,10 @@
 #BC20 comes out on Tuesdays when there is a Monday edition otherwise the IBD50 is published on Tuesdays --whereas I have a problem of looking for next day prices for IBD50 since it can occur on a mon or tues, that shouldn't be a problem here.
 #calculate a volatility score of the index , ie how much the stocks move on and off. but to that volatility what is the likelihood it'll come back on and still be doing ok. just bc leaves list doesn't mean it isn't doing well. 
 
+2014-08-05
+fb cmg aapl apc cni nlsn cp ilmn abc luv amt mck tmo lnkd biib stz hca sndk gmcr spg 
+2014-07-29
+fb clr ilmn eog aapl cni cam mu cmg cp unp aet tmo pxd apc abc cxo hal cnq se 
 #shw sherwin williams 
 2014-07-22
 clr eog mu stz gmcr cp aet unp aapl cxo pxd apc vrx mga hal ilmn cni epd trp shw 
