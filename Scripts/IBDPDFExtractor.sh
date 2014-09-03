@@ -44,8 +44,6 @@ data.
 # sed -n -e 's/^\([^<]*\) [1-9][1-9] [ABCDE] .*/\1/p' ibd5020131206.8585.txt | awk '{ print $(NF) }' | tr '\n' ' '
 # #the above is basically cutting off everything after the p/e and accumulation grade. this then gives us a clean est of space delimited fields to use awk on
 
-
-
 inputfilename=${1}
 
 #BC20 and IBD50, could be used for 8585 but not all in the 8585 get boxes
@@ -72,13 +70,17 @@ day=${input:9:2}
 echo "$year-$month-$day"
 }
 
-#test
-#get-date-from-filename "IBD20131523"
-instructions
-for item in IBD201*.pdf.txt
+
+######################
+#####   M A I N  #####
+######################
+
+#instructions
+#echo ${1}
+for item in ${1}IBD201*.pdf.txt
 #until [ -z "$1" ]
 do    	
-    echo "Processing '$item'"
+    #echo "Processing '$item'"
     myfile=$(basename ${item} )
     
     results=$( extract-from-detail-boxes ${item} )  # there has got to be a better way to do this calling an array of function if no results found
@@ -101,10 +103,13 @@ do
     outputType="Top200"
 	fi
     fi
-    echo "${outputType}"
-    get-date-from-filename ${myfile}
-    echo "${results}"
+    # echo "${outputType}"
+    # get-date-from-filename ${myfile}
+    # echo "${results}"
+    #echo "${outputType},$( get-date-from-filename ${myfile} ),${results}"
+    
+    #switch to the output on one line so we can sort easily by type for easier import to the final data files
+    echo "${outputType},$( get-date-from-filename ${myfile} ),${results}"
     shift
 done
-echo "based on the output type we could insert the desired data into the appropriate file instead of simply printing it out. That would save a cut/past step. We could easily just have a test run flag and then a insert flag."
-echo "***85 85 shouldn't come from the boxes, but the sidebar list."
+#echo "based on the output type we could insert the desired data into the appropriate file instead of simply printing it out. That would save a cut/past step. We could easily just have a test run flag and then a insert flag."
