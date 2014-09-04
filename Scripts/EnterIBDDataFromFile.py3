@@ -18,19 +18,19 @@ def read_file(myfile):
             if splitline[0]=="8585":
                 #print("8585")
                 #EightyFiveFilename="../Data/8585.txt2"
-                filename="../Data/8585.txt2"
+                filename="../Data/8585.txt"
             if splitline[0]=="Top200":
                 #print("200")
                 #Top200Filename="../Data/Top200Composite.txt2"
-                filename="../Data/Top200Composite.txt2"
+                filename="../Data/Top200Composite.txt"
             if splitline[0]=="BC20":
                 #print("20")
                 #BC20Filename="../Data/BC20.txt2"
-                filename="../Data/BC20.txt2"
+                filename="../Data/BC20.txt"
             if splitline[0]=="IBD50":
                 #print("50")
                 #IBD50Filename="../Data/IBD50.txt2"
-                filename="../Data/IBD50.txt2"
+                filename="../Data/IBD50.txt"
             print("Writing %s data to %s." % (splitline[0],filename))
             file_prepend_write(filename,splitline)
 
