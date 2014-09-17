@@ -1,3 +1,9 @@
+2014-09-10
+BITA SLXP THRM XRS TRN URI AVGO SWKS FB CAR AKRX JAZZ AMBA ATHM ACT SNCR FL GILD SAVE HAR TMH ODFL CP FFIV UBNT UNP MMP VIPS FLT CBG CELG YY KS STZ ARRS RHI EMES ALXN BIIB APC 
+
+2014-09-08
+BITA SLXP THRM TRN URI XRS AVGO SWKS FB CAR AKRX ACT FL SNCR JAZZ ATHM GILD SLCA HAR UBNT CMG AAP FFIV KS SM FLT CBG STZ CELG VIPS ALXN UNP ARRS MMP YY BIIB APC RHI FANG EMES AMBA 
+
 #FML checking that the date is a Monday doesn't work since it often falls on a tuesday due to holidays.
 #yet I need it to be a Tuesday since otherwise my historical data won't consistently be the next day.
 #I feel that only companies who have had earnings reports should move on these lists. What other information comes out that can effect the list on a weekly basis? I imagine that stock price and mutual fund purch/sales of a particular stock would do it but how do they know how much a fund bough
