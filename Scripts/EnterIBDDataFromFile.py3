@@ -55,9 +55,11 @@ def read_file(myfile):
                     print("IBD50 data length error.")
                     print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
                     #print((splitline[2].strip().split(' '))[19])
-            if okToWriteFlag==True:
+            if okToWriteFlag==True and not testFlag==True:
                 print("Writing %s data to %s." % (splitline[0],filename))
                 file_prepend_write(filename,splitline)
+            if testFlag==True:
+                print("Data ok for %s on %s" % (splitline[0], splitline[1]))
 
 #end def read_file
 
@@ -74,8 +76,9 @@ def file_prepend_write(filename,data):
         f.close
 
 def usage():
-    print("This program reads the data saved off from IBD pdfs and processed by IBDPDFExtractor and writes the data to the appropriate datat file.")
-    sys.exit('Usage: %s inputfilename.ext' % __file__)
+    print("This program reads the data saved off from IBD pdfs and processed by IBDPDFExtractor and writes the data to the appropriate data file.")
+    print("The --test option will not write the results to the files.")
+    sys.exit('Usage: %s inputfilename.ext --inputfile=somefile [--test]' % __file__)
 #    sys.exit('Usage: %s inputfilename.ext' % sys.argv[0])
 
 """
@@ -83,11 +86,36 @@ def usage():
 MAIN
 -----------------------------------------------
 """
-#print(len(sys.argv))
-if (len(sys.argv) == 2):
-    data_file_handler = open(sys.argv[1])
+import getopt
+
+if (len(sys.argv) == 2 or len(sys.argv) == 3):
+    try:
+        options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:t', ['inputfile=',
+                                                                     'test'
+                                                                 ])
+    except getopt.GetoptError as err:
+        print( str(err)) # will print something like "option -a not recognized"                                         
+        usage()                                                                                                  
+        sys.exit(2)
+
+    for opt, arg in options:
+        if opt in ('-i', '--inputfile'):
+            inputfile=arg
+        elif opt in ('-t', '--test'):
+            testFlag=True
+        else:
+            assert False, "unhandled option"
+
+    #print(len(sys.argv))
+    # if (len(sys.argv) == 2):
+    #     data_file_handler = open(inputfile)
+    #     read_file(data_file_handler)
+    #     data_file_handler.close()
+
+    data_file_handler = open(inputfile)
     read_file(data_file_handler)
     data_file_handler.close()
+
 else:
     usage()
 
