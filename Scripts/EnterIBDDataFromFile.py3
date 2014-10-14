@@ -7,7 +7,7 @@
 
 import sys #for cmd line arguments
 
-def read_file(myfile):
+def read_file(myfile,testFlag):
     """
     """
     for line in myfile:
@@ -20,10 +20,11 @@ def read_file(myfile):
             if splitline[0]=="8585":
                 #print("8585")
                 #EightyFiveFilename="../Data/8585.txt2"
-                if len(splitline[2].strip().split(' '))>99:
+                if len(splitline[2].strip().split(' '))>75:
                     okToWriteFlag=True
+                    print("%s 8585 records on %s" % (len(splitline[2].strip().split(' ')),splitline[1]) )
                 else:
-                    print("8585 data length error.")
+                    print("8585 data length error. Less than 75 records")
                     print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
                 filename="../Data/8585.txt"
             if splitline[0]=="Top200":
@@ -32,6 +33,9 @@ def read_file(myfile):
                 if len(splitline[2].strip().split(' '))==200:
                     okToWriteFlag=True
                     #print("Top200 is 200 long")
+                else:
+                    print("Top 200 data length error. Not 200 records")
+                    print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
                 filename="../Data/Top200Composite.txt"
             if splitline[0]=="BC20":
                 #print("20")
@@ -40,8 +44,10 @@ def read_file(myfile):
                     okToWriteFlag=True
                     #print("BC20 is 20 long")
                 else:
-                    print("IBD50 data length error.")
-                    print(len(splitline[2].strip().split(' ')))
+                    print("BC20 data length error.")
+                    print("Only %s records. " % len(splitline[2].strip().split(' ')))
+                    #print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
+                    print("Date:%s,Length:%s" % (splitline[1],len(splitline[2].strip().split(' ')) ))
                     #print((splitline[2].strip().split(' '))[19])
                 filename="../Data/BC20.txt"
             if splitline[0]=="IBD50":
@@ -87,7 +93,7 @@ MAIN
 -----------------------------------------------
 """
 import getopt
-
+testFlag=False
 if (len(sys.argv) == 2 or len(sys.argv) == 3):
     try:
         options, remainder = getopt.gnu_getopt(sys.argv[1:], 'i:t', ['inputfile=',
@@ -113,7 +119,7 @@ if (len(sys.argv) == 2 or len(sys.argv) == 3):
     #     data_file_handler.close()
 
     data_file_handler = open(inputfile)
-    read_file(data_file_handler)
+    read_file(data_file_handler,testFlag)
     data_file_handler.close()
 
 else:
