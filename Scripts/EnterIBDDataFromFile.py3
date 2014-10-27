@@ -20,7 +20,7 @@ def read_file(myfile,testFlag):
             if splitline[0]=="8585":
                 #print("8585")
                 #EightyFiveFilename="../Data/8585.txt2"
-                if len(splitline[2].strip().split(' '))>75:
+                if len(splitline[2].strip().split(' '))>75: #the lowest I've seen is 65 (for wk of Oct 17 2014, but we'll keep 75 as our threshold
                     okToWriteFlag=True
                     print("%s 8585 records on %s" % (len(splitline[2].strip().split(' ')),splitline[1]) )
                 else:
@@ -35,7 +35,8 @@ def read_file(myfile,testFlag):
                     #print("Top200 is 200 long")
                 else:
                     print("Top 200 data length error. Not 200 records")
-                    print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
+                    #print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
+                    print("Date:%s,Length:%s" % (splitline[1],len(splitline[2].strip().split(' ')) ))
                 filename="../Data/Top200Composite.txt"
             if splitline[0]=="BC20":
                 #print("20")
