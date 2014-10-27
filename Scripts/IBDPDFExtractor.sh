@@ -48,6 +48,7 @@ inputfilename=${1}
 
 #BC20 and IBD50, could be used for 8585 but not all in the 8585 get boxes
 extract-from-detail-boxes() {
+    #I believe this works as it will always be 'Group' or 'Grp' to key off of, depending which case it is
     grep Group ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," | tr '\n' ' '
     grep Grp ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," | tr '\n' ' '
 }
@@ -57,7 +58,8 @@ extract-from-top200(){
 }
 
 extract-from-8585(){
-    sed -n -e 's/^\([^<]*\) [1-9][1-9] [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' '
+    sed -n -e 's/^\([^<]*\) [0-9]\{1,3\} [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' ' #fuck I had [1-9][1-9] and this was excluding anything with a zero in the P/E column. And anything w single digit P/E
+    #sed -n -e 's/^\([^<]*\) [1-9][0-9][0-9] [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' '
 }
 
 
@@ -97,10 +99,11 @@ do
     then 
 	results=$( extract-from-8585 ${item} )
 	outputType="8585"
-	if [[ ${#results} -lt 300 ]]
+	#if [[ ${#results} -lt 300 ]]
+	if [[ ${#results} -lt 250 ]]
 	then 
 	    results=$( extract-from-top200 ${item} )
-    outputType="Top200"
+	    outputType="Top200"
 	fi
     fi
     # echo "${outputType}"
