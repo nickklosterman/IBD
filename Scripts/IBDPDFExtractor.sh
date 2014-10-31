@@ -58,6 +58,8 @@ extract-from-top200(){
 }
 
 extract-from-8585(){
+    #from IBD20141017.pdf.txt : "Keurig Green MountGMCR 35 C 96 98 –8 137.98 –2.18 Profunds Ultra Nas A+ 0.5 –"
+    #I need to somehow extract or invite manual intervention when there company name intrudes into the ticker and they are both matched
     sed -n -e 's/^\([^<]*\) [0-9]\{1,3\} [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' ' #fuck I had [1-9][1-9] and this was excluding anything with a zero in the P/E column. And anything w single digit P/E
     #sed -n -e 's/^\([^<]*\) [1-9][0-9][0-9] [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' '
 }
