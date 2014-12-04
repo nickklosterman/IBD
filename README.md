@@ -38,7 +38,7 @@ Run `Scripts/touchAndOpenIBDTxtFiles.sh`. This will create and open a file named
 Open the pdf and extract the data and place it into the `<pdffilename>.txt`. You must manually copy out the relevant chunks and paste them into the appropriate `<pdffilename>.txt` file. For Top 200, copy out the entire table. For 85-85/Week In Review, copy the side table and not the box data. For IBD50 & BC20 copy the box data. 
 
 Run `ExtractionAndInsertionRunner.sh /path/to/directory test` from the `/Scripts/` directory, pointing to the directory where the `<pdffilename>.txt` files are to test the data before entering.
-E.g. `bash ExtractionAndInsertionRunner.sh /tmp/`
+E.g. `bash ExtractionAndInsertionRunner.sh /tmp/ test`
 
 When you are satisfied that all data has been properly extracted, run `ExtractionAndInsertionRunner.sh /path/to/directory`. This will copy the extracted data into the appropriate files in `/Data/`
 

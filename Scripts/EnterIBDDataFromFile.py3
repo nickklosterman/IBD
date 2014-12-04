@@ -1,8 +1,13 @@
-#!/usr/bin/env/python 
+#!/usr/bin/env/python3 
 # -*- python -*-
 
 
 """
+This program reads the data saved off from IBD pdfs and processed by IBDPDFExtractor and writes the data to the appropriate data file.
+This data is read from /tmp/YYYY-MM-DD_IBDDataSorted.txt
+The --test option will not write the results to the files.
+
+The data is always added to the very beginning of each file. 
 """
 
 import sys #for cmd line arguments
@@ -63,7 +68,6 @@ def read_file(myfile,testFlag):
                     print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
                     #print((splitline[2].strip().split(' '))[19])
             if okToWriteFlag==True and not testFlag==True:
-                print("Writing %s data to %s." % (splitline[0],filename))
                 file_prepend_write(filename,splitline)
             if testFlag==True:
                 print("Data ok for %s on %s" % (splitline[0], splitline[1]))
@@ -75,13 +79,40 @@ def file_prepend_write(filename,data):
     This function takes a filename and a list 
     The list is written to the beginning of the file
     The list has three elements. data[0]= investment list, data[1]= date, data[2]= stock list
-    """
-    with open(filename,'r+') as f:
-        content = f.read()
-        f.seek(0,0)
-        f.write(data[1] + '\n' + data[2] + '\n' + content)
-        f.close
 
+    A check is performed to prevent writing duplicate data out
+    """
+    entryExists=exists_in_file(filename,data)
+    if (entryExists==False):
+        print("Writing %s data to %s." % (data[0],filename))
+        with open(filename,'r+') as f:
+            content = f.read()
+            f.seek(0,0)
+            f.write(data[1] + '\n' + data[2] + '\n' + content)
+            f.close
+    else:
+        print("Error: Write failed. Data for %s on %s is already present in %s." % (data[0],data[1],filename))
+
+def exists_in_file(filename,data):
+    """
+    Check to see if an entry already exists in the file.
+    Key off of the date.
+    http://stackoverflow.com/questions/4940032/search-for-string-in-txt-file-python
+
+    This method is a bit overkill. A naive solution is to go through the first ~20 lines and only search there. I'm really just trying to prevent multiple entries after I've already done it once and am still playing with the data.
+    This however is a good method for compeleteness sake if I ever needed to recreate from all source files. God willing that will never happen.
+    """
+    import mmap
+    f = open(filename)
+    s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
+    searchstring=data[1] #key off of the date. the stock list could be repeated and cause false positives.
+    b_searchstring = searchstring.encode('utf-8') #need it to be a bytearray in python3    http://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-python-3
+    if s.find(b_searchstring) != -1:
+        return True
+    else:
+        return False
+    
+        
 def usage():
     print("This program reads the data saved off from IBD pdfs and processed by IBDPDFExtractor and writes the data to the appropriate data file.")
     print("The --test option will not write the results to the files.")
