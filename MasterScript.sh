@@ -13,5 +13,5 @@ echo "output written to BadTickerListDataLocatorOutput.txt"
 echo "-End BadTickerDataLocator.sh Execution"
 dateName=$( date +%Y-%m-%d )
 bash Scripts/PrepForStockApp.sh IBDdatabase.sqlite.${dateName}
-bash Scripts/IBDGnuplotter.sh IBDdatabase.sqlite.${dateName} 2013-07-15 2014-09-09
+bash Scripts/IBDGnuplotter.sh IBDdatabase.sqlite.${dateName} 2013-07-15 2014-12-05
 echo "End MasterScript.sh Execution"
