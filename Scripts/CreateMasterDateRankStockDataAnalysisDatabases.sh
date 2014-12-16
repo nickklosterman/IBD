@@ -91,7 +91,9 @@ CREATE TABLE IF NOT EXISTS ${database}_DatesList AS SELECT DISTINCT(date) FROM $
 	for ticker in $tickerlist 
 	do 
 
+	    #The pragma line was added to overcome the 'database or disk is full' error that was occurring at the first 'create temporary table....' call; this occurred when the sqlite db got to be about 500MB. online resources stated that the error was thrown when teh database needed more space than available in /tmp. I monitored disk usage and didn't see it's usage spike. not sure if this is still truly the cause.
 	    sqlite3 $databasefilename "DROP TABLE IF EXISTS ${database}_${ticker}Details;
+            PRAGMA temp_store = 2;
 	    CREATE TEMPORARY TABLE ${database}_${ticker}Details AS SELECT rank,date FROM ${database} WHERE stockticker LIKE '${ticker}';
 	    DROP TABLE IF EXISTS ${database}_CombinedDates${ticker}Details;
 	    CREATE TEMPORARY  TABLE ${database}_CombinedDates${ticker}Details AS SELECT * FROM ${database}_DatesList LEFT OUTER JOIN ${database}_${ticker}Details ON ${database}_DatesList.date = ${database}_${ticker}Details.date;
