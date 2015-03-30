@@ -7,7 +7,9 @@ var filename='/home/puffjay/Muddle.txt'
 if (typeof process.argv[2] !== 'undefined') {
     filename=process.argv[2]
 }
-console.log("Using "+filename);
+
+//console.log("Using "+filename);
+
 var rl = readline.createInterface({
     input : fs.createReadStream(filename),
     output: process.stdout,
@@ -25,13 +27,15 @@ var bigArray = [];
 rl.on('line',function(line){
     var trimLine = line.trim();
 
-    var dateRE = /^[0-9]{4}.*$/;
+    var dateRE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
     
     var dateMatch = trimLine.match(dateRE); //alternately if line doesn't start with # and not of zero length after trim whitespace
+  //console.log("dateMatch:",dateMatch);
 
     if ( trimLine[0] !== "#") { //ignore comment lines
 	//console.log("tl:"+trimLine+" tlIo:"+trimLine.indexOf("201") );
-	if ( trimLine.indexOf("201") !== -1 ) { //	if (dateMatch !== null) {
+//	if ( trimLine.indexOf("201") !== -1 ) { //
+ 	if (dateMatch !== null) {
 	    //print out data before overwriting
 	    if (typeof myObj.date !== 'undefined' ){
 //		console.log("obj:",myObj);
