@@ -34,7 +34,7 @@ rl.on('line',function(line){
 	if ( trimLine.indexOf("201") !== -1 ) { //	if (dateMatch !== null) {
 	    //print out data before overwriting
 	    if (typeof myObj.date !== 'undefined' ){
-		console.log("obj:",myObj);
+//		console.log("obj:",myObj);
 		bigArray.push(myObj);
 		myObj = {}; //clear out the obj
 	    }
@@ -61,7 +61,7 @@ rl.on('close',function() {
 
     //need to printout the last obj here    ......???really won't this be a duplicate?...hmm appears not
     if (typeof myObj.date !== 'undefined' && myObj.list.length > 0 ){
-	console.log("obj:",myObj);
+//	console.log("obj:",myObj);
 	bigArray.push(myObj);
     };
     bigArray.sort(function(a,b) { 
@@ -148,7 +148,7 @@ function appendStats(inputArray){
 
 //compute our streakCount
 	//	console.log("cIa:b:",currentInputArray);
-		console.log("cS.pMA:",currentStats.previousMemberArray);
+//		console.log("cS.pMA:",currentStats.previousMemberArray);
 	currentInputArray.forEach(function(ele,ind,fA) {
 	    var filterEle = currentStats.previousMemberArray.filter(function(ele_,ind_,fA_) { return ele.ticker === ele_.ticker; } );
 	    //	    console.log(ele.ticker+' '+filterEle.length+' '+filterEle[0].streakCount); 
