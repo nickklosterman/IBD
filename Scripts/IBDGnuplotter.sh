@@ -4,8 +4,8 @@ database=$1 #"IBDdatabase.sqlite.12072014"
 date=`date +%Y-%m-%d`
 
 #these are the limits we will perform our sql query inside; there may be no data returned for these limits. If there is data returned, mindate & maxdate will hold the dates for the first and last datapoint inside the query limits
-querymindate=$2 #"2013-07-13"
-querymaxdate=$3 #2014-12-31"
+querymindate=$2 
+querymaxdate=$3
 
 
 #for mytable in "BC20" #"IBD50" "BC20" "Top200Composite" "IBD8585"
@@ -27,28 +27,31 @@ do
 	    ;;
     esac
 
- #   echo "Max y range: $maxyrange"
+    #   echo "Max y range: $maxyrange"
 
-    tickerlist=$(sqlite3 $database  "SELECT distinct(stockticker) FROM ${table}")
+#    tickerlist=$(sqlite3 $database "SELECT distinct(stockticker) FROM ${table}")
+    tickerlist=$(sqlite3 $database "SELECT stockticker FROM ${table} where date in ( select max(date) from ${table})") #this will only create svgs for the tickers present on the most recent list; instead of `in` I could've used `like` or `=` 
     for ticker in $tickerlist
     do 
 
 	mindate=$(sqlite3 "$database" 'SELECT min('"$table"'_'"$ticker"'_Master.Date) FROM '"$table"'_'"$ticker"'_Master  WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" )' )
-mindatelength=${#mindate}
+	mindatelength=${#mindate}
 
-if [[ $mindatelength -eq 10 ]]
-then 
-	maxdate=`sqlite3 "$database" 'SELECT max('"$table"'_'"$ticker"'_Master.Date) FROM '"$table"'_'"$ticker"'_Master  WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" )' `
+	#echo $mindate
+	
+	if [[ $mindatelength -eq 10 ]]
+	then 
+	    maxdate=`sqlite3 "$database" 'SELECT max('"$table"'_'"$ticker"'_Master.Date) FROM '"$table"'_'"$ticker"'_Master  WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" )' `
 
-	echo -e $ticker
-#	echo $mindate
-#	echo $maxdate
-	tickerOpen=$(sqlite3 "$database" 'SELECT '"$table"'_'"$ticker"'_Master.Open FROM '"$table"'_'"$ticker"'_Master  WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" ) ORDER BY '"$table"'_'"$ticker"'_Master.date ASC LIMIT 1' )
-#	echo $tickerOpen
-	sp500Open=$(sqlite3 "$database" 'SELECT  _GSPC.Open as SP500Open  FROM '"$table"'_'"$ticker"'_Master INNER JOIN _GSPC ON '"$table"'_'"$ticker"'_Master.Date =  _GSPC.Date WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" ) ORDER BY '"$table"'_'"$ticker"'_Master.Date ASC LIMIT 1' )
-#	echo $sp500Open
+	    echo -e $ticker
+	    #	echo $mindate
+	    #	echo $maxdate
+	    tickerOpen=$(sqlite3 "$database" 'SELECT '"$table"'_'"$ticker"'_Master.Open FROM '"$table"'_'"$ticker"'_Master  WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" ) ORDER BY '"$table"'_'"$ticker"'_Master.date ASC LIMIT 1' )
+	    #	echo $tickerOpen
+	    sp500Open=$(sqlite3 "$database" 'SELECT  _GSPC.Open as SP500Open  FROM '"$table"'_'"$ticker"'_Master INNER JOIN _GSPC ON '"$table"'_'"$ticker"'_Master.Date =  _GSPC.Date WHERE '"$table"'_'"$ticker"'_Master.date >= (select min('"$table"'_'"$ticker"'_Master.date) from '"$table"'_'"$ticker"'_Master where '"$table"'_'"$ticker"'_Master.rank > 0 and '"$table"'_'"$ticker"'_Master.date >="'"$querymindate"'" and '"$table"'_'"$ticker"'_Master.date < "'"$querymaxdate"'" ) ORDER BY '"$table"'_'"$ticker"'_Master.Date ASC LIMIT 1' )
+	    #	echo $sp500Open
 
-	gnuplot <<EOF
+	    gnuplot <<EOF
 set ylabel "% Change"
 #set logscale y
 set yrange [0.8:2.6]
@@ -85,7 +88,9 @@ plot "< sqlite3 $database 'SELECT ${table}_${ticker}_Master.Date, ${table}_${tic
 
 EOF
 
-fi 
+	else
+	    echo "phail $ticker"
+	fi 
     done
 
 
