@@ -61,3 +61,6 @@ Remove dependence on hard coded IBDdatabase.sqlite
 Create a script that uses the historic data in the database and creates json for PythonStockTracker for each list entry
 Create a script that performs the movement matrix on sqlite data
 Figure out the correct joins to do to easily determine which stocks went on in Week X and which were dropped when compared to Week X-1
+
+Tue Mar 17 13:05:31 EDT 2015
+Make the change such that only the most recent list's data is downloaded. We are still downloading all which isn't efficient.
