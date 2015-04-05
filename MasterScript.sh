@@ -17,4 +17,18 @@ echo "-End BadTickerDataLocator.sh Execution"
 dateName=$( date +%Y-%m-%d )
 bash Scripts/PrepForStockApp.sh IBDdatabase.sqlite.${dateName}
 bash Scripts/IBDGnuplotter.sh IBDdatabase.sqlite.${dateName} 2013-07-15 ${today}
+path="svgs/${today}/" 
+mkdir $path
+
+for item in "BC20" "IBD50" "IBD8585" "Top200Composite"
+do
+    mv ${item}*${date}.svg svgs/${today}
+done
+
+do
+    echo "$item"
+    python makeSVGPage.py ${item} ${path}
+done
+
+
 echo "End MasterScript.sh Execution"
