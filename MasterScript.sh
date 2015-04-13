@@ -23,10 +23,6 @@ mkdir $path
 for item in "BC20" "IBD50" "IBD8585" "Top200Composite"
 do
     mv ${item}*${date}.svg svgs/${today}
-done
-
-do
-    echo "$item"
     python makeSVGPage.py ${item} ${path}
 done
 
