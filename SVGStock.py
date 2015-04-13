@@ -1,9 +1,8 @@
 class SVGStock:
-    def __init__(self,svgFile,filepath):
+    def __init__(self,svgFile):
         self.ticker=(svgFile.split('_'))[1]
         self.IBDList=(svgFile.split('_'))[0]
         self.svgFile=svgFile
-        self.filepath=filepath
         
     def getYahooKeyStatisticsLink(self):
         return '<a href="http://finance.yahoo.com/q/ks?s='+self.ticker+'+Key+Statistics">'+self.ticker.upper()+' Key Statistics</a>'
@@ -14,4 +13,4 @@ class SVGStock:
     def getTicker(self):
         return self.ticker
     def getSvgImgLink(self):
-        return '<img src="'+self.filepath+self.svgFile+'">' 
+        return '<img src="'+self.svgFile+'">' 

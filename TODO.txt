@@ -64,3 +64,7 @@ Figure out the correct joins to do to easily determine which stocks went on in W
 
 Tue Mar 17 13:05:31 EDT 2015
 Make the change such that only the most recent list's data is downloaded. We are still downloading all which isn't efficient.
+
+
+Mon Apr 13 13:32:30 EDT 2015
+Add in company name or some other more identifying attribute in the data I save off. I need this simply for when tickers change and then are possibly taken over again by a new company.  I'm curious if there are rules for ticker symbols and renaming them.
