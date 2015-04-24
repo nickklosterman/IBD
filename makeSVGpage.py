@@ -19,7 +19,7 @@ filelist=sorted(glob.glob(path+IBDList+"_*.svg"))
 print(filelist)
 buffer="<html><body>"
 for item in filelist:
-    data=SVGS.SVGStock(item,path)
+    data=SVGS.SVGStock(item)
     #print(data.getSvgImgLink())
     #print(data.getYahoo2YrLogChartLink())
     #print(data.getYahooProfileLink())
