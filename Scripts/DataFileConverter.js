@@ -1,5 +1,12 @@
 // based on BashScripts/MuddleParser.js
 
+/**
+ * USAGE:
+ * node scrip.js ../Data/BC20.txt
+ * 
+ * DataFileConverter: this script converts the raw data into lists showing tickers jumping on and off the list.
+*/
+
 var readline=require('readline')
 var fs=require('fs')
 
@@ -62,7 +69,6 @@ rl.on('line',function(line){
 //perform any processing on our object/array now that we are done populating it.
 rl.on('close',function() {
     //use this as a trigger to perform any postProc
-
     //need to printout the last obj here    ......???really won't this be a duplicate?...hmm appears not
     if (typeof myObj.date !== 'undefined' && myObj.list.length > 0 ){
 //	console.log("obj:",myObj);
@@ -80,12 +86,12 @@ rl.on('close',function() {
     });
     appendStats(bigArray);
     //key off streakCount = 1 to highlight new entries
+
+//output the final result to stdout
     console.log(JSON.stringify(bigArray));
     //    console.log(bigArray);
     //    console.log("rl close");
-
 })
-
 //end readline code
 
 function returnArray(line) { 
@@ -101,8 +107,6 @@ function returnArray(line) {
 	});
 	return returnArray
     }
-
-
 }
 /*
   Here we will loop backwards over our sorted array (loooping from oldest entry to most recent entry) and compute the streak of each ticker. Items with a streakCount === 1 are new to the list and can easily be marked. 
@@ -160,10 +164,12 @@ function appendStats(inputArray){
 		/*if ( ele.streakCount ) {*/ 
 		//	    console.log(ele.ticker+' '+filterEle.length+filterEle[0].streakCount); 
 		ele.streakCount=filterEle[0].streakCount+1;
+              //console.log(fA.length);
 //		console.log("fE0.i:"+filterEle[0].index+" ei:"+ele.index+" fE0.rA:"+filterEle[0].rankAccumulator); 
-		ele.rankAccumulator=ele.index+filterEle[0].rankAccumulator;
+
+	      ele.rankAccumulator=fA.length+1-ele.index+filterEle[0].rankAccumulator; //fix the rankAccumulator such that higher ranked tickers get more points not less (i.e. #1 gets 20pts for BC20 and #20 gets 1pt; we add 1 such that the last place gets one point otherwise it wouldn't get any. 
 		//	    console.log(ele.ticker+' '+filterEle.length+' '+filterEle[0].streakCount+' '+ele.streakCount); 
-	    } else { ele.streakCount=1; ele.rankAccumulator=ele.index; }
+	    } else { ele.streakCount=1; ele.rankAccumulator=fA.length+1-ele.index; }
 	    //}
 	    
 	});
