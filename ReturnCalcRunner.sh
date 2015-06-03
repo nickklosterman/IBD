@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# usage : bash script IBDdatabase.sqlite 2015-01-01 2015-06-01
+
 # This script is meant to loop over the given database file and compute the return from the first time the stock appeared on the list to the current day
 
 database=$1 #"IBDdatabase.sqlite.12072014"
