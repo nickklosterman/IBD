@@ -12,7 +12,7 @@ querymindate=$2  #2015-01-01
 querymaxdate=$3 #2015-05-31
 
 
-for table in "BC20" #"IBD50" "BC20" "Top200Composite" "IBD8585"
+for table in Top200Composite #"BC20" #"IBD50" "BC20" "Top200Composite" "IBD8585"
 #for table in "IBD50" "BC20" "Top200Composite" "IBD8585"
 do
 
@@ -53,7 +53,7 @@ do
 done
 
 echo "You really want to use the adjusted close as this takes into account any stock splits.Might have to do goofy math where you take the adjusted close of the day before you bought. Fuck it doesn't matter since it is pretend. Buffett doesn't care about one day difference. "
-
+echo "NOTE: if any stock doesn't span until your end date, it is bc the stock was delisted / bought"
 
 
 
