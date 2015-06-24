@@ -98,15 +98,23 @@ do
 
 #if the extract from detail boxes returned too short of a result to be considered valid    
     if [[ ${#results} -lt 20 ]]
-    then 
-	results=$( extract-from-8585 ${item} )
-	outputType="8585"
-	#if [[ ${#results} -lt 300 ]]
-	if [[ ${#results} -lt 250 ]]
-	then 
+    then
+        #Wed Jun 24 12:24:48 EDT 2015 tweak calculation bc IBD20150618 was Top200 but being treated as 8585 which was wrong. I believe the probability of the 8585 being 200 records and therefore being mistaken as a top200 is quite low. hmm this might be a Mac(old bash) vs Linux (new bash) I think this is reporting number of characters instead of number of elements in array.
+
 	    results=$( extract-from-top200 ${item} )
 	    outputType="Top200"
-	fi
+            if [[ ${#results} -ne 200 ]]
+               then 
+	    results=$( extract-from-8585 ${item} )
+	    outputType="8585"
+            fi
+
+	    #if [[ ${#results} -lt 300 ]]
+#	if [[ ${#results} -lt 250 ]]
+#	then 
+#	    results=$( extract-from-top200 ${item} )
+#	    outputType="Top200"
+#	fi
     fi
     # echo "${outputType}"
     # get-date-from-filename ${myfile}
