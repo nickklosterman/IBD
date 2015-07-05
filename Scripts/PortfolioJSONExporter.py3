@@ -22,7 +22,7 @@ import datetime #for date and timedelta
 import sys #for cmd line arguments
 import urllib.request, urllib.parse, urllib.error #for getting quotes from net
 
-from YahooStockQuotes import getHistoricalStockPrices 
+from YahooStockQuotes import getHistoricalStockData #Prices 
 
 
 def get_date(date):
@@ -55,9 +55,9 @@ def getHistoricalPrice(symbol,date):
     if openPrice!=-1:
         return openPrice
     else:
-        data=getHistoricalStockPrices(symbol,date)
+        data=getHistoricalStockData(symbol,date) #getHistoricalStockPrices(symbol,date)
         if data!="None":
-            return data[1][4]
+            return float(data[1][4])
         else:
             return 0
 
@@ -123,7 +123,6 @@ def query_for_data(table):
             """
             commissionToBuy=7.0
             commissionToSell=7.0
-
             if (sharePrice != -1.0 and sharePrice != 0 ):
                 if(leftoverInvestmentAmountFlag):
                     sharesToBuy=math.floor((investmentAmount-commissionToBuy+leftoverInvestmentAmount)/sharePrice)
