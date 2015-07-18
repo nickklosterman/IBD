@@ -42,19 +42,21 @@ data.
 
 # #for 8585
 # sed -n -e 's/^\([^<]*\) [1-9][1-9] [ABCDE] .*/\1/p' ibd5020131206.8585.txt | awk '{ print $(NF) }' | tr '\n' ' '
-# #the above is basically cutting off everything after the p/e and accumulation grade. this then gives us a clean est of space delimited fields to use awk on
+# #the above is basically cutting off everything after the p/e and accumulation grade. this then gives us a clean set of space delimited fields to use awk on
 
 inputfilename=${1}
 
 #BC20 and IBD50, could be used for 8585 but not all in the 8585 get boxes
 extract-from-detail-boxes() {
     #I believe this works as it will always be 'Group' or 'Grp' to key off of, depending which case it is
-    grep Group ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," | tr '\n' ' '
-    grep Grp ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," | tr '\n' ' '
+    grep Group ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," #| tr '\n' ' '
+    grep Grp   ${1} |  sed 's/^\([0-9]*\)/\1,/;s/(/,/;s/)/,/'  | sort -n | cut -f 3 -d"," #| tr '\n' ' '
 }
 
 extract-from-top200(){
-    awk '{ print $(NF-3) }' ${1}  | sed 's/[[:lower:]]/ /g;s/^ +*.//g' | awk '{ print $NF }' | tr '\n' ' '
+#print the third from last (NF = number of fields) field; replace all lower case charactesr with spaces; ??replace all leading spaces with nothing???; print the NF field (which at this point should be the only entry; convert newline to space 
+#the lowercasing is used to separate out when the company name runs into the ticker symbol. It produces a separate field. we then grab the ticker field with that final `{print $NF}`
+    awk '{ print $(NF-3) }' ${1}  | sed 's/[[:lower:]]/ /g;s/^ +*.//g' | awk '{ print $NF }' #| tr '\n' ' '
 }
 
 extract-from-8585(){
@@ -82,47 +84,49 @@ echo "$year-$month-$day"
 #instructions
 #echo ${1}
 for item in ${1}IBD201*.pdf.txt
-#until [ -z "$1" ]
 do    	
     #echo "Processing '$item'"
     myfile=$(basename ${item} )
-    
-    results=$( extract-from-detail-boxes ${item} )  # there has got to be a better way to do this calling an array of function if no results found
-    #guessing on the length of the result as to which list this came from
-    if [[ ${#results} -lt 100 ]]
+
+    saveIFS=$IFS
+    results=$( extract-from-detail-boxes ${item} )  
+    IFS=$'\n'
+    resultsArr=($results)
+    IFS=$saveIFS
+
+    if [[ ${#resultsArr[@]} -eq 20 ]] #there have been times in the past when there weren't 20 for BC20; 
     then 
 	outputType="BC20"
-    else
+    fi
+    if [[ ${#resultsArr[@]} -eq 50 ]]
+    then
 	outputType="IBD50"
     fi
 
-#if the extract from detail boxes returned too short of a result to be considered valid    
-    if [[ ${#results} -lt 20 ]]
+    if [[ ${#resultsArr[@]} -lt 20 ]] 
     then
         #Wed Jun 24 12:24:48 EDT 2015 tweak calculation bc IBD20150618 was Top200 but being treated as 8585 which was wrong. I believe the probability of the 8585 being 200 records and therefore being mistaken as a top200 is quite low. hmm this might be a Mac(old bash) vs Linux (new bash) I think this is reporting number of characters instead of number of elements in array.
-
 	    results=$( extract-from-top200 ${item} )
+	    saveIFS=$IFS
+	    IFS=$'\n'
+	    resultsArr=($results)
+	    IFS=$saveIFS
 	    outputType="Top200"
-            if [[ ${#results} -ne 200 ]]
+#echo "${#results} ${#results[@]} ${results} $myfile $outputType"
+            if [[ ${#resultsArr[@]} -ne 200 ]]
                then 
 	    results=$( extract-from-8585 ${item} )
+	    saveIFS=$IFS
+	    IFS=$'\n'
+	    resultsArr=($results)
+	    IFS=$saveIFS
 	    outputType="8585"
             fi
 
-	    #if [[ ${#results} -lt 300 ]]
-#	if [[ ${#results} -lt 250 ]]
-#	then 
-#	    results=$( extract-from-top200 ${item} )
-#	    outputType="Top200"
-#	fi
     fi
-    # echo "${outputType}"
-    # get-date-from-filename ${myfile}
-    # echo "${results}"
-    #echo "${outputType},$( get-date-from-filename ${myfile} ),${results}"
-    
     #switch to the output on one line so we can sort easily by type for easier import to the final data files
-    echo "${outputType},$( get-date-from-filename ${myfile} ),${results}"
+    echo "${outputType},$( get-date-from-filename ${myfile} ),${resultsArr[@]}"
     shift
 done
-#echo "based on the output type we could insert the desired data into the appropriate file instead of simply printing it out. That would save a cut/past step. We could easily just have a test run flag and then a insert flag."
+
+#for the string to array method http://stackoverflow.com/questions/24628076/bash-convert-n-delimited-strings-into-array?rq=1
