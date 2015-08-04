@@ -60,15 +60,15 @@ def getHistoricalStockData(symbol, date):
         days[1]=days[1].decode('ascii')
         data = [day[:-2].split(',') for day in days]
     except urllib.error.HTTPError as err:
-        print(err)
+        #print(err)
         import traceback
         #errorLog.append(err)
     except urllib.error.URLError as err:
-        print(err)
+        #print(err)
         import traceback
         #errorLog.append(err)
     except Exception as err:
-        print(err)
+        #print(err)
         import traceback
         #errorLog.append(err)
     else:

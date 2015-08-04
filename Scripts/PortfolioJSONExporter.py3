@@ -34,27 +34,29 @@ def get_date(date):
     
 #
 
-def queryDatabaseForOpenPrice(symbol,date):
-    table="StockData"
-    check_tables_exist(table)    
-    Query='SELECT Open FROM '+table
-    Query='SELECT Open FROM  '+table+' WHERE  date LIKE "'+date+'" AND StockTicker LIKE "'+symbol+'"'
-    querycursor1=connection.cursor()
-    querycursor1.execute(Query)
+def queryDatabaseForOpenPrice(symbol,date,table):
+    #table="StockData"
     openPrice=-1
-    while True: #needed so we can use the 'break' in case a row is empty
-        row=querycursor1.fetchone()
-        if row == None:
-            break
-        openPrice=row[0]
+    if check_tables_exist(table+'_'+symbol+'_Master') :
+        Query='SELECT Open FROM '+table
+        Query='SELECT Open FROM  '+table+' WHERE  date LIKE "'+date+'" AND StockTicker LIKE "'+symbol+'"'
+        Query='SELECT Open FROM '+table+'_'+symbol+'_Master WHERE date LIKE "'+date+'"'
+        querycursor1=connection.cursor()
+        querycursor1.execute(Query)
+        while True: #needed so we can use the 'break' in case a row is empty
+            row=querycursor1.fetchone()
+            if row == None:
+                break
+            openPrice=row[0]
     return openPrice
 
 
-def getHistoricalPrice(symbol,date):
-    openPrice=queryDatabaseForOpenPrice(symbol,date)
+def getHistoricalPrice(symbol,date,table):
+    openPrice=queryDatabaseForOpenPrice(symbol,date,table)
     if openPrice!=-1:
         return openPrice
     else:
+        # Arrg, I currently have the YahooStockQuotes.getHistoricalStockData() print the error messages ; Screw it removing the print(err) output
         data=getHistoricalStockData(symbol,date) #getHistoricalStockPrices(symbol,date)
         if data!="None":
             return float(data[1][4])
@@ -62,11 +64,13 @@ def getHistoricalPrice(symbol,date):
             return 0
 
 def check_tables_exist(table):
+    existsFlag=True
     cursor=connection.cursor()
     Query="select case when tbl_name ='"+table+"' then 1 else 0 end  from sqlite_master where type='table' and name='"+table+"' order by name"
     cursor.execute(Query)
     row=cursor.fetchone()
     if row == None or int(row[0]==0):
+        existsFlag=False
         if table=="tablelist[1]:":
             Query='CREATE TABLE IF NOT EXISTS +tablelist[1]+ (Id INTEGER PRIMARY KEY, Date TEXT, StockTicker TEXT, Rank INTEGER, QuoteDate TEXT, Open INTEGER, High INTEGER, Low INTEGER, Close INTEGER, Volume INTEGER, Adj_Close INTEGER)'
         if table=="tablelist[2]:":
@@ -76,6 +80,7 @@ def check_tables_exist(table):
     #    print("returned None")
                 
     cursor.close()
+    return existsFlag
 
 
 def queryTableDateForCount(table,date):
@@ -117,7 +122,7 @@ def query_for_data(table):
             ticker=row2[0]
             rank=row2[1]
             dateSplit=date.split('-')
-            sharePrice=getHistoricalPrice(ticker,date) #get_historical_prices(ticker,date)
+            sharePrice=getHistoricalPrice(ticker,date,table) #get_historical_prices(ticker,date)
             """
             Rest the commissions
             """
@@ -246,8 +251,8 @@ for opt, arg in options:
 print("{\"portfolio\":  [")
 
 #OutputStream("{\"portfolio\":  [")
-#inputList=["IBD50","BC20","IBD8585","Top200Composite"]
-inputList=["BC20"]
+inputList=["IBD50","BC20","IBD8585","Top200Composite"]
+#inputList=["BC20"]
 #inputList=["BC20","IBD8585","Top200Composite"]
 for item in inputList:
     connection=sqlite3.connect(database)
