@@ -1,7 +1,7 @@
 Thu Oct  3 22:21:44 EDT 2013
 scatter plot of Avg Rank vs price increase (doubt there is a correlation at all, but check anyway)
 comparison to SP500 for same period
-gnuplot output 
+[DONE]gnuplot output 
 research financial math, financial plots see if there are any plot types all ready used that might be useful
 Output PDF report w gnuplots oa stocks time seires data perhaps  plot 5tickers/ graph
 Gnuplot has capability to output for web w/interactive capabilites. 
@@ -44,7 +44,7 @@ plot 2*x linetype 1, 4*x linetype 2 axes x1y2
 http://stackoverflow.com/questions/2827650/plotting-two-axes-in-gnuplot
 
 Fri Oct 11 21:59:05 EDT 2013
-Grab the SP500 data once and make all other calls use that.
+[DONE] Grab the SP500 data once and make all other calls use that.
 
 Finish the Refresh script, filling in all options.
 If the options aren't there then add them to the files
