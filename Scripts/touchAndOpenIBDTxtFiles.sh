@@ -10,6 +10,7 @@ opening all IBD.txt files in emacs"
 for item in IBD201*.pdf
 do 
     touch $item.txt
+    touch $item.EarningsReport.txt
 done
 acroread IBD201*.pdf  &
 emacs IBD201*.txt
