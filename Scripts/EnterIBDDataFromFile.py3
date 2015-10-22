@@ -22,6 +22,9 @@ def read_file(myfile,testFlag):
             splitline=line.split(',')
             #print(splitline)
             #print(len(splitline))
+            if splitline[0]=="":
+                print("Error in this file. It is missing the initial field.")
+                break;
             if splitline[0]=="8585":
                 #print("8585")
                 #EightyFiveFilename="../Data/8585.txt2"
