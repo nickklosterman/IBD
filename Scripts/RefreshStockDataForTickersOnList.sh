@@ -127,15 +127,13 @@ echo "$newFilename $ticker"
     # while $response not in ( 'yY' | 'nN')
     # echo "please enter y or n"
     # read response
-
+    date=`date +%Y-%m-%d`
     echo "File cleanup - creating gzipped tar archive of all .csv files"
-    tar -cvzf YahooHistoricalDataFiles.tar.gz *.csv
+    tar -cvzf YahooHistoricalDataFiles${date}.tar.gz *.csv
     #file cleanup
     rm *.csv #damnit these are being deleted before they are being imported
 
-
     #python Scripts/ImportCSVStockDataToSQLite.py3  umm I think I want the one with bulk transactions....
-
 
     #to determine how risky an investment would've been, do a query to find the min and max of each ticker and get the dates. see how close the dates are as well.
     #You'd need to apply some type of window, otherwise over time the min will typically be in the past and quite old
