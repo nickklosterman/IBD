@@ -33,7 +33,7 @@ Process for entering new data
 =============================
 Stick the IBD pdf files in a directory.
 
-Run `Scripts/touchAndOpenIBDTxtFiles.sh`. This will create and open a file named `<pdffilename>.txt`.
+Run `Scripts/touchAndOpenIBDTxtFiles.sh` from the directory where the IBD pdf files are located. This will create and open a file named `<pdffilename>.txt`.
 
 Open the pdf and extract the data and place it into the `<pdffilename>.txt`. You must manually copy out the relevant chunks and paste them into the appropriate `<pdffilename>.txt` file. For Top 200, copy out the entire table. For 85-85/Week In Review, copy the side table and not the box data. For IBD50 & BC20 copy the box data. 
 
