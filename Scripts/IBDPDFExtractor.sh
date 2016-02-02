@@ -43,6 +43,8 @@ data.
 # #for 8585
 # sed -n -e 's/^\([^<]*\) [1-9][1-9] [ABCDE] .*/\1/p' ibd5020131206.8585.txt | awk '{ print $(NF) }' | tr '\n' ' '
 # #the above is basically cutting off everything after the p/e and accumulation grade. this then gives us a clean set of space delimited fields to use awk on
+# sed -n -e 's/^\([^<]*\) [0-9]\{1,3\} [ABCDE] [0-9]\{1,2\} .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' '
+# I believe the above uses a hold space and what is matched is actually discarded for sed. then we print the last field with awk. The sed is checking for some type of start that is not ?? then it matches the number and grade letter and another est of numbers to find the hold space. 
 
 inputfilename=${1}
 
@@ -62,7 +64,7 @@ extract-from-top200(){
 extract-from-8585(){
     #from IBD20141017.pdf.txt : "Keurig Green MountGMCR 35 C 96 98 –8 137.98 –2.18 Profunds Ultra Nas A+ 0.5 –"
     #I need to somehow extract or invite manual intervention when there company name intrudes into the ticker and they are both matched
-    sed -n -e 's/^\([^<]*\) [0-9]\{1,3\} [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' ' #fuck I had [1-9][1-9] and this was excluding anything with a zero in the P/E column. And anything w single digit P/E
+    sed -n -e 's/^\([^<]*\) [0-9]\{1,3\} [ABCDE] [0-9]\{1,2\} .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' ' #fuck I had [1-9][1-9] and this was excluding anything with a zero in the P/E column. And anything w single digit P/E, added additional trailing [0-9]\{1,2\} as `AgreeRealty ADC 16 C 93 87 –19 33.73 –0.26 Mass Mutual Rus 20 A 0.0 +` from 2016-01-08 was failing bc the previous check was capturing to the '.....Mass Mutual Rus 20...' which was then reporting the ticker as Rus instead of ADC.
     #sed -n -e 's/^\([^<]*\) [1-9][0-9][0-9] [ABCDE] .*/\1/p' ${1} | awk '{ print $(NF) }' | tr '\n' ' '
 }
 
@@ -93,7 +95,9 @@ do
     IFS=$'\n'
     resultsArr=($results)
     IFS=$saveIFS
+    outputType="Unknown"
 
+    #This is super fragile as I don't know how to handle when the results are less than expected
     if [[ ${#resultsArr[@]} -eq 20 ]] #there have been times in the past when there weren't 20 for BC20; 
     then 
 	outputType="BC20"
@@ -122,7 +126,6 @@ do
 	    IFS=$saveIFS
 	    outputType="8585"
             fi
-
     fi
     #switch to the output on one line so we can sort easily by type for easier import to the final data files
     echo "${outputType},$( get-date-from-filename ${myfile} ),${resultsArr[@]}"
