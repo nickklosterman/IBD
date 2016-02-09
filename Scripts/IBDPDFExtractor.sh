@@ -119,12 +119,13 @@ do
 #echo "${#results} ${#results[@]} ${results} $myfile $outputType"
             if [[ ${#resultsArr[@]} -ne 200 ]]
                then 
-	    results=$( extract-from-8585 ${item} )
-	    saveIFS=$IFS
-	    IFS=$'\n'
-	    resultsArr=($results)
-	    IFS=$saveIFS
-	    outputType="8585"
+		   results=$( extract-from-8585 ${item} )
+		   saveIFS=$IFS
+		   IFS=$'\n'
+		   resultsArr=($results)
+		   IFS=$saveIFS
+		   outputType="8585"
+		   #echo "${#results[@]}"
             fi
     fi
     #switch to the output on one line so we can sort easily by type for easier import to the final data files
