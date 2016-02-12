@@ -50,7 +50,7 @@ def read_file(myfile,testFlag):
                     
                 #print("8585")
                 #EightyFiveFilename="../Data/8585.txt2"
-                if len(splitline[2].strip().split(' '))>65: #the lowest I've seen is 65 (for wk of Oct 17 2014, but we'll keep 75 as our threshold; #uggh just saw 72, so putting down to 65
+                if len(splitline[2].strip().split(' '))>65: #the lowest I've seen is 65 (for wk of Oct 17 2014, but we'll keep 75 as our threshold; #uggh just saw 72, so putting down to 65 # and today I saw it at 42..shit. putting it down temporarily to get things to pass
                     okToWriteFlag=True
                     print("%s 8585 records on %s" % (len(splitline[2].strip().split(' ')),splitline[1]) )
                 else:
