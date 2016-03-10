@@ -42,6 +42,9 @@ E.g. `bash ExtractionAndInsertionRunner.sh /tmp/ test`
 
 When you are satisfied that all data has been properly extracted, run `ExtractionAndInsertionRunner.sh /path/to/directory`. This will copy the extracted data into the appropriate files in `/Data/`
 
+As of today, Tue Feb  2 12:03:49 EST 2016, the easiest way to insert results when BC20 isn't 20 and 8585 is really short is to find the extracted results in /tmp/{data}_IBDSorted.txt and fix them up and comment out the call to IBDPDFExtractor.sh in ExtractionAndInsertionRunnerh.sh. 
+
+
 Generate SVG Plots of Data
 ==========================
 Run `MasterScript.sh`

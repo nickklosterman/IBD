@@ -10,7 +10,7 @@ The --test option will not write the results to the files.
 The data is always added to the very beginning of each file. 
 """
 
-import sys #for cmd line arguments
+import sys,datetime #for cmd line arguments
 
 def read_file(myfile,testFlag):
     """
@@ -22,13 +22,35 @@ def read_file(myfile,testFlag):
             splitline=line.split(',')
             #print(splitline)
             #print(len(splitline))
+            year, month, day = (int(x) for x in splitline[1].split('-'))
+
+
+#            date.weekday() Return the day of the week as an integer, where Monday is 0 and Sunday is 6. For example, date(2002, 12, 4).weekday() == 2, a Wednesday. See also isoweekday().
+#            date.isoweekday() Return the day of the week as an integer, where Monday is 1 and Sunday is 7. For example, date(2002, 12, 4).isoweekday() == 3, a Wednesday. See also weekday(), isocalendar().
+            
+            dayOfWeek = datetime.date(year,month,day).weekday()
+            #print("%i day of week" % dayOfWeek)
+            
             if splitline[0]=="":
                 print("Error in this file. It is missing the initial field.")
                 break;
+            if splitline[0]=="Unknown":
+                if dayOfWeek==0 or dayOfWeek==2:
+                    bestGuess="IBD50"
+                elif dayOfWeek==1:
+                    bestGuess="BC20"
+                elif dayOfWeek==3:
+                    bestGuess="Top200"
+                elif dayOfWeek==4:
+                    bestGuess="8585"
+
             if splitline[0]=="8585":
+                if dayOfWeek != 4:
+                    print("Date mismatch for 8585. Was expecting 4 but saw %i" % dayOfWeek)
+                    
                 #print("8585")
                 #EightyFiveFilename="../Data/8585.txt2"
-                if len(splitline[2].strip().split(' '))>75: #the lowest I've seen is 65 (for wk of Oct 17 2014, but we'll keep 75 as our threshold
+                if len(splitline[2].strip().split(' '))>65: #the lowest I've seen is 65 (for wk of Oct 17 2014, but we'll keep 75 as our threshold; #uggh just saw 72, so putting down to 65 # and today I saw it at 42..shit. putting it down temporarily to get things to pass
                     okToWriteFlag=True
                     print("%s 8585 records on %s" % (len(splitline[2].strip().split(' ')),splitline[1]) )
                 else:
@@ -36,6 +58,8 @@ def read_file(myfile,testFlag):
                     print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
                 filename="../Data/8585.txt"
             if splitline[0]=="Top200":
+                if dayOfWeek != 3:
+                    print("Date mismatch for Top200. Was expecting 3 but saw %i" % dayOfWeek)
                 #print("200")
                 #Top200Filename="../Data/Top200Composite.txt2"
                 if len(splitline[2].strip().split(' '))==200:
@@ -47,6 +71,8 @@ def read_file(myfile,testFlag):
                     print("Date:%s,Length:%s" % (splitline[1],len(splitline[2].strip().split(' ')) ))
                 filename="../Data/Top200Composite.txt"
             if splitline[0]=="BC20":
+                if dayOfWeek != 1:
+                    print("Date mismatch for BC200. Was expecting 1 but saw %i" % dayOfWeek)
                 #print("20")
                 #BC20Filename="../Data/BC20.txt2"
                 if len(splitline[2].strip().split(' '))==20:
@@ -60,6 +86,8 @@ def read_file(myfile,testFlag):
                     #print((splitline[2].strip().split(' '))[19])
                 filename="../Data/BC20.txt"
             if splitline[0]=="IBD50":
+                if dayOfWeek != 0 and dayOfWeek != 2:
+                    print("Date mismatch for IBD50. Was expecting 0 or 2 but saw %i" % dayOfWeek)
                 #print("50")
                 #IBD50Filename="../Data/IBD50.txt2"
                 filename="../Data/IBD50.txt"
@@ -70,6 +98,8 @@ def read_file(myfile,testFlag):
                     print("IBD50 data length error.")
                     print("Date:%s,Length:%s, last element: %s" % (splitline[1],len(splitline[2].strip().split(' ')), (splitline[2].strip().split(' '))[19]) )
                     #print((splitline[2].strip().split(' '))[19])
+#            if okToWriteFlag==False:
+#                print("Hmm looks like there is a date / data type mismatch.")
             if okToWriteFlag==True and not testFlag==True:
                 file_prepend_write(filename,splitline)
             if testFlag==True:
@@ -87,7 +117,7 @@ def file_prepend_write(filename,data):
     """
     entryExists=exists_in_file(filename,data)
     if (entryExists==False):
-        print("Writing %s data to %s." % (data[0],filename))
+        print("Writing %s data from %s to %s." % (data[0],data[1],filename))
         with open(filename,'r+') as f:
             content = f.read()
             f.seek(0,0)
