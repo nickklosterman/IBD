@@ -58,7 +58,8 @@ extract-from-detail-boxes() {
 extract-from-top200(){
 #print the third from last (NF = number of fields) field; replace all lower case charactesr with spaces; ??replace all leading spaces with nothing???; print the NF field (which at this point should be the only entry; convert newline to space 
 #the lowercasing is used to separate out when the company name runs into the ticker symbol. It produces a separate field. we then grab the ticker field with that final `{print $NF}`
-    awk '{ print $(NF-3) }' ${1}  | sed 's/[[:lower:]]/ /g;s/^ +*.//g' | awk '{ print $NF }' #| tr '\n' ' '
+    sed '/^\s*$/d' ${1} | awk '{ print $(NF-3) }' | sed 's/[[:lower:]]/ /g;s/^ +*.//g' | awk '{ print $NF }' #| tr '\n' ' '
+    #If you receive the following error: awk: cmd. line:1: (FILENAME=/home/puffjay/Downloads/IBDs/IBD20160226.pdf.txt FNR=92) fatal: attempt to access field -3  make sure that there are no blank lines in the file. The preceding sed should prevent this error from occurring. It handles blank lines and lines with tabs.
 }
 
 extract-from-8585(){
