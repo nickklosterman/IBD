@@ -1,5 +1,6 @@
 var http = require('http'),
-    cheerio = require('cheerio'),
+    //cheerio = require('cheerio'),
+    fs = require('fs'),
     request = require('request'),
     cookie='',
     postIDUrl="http://www.investors.com/ajax/static/postID:";
@@ -56,14 +57,23 @@ function makeRequest2(obj){
 	response.on('end', function () {
 	    console.log(obj.site);
 	    var resp = JSON.parse(str);
-	    resp.d.ETablesDataList.forEach(function(ele, indx,arr) {
+	    writeDataToFile(obj.site+'_'+dateForInsertion+'.txt',JSON.stringify(resp.d.ETablesDataList));
+/*	    resp.d.ETablesDataList.forEach(function(ele, indx,arr) {
 		console.log(ele.Rank+" "+ele.Symbol);
-	    });
+	    }); */
 	    //console.log(JSON.stringify(resp.d.ETablesDataList));  //<-- this is the data that you'd write to the sql database
 	});
     }
 
     http.request(options, callback).end();
+}
+
+function writeDataToFile(filename,data) {
+    fs.writeFile(filename,data, (err) => {
+  if (err) throw err;
+  console.log('It\'s saved!:'+filename);
+});
+
 }
 
 var sitesArr = [ 
@@ -86,11 +96,11 @@ sitesArr = [
     {site:"New High",urlPiece:    'GetNewHigh?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="Symbol"&sortOrder2="ASC"'}, 
     {site:"IPO Leaders",urlPiece:    'GetIPOLeaders?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="Symbol"&sortOrder2="ASC"'},
     {site:"Global Leaders",urlPiece:    'GetGlobalLeaders?sortcolumn1="rank"&sortOrder1="asc"&sortcolumn2="CompRating"&sortOrder2="ASC"'},
-
-    
-    {site:"Weekly Review",urlPiece:'GetWeeklyReview?sortcolumn1="indgrprank"&sortOrder1="asc"&sortcolumn2="symbol"&sortOrder2="ASC"'}//d.ETablesDataList
+    {site:"Weekly Review",urlPiece:'GetWeeklyReview?sortcolumn1="indgrprank"&sortOrder1="asc"&sortcolumn2="symbol"&sortOrder2="ASC"'}
 ];
 
+
+/*
 function getIBDDataTableUrls() {
     request(ibdDataTablesUrl.url,function(error,response,html) {
 	if (!error && response.statusCode == 200) {
@@ -128,7 +138,7 @@ function getPost(id) {
 	} else { console.log(error);}
     });
 }
-
+*/
 
 function main(cookie) {
     sitesArr.forEach(function(ele,idx,arr) {
