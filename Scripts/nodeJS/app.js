@@ -1,7 +1,7 @@
 var http = require('http'),
     //cheerio = require('cheerio'),
     fs = require('fs'),
-    request = require('request'),
+    //request = require('request'),
     cookie='',
     postIDUrl="http://www.investors.com/ajax/static/postID:";
 
