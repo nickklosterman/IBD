@@ -91,12 +91,25 @@ var sitesArr = [
 
 sitesArr = [ 
     {site:"IBD50",urlPiece:    'GetIBD50?sortcolumn1="ibd100rank"&sortOrder1="asc"&sortcolumn2=""&sortOrder2="ASC"'}, 
-    {site:"Sector Leaders",urlPiece:    'GetSectorLeaders?sortcolumn1="sectorrank"&sortOrder1="asc"&sortcolumn2="symbol"&sortOrder2="ASC"'}, 
+    {site:"Sector Leaders",urlPiece:    'GetSectorLeaders?sortcolumn1="sectorrank"&sortOrder1="asc"&sortcolumn2="symbol"&sortOrder2="ASC"'},
+    {site:"Stock Spotlight",urlPiece:    'GetStockSpotlight?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="symbol"&sortOrder2="ASC"'},
+
+
     {site:"Big Cap 20",urlPiece:    'GetBigCap20?sortcolumn1="ibd100rank"&sortOrder1="asc"&sortcolumn2=""&sortOrder2="ASC"'}, 
-    {site:"New High",urlPiece:    'GetNewHigh?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="Symbol"&sortOrder2="ASC"'}, 
+    {site:"New High",urlPiece:    'GetNewHigh?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="Symbol"&sortOrder2="ASC"'},
+    {site:"Relative Strength At New High",urlPiece:    'GetBoltingRSLines?sortcolumn1="rsrating"&sortOrder1="desc"&sortcolumn2="symbol"&sortOrder2="ASC"'},
+    {site:"Stocks That Funds Are Buying",urlPiece:    'GetAccelMFOwnership?sortcolumn1="nofunds"&sortOrder1="desc"&sortcolumn2="symbol"&sortOrder2="ASC"'}, 
+
+
+    {site:"Global Leaders",urlPiece:    'GetGlobalLeaders?sortcolumn1="rank"&sortOrder1="asc"&sortcolumn2="CompRating"&sortOrder2="ASC"'},   
     {site:"IPO Leaders",urlPiece:    'GetIPOLeaders?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="Symbol"&sortOrder2="ASC"'},
-    {site:"Global Leaders",urlPiece:    'GetGlobalLeaders?sortcolumn1="rank"&sortOrder1="asc"&sortcolumn2="CompRating"&sortOrder2="ASC"'},
-    {site:"Weekly Review",urlPiece:'GetWeeklyReview?sortcolumn1="indgrprank"&sortOrder1="asc"&sortcolumn2="symbol"&sortOrder2="ASC"'}
+    {site:"Rising Profit Estimates",urlPiece:    'GetLeadersRisingEstimates?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="symbol"&sortOrder2="ASC"'},
+    //teach leaders is just a list of articles
+
+    //same with stocks near a buy zone
+    {site:"Weekly Review",urlPiece:'GetWeeklyReview?sortcolumn1="indgrprank"&sortOrder1="asc"&sortcolumn2="symbol"&sortOrder2="ASC"'},
+    {site:"CANSLIM Select",urlPiece:'GetCanslimSelect?sortcolumn1="comprating"&sortOrder1="desc"&sortcolumn2="symbol"&sortOrder2="ASC"'}
+
 ];
 
 
@@ -203,10 +216,12 @@ main(cookie)
 var now=new Date();
 console.log(now);
 var dateForInsertion = now.getUTCFullYear()+"-"+(now.getUTCMonth()+1)+"-"+now.getUTCDate();
-dateForInsertion = now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate();
+dateForInsertion = now.getFullYear()+"-"+(getDateTwoDigitFormat(now.getMonth()+1))+"-"+getDateTwoDigitFormat(now.getDate());
 console.log(dateForInsertion);
 
-
+function getDateTwoDigitFormat(m) {
+    return m<10?"0"+m:m;
+}
 
 /*TODO:
   know which list to write the data to,
