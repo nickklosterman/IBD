@@ -96,7 +96,7 @@ do
     IFS=$'\n'
     resultsArr=($results)
     IFS=$saveIFS
-    outputType="Unknown"
+    outputType="Unknown-try getting the data from the pdf again"
 
     #This is super fragile as I don't know how to handle when the results are less than expected
     if [[ ${#resultsArr[@]} -eq 20 ]] #there have been times in the past when there weren't 20 for BC20; 

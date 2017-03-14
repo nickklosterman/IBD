@@ -2,3 +2,5 @@ IBDdatabase.sqlite-journal
 GetHistory.log
 *.*~
 #*.*#
+Scripts/nodeJS/node_modules
+svgs/
