@@ -9,7 +9,8 @@ do
 		#for file in `ls -r "${filePrefix[$i]}"*`  #"${item}"*
     do
 	echo "${file}"
-	node fileReader.js "${file}" Rank >> "${filePrefix[$i]}.txt"
+	#node fileReader.js "${file}" Rank >> "${filePrefix[$i]}.txt"
+	node fileReader.js "${file}" >> "${filePrefix[$i]}.txt"
 	#echo "${file}"
     done
 done
