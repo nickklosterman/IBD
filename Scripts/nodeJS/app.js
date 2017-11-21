@@ -1,4 +1,4 @@
-var http = require('http'),
+var http = require('https'),
     //cheerio = require('cheerio'),
     fs = require('fs'),
     //request = require('request'),
